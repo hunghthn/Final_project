@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model_brand: MyString
+  model_title_name: MyString
+  model_price: MyString
+  model_segment: MyString
+  model_main_pic: MyString
+  model_engine: MyString
+  model_power: MyString
+  model_torque: MyString
+  model_gearbox: MyString
+  model_drive_system: MyString
+  model_seat: 1
+  model_type: MyString
+  model_source: MyString
+
+two:
+  model_brand: MyString
+  model_title_name: MyString
+  model_price: MyString
+  model_segment: MyString
+  model_main_pic: MyString
+  model_engine: MyString
+  model_power: MyString
+  model_torque: MyString
+  model_gearbox: MyString
+  model_drive_system: MyString
+  model_seat: 1
+  model_type: MyString
+  model_source: MyString

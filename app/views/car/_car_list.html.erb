@@ -1,0 +1,30 @@
+<% @models.each do |model| %>
+<div class="col-lg-4 col-sm-6">
+  <div class="car-item gray-bg text-center">
+    <div class="car-image">
+      <img class="img-fluid" src="<%= model.model_main_pic %>" alt="<%= model.model_name %>">
+      <div class="car-overlay-banner">
+        <ul>
+          <li><a href="#"><i class="fa fa-link"></i></a></li>
+          <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="car-list">
+      <ul class="list-inline">
+        <li><i class="fa fa-car"></i> <%= model.type.type_name %></li>
+        <li><i class="fa fa-cog"></i> <%= model.segment.segment_name %> </li>
+      </ul>
+    </div>
+    <div class="car-content">
+      <span><a href="#"><%= model.brand.brand_name %></a></span>
+      <!-- Trong file hiển thị danh sách model -->
+      <span><%= link_to model.model_title_name, model_path(model) %></span>
+      <div class="separator"></div>
+      <div class="price">
+        <span class="new-price"><%= model.model_price %> </span>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

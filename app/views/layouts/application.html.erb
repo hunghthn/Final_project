@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Car Final Project" />
+  <meta name="author" content="HTH" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Car Project By HTH</title>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" />
+  
+  <%= stylesheet_link_tag 'bootstrap.min', 'flaticon', 'mega_menu', 'font-awesome.min', 'jquery-ui', 'style', 'responsive', media: 'all' %>
+  <%= javascript_include_tag 'application', defer: true %>
+  <%= javascript_include_tag 'jquery-3.6.0.min', 'popper', 'bootstrap.min', 'mega-menu/mega_menu', 'jquery-ui', 'select/jquery-select', 'magnific-popup/jquery.magnific-popup.min', 'custom' %>
+
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>

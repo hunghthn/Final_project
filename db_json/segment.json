@@ -1,0 +1,82 @@
+[
+    {
+        "segment_name": "Xe sang cỡ trung",
+        "segment_desc": "Là những xe có trục cơ sở khoảng gần 3.000 mm, có nhiều phom dáng cả sedan, hatchback, crossover, SUV."
+    },
+    {
+        "segment_name": "Bán tải cỡ lớn",
+        "segment_desc": "Bán tải cỡ lớn trước đây vốn không được phân phối chính hãng ở Việt Nam vì giá rất cao. Hiện chỉ có Jeep Gladiator là dòng duy nhất phân phối chính hãng. Những cái tên nổi bật khác như Ford F-150, Toyota Tundra vẫn về nước qua đường không chính hãng."
+    },
+    {
+        "segment_name": "MPV cỡ lớn",
+        "segment_desc": "Đây là phân khúc mà MPV là một lựa chọn thứ hai dành cho những gia đình đã có sẵn những mẫu xe khác. Đồng thời, MPV cỡ lớn cũng là lựa chọn cho khách sạn, doanh nghiệp."
+    },
+    {
+        "segment_name": "Siêu xe/Xe thể thao",
+        "segment_desc": "Ở phân khúc của xe thể thao, siêu xe, kích thước không phải là yếu tố được quan tâm nhiều, thay vào đó là động cơ, hộp số, dẫn động... - những yếu tố ảnh hưởng tới khả năng vận hành. Thiết kế xe ở phân khúc này thuộc dạng coupe, convertible."
+    },
+    {
+        "segment_name": "MPV hạng sang",
+        "segment_desc": "Cũng giống như phân khúc phổ thông, hạng sang cũng có dòng MPV để phục vụ nhu cầu chở nhiều người. Thông thường, MPV hạng sang có trục cơ sở tương đương hoặc lớn hơn những chiếc sedan, SUV cỡ lớn."
+    },
+    {
+        "segment_name": "Xe sang cỡ lớn",
+        "segment_desc": "Xe sang cỡ lớn là những dòng có trục cơ sở khoảng 3.100 mm trở lên, thuộc hàng đắt nhất thị trường. Sedan và SUV là hai phom phổ biến thuộc phân khúc này."
+    },
+    {
+        "segment_name": "Siêu sang cỡ lớn",
+        "segment_desc": "Những mẫu xe ở phân khúc siêu sang thường có kích thước lớn đến rất lớn vì mục đích chính là phục vụ không gian nội thất xa xỉ cho người giàu và siêu giàu. Ở Việt Nam, cả Rolls-Royce và Bentley đều được phân phối chính hãng."
+    },
+    {
+        "segment_name": "Xe sang cỡ nhỏ",
+        "segment_desc": "Nếu như trước đây, xe sang thường có kích thước nhỏ nhất tầm Mercedes C-class (trục cơ sở hơn 2.800 mm) thì gần đây các hãng ngày càng làm nhiều xe sang với kích thước nhỏ hơn, ví dụ A-class của Mercedes chỉ có trục cơ sở hơn 2.700 mm. Vì vậy, những mẫu xe có chiều dài cơ sở khoảng 2.800 mm trở xuống được xếp vào hạng xe sang cỡ nhỏ."
+    },
+    {
+        "segment_name": "SUV phổ thông cỡ lớn",
+        "segment_desc": "Đây là phân khúc không có nhiều mẫu xe ở cả Việt Nam lẫn trên thế giới. Những chiếc SUV phổ thông cỡ lớn thường hướng tới mục đích chạy đường dài, địa hình. Tại Việt Nam, Land Cruiser là mẫu xe tiêu biểu của dòng này."
+    },
+    {
+        "segment_name": "Bán tải cỡ trung",
+        "segment_desc": "Các dòng xe bán tải đang bán chính hãng ở Việt Nam đều nằm ở phân khúc này. Về kết cấu, xe phát triển cùng nền tảng với những dòng SUV cỡ D. Ví dụ Toyota Hilux cùng nền tảng với Fortuner, Ford Ranger cùng nền tảng với Everest hay Mitsubishi Triton cùng nền tảng với Pajero Sport."
+    },
+    {
+        "segment_name": "Xe siêu nhỏ",
+        "segment_desc": "Nhóm xe mini xếp dưới những mẫu phân khúc A như Morning, Wigo, i10. Wuling Hongguang Mini EV hay VinFast VF 3 với kích thước, giá thuộc hàng nhỏ và rẻ nhất thị trường ôtô Việt Nam. "
+    },
+    {
+        "segment_name": "Xe cỡ trung hạng E",
+        "segment_desc": "Phân khúc E ở xe phổ thông chỉ những dòng xe trên cỡ trung, nhưng chưa tới tầm cỡ lớn. Ở các thị trường phát triển, người ta vẫn xếp E là xe cỡ trung. Phân khúc này có trục cơ sở nhỉnh hơn khoảng 100 mm so với cỡ D, nhưng đôi khi cũng chỉ ngang ngửa cỡ D. Tuy vậy các kích thước khác tổng thể thường lớn hơn. "
+    },
+    {
+        "segment_name": "Xe nhỏ cỡ A",
+        "segment_desc": "Đây là phân khúc nhỏ nhất tại thị trường Việt Nam, hầu hết là dáng hatchback như Fadil, i10, Morning, Brio, Wigo, chỉ có một dòng có biến thể sedan là Hyundai i10.  Phân khúc A thường có chiều dài cơ sở khoảng 2.400 mm, động cơ ngưỡng 1.2, giá khoảng 400 triệu."
+    },
+    {
+        "segment_name": "Xe nhỏ cỡ A+/B-",
+        "segment_desc": "Phân khúc còn mới mẻ tại Việt Nam, với ba mẫu gầm cao là VinFast VF5, Kia Sonet và Toyota Raize."
+    },
+    {
+        "segment_name": "MPV cỡ trung",
+        "segment_desc": "Từ nhiều năm nay, MPV cỡ trung là đất diễn riêng của Toyota Innova, với 3 hàng ghế rộng, hàng ghế cuối người lớn cũng ngồi vừa. Tuy vậy sự tăng trưởng mạnh mẽ của MPV cỡ nhỏ đang khiến dòng MPV cỡ trung dần giảm doanh số."
+    },
+    {
+        "segment_name": "Xe cỡ trung hạng D",
+        "segment_desc": "Xe gia đình cỡ trung ở phân khúc D thường đáp ứng không gian khá lý tưởng cho nhu cầu sử dụng của người Việt, không chật chội nhưng cũng không quá to để xoay trở. Trục cơ sở khoảng 2.800 mm, động cơ khoảng 2.0 trở lên, nhưng cũng có xe lắp 1.5 turbo như Honda Accord. Phân khúc này có cả sedan và SUV, nhưng sedan ngày càng thất thế và SUV lên ngôi."
+    },
+    {
+        "segment_name": "MPV cỡ nhỏ",
+        "segment_desc": "Các xe MPV cỡ nhỏ thường có chiều dài cơ sở khoảng 2.700-2.800 mm, tức tương đương một chiếc sedan hoặc crossover cỡ C-D. Kích thước này đảm bảo cho MPV có thể xếp 3 hàng ghế. Xpander là cái tên làm sống dậy phân khúc này, bên cạnh đối thủ xuất hiện sau như Suzuki XL7."
+    },
+    {
+        "segment_name": "Xe cỡ vừa hạng C",
+        "segment_desc": "Đây là phân khúc có kích cỡ vừa phải với khách hàng Việt, chiều dài cơ sở khoảng 2.700 mm, động cơ trải dài từ 1.5 tới 2.5, có nhiều biến thể cả sedan, hatchback, crossover/SUV. Mức giá tuỳ từng phom dáng mà trải dài từ khoảng 700 triệu tới hơn 1 tỷ. Trước đây cỡ C chủ yếu là 5 chỗ, nhưng hiện tại có nhiều cấu hình 5+2."
+    },
+    {
+        "segment_name": "Xe nhỏ hạng B",
+        "segment_desc": "Phân khúc B là đoạn thị trường nở rộ trong vài năm gần đây, với cả các dòng sedan và crossover, tuy vậy hatchback cỡ B lại đang dần mất chỗ đứng.  Xe cỡ B thường có trục cơ sở khoảng 2.500-2.600 mm, động cơ 1.3-1.5, giá trải dài 500-700 triệu.   "
+    },
+    {
+        "segment_name": "Xe nhỏ hạng B+/C-",
+        "segment_desc": "Đây là phân khúc lửng, nhằm đánh vào khoảng trống giữa B và C. Với chiều dài cơ sở khoảng trên 2.600 mm nhưng dưới 2.700 mm. Động cơ cũng có thể giao thoa ở cả B và C."
+    }
+]
