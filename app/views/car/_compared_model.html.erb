@@ -1,0 +1,31 @@
+<!-- _compared_model.html.erb -->
+<div class="grid-col-4 ">
+  <% model = Model.find_by(id: model_id) %>
+  <ul>
+    <li>
+        <div class="car-item gray-bg ">
+          <div class="car-image">
+            <img class="img-fluid" src="<%= model.model_main_pic %>" alt="<%= model.model_name %>">
+            <div class="car-overlay-banner">
+              <ul>
+                <li>
+                 <%= link_to "#", class: 'remove-from-compare', data: { model_id: model.id } do %>
+                    <i class="fa fa-minus-circle"></i>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="car-content">
+            <span><a href="#"><%= model.brand.brand_name %></a></span>
+            <!-- Trong file hiển thị danh sách model -->
+            <span><%= link_to model.model_title_name, model_path(model) %></span>
+            <div class="separator"></div>
+            <div class="price">
+              <span class="new-price"><%= model.model_price %> </span>
+            </div>
+          </div>
+        </div>
+    </li>
+  </ul>
+</div>

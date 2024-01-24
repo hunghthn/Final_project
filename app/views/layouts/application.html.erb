@@ -10,15 +10,15 @@
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" />
   
-  <%= stylesheet_link_tag 'bootstrap.min', 'flaticon', 'mega_menu', 'font-awesome.min', 'jquery-ui', 'style', 'responsive', media: 'all' %>
+  <%= stylesheet_link_tag 'bootstrap.min', 'flaticon', 'mega_menu', 'font-awesome.min', 'jquery-ui', 'style', 'responsive','slick','slick-theme','owl.carousel', media: 'all' %>
   <%= javascript_include_tag 'application', defer: true %>
-  <%= javascript_include_tag 'jquery-3.6.0.min', 'popper', 'bootstrap.min', 'mega-menu/mega_menu', 'jquery-ui', 'select/jquery-select', 'magnific-popup/jquery.magnific-popup.min', 'custom' %>
-
+  <%= javascript_include_tag 'jquery-3.6.0.min', 'popper', 'bootstrap.min', 'mega-menu/mega_menu', 'jquery-ui', 'select/jquery-select', 'magnific-popup/jquery.magnific-popup.min', 'custom', 'owl-carousel/owl.carousel.min', 'slick/slick.min','forms/form-validation' %>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
   <%= yield %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 </body>
 </html>

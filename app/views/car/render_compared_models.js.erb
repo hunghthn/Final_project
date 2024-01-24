@@ -1,0 +1,3 @@
+// render_compared_model.js.erb
+$('.grid-row#list-compared').html("<%= j(render partial: 'compared_models', locals: { compared_models: session[:compared_models] }) %>");
+$('#compare-count').text(<%= session[:compared_models].size %>);

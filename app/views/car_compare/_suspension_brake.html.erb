@@ -1,0 +1,28 @@
+<% suspension_brake_attributes = [
+  { label: "Treo trước", attribute: "front_suspension" },
+  { label: "Treo sau", attribute: "rear_suspension" },
+  { label: "Phanh trước", attribute: "front_brakes" },
+  { label: "Phanh sau", attribute: "rear_brakes" },
+  { label: "Hệ thống giảm xóc", attribute: "shock_absorber_system" }
+] %>
+
+<div id="suspension_brake_container">
+  <div class="row pt-4 pb-4">
+    <h4 class="container-title">Hệ thống treo/phanh
+      <i id="toggle-icon" class="fa fa-angle-down"></i>
+    </h4>
+  </div>
+
+  <% suspension_brake_attributes.each do |attr| %>
+    <div class="row pt-1">
+      <div class="col-md-3">
+        <h6><%= attr[:label] %></h6>
+      </div>
+      <% @compared_models.each do |model| %>
+        <div class="col-md-3">
+          <p id="<%= "#{attr[:attribute]}_for_model_#{model.id}" %>"><%= model.trims.first.suspension_brake.public_send(attr[:attribute]) %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

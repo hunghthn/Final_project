@@ -1,0 +1,44 @@
+<% exterior_attributes = [
+  { label: "Đèn chiếu xa", attribute: "headlight_high_beam" },
+  { label: "Đèn chiếu gần", attribute: "headlight_low_beam" },
+  { label: "Đèn ban ngày", attribute: "daytime_running_lights" },
+  { label: "Đèn hậu", attribute: "tail_lights" },
+  { label: "Đèn sương mù", attribute: "fog_lights" },
+  { label: "Đèn pha tự động bật/tắt", attribute: "auto_headlights" },
+  { label: "Đèn pha tự động xa/gần", attribute: "auto_headlight_range_control" },
+  { label: "Đèn pha tự động điều chỉnh góc chiếu", attribute: "auto_headlight_leveling" },
+  { label: "Đèn phanh trên cao", attribute: "high_mounted_stop_light" },
+  { label: "Ống xả", attribute: "exhaust_pipe" },
+  { label: "Gạt mưa tự động", attribute: "automatic_rain_sensing_wipers" },
+  { label: "Ăng ten vây cá", attribute: "shark_fin_antenna" },
+  { label: "Cốp đóng/mở điện", attribute: "power_operated_trunk" },
+  { label: "Mở cốp rảnh tay", attribute: "hands_free_trunk" },
+  { label: "Gương chiếu hậu", attribute: "rearview_mirror" },
+  { label: "Sấy gương chiếu hậu", attribute: "heated_rearview_mirror" },
+  { label: "Gương hậu ngoài tự động chống chói", attribute: "anti_glare_side_mirrors" },
+  { label: "Gương hậu ngoại tự động hạ thấp khi lùi", attribute: "lower_side_mirror_when_reversing" },
+  { label: "Cánh gió sau", attribute: "rear_wind_deflector" },
+  { label: "Giá nóc", attribute: "roof_rack" }
+] %>
+
+<div id="exterior_container">
+  <div class="row pt-4 pb-4">
+    <h4 class="container-title">Ngoại thất
+      <i id="toggle-icon" class="fa fa-angle-down"></i>
+    </h4>
+  </div>
+
+  <% exterior_attributes.each do |attr| %>
+    <div class="row pt-1">
+      <div class="col-md-3">
+        <h6><%= attr[:label] %></h6>
+      </div>
+      <% @compared_models.each do |model| %>
+        <div class="col-md-3">
+          <p id="<%= "#{attr[:attribute]}_for_model_#{model.id}" %>"><%= model.trims.first.exterior.public_send(attr[:attribute]) %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+    

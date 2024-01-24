@@ -1,0 +1,4730 @@
+[
+  {
+      "model_brand": "Mazda",
+      "model_title_name": "CX-5 2023",
+      "prices": [
+        {
+          "name": "2.0 Deluxe",
+          "listed_price": "759 triệu VNĐ",
+          "HN_price": "826.877.000 VNĐ",
+          "TPHCM_price": "819.287.000 VNĐ",
+          "other_price": "800.287.000 VNĐ"
+        },
+        {
+          "name": "2.0 Luxury",
+          "listed_price": "799 triệu VNĐ",
+          "HN_price": "869.277.000 VNĐ",
+          "TPHCM_price": "861.287.000 VNĐ",
+          "other_price": "842.287.000 VNĐ"
+        },
+        {
+          "name": "2.0 Premium",
+          "listed_price": "839 triệu VNĐ",
+          "HN_price": "911.677.000 VNĐ",
+          "TPHCM_price": "903.287.000 VNĐ",
+          "other_price": "884.287.000 VNĐ"
+        },
+        {
+          "name": "2.0 Premium Sport",
+          "listed_price": "859 triệu VNĐ",
+          "HN_price": "932.877.000 VNĐ",
+          "TPHCM_price": "924.287.000 VNĐ",
+          "other_price": "905.287.000 VNĐ"
+        },
+        {
+          "name": "2.0 Premium Exclusive",
+          "listed_price": "879 triệu VNĐ",
+          "HN_price": "954.077.000 VNĐ",
+          "TPHCM_price": "945.287.000 VNĐ",
+          "other_price": "926.287.000 VNĐ"
+        },
+        {
+          "name": "2.5 Signature Sport",
+          "listed_price": "979 triệu VNĐ",
+          "HN_price": "1.060.077.000 VNĐ",
+          "TPHCM_price": "1.050.287.000 VNĐ",
+          "other_price": "1.031.287.000 VNĐ"
+        },
+        {
+          "name": "2.5 Signature Exclusive",
+          "listed_price": "999 triệu VNĐ",
+          "HN_price": "1.081.277.000 VNĐ",
+          "TPHCM_price": "1.071.287.000 VNĐ",
+          "other_price": "1.052.287.000 VNĐ"
+        }
+      ]
+    },
+  {
+    "model_brand": "Mazda",
+    "model_title_name": "CX-8 2022",
+    "prices": [
+      {
+        "name": "2.5 Luxury",
+        "listed_price": "949 triệu VNĐ",
+        "HN_price": "1.028.634.000 VNĐ",
+        "TPHCM_price": "1.019.144.000 VNĐ",
+        "other_price": "1.000.144.000 VNĐ"
+      },
+      {
+        "name": "2.5 Premium",
+        "listed_price": "1 tỷ 029 triệu VNĐ",
+        "HN_price": "1.113.434.000 VNĐ",
+        "TPHCM_price": "1.103.144.000 VNĐ",
+        "other_price": "1.084.144.000 VNĐ"
+      },
+      {
+        "name": "2.5 Premium AWD",
+        "listed_price": "1 tỷ 119 triệu VNĐ",
+        "HN_price": "1.208.834.000 VNĐ",
+        "TPHCM_price": "1.197.644.000 VNĐ",
+        "other_price": "1.178.644.000 VNĐ"
+      },
+      {
+        "name": "2.5 Premium AWD (6S)",
+        "listed_price": "1 tỷ 129 triệu VNĐ",
+        "HN_price": "1.219.434.000 VNĐ",
+        "TPHCM_price": "1.208.144.000 VNĐ",
+        "other_price": "1.189.144.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mazda",
+    "model_title_name": "Mazda6 2021",
+    "prices": [
+      {
+        "name": "2.0 Premium",
+        "listed_price": "779 triệu VNĐ",
+        "HN_price": "894.817.000 VNĐ",
+        "TPHCM_price": "879.237.000 VNĐ",
+        "other_price": "860.237.000 VNĐ"
+      },
+      {
+        "name": "2.0 Premium GTCCC",
+        "listed_price": "830 triệu VNĐ",
+        "HN_price": "951.937.000 VNĐ",
+        "TPHCM_price": "935.337.000 VNĐ",
+        "other_price": "916.337.000 VNĐ"
+      },
+      {
+        "name": "2.5 Signature Premium GTCCC",
+        "listed_price": "914 triệu VNĐ",
+        "HN_price": "1.046.017.000 VNĐ",
+        "TPHCM_price": "1.027.737.000 VNĐ",
+        "other_price": "1.008.737.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Land Rover",
+    "model_title_name": "Range Rover 2021",
+    "prices": [
+      {
+        "name": "Range Rover HSE (Standard Wheelbase)",
+        "listed_price": "7 tỷ 895 triệu VNĐ",
+        "HN_price": "8.864.737.000 VNĐ",
+        "TPHCM_price": "8.706.837.000 VNĐ",
+        "other_price": "8.687.837.000 VNĐ"
+      },
+      {
+        "name": "Autobiography (Long Wheelbase)",
+        "listed_price": "10 tỷ 760 triệu VNĐ",
+        "HN_price": "12.073.537.000 VNĐ",
+        "TPHCM_price": "11.858.337.000 VNĐ",
+        "other_price": "11.839.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "AMG SL 2024",
+    "prices": [
+      {
+        "name": "SL 43",
+        "listed_price": "6 tỷ 959 triệu VNĐ",
+        "HN_price": "7.816.417.000 VNĐ",
+        "TPHCM_price": "7.677.237.000 VNĐ",
+        "other_price": "7.658.237.000 VNĐ"
+      },
+      {
+        "name": "SL 63 S E Performance",
+        "listed_price": "12 tỷ 290 triệu VNĐ",
+        "HN_price": "13.787.137.000 VNĐ",
+        "TPHCM_price": "13.541.337.000 VNĐ",
+        "other_price": "13.522.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "GT-Coupe 2021",
+    "prices": [
+      {
+        "name": "AMG GT 53 4MATIC+",
+        "listed_price": "6 tỷ 719 triệu VNĐ",
+        "HN_price": "7.547.617.000 VNĐ",
+        "TPHCM_price": "7.413.237.000 VNĐ",
+        "other_price": "7.394.237.000 VNĐ"
+      },
+      {
+        "name": "AMG GT R",
+        "listed_price": "11 tỷ 590 triệu VNĐ",
+        "HN_price": "13.003.137.000 VNĐ",
+        "TPHCM_price": "12.771.337.000 VNĐ",
+        "other_price": "12.752.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": " GLS 2021",
+    "prices": [
+      {
+        "name": "450 4MATIC",
+        "listed_price": "5 tỷ 249 triệu VNĐ",
+        "HN_price": "5.901.574.000 VNĐ",
+        "TPHCM_price": "5.796.594.000 VNĐ",
+        "other_price": "5.777.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "MG",
+    "model_title_name": "RX5 2023",
+    "prices": [
+      {
+        "name": "1.5 STD",
+        "listed_price": "739 triệu VNĐ",
+        "HN_price": "850.017.000 VNĐ",
+        "TPHCM_price": "835.237.000 VNĐ",
+        "other_price": "816.237.000 VNĐ"
+      },
+      {
+        "name": "1.5 LUX",
+        "listed_price": "829 triệu VNĐ",
+        "HN_price": "950.817.000 VNĐ",
+        "TPHCM_price": "934.237.000 VNĐ",
+        "other_price": "915.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "LS 2021",
+    "prices": [
+      {
+        "name": "LS500",
+        "listed_price": "7 tỷ 650 triệu VNĐ",
+        "HN_price": "8.590.337.000 VNĐ",
+        "TPHCM_price": "8.437.337.000 VNĐ",
+        "other_price": "8.418.337.000 VNĐ"
+      },
+      {
+        "name": "LS500h",
+        "listed_price": "8 tỷ 360 triệu VNĐ",
+        "HN_price": "9.385.537.000 VNĐ",
+        "TPHCM_price": "9.218.337.000 VNĐ",
+        "other_price": "9.199.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "LX 2022",
+    "prices": [
+      {
+        "name": "600 Urban",
+        "listed_price": "8 tỷ 500 triệu VNĐ",
+        "HN_price": "9.542.694.000 VNĐ",
+        "TPHCM_price": "9.372.694.000 VNĐ",
+        "other_price": "9.353.694.000 VNĐ"
+      },
+      {
+        "name": "600 F Sport",
+        "listed_price": "8 tỷ 750 triệu VNĐ",
+        "HN_price": "9.822.337.000 VNĐ",
+        "TPHCM_price": "9.647.337.000 VNĐ",
+        "other_price": "9.628.337.000 VNĐ"
+      },
+      {
+        "name": "600 VIP",
+        "listed_price": "9 tỷ 610 triệu VNĐ",
+        "HN_price": "10.785.537.000 VNĐ",
+        "TPHCM_price": "10.593.337.000 VNĐ",
+        "other_price": "10.574.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Land Rover",
+    "model_title_name": "Range Rover Sport 2023",
+    "prices": [
+      {
+        "name": "Dynamic SE 3.0 I6 P360",
+        "listed_price": "7 tỷ 329 triệu VNĐ",
+        "HN_price": "8.230.817.000 VNĐ",
+        "TPHCM_price": "8.084.237.000 VNĐ",
+        "other_price": "8.065.237.000 VNĐ"
+      },
+      {
+        "name": "Dynamic HSE 3.0 I6 P360",
+        "listed_price": "7 tỷ 899 triệu VNĐ",
+        "HN_price": "8.869.217.000 VNĐ",
+        "TPHCM_price": "8.711.237.000 VNĐ",
+        "other_price": "8.692.237.000 VNĐ"
+      },
+      {
+        "name": "Autobiography 3.0 I6 P360",
+        "listed_price": "8 tỷ 269 triệu VNĐ",
+        "HN_price": "9.283.617.000 VNĐ",
+        "TPHCM_price": "9.118.237.000 VNĐ",
+        "other_price": "9.099.237.000 VNĐ"
+      },
+      {
+        "name": "First Edition SE 3.0 I6 P400",
+        "listed_price": "8 tỷ 569 triệu VNĐ",
+        "HN_price": "9.619.617.000 VNĐ",
+        "TPHCM_price": "9.448.237.000 VNĐ",
+        "other_price": "9.429.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Land Rover",
+    "model_title_name": "Discovery Sport 2021",
+    "prices": [
+      {
+        "name": "S",
+        "listed_price": "4 tỷ 285 triệu VNĐ",
+        "HN_price": "4.821.894.000 VNĐ",
+        "TPHCM_price": "4.736.194.000 VNĐ",
+        "other_price": "4.717.194.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jaguar",
+    "model_title_name": "E-Pace 2021",
+    "prices": [
+      {
+        "name": "E-Pace S",
+        "listed_price": "3 tỷ VNĐ",
+        "HN_price": "3.382.337.000 VNĐ",
+        "TPHCM_price": "3.322.337.000 VNĐ",
+        "other_price": "3.303.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Land Rover",
+    "model_title_name": "Defender 130 2023",
+    "prices": [
+      {
+        "name": "SE P300",
+        "listed_price": "5 tỷ 989 triệu VNĐ",
+        "HN_price": "6.730.374.000 VNĐ",
+        "TPHCM_price": "6.610.594.000 VNĐ",
+        "other_price": "6.591.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Land Rover",
+    "model_title_name": "Discovery 2021",
+    "prices": [
+      {
+        "name": "Discovery S",
+        "listed_price": "4 tỷ 520 triệu VNĐ",
+        "HN_price": "5.085.094.000 VNĐ",
+        "TPHCM_price": "4.994.694.000 VNĐ",
+        "other_price": "4.975.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volvo",
+    "model_title_name": "XC90 2021",
+    "prices": [
+      {
+        "name": "Inscription",
+        "listed_price": "3 tỷ 890 triệu VNĐ",
+        "HN_price": "4.379.494.000 VNĐ",
+        "TPHCM_price": "4.301.694.000 VNĐ",
+        "other_price": "4.282.694.000 VNĐ"
+      },
+      {
+        "name": "Recharge",
+        "listed_price": "4 tỷ 599 triệu VNĐ",
+        "HN_price": "5.173.574.000 VNĐ",
+        "TPHCM_price": "5.081.594.000 VNĐ",
+        "other_price": "5.062.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volvo",
+    "model_title_name": "V60 Cross Country 2022",
+    "prices": [
+      {
+        "name": "B5 AWD",
+        "listed_price": "2 tỷ 550 triệu VNĐ",
+        "HN_price": "2.878.337.000 VNĐ",
+        "TPHCM_price": "2.827.337.000 VNĐ",
+        "other_price": "2.808.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volvo",
+    "model_title_name": "V90 2021",
+    "prices": [
+      {
+        "name": "Cross Country",
+        "listed_price": "3 tỷ 090 triệu VNĐ",
+        "HN_price": "3.483.137.000 VNĐ",
+        "TPHCM_price": "3.421.337.000 VNĐ",
+        "other_price": "3.402.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Wuling",
+    "model_title_name": "Hongguang Mini EV",
+    "prices": [
+      {
+        "name": "Tiêu chuẩn (pin 9,6 kWh)",
+        "listed_price": "239 triệu VNĐ",
+        "HN_price": "261.337.000 VNĐ",
+        "TPHCM_price": "261.337.000 VNĐ",
+        "other_price": "242.337.000 VNĐ"
+      },
+      {
+        "name": "Nâng cao (pin 9,6 kWh)",
+        "listed_price": "255 triệu VNĐ",
+        "HN_price": "277.337.000 VNĐ",
+        "TPHCM_price": "277.337.000 VNĐ",
+        "other_price": "258.337.000 VNĐ"
+      },
+      {
+        "name": "Tiêu chuẩn (pin 13,9 kWh)",
+        "listed_price": "265 triệu VNĐ",
+        "HN_price": "287.337.000 VNĐ",
+        "TPHCM_price": "287.337.000 VNĐ",
+        "other_price": "268.337.000 VNĐ"
+      },
+      {
+        "name": "Nâng cao (pin 13,9 kWh)",
+        "listed_price": "279 triệu VNĐ",
+        "HN_price": "301.337.000 VNĐ",
+        "TPHCM_price": "301.337.000 VNĐ",
+        "other_price": "282.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "VinFast",
+    "model_title_name": "VF 7 2024",
+    "prices": [
+      {
+        "name": "Base (không gồm pin)",
+        "listed_price": "850 triệu VNĐ",
+        "HN_price": "872.337.000 VNĐ",
+        "TPHCM_price": "872.337.000 VNĐ",
+        "other_price": "853.337.000 VNĐ"
+      },
+      {
+        "name": "Base (đã gồm pin)",
+        "listed_price": "999 triệu VNĐ",
+        "HN_price": "1.021.337.000 VNĐ",
+        "TPHCM_price": "1.021.337.000 VNĐ",
+        "other_price": "1.002.337.000 VNĐ"
+      },
+      {
+        "name": "Plus (không gồm pin)",
+        "listed_price": "999 triệu VNĐ",
+        "HN_price": "1.021.337.000 VNĐ",
+        "TPHCM_price": "1.021.337.000 VNĐ",
+        "other_price": "1.002.337.000 VNĐ"
+      },
+      {
+        "name": "Plus (đã gồm pin)",
+        "listed_price": "1 tỷ 199 triệu VNĐ",
+        "HN_price": "1.221.337.000 VNĐ",
+        "TPHCM_price": "1.221.337.000 VNĐ",
+        "other_price": "1.202.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "Teramont 2023",
+    "prices": [
+      {
+        "name": "Teramont",
+        "listed_price": "2 tỷ 499 triệu VNĐ",
+        "HN_price": "2.821.574.000 VNĐ",
+        "TPHCM_price": "2.771.594.000 VNĐ",
+        "other_price": "2.752.594.000 VNĐ"
+      },
+      {
+        "name": "Teramont",
+        "listed_price": "2 tỷ 499 triệu VNĐ",
+        "HN_price": "2.821.574.000 VNĐ",
+        "TPHCM_price": "2.771.594.000 VNĐ",
+        "other_price": "2.752.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "Tiguan 2022",
+    "prices": [
+      {
+        "name": "Tiguan 2022",
+        "listed_price": "1 tỷ 999 triệu VNĐ",
+        "HN_price": "2.261.574.000 VNĐ",
+        "TPHCM_price": "2.221.594.000 VNĐ",
+        "other_price": "2.202.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "VinFast",
+    "model_title_name": "VF 9 2023",
+    "prices": [
+      {
+        "name": "Eco",
+        "listed_price": "1 tỷ 491 triệu VNĐ",
+        "HN_price": "1.513.694.000 VNĐ",
+        "TPHCM_price": "1.513.694.000 VNĐ",
+        "other_price": "1.494.694.000 VNĐ"
+      },
+      {
+        "name": "Plus",
+        "listed_price": "1 tỷ 685 triệu VNĐ",
+        "HN_price": "1.707.694.000 VNĐ",
+        "TPHCM_price": "1.707.694.000 VNĐ",
+        "other_price": "1.688.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "Viloran 2023",
+    "prices": [
+      {
+        "name": "Premium",
+        "listed_price": "1 tỷ 989 triệu VNĐ",
+        "HN_price": "2.250.374.000 VNĐ",
+        "TPHCM_price": "2.210.594.000 VNĐ",
+        "other_price": "2.191.594.000 VNĐ"
+      },
+      {
+        "name": "Luxury",
+        "listed_price": "2 tỷ 188 triệu VNĐ",
+        "HN_price": "2.473.254.000 VNĐ",
+        "TPHCM_price": "2.429.494.000 VNĐ",
+        "other_price": "2.410.494.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "VinFast",
+    "model_title_name": "VF e34 2021",
+    "prices": [
+      {
+        "name": "Tiêu chuẩn",
+        "listed_price": "710 triệu VNĐ",
+        "HN_price": "732.337.000 VNĐ",
+        "TPHCM_price": "732.337.000 VNĐ",
+        "other_price": "713.337.000 VNĐ"
+      },
+      {
+        "name": "Tiêu chuẩn",
+        "listed_price": "710 triệu VNĐ",
+        "HN_price": "732.337.000 VNĐ",
+        "TPHCM_price": "732.337.000 VNĐ",
+        "other_price": "713.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "VinFast",
+    "model_title_name": "VF 5 2023",
+    "prices": [
+      {
+        "name": "Plus",
+        "listed_price": "458 triệu VNĐ",
+        "HN_price": "480.337.000 VNĐ",
+        "TPHCM_price": "480.337.000 VNĐ",
+        "other_price": "461.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "VinFast",
+    "model_title_name": "VF 6 2023",
+    "prices": [
+      {
+        "name": "Base",
+        "listed_price": "675 triệu VNĐ",
+        "HN_price": "697.337.000 VNĐ",
+        "TPHCM_price": "697.337.000 VNĐ",
+        "other_price": "678.337.000 VNĐ"
+      },
+      {
+        "name": "Plus",
+        "listed_price": "765 triệu VNĐ",
+        "HN_price": "787.337.000 VNĐ",
+        "TPHCM_price": "787.337.000 VNĐ",
+        "other_price": "768.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "Passat 2019",
+    "prices": [
+      {
+        "name": "BlueMotion High",
+        "listed_price": "1 tỷ 480 triệu VNĐ",
+        "HN_price": "1.679.937.000 VNĐ",
+        "TPHCM_price": "1.650.337.000 VNĐ",
+        "other_price": "1.631.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "VinFast",
+    "model_title_name": "VF 8 2022",
+    "prices": [
+      {
+        "name": "VF8 Eco",
+        "listed_price": "1 tỷ 290 triệu VNĐ",
+        "HN_price": "1.312.337.000 VNĐ",
+        "TPHCM_price": "1.312.337.000 VNĐ",
+        "other_price": "1.293.337.000 VNĐ"
+      },
+      {
+        "name": "VF8 Plus",
+        "listed_price": "1 tỷ 470 triệu VNĐ",
+        "HN_price": "1.492.337.000 VNĐ",
+        "TPHCM_price": "1.492.337.000 VNĐ",
+        "other_price": "1.473.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "Touareg 2023",
+    "prices": [
+      {
+        "name": "Elegance",
+        "listed_price": "2 tỷ 999 triệu VNĐ",
+        "HN_price": "3.381.217.000 VNĐ",
+        "TPHCM_price": "3.321.237.000 VNĐ",
+        "other_price": "3.302.237.000 VNĐ"
+      },
+      {
+        "name": "Luxury",
+        "listed_price": "3 tỷ 499 triệu VNĐ",
+        "HN_price": "3.941.217.000 VNĐ",
+        "TPHCM_price": "3.871.237.000 VNĐ",
+        "other_price": "3.852.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "T-Cross 2022",
+    "prices": [
+      {
+        "name": "Elegance",
+        "listed_price": "1 tỷ 099 triệu VNĐ",
+        "HN_price": "1.253.217.000 VNĐ",
+        "TPHCM_price": "1.231.237.000 VNĐ",
+        "other_price": "1.212.237.000 VNĐ"
+      },
+      {
+        "name": "Luxury",
+        "listed_price": "1 tỷ 299 triệu VNĐ",
+        "HN_price": "1.477.217.000 VNĐ",
+        "TPHCM_price": "1.451.237.000 VNĐ",
+        "other_price": "1.432.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "Virtus 2023",
+    "prices": [
+      {
+        "name": "Elegancy",
+        "listed_price": "949 triệu VNĐ",
+        "HN_price": "1.085.217.000 VNĐ",
+        "TPHCM_price": "1.066.237.000 VNĐ",
+        "other_price": "1.047.237.000 VNĐ"
+      },
+      {
+        "name": "Luxury",
+        "listed_price": "1 tỷ 069 triệu VNĐ",
+        "HN_price": "1.219.617.000 VNĐ",
+        "TPHCM_price": "1.198.237.000 VNĐ",
+        "other_price": "1.179.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volvo",
+    "model_title_name": "XC60 2022",
+    "prices": [
+      {
+        "name": "Inscription",
+        "listed_price": "2 tỷ 190 triệu VNĐ",
+        "HN_price": "2.475.137.000 VNĐ",
+        "TPHCM_price": "2.431.337.000 VNĐ",
+        "other_price": "2.412.337.000 VNĐ"
+      },
+      {
+        "name": "R-Design",
+        "listed_price": "2 tỷ 190 triệu VNĐ",
+        "HN_price": "2.475.137.000 VNĐ",
+        "TPHCM_price": "2.431.337.000 VNĐ",
+        "other_price": "2.412.337.000 VNĐ"
+      },
+      {
+        "name": "T8 Recharge",
+        "listed_price": "2 tỷ 750 triệu VNĐ",
+        "HN_price": "3.102.337.000 VNĐ",
+        "TPHCM_price": "3.047.337.000 VNĐ",
+        "other_price": "3.028.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Palisade 2023",
+    "prices": [
+      {
+        "name": "Exclusive 7 chỗ",
+        "listed_price": "1 tỷ 469 triệu VNĐ",
+        "HN_price": "1.579.834.000 VNĐ",
+        "TPHCM_price": "1.565.144.000 VNĐ",
+        "other_price": "1.546.144.000 VNĐ"
+      },
+      {
+        "name": "Exclusive 6 chỗ",
+        "listed_price": "1 tỷ 479 triệu VNĐ",
+        "HN_price": "1.590.434.000 VNĐ",
+        "TPHCM_price": "1.575.644.000 VNĐ",
+        "other_price": "1.556.644.000 VNĐ"
+      },
+      {
+        "name": "Prestige 7 chỗ",
+        "listed_price": "1 tỷ 559 triệu VNĐ",
+        "HN_price": "1.675.234.000 VNĐ",
+        "TPHCM_price": "1.659.644.000 VNĐ",
+        "other_price": "1.640.644.000 VNĐ"
+      },
+      {
+        "name": "Prestige 6 chỗ",
+        "listed_price": "1 tỷ 589 triệu VNĐ",
+        "HN_price": "1.707.034.000 VNĐ",
+        "TPHCM_price": "1.691.144.000 VNĐ",
+        "other_price": "1.672.144.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Ioniq 5 2023",
+    "prices": [
+      {
+        "name": "Exclusive",
+        "listed_price": "1 tỷ 300 triệu VNĐ",
+        "HN_price": "1.322.337.000 VNĐ",
+        "TPHCM_price": "1.322.337.000 VNĐ",
+        "other_price": "1.303.337.000 VNĐ"
+      },
+      {
+        "name": "Prestige",
+        "listed_price": "1 tỷ 450 triệu VNĐ",
+        "HN_price": "1.472.337.000 VNĐ",
+        "TPHCM_price": "1.472.337.000 VNĐ",
+        "other_price": "1.453.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volvo",
+    "model_title_name": "XC40 2021",
+    "prices": [
+      {
+        "name": "R-Design",
+        "listed_price": "1 tỷ 750 triệu VNĐ",
+        "HN_price": "1.982.337.000 VNĐ",
+        "TPHCM_price": "1.947.337.000 VNĐ",
+        "other_price": "1.928.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Stargazer 2022",
+    "prices": [
+      {
+        "name": "1.5 Tiêu chuẩn",
+        "listed_price": "575 triệu VNĐ",
+        "HN_price": "666.694.000 VNĐ",
+        "TPHCM_price": "655.194.000 VNĐ",
+        "other_price": "636.194.000 VNĐ"
+      },
+      {
+        "name": "1.5 Đặc biệt",
+        "listed_price": "625 triệu VNĐ",
+        "HN_price": "722.694.000 VNĐ",
+        "TPHCM_price": "710.194.000 VNĐ",
+        "other_price": "691.194.000 VNĐ"
+      },
+      {
+        "name": "1.5 Cao cấp",
+        "listed_price": "675 triệu VNĐ",
+        "HN_price": "778.694.000 VNĐ",
+        "TPHCM_price": "765.194.000 VNĐ",
+        "other_price": "746.194.000 VNĐ"
+      },
+      {
+        "name": "1.5 Cao cấp 6 chỗ",
+        "listed_price": "685 triệu VNĐ",
+        "HN_price": "789.894.000 VNĐ",
+        "TPHCM_price": "776.194.000 VNĐ",
+        "other_price": "757.194.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volkswagen",
+    "model_title_name": "Polo 2022",
+    "prices": [
+      {
+        "name": "Sport Edition",
+        "listed_price": "699 triệu VNĐ",
+        "HN_price": "805.217.000 VNĐ",
+        "TPHCM_price": "791.237.000 VNĐ",
+        "other_price": "772.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Volvo",
+    "model_title_name": "S90 2021",
+    "prices": [
+      {
+        "name": "Inscription",
+        "listed_price": "2 tỷ 150 triệu VNĐ",
+        "HN_price": "2.430.337.000 VNĐ",
+        "TPHCM_price": "2.387.337.000 VNĐ",
+        "other_price": "2.368.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Tucson 2022",
+    "prices": [
+      {
+        "name": "2.0 Tiêu chuẩn",
+        "listed_price": "799 triệu VNĐ",
+        "HN_price": "869.277.000 VNĐ",
+        "TPHCM_price": "861.287.000 VNĐ",
+        "other_price": "842.287.000 VNĐ"
+      },
+      {
+        "name": "2.0 Xăng Đặc biệt",
+        "listed_price": "879 triệu VNĐ",
+        "HN_price": "954.077.000 VNĐ",
+        "TPHCM_price": "945.287.000 VNĐ",
+        "other_price": "926.287.000 VNĐ"
+      },
+      {
+        "name": "1.6 T-GDi Đặc biệt",
+        "listed_price": "959 triệu VNĐ",
+        "HN_price": "1.038.877.000 VNĐ",
+        "TPHCM_price": "1.029.287.000 VNĐ",
+        "other_price": "1.010.287.000 VNĐ"
+      },
+      {
+        "name": "2.0 Diesel Đặc biệt",
+        "listed_price": "959 triệu VNĐ",
+        "HN_price": "1.038.877.000 VNĐ",
+        "TPHCM_price": "1.029.287.000 VNĐ",
+        "other_price": "1.010.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Santa Fe 2023",
+    "prices": [
+      {
+        "name": "2.5 Xăng",
+        "listed_price": "1 tỷ 029 triệu VNĐ",
+        "HN_price": "1.113.434.000 VNĐ",
+        "TPHCM_price": "1.103.144.000 VNĐ",
+        "other_price": "1.084.144.000 VNĐ"
+      },
+      {
+        "name": "2.2 Dầu",
+        "listed_price": "1 tỷ 120 triệu VNĐ",
+        "HN_price": "1.209.894.000 VNĐ",
+        "TPHCM_price": "1.198.694.000 VNĐ",
+        "other_price": "1.179.694.000 VNĐ"
+      },
+      {
+        "name": "2.5 Xăng Cao Cấp",
+        "listed_price": "1 tỷ 210 triệu VNĐ",
+        "HN_price": "1.305.294.000 VNĐ",
+        "TPHCM_price": "1.293.194.000 VNĐ",
+        "other_price": "1.274.194.000 VNĐ"
+      },
+      {
+        "name": "2.2 Dầu Cao Cấp",
+        "listed_price": "1 tỷ 269 triệu VNĐ",
+        "HN_price": "1.367.834.000 VNĐ",
+        "TPHCM_price": "1.355.144.000 VNĐ",
+        "other_price": "1.336.144.000 VNĐ"
+      },
+      {
+        "name": "1.6 Xăng hybrid",
+        "listed_price": "1 tỷ 369 triệu VNĐ",
+        "HN_price": "1.473.834.000 VNĐ",
+        "TPHCM_price": "1.460.144.000 VNĐ",
+        "other_price": "1.441.144.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Custin 2023",
+    "prices": [
+      {
+        "name": "1.5 Tiêu chuẩn",
+        "listed_price": "850 triệu VNĐ",
+        "HN_price": "923.694.000 VNĐ",
+        "TPHCM_price": "915.194.000 VNĐ",
+        "other_price": "896.194.000 VNĐ"
+      },
+      {
+        "name": "1.5 Ðặc biệt",
+        "listed_price": "945 triệu VNĐ",
+        "HN_price": "1.024.394.000 VNĐ",
+        "TPHCM_price": "1.014.944.000 VNĐ",
+        "other_price": "995.944.000 VNĐ"
+      },
+      {
+        "name": "2.0 Cao cấp",
+        "listed_price": "999 triệu VNĐ",
+        "HN_price": "1.081.634.000 VNĐ",
+        "TPHCM_price": "1.071.644.000 VNĐ",
+        "other_price": "1.052.644.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Elantra 2022",
+    "prices": [
+      {
+        "name": "1.6 AT Tiêu chuẩn",
+        "listed_price": "599 triệu VNĐ",
+        "HN_price": "657.277.000 VNĐ",
+        "TPHCM_price": "651.287.000 VNĐ",
+        "other_price": "632.287.000 VNĐ"
+      },
+      {
+        "name": "1.6 AT Đặc biệt",
+        "listed_price": "669 triệu VNĐ",
+        "HN_price": "731.477.000 VNĐ",
+        "TPHCM_price": "724.787.000 VNĐ",
+        "other_price": "705.787.000 VNĐ"
+      },
+      {
+        "name": "2.0 AT Cao cấp",
+        "listed_price": "729 triệu VNĐ",
+        "HN_price": "795.077.000 VNĐ",
+        "TPHCM_price": "787.787.000 VNĐ",
+        "other_price": "768.787.000 VNĐ"
+      },
+      {
+        "name": "N-Line",
+        "listed_price": "799 triệu VNĐ",
+        "HN_price": "869.277.000 VNĐ",
+        "TPHCM_price": "861.287.000 VNĐ",
+        "other_price": "842.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jeep",
+    "model_title_name": "Grand Cherokee L 2023",
+    "prices": [
+      {
+        "name": "Limited",
+        "listed_price": "6 tỷ 380 triệu VNĐ",
+        "HN_price": "7.168.294.000 VNĐ",
+        "TPHCM_price": "7.040.694.000 VNĐ",
+        "other_price": "7.021.694.000 VNĐ"
+      },
+      {
+        "name": "Summit Reserved",
+        "listed_price": "6 tỷ 888 triệu VNĐ",
+        "HN_price": "7.737.254.000 VNĐ",
+        "TPHCM_price": "7.599.494.000 VNĐ",
+        "other_price": "7.580.494.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Creta 2022",
+    "prices": [
+      {
+        "name": "1.5 Tiêu chuẩn",
+        "listed_price": "640 triệu VNĐ",
+        "HN_price": "739.137.000 VNĐ",
+        "TPHCM_price": "726.337.000 VNĐ",
+        "other_price": "707.337.000 VNĐ"
+      },
+      {
+        "name": "1.5 Đặc biệt",
+        "listed_price": "690 triệu VNĐ",
+        "HN_price": "795.137.000 VNĐ",
+        "TPHCM_price": "781.337.000 VNĐ",
+        "other_price": "762.337.000 VNĐ"
+      },
+      {
+        "name": "1.5 Cao cấp",
+        "listed_price": "740 triệu VNĐ",
+        "HN_price": "851.137.000 VNĐ",
+        "TPHCM_price": "836.337.000 VNĐ",
+        "other_price": "817.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Venue 2023",
+    "prices": [
+      {
+        "name": "Tiêu chuẩn",
+        "listed_price": "539 triệu VNĐ",
+        "HN_price": "593.677.000 VNĐ",
+        "TPHCM_price": "588.287.000 VNĐ",
+        "other_price": "569.287.000 VNĐ"
+      },
+      {
+        "name": "Đặc biệt",
+        "listed_price": "579 triệu VNĐ",
+        "HN_price": "636.077.000 VNĐ",
+        "TPHCM_price": "630.287.000 VNĐ",
+        "other_price": "611.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "Accent 2021",
+    "prices": [
+      {
+        "name": "1.4 MT Tiêu chuẩn",
+        "listed_price": "426 triệu VNĐ",
+        "HN_price": "473.897.000 VNĐ",
+        "TPHCM_price": "469.637.000 VNĐ",
+        "other_price": "450.637.000 VNĐ"
+      },
+      {
+        "name": "1.4 MT",
+        "listed_price": "472 triệu VNĐ",
+        "HN_price": "522.657.000 VNĐ",
+        "TPHCM_price": "517.937.000 VNĐ",
+        "other_price": "498.937.000 VNĐ"
+      },
+      {
+        "name": "1.4 AT",
+        "listed_price": "501 triệu VNĐ",
+        "HN_price": "553.397.000 VNĐ",
+        "TPHCM_price": "548.387.000 VNĐ",
+        "other_price": "529.387.000 VNĐ"
+      },
+      {
+        "name": "1.4 AT Đặc biệt",
+        "listed_price": "542 triệu VNĐ",
+        "HN_price": "596.857.000 VNĐ",
+        "TPHCM_price": "591.437.000 VNĐ",
+        "other_price": "572.437.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_title_name": "i10 2021",
+    "prices": [
+      {
+        "name": "1.2 MT Tiêu chuẩn",
+        "listed_price": "360 triệu VNĐ",
+        "HN_price": "403.937.000 VNĐ",
+        "TPHCM_price": "400.337.000 VNĐ",
+        "other_price": "381.337.000 VNĐ"
+      },
+      {
+        "name": "Sedan 1.2 MT tiêu chuẩn",
+        "listed_price": "380 triệu VNĐ",
+        "HN_price": "425.137.000 VNĐ",
+        "TPHCM_price": "421.337.000 VNĐ",
+        "other_price": "402.337.000 VNĐ"
+      },
+      {
+        "name": "1.2 MT",
+        "listed_price": "405 triệu VNĐ",
+        "HN_price": "451.637.000 VNĐ",
+        "TPHCM_price": "447.587.000 VNĐ",
+        "other_price": "428.587.000 VNĐ"
+      },
+      {
+        "name": "Sedan 1.2 MT",
+        "listed_price": "425 triệu VNĐ",
+        "HN_price": "472.837.000 VNĐ",
+        "TPHCM_price": "468.587.000 VNĐ",
+        "other_price": "449.587.000 VNĐ"
+      },
+      {
+        "name": "1.2 AT",
+        "listed_price": "435 triệu VNĐ",
+        "HN_price": "483.437.000 VNĐ",
+        "TPHCM_price": "479.087.000 VNĐ",
+        "other_price": "460.087.000 VNĐ"
+      },
+      {
+        "name": "Sedan 1.2 AT",
+        "listed_price": "455 triệu VNĐ",
+        "HN_price": "504.637.000 VNĐ",
+        "TPHCM_price": "500.087.000 VNĐ",
+        "other_price": "481.087.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jeep",
+    "model_title_name": "Wrangler 2023",
+    "prices": [
+      {
+        "name": "Willys/Islander",
+        "listed_price": "3 tỷ 766 triệu VNĐ",
+        "HN_price": "4.240.257.000 VNĐ",
+        "TPHCM_price": "4.164.937.000 VNĐ",
+        "other_price": "4.145.937.000 VNĐ"
+      },
+      {
+        "name": "Sahara",
+        "listed_price": "3 tỷ 868 triệu VNĐ",
+        "HN_price": "4.354.497.000 VNĐ",
+        "TPHCM_price": "4.277.137.000 VNĐ",
+        "other_price": "4.258.137.000 VNĐ"
+      },
+      {
+        "name": "Rubicon (2 cửa)",
+        "listed_price": "4 tỷ 088 triệu VNĐ",
+        "HN_price": "4.600.897.000 VNĐ",
+        "TPHCM_price": "4.519.137.000 VNĐ",
+        "other_price": "4.500.137.000 VNĐ"
+      },
+      {
+        "name": "Rubicon (4 cửa)",
+        "listed_price": "4 tỷ 088 triệu VNĐ",
+        "HN_price": "4.600.897.000 VNĐ",
+        "TPHCM_price": "4.519.137.000 VNĐ",
+        "other_price": "4.500.137.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jaguar",
+    "model_title_name": "XE 2021",
+    "prices": [
+      {
+        "name": "S",
+        "listed_price": "3 tỷ 649 triệu VNĐ",
+        "HN_price": "4.109.217.000 VNĐ",
+        "TPHCM_price": "4.036.237.000 VNĐ",
+        "other_price": "4.017.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jeep",
+    "model_title_name": "Gladiator 2023",
+    "prices": [
+      {
+        "name": "Rubicon",
+        "listed_price": "4 tỷ 088 triệu VNĐ",
+        "HN_price": "4.404.673.000 VNĐ",
+        "TPHCM_price": "4.355.617.000 VNĐ",
+        "other_price": "4.336.617.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jaguar",
+    "model_title_name": "XF 2021",
+    "prices": [
+      {
+        "name": "R-Dynamic SE",
+        "listed_price": "3 tỷ 119 triệu VNĐ",
+        "HN_price": "3.515.617.000 VNĐ",
+        "TPHCM_price": "3.453.237.000 VNĐ",
+        "other_price": "3.434.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jaguar",
+    "model_title_name": "F-Type 2021",
+    "prices": [
+      {
+        "name": "Coupe 2.0",
+        "listed_price": "5 tỷ 650 triệu VNĐ",
+        "HN_price": "6.350.337.000 VNĐ",
+        "TPHCM_price": "6.237.337.000 VNĐ",
+        "other_price": "6.218.337.000 VNĐ"
+      },
+      {
+        "name": "Convertible 2.0",
+        "listed_price": "6 tỷ 195 triệu VNĐ",
+        "HN_price": "6.960.737.000 VNĐ",
+        "TPHCM_price": "6.836.837.000 VNĐ",
+        "other_price": "6.817.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "RX 2023",
+    "prices": [
+      {
+        "name": "350 Premium",
+        "listed_price": "3 tỷ 430 triệu VNĐ",
+        "HN_price": "3.863.937.000 VNĐ",
+        "TPHCM_price": "3.795.337.000 VNĐ",
+        "other_price": "3.776.337.000 VNĐ"
+      },
+      {
+        "name": "350 Luxury",
+        "listed_price": "4 tỷ 330 triệu VNĐ",
+        "HN_price": "4.871.937.000 VNĐ",
+        "TPHCM_price": "4.785.337.000 VNĐ",
+        "other_price": "4.766.337.000 VNĐ"
+      },
+      {
+        "name": "350 F Sport",
+        "listed_price": "4 tỷ 720 triệu VNĐ",
+        "HN_price": "5.308.737.000 VNĐ",
+        "TPHCM_price": "5.214.337.000 VNĐ",
+        "other_price": "5.195.337.000 VNĐ"
+      },
+      {
+        "name": "500h F Sport Performance",
+        "listed_price": "4 tỷ 940 triệu VNĐ",
+        "HN_price": "5.555.137.000 VNĐ",
+        "TPHCM_price": "5.456.337.000 VNĐ",
+        "other_price": "5.437.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Jaguar",
+    "model_title_name": "F-Pace 2021",
+    "prices": [
+      {
+        "name": "S",
+        "listed_price": "3 tỷ 649 triệu VNĐ",
+        "HN_price": "4.109.217.000 VNĐ",
+        "TPHCM_price": "4.036.237.000 VNĐ",
+        "other_price": "4.017.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "LM 2021",
+    "prices": [
+      {
+        "name": "7 seat",
+        "listed_price": "7 tỷ 210 triệu VNĐ",
+        "HN_price": "8.097.894.000 VNĐ",
+        "TPHCM_price": "7.953.694.000 VNĐ",
+        "other_price": "7.934.694.000 VNĐ"
+      },
+      {
+        "name": "4 seat",
+        "listed_price": "8 tỷ 610 triệu VNĐ",
+        "HN_price": "9.665.537.000 VNĐ",
+        "TPHCM_price": "9.493.337.000 VNĐ",
+        "other_price": "9.474.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Land Rover",
+    "model_title_name": "Range Rover Velar 2021",
+    "prices": [
+      {
+        "name": "S",
+        "listed_price": "4 tỷ 285 triệu VNĐ",
+        "HN_price": "4.821.537.000 VNĐ",
+        "TPHCM_price": "4.735.837.000 VNĐ",
+        "other_price": "4.716.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Land Rover",
+    "model_title_name": "Range Rover Evoque 2022",
+    "prices": [
+      {
+        "name": "SE P200",
+        "listed_price": "2 tỷ 959 triệu VNĐ",
+        "HN_price": "3.336.417.000 VNĐ",
+        "TPHCM_price": "3.277.237.000 VNĐ",
+        "other_price": "3.258.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Isuzu",
+    "model_title_name": "D-Max 2021",
+    "prices": [
+      {
+        "name": "Prestige 1.9 4X2 MT",
+        "listed_price": "630 triệu VNĐ",
+        "HN_price": "697.697.000 VNĐ",
+        "TPHCM_price": "690.137.000 VNĐ",
+        "other_price": "671.137.000 VNĐ"
+      },
+      {
+        "name": "Prestige1.9 4X2 AT",
+        "listed_price": "650 triệu VNĐ",
+        "HN_price": "719.137.000 VNĐ",
+        "TPHCM_price": "711.337.000 VNĐ",
+        "other_price": "692.337.000 VNĐ"
+      },
+      {
+        "name": "Type Z 1.9 4x4 AT",
+        "listed_price": "850 triệu VNĐ",
+        "HN_price": "933.537.000 VNĐ",
+        "TPHCM_price": "923.337.000 VNĐ",
+        "other_price": "904.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Isuzu",
+    "model_title_name": "mu-X 2022",
+    "prices": [
+      {
+        "name": "B7 4x2 MT",
+        "listed_price": "900 triệu VNĐ",
+        "HN_price": "1.030.694.000 VNĐ",
+        "TPHCM_price": "1.012.694.000 VNĐ",
+        "other_price": "993.694.000 VNĐ"
+      },
+      {
+        "name": "B7 Plus 4x2 AT",
+        "listed_price": "980 triệu VNĐ",
+        "HN_price": "1.120.294.000 VNĐ",
+        "TPHCM_price": "1.100.694.000 VNĐ",
+        "other_price": "1.081.694.000 VNĐ"
+      },
+      {
+        "name": "Prestige 4x2 AT",
+        "listed_price": "1 tỷ 120 triệu VNĐ",
+        "HN_price": "1.277.094.000 VNĐ",
+        "TPHCM_price": "1.254.694.000 VNĐ",
+        "other_price": "1.235.694.000 VNĐ"
+      },
+      {
+        "name": "Premium 4x4 AT",
+        "listed_price": "1 tỷ 190 triệu VNĐ",
+        "HN_price": "1.355.494.000 VNĐ",
+        "TPHCM_price": "1.331.694.000 VNĐ",
+        "other_price": "1.312.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "GX 2021",
+    "prices": [
+      {
+        "name": "460",
+        "listed_price": "5 tỷ 970 triệu VNĐ",
+        "HN_price": "6.709.094.000 VNĐ",
+        "TPHCM_price": "6.589.694.000 VNĐ",
+        "other_price": "6.570.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Sportage 2022",
+    "prices": [
+      {
+        "name": "2.0G Luxury",
+        "listed_price": "859 triệu VNĐ",
+        "HN_price": "932.877.000 VNĐ",
+        "TPHCM_price": "924.287.000 VNĐ",
+        "other_price": "905.287.000 VNĐ"
+      },
+      {
+        "name": "2.0G Premium",
+        "listed_price": "889 triệu VNĐ",
+        "HN_price": "964.677.000 VNĐ",
+        "TPHCM_price": "955.787.000 VNĐ",
+        "other_price": "936.787.000 VNĐ"
+      },
+      {
+        "name": "2.0G Signature (X-Line)",
+        "listed_price": "949 triệu VNĐ",
+        "HN_price": "1.028.277.000 VNĐ",
+        "TPHCM_price": "1.018.787.000 VNĐ",
+        "other_price": "999.787.000 VNĐ"
+      },
+      {
+        "name": "2.0G Signature",
+        "listed_price": "969 triệu VNĐ",
+        "HN_price": "1.049.477.000 VNĐ",
+        "TPHCM_price": "1.039.787.000 VNĐ",
+        "other_price": "1.020.787.000 VNĐ"
+      },
+      {
+        "name": "1.6 Turbo Signature AWD",
+        "listed_price": "1 tỷ 029 triệu VNĐ",
+        "HN_price": "1.113.077.000 VNĐ",
+        "TPHCM_price": "1.102.787.000 VNĐ",
+        "other_price": "1.083.787.000 VNĐ"
+      },
+      {
+        "name": "1.6 Turbo Signature AWD (X-Line)",
+        "listed_price": "1 tỷ 029 triệu VNĐ",
+        "HN_price": "1.113.077.000 VNĐ",
+        "TPHCM_price": "1.102.787.000 VNĐ",
+        "other_price": "1.083.787.000 VNĐ"
+      },
+      {
+        "name": "2.0D Signature",
+        "listed_price": "1 tỷ 029 triệu VNĐ",
+        "HN_price": "1.113.077.000 VNĐ",
+        "TPHCM_price": "1.102.787.000 VNĐ",
+        "other_price": "1.083.787.000 VNĐ"
+      },
+      {
+        "name": "2.0D Signature (X-Line)",
+        "listed_price": "1 tỷ 029 triệu VNĐ",
+        "HN_price": "1.113.077.000 VNĐ",
+        "TPHCM_price": "1.102.787.000 VNĐ",
+        "other_price": "1.083.787.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "ES 2021",
+    "prices": [
+      {
+        "name": "250",
+        "listed_price": "2 tỷ 620 triệu VNĐ",
+        "HN_price": "2.956.737.000 VNĐ",
+        "TPHCM_price": "2.904.337.000 VNĐ",
+        "other_price": "2.885.337.000 VNĐ"
+      },
+      {
+        "name": "250 F Sport",
+        "listed_price": "2 tỷ 710 triệu VNĐ",
+        "HN_price": "3.057.537.000 VNĐ",
+        "TPHCM_price": "3.003.337.000 VNĐ",
+        "other_price": "2.984.337.000 VNĐ"
+      },
+      {
+        "name": "300h",
+        "listed_price": "3 tỷ 140 triệu VNĐ",
+        "HN_price": "3.539.137.000 VNĐ",
+        "TPHCM_price": "3.476.337.000 VNĐ",
+        "other_price": "3.457.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lynk & Co",
+    "model_title_name": "09 2024",
+    "prices": [
+      {
+        "name": "Halo",
+        "listed_price": "2 tỷ 199 triệu VNĐ",
+        "HN_price": "2.485.574.000 VNĐ",
+        "TPHCM_price": "2.441.594.000 VNĐ",
+        "other_price": "2.422.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "NX 2022",
+    "prices": [
+      {
+        "name": "350 F Sport",
+        "listed_price": "3 tỷ 130 triệu VNĐ",
+        "HN_price": "3.527.937.000 VNĐ",
+        "TPHCM_price": "3.465.337.000 VNĐ",
+        "other_price": "3.446.337.000 VNĐ"
+      },
+      {
+        "name": "350h",
+        "listed_price": "3 tỷ 420 triệu VNĐ",
+        "HN_price": "3.852.737.000 VNĐ",
+        "TPHCM_price": "3.784.337.000 VNĐ",
+        "other_price": "3.765.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "K5 2021",
+    "prices": [
+      {
+        "name": "2.0 Luxury",
+        "listed_price": "859 triệu VNĐ",
+        "HN_price": "932.877.000 VNĐ",
+        "TPHCM_price": "924.287.000 VNĐ",
+        "other_price": "905.287.000 VNĐ"
+      },
+      {
+        "name": "2.0 Premium",
+        "listed_price": "909 triệu VNĐ",
+        "HN_price": "985.877.000 VNĐ",
+        "TPHCM_price": "976.787.000 VNĐ",
+        "other_price": "957.787.000 VNĐ"
+      },
+      {
+        "name": "2.5 GT-Line",
+        "listed_price": "999 triệu VNĐ",
+        "HN_price": "1.081.277.000 VNĐ",
+        "TPHCM_price": "1.071.287.000 VNĐ",
+        "other_price": "1.052.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Quoris 2017",
+    "prices": [
+      {
+        "name": "3.8 AT",
+        "listed_price": "2 tỷ 708 triệu VNĐ",
+        "HN_price": "3.055.297.000 VNĐ",
+        "TPHCM_price": "3.001.137.000 VNĐ",
+        "other_price": "2.982.137.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Lexus",
+    "model_title_name": "IS 2021",
+    "prices": [
+      {
+        "name": "Standard",
+        "listed_price": "2 tỷ 130 triệu VNĐ",
+        "HN_price": "2.407.937.000 VNĐ",
+        "TPHCM_price": "2.365.337.000 VNĐ",
+        "other_price": "2.346.337.000 VNĐ"
+      },
+      {
+        "name": "Luxury",
+        "listed_price": "2 tỷ 490 triệu VNĐ",
+        "HN_price": "2.811.137.000 VNĐ",
+        "TPHCM_price": "2.761.337.000 VNĐ",
+        "other_price": "2.742.337.000 VNĐ"
+      },
+      {
+        "name": "Hybrid",
+        "listed_price": "2 tỷ 830 triệu VNĐ",
+        "HN_price": "3.191.937.000 VNĐ",
+        "TPHCM_price": "3.135.337.000 VNĐ",
+        "other_price": "3.116.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Sorento 2023",
+    "prices": [
+      {
+        "name": "2.2D Luxury 2WD",
+        "listed_price": "1 tỷ 069 triệu VNĐ",
+        "HN_price": "1.155.834.000 VNĐ",
+        "TPHCM_price": "1.145.144.000 VNĐ",
+        "other_price": "1.126.144.000 VNĐ"
+      },
+      {
+        "name": "2.5G Premium 2WD",
+        "listed_price": "1 tỷ 129 triệu VNĐ",
+        "HN_price": "1.219.434.000 VNĐ",
+        "TPHCM_price": "1.208.144.000 VNĐ",
+        "other_price": "1.189.144.000 VNĐ"
+      },
+      {
+        "name": "2.5G Signature AWD (7 chỗ) Nội thất đen",
+        "listed_price": "1 tỷ 159 triệu VNĐ",
+        "HN_price": "1.251.234.000 VNĐ",
+        "TPHCM_price": "1.239.644.000 VNĐ",
+        "other_price": "1.220.644.000 VNĐ"
+      },
+      {
+        "name": "2.5G Signature AWD (6 chỗ) nội thất nâu",
+        "listed_price": "1 tỷ 229 triệu VNĐ",
+        "HN_price": "1.325.434.000 VNĐ",
+        "TPHCM_price": "1.313.144.000 VNĐ",
+        "other_price": "1.294.144.000 VNĐ"
+      },
+      {
+        "name": "2.5G Signature AWD (7 chỗ) Nội thất nâu",
+        "listed_price": "1 tỷ 239 triệu VNĐ",
+        "HN_price": "1.336.034.000 VNĐ",
+        "TPHCM_price": "1.323.644.000 VNĐ",
+        "other_price": "1.304.644.000 VNĐ"
+      },
+      {
+        "name": "2.2D Premium AWD",
+        "listed_price": "1 tỷ 249 triệu VNĐ",
+        "HN_price": "1.346.634.000 VNĐ",
+        "TPHCM_price": "1.334.144.000 VNĐ",
+        "other_price": "1.315.144.000 VNĐ"
+      },
+      {
+        "name": "2.2D Signature AWD (7 chỗ) nội thất đen",
+        "listed_price": "1 tỷ 259 triệu VNĐ",
+        "HN_price": "1.357.234.000 VNĐ",
+        "TPHCM_price": "1.344.644.000 VNĐ",
+        "other_price": "1.325.644.000 VNĐ"
+      },
+      {
+        "name": "2.2D Signature AWD (7 chỗ) nội thất nâu",
+        "listed_price": "1 tỷ 279 triệu VNĐ",
+        "HN_price": "1.378.434.000 VNĐ",
+        "TPHCM_price": "1.365.644.000 VNĐ",
+        "other_price": "1.346.644.000 VNĐ"
+      },
+      {
+        "name": "2.2D Signature AWD (6 chỗ) nội thất nâu",
+        "listed_price": "1 tỷ 299 triệu VNĐ",
+        "HN_price": "1.399.634.000 VNĐ",
+        "TPHCM_price": "1.386.644.000 VNĐ",
+        "other_price": "1.367.644.000 VNĐ"
+      },
+      {
+        "name": "1.6 Hybrid Premium",
+        "listed_price": "1 tỷ 304 triệu VNĐ",
+        "HN_price": "1.326.694.000 VNĐ",
+        "TPHCM_price": "1.326.694.000 VNĐ",
+        "other_price": "1.307.694.000 VNĐ"
+      },
+      {
+        "name": "1.6 Hybrid Signature (nội thất đen)",
+        "listed_price": "1 tỷ 404 triệu VNĐ",
+        "HN_price": "1.426.694.000 VNĐ",
+        "TPHCM_price": "1.426.694.000 VNĐ",
+        "other_price": "1.407.694.000 VNĐ"
+      },
+      {
+        "name": "1.6 Plug-in Hybrid Premium",
+        "listed_price": "1 tỷ 494 triệu VNĐ",
+        "HN_price": "1.516.694.000 VNĐ",
+        "TPHCM_price": "1.516.694.000 VNĐ",
+        "other_price": "1.497.694.000 VNĐ"
+      },
+      {
+        "name": "1.6 Hybrid Signature (nội thất nâu)",
+        "listed_price": "1 tỷ 599 triệu VNĐ",
+        "HN_price": "1.621.694.000 VNĐ",
+        "TPHCM_price": "1.621.694.000 VNĐ",
+        "other_price": "1.602.694.000 VNĐ"
+      },
+      {
+        "name": "1.6 Plug-in Hybrid Signature (Nội thất nâu)",
+        "listed_price": "1 tỷ 604 triệu VNĐ",
+        "HN_price": "1.626.694.000 VNĐ",
+        "TPHCM_price": "1.626.694.000 VNĐ",
+        "other_price": "1.607.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Carnival 2022",
+    "prices": [
+      {
+        "name": "2.2D Luxury 8 chỗ",
+        "listed_price": "1 tỷ 219 triệu VNĐ",
+        "HN_price": "1.314.834.000 VNĐ",
+        "TPHCM_price": "1.302.644.000 VNĐ",
+        "other_price": "1.283.644.000 VNĐ"
+      },
+      {
+        "name": "2.2D Premium 8 chỗ",
+        "listed_price": "1 tỷ 309 triệu VNĐ",
+        "HN_price": "1.410.234.000 VNĐ",
+        "TPHCM_price": "1.397.144.000 VNĐ",
+        "other_price": "1.378.144.000 VNĐ"
+      },
+      {
+        "name": "2.2D Premium 7 chỗ",
+        "listed_price": "1 tỷ 359 triệu VNĐ",
+        "HN_price": "1.463.234.000 VNĐ",
+        "TPHCM_price": "1.449.644.000 VNĐ",
+        "other_price": "1.430.644.000 VNĐ"
+      },
+      {
+        "name": "2.2D Signature 7 ghế",
+        "listed_price": "1 tỷ 439 triệu VNĐ",
+        "HN_price": "1.548.034.000 VNĐ",
+        "TPHCM_price": "1.533.644.000 VNĐ",
+        "other_price": "1.514.644.000 VNĐ"
+      },
+      {
+        "name": "3.5G Signature 7 chỗ",
+        "listed_price": "1 tỷ 839 triệu VNĐ",
+        "HN_price": "1.972.034.000 VNĐ",
+        "TPHCM_price": "1.953.644.000 VNĐ",
+        "other_price": "1.934.644.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Seltos 2023",
+    "prices": [
+      {
+        "name": "1.4 Turbo Deluxe",
+        "listed_price": "599 triệu VNĐ",
+        "HN_price": "657.277.000 VNĐ",
+        "TPHCM_price": "651.287.000 VNĐ",
+        "other_price": "632.287.000 VNĐ"
+      },
+      {
+        "name": "1.6 AT Deluxe",
+        "listed_price": "599 triệu VNĐ",
+        "HN_price": "657.277.000 VNĐ",
+        "TPHCM_price": "651.287.000 VNĐ",
+        "other_price": "632.287.000 VNĐ"
+      },
+      {
+        "name": "1.6 AT Luxury",
+        "listed_price": "629 triệu VNĐ",
+        "HN_price": "689.077.000 VNĐ",
+        "TPHCM_price": "682.787.000 VNĐ",
+        "other_price": "663.787.000 VNĐ"
+      },
+      {
+        "name": "1.4 Turbo Luxury",
+        "listed_price": "639 triệu VNĐ",
+        "HN_price": "699.677.000 VNĐ",
+        "TPHCM_price": "693.287.000 VNĐ",
+        "other_price": "674.287.000 VNĐ"
+      },
+      {
+        "name": "1.6 AT Premium",
+        "listed_price": "689 triệu VNĐ",
+        "HN_price": "752.677.000 VNĐ",
+        "TPHCM_price": "745.787.000 VNĐ",
+        "other_price": "726.787.000 VNĐ"
+      },
+      {
+        "name": "1.4 Turbo Premium",
+        "listed_price": "699 triệu VNĐ",
+        "HN_price": "763.277.000 VNĐ",
+        "TPHCM_price": "756.287.000 VNĐ",
+        "other_price": "737.287.000 VNĐ"
+      },
+      {
+        "name": "1.4 Turbo X-Line",
+        "listed_price": "709 triệu VNĐ",
+        "HN_price": "773.877.000 VNĐ",
+        "TPHCM_price": "766.787.000 VNĐ",
+        "other_price": "747.787.000 VNĐ"
+      },
+      {
+        "name": "1.4 Turbo GT-Line",
+        "listed_price": "719 triệu VNĐ",
+        "HN_price": "784.477.000 VNĐ",
+        "TPHCM_price": "777.287.000 VNĐ",
+        "other_price": "758.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Rondo 2021",
+    "prices": [
+      {
+        "name": "GMT",
+        "listed_price": "559 triệu VNĐ",
+        "HN_price": "615.234.000 VNĐ",
+        "TPHCM_price": "609.644.000 VNĐ",
+        "other_price": "590.644.000 VNĐ"
+      },
+      {
+        "name": "GAT",
+        "listed_price": "655 triệu VNĐ",
+        "HN_price": "716.994.000 VNĐ",
+        "TPHCM_price": "710.444.000 VNĐ",
+        "other_price": "691.444.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Carens 2022",
+    "prices": [
+      {
+        "name": "1.5G MT Deluxe",
+        "listed_price": "589 triệu VNĐ",
+        "HN_price": "647.034.000 VNĐ",
+        "TPHCM_price": "641.144.000 VNĐ",
+        "other_price": "622.144.000 VNĐ"
+      },
+      {
+        "name": "1.5G IVT",
+        "listed_price": "629 triệu VNĐ",
+        "HN_price": "689.434.000 VNĐ",
+        "TPHCM_price": "683.144.000 VNĐ",
+        "other_price": "664.144.000 VNĐ"
+      },
+      {
+        "name": "1.5G Luxury",
+        "listed_price": "659 triệu VNĐ",
+        "HN_price": "721.234.000 VNĐ",
+        "TPHCM_price": "714.644.000 VNĐ",
+        "other_price": "695.644.000 VNĐ"
+      },
+      {
+        "name": "1.4T Premium",
+        "listed_price": "725 triệu VNĐ",
+        "HN_price": "791.194.000 VNĐ",
+        "TPHCM_price": "783.944.000 VNĐ",
+        "other_price": "764.944.000 VNĐ"
+      },
+      {
+        "name": "1.4T Signature",
+        "listed_price": "769 triệu VNĐ",
+        "HN_price": "837.834.000 VNĐ",
+        "TPHCM_price": "830.144.000 VNĐ",
+        "other_price": "811.144.000 VNĐ"
+      },
+      {
+        "name": "1.5D Premium",
+        "listed_price": "829 triệu VNĐ",
+        "HN_price": "901.434.000 VNĐ",
+        "TPHCM_price": "893.144.000 VNĐ",
+        "other_price": "874.144.000 VNĐ"
+      },
+      {
+        "name": "1.5D Signature",
+        "listed_price": "859 triệu VNĐ",
+        "HN_price": "933.234.000 VNĐ",
+        "TPHCM_price": "924.644.000 VNĐ",
+        "other_price": "905.644.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Morning 2022",
+    "prices": [
+      {
+        "name": "MT",
+        "listed_price": "369 triệu VNĐ",
+        "HN_price": "413.477.000 VNĐ",
+        "TPHCM_price": "409.787.000 VNĐ",
+        "other_price": "390.787.000 VNĐ"
+      },
+      {
+        "name": "AT",
+        "listed_price": "414 triệu VNĐ",
+        "HN_price": "461.177.000 VNĐ",
+        "TPHCM_price": "457.037.000 VNĐ",
+        "other_price": "438.037.000 VNĐ"
+      },
+      {
+        "name": "AT Premium",
+        "listed_price": "426 triệu VNĐ",
+        "HN_price": "473.897.000 VNĐ",
+        "TPHCM_price": "469.637.000 VNĐ",
+        "other_price": "450.637.000 VNĐ"
+      },
+      {
+        "name": "GT-Line",
+        "listed_price": "439 triệu VNĐ",
+        "HN_price": "487.677.000 VNĐ",
+        "TPHCM_price": "483.287.000 VNĐ",
+        "other_price": "464.287.000 VNĐ"
+      },
+      {
+        "name": "X-Line",
+        "listed_price": "439 triệu VNĐ",
+        "HN_price": "487.677.000 VNĐ",
+        "TPHCM_price": "483.287.000 VNĐ",
+        "other_price": "464.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "K3 2022",
+    "prices": [
+      {
+        "name": "1.6 MT",
+        "listed_price": "539 triệu VNĐ",
+        "HN_price": "593.677.000 VNĐ",
+        "TPHCM_price": "588.287.000 VNĐ",
+        "other_price": "569.287.000 VNĐ"
+      },
+      {
+        "name": "1.6 Luxury",
+        "listed_price": "599 triệu VNĐ",
+        "HN_price": "657.277.000 VNĐ",
+        "TPHCM_price": "651.287.000 VNĐ",
+        "other_price": "632.287.000 VNĐ"
+      },
+      {
+        "name": "1.6 Premium",
+        "listed_price": "629 triệu VNĐ",
+        "HN_price": "689.077.000 VNĐ",
+        "TPHCM_price": "682.787.000 VNĐ",
+        "other_price": "663.787.000 VNĐ"
+      },
+      {
+        "name": "2.0 Premium",
+        "listed_price": "649 triệu VNĐ",
+        "HN_price": "710.277.000 VNĐ",
+        "TPHCM_price": "703.787.000 VNĐ",
+        "other_price": "684.787.000 VNĐ"
+      },
+      {
+        "name": "1.6 Turbo GT",
+        "listed_price": "725 triệu VNĐ",
+        "HN_price": "790.837.000 VNĐ",
+        "TPHCM_price": "783.587.000 VNĐ",
+        "other_price": "764.587.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "EQS SUV 2023",
+    "prices": [
+      {
+        "name": "500",
+        "listed_price": "4 tỷ 999 triệu VNĐ",
+        "HN_price": "5.021.694.000 VNĐ",
+        "TPHCM_price": "5.021.694.000 VNĐ",
+        "other_price": "5.002.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Sonet 2021",
+    "prices": [
+      {
+        "name": "1.5 Deluxe",
+        "listed_price": "519 triệu VNĐ",
+        "HN_price": "572.477.000 VNĐ",
+        "TPHCM_price": "567.287.000 VNĐ",
+        "other_price": "548.287.000 VNĐ"
+      },
+      {
+        "name": "1.5 Luxury",
+        "listed_price": "549 triệu VNĐ",
+        "HN_price": "604.277.000 VNĐ",
+        "TPHCM_price": "598.787.000 VNĐ",
+        "other_price": "579.787.000 VNĐ"
+      },
+      {
+        "name": "1.5 Premium",
+        "listed_price": "574 triệu VNĐ",
+        "HN_price": "630.777.000 VNĐ",
+        "TPHCM_price": "625.037.000 VNĐ",
+        "other_price": "606.037.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Kia",
+    "model_title_name": "Soluto 2021",
+    "prices": [
+      {
+        "name": "MT",
+        "listed_price": "386 triệu VNĐ",
+        "HN_price": "431.497.000 VNĐ",
+        "TPHCM_price": "427.637.000 VNĐ",
+        "other_price": "408.637.000 VNĐ"
+      },
+      {
+        "name": "MT Deluxe",
+        "listed_price": "418 triệu VNĐ",
+        "HN_price": "465.417.000 VNĐ",
+        "TPHCM_price": "461.237.000 VNĐ",
+        "other_price": "442.237.000 VNĐ"
+      },
+      {
+        "name": "AT Deluxe",
+        "listed_price": "446 triệu VNĐ",
+        "HN_price": "495.097.000 VNĐ",
+        "TPHCM_price": "490.637.000 VNĐ",
+        "other_price": "471.637.000 VNĐ"
+      },
+      {
+        "name": "AT Luxury",
+        "listed_price": "482 triệu VNĐ",
+        "HN_price": "533.257.000 VNĐ",
+        "TPHCM_price": "528.437.000 VNĐ",
+        "other_price": "509.437.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "S-Class 2022",
+    "prices": [
+      {
+        "name": "S 450 4Matic",
+        "listed_price": "5 tỷ 039 triệu VNĐ",
+        "HN_price": "5.666.017.000 VNĐ",
+        "TPHCM_price": "5.565.237.000 VNĐ",
+        "other_price": "5.546.237.000 VNĐ"
+      },
+      {
+        "name": "S 450 4Matic Luxury",
+        "listed_price": "5 tỷ 559 triệu VNĐ",
+        "HN_price": "6.248.417.000 VNĐ",
+        "TPHCM_price": "6.137.237.000 VNĐ",
+        "other_price": "6.118.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "V-Class 2021",
+    "prices": [
+      {
+        "name": "V 250 LUXURY",
+        "listed_price": "2 tỷ 845 triệu VNĐ",
+        "HN_price": "3.209.094.000 VNĐ",
+        "TPHCM_price": "3.152.194.000 VNĐ",
+        "other_price": "3.133.194.000 VNĐ"
+      },
+      {
+        "name": "V 250 AMG",
+        "listed_price": "3 tỷ 445 triệu VNĐ",
+        "HN_price": "3.881.094.000 VNĐ",
+        "TPHCM_price": "3.812.194.000 VNĐ",
+        "other_price": "3.793.194.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "EQS 2022",
+    "prices": [
+      {
+        "name": "450+",
+        "listed_price": "4 tỷ 839 triệu VNĐ",
+        "HN_price": "4.861.337.000 VNĐ",
+        "TPHCM_price": "4.861.337.000 VNĐ",
+        "other_price": "4.842.337.000 VNĐ"
+      },
+      {
+        "name": "580 4MATIC",
+        "listed_price": "5 tỷ 959 triệu VNĐ",
+        "HN_price": "5.981.337.000 VNĐ",
+        "TPHCM_price": "5.981.337.000 VNĐ",
+        "other_price": "5.962.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "EQE SUV 2023",
+    "prices": [
+      {
+        "name": "500",
+        "listed_price": "3 tỷ 999 triệu VNĐ",
+        "HN_price": "4.021.337.000 VNĐ",
+        "TPHCM_price": "4.021.337.000 VNĐ",
+        "other_price": "4.002.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "GLE 2021",
+    "prices": [
+      {
+        "name": "450 4Matic",
+        "listed_price": "4 tỷ 509 triệu VNĐ",
+        "HN_price": "5.072.774.000 VNĐ",
+        "TPHCM_price": "4.982.594.000 VNĐ",
+        "other_price": "4.963.594.000 VNĐ"
+      },
+      {
+        "name": "AMG 53 4Matic+ Coupe",
+        "listed_price": "5 tỷ 679 triệu VNĐ",
+        "HN_price": "6.382.817.000 VNĐ",
+        "TPHCM_price": "6.269.237.000 VNĐ",
+        "other_price": "6.250.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "GLA 2022",
+    "prices": [
+      {
+        "name": "45 S 4MATIC+",
+        "listed_price": "3 tỷ 430 triệu VNĐ",
+        "HN_price": "3.863.937.000 VNĐ",
+        "TPHCM_price": "3.795.337.000 VNĐ",
+        "other_price": "3.776.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "C-Class 2022",
+    "prices": [
+      {
+        "name": "C200 Avantgarde",
+        "listed_price": "1 tỷ 709 triệu VNĐ",
+        "HN_price": "1.833.877.000 VNĐ",
+        "TPHCM_price": "1.816.787.000 VNĐ",
+        "other_price": "1.797.787.000 VNĐ"
+      },
+      {
+        "name": "C200 Avantgarde Plus",
+        "listed_price": "1 tỷ 914 triệu VNĐ",
+        "HN_price": "2.051.177.000 VNĐ",
+        "TPHCM_price": "2.032.037.000 VNĐ",
+        "other_price": "2.013.037.000 VNĐ"
+      },
+      {
+        "name": "C300 AMG",
+        "listed_price": "2 tỷ 199 triệu VNĐ",
+        "HN_price": "2.353.277.000 VNĐ",
+        "TPHCM_price": "2.331.287.000 VNĐ",
+        "other_price": "2.312.287.000 VNĐ"
+      },
+      {
+        "name": "C300 AMG First Edition",
+        "listed_price": "2 tỷ 399 triệu VNĐ",
+        "HN_price": "2.565.277.000 VNĐ",
+        "TPHCM_price": "2.541.287.000 VNĐ",
+        "other_price": "2.522.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "GLC 2023",
+    "prices": [
+      {
+        "name": "GLC 200",
+        "listed_price": "2 tỷ 299 triệu VNĐ",
+        "HN_price": "2.459.277.000 VNĐ",
+        "TPHCM_price": "2.436.287.000 VNĐ",
+        "other_price": "2.417.287.000 VNĐ"
+      },
+      {
+        "name": "GLC 300",
+        "listed_price": "2 tỷ 799 triệu VNĐ",
+        "HN_price": "2.989.277.000 VNĐ",
+        "TPHCM_price": "2.961.287.000 VNĐ",
+        "other_price": "2.942.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "EQB",
+    "prices": [
+      {
+        "name": "250",
+        "listed_price": "2 tỷ 289 triệu VNĐ",
+        "HN_price": "2.311.694.000 VNĐ",
+        "TPHCM_price": "2.311.694.000 VNĐ",
+        "other_price": "2.292.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "E-Class 2021",
+    "prices": [
+      {
+        "name": "E 180",
+        "listed_price": "2 tỷ 159 triệu VNĐ",
+        "HN_price": "2.310.877.000 VNĐ",
+        "TPHCM_price": "2.289.287.000 VNĐ",
+        "other_price": "2.270.287.000 VNĐ"
+      },
+      {
+        "name": "E 200 Exclusive",
+        "listed_price": "2 tỷ 540 triệu VNĐ",
+        "HN_price": "2.714.737.000 VNĐ",
+        "TPHCM_price": "2.689.337.000 VNĐ",
+        "other_price": "2.670.337.000 VNĐ"
+      },
+      {
+        "name": "E 300 AMG",
+        "listed_price": "3 tỷ 209 triệu VNĐ",
+        "HN_price": "3.423.877.000 VNĐ",
+        "TPHCM_price": "3.391.787.000 VNĐ",
+        "other_price": "3.372.787.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "GLB 2021",
+    "prices": [
+      {
+        "name": "200 AMG",
+        "listed_price": "2 tỷ 089 triệu VNĐ",
+        "HN_price": "2.362.374.000 VNĐ",
+        "TPHCM_price": "2.320.594.000 VNĐ",
+        "other_price": "2.301.594.000 VNĐ"
+      },
+      {
+        "name": "35 AMG 4MATIC",
+        "listed_price": "2 tỷ 849 triệu VNĐ",
+        "HN_price": "3.213.217.000 VNĐ",
+        "TPHCM_price": "3.156.237.000 VNĐ",
+        "other_price": "3.137.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mercedes",
+    "model_title_name": "A-class 2021",
+    "prices": [
+      {
+        "name": "A 35 AMG 4MATIC Sedan",
+        "listed_price": "2 tỷ 429 triệu VNĐ",
+        "HN_price": "2.742.817.000 VNĐ",
+        "TPHCM_price": "2.694.237.000 VNĐ",
+        "other_price": "2.675.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mini",
+    "model_title_name": "JCW 2021",
+    "prices": [
+      {
+        "name": "JCW Clubman",
+        "listed_price": "2 tỷ 499 triệu VNĐ",
+        "HN_price": "2.821.217.000 VNĐ",
+        "TPHCM_price": "2.771.237.000 VNĐ",
+        "other_price": "2.752.237.000 VNĐ"
+      },
+      {
+        "name": "JCW Countryman",
+        "listed_price": "2 tỷ 549 triệu VNĐ",
+        "HN_price": "2.877.217.000 VNĐ",
+        "TPHCM_price": "2.826.237.000 VNĐ",
+        "other_price": "2.807.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mitsubishi",
+    "model_title_name": "Xpander 2023",
+    "prices": [
+      {
+        "name": "MT",
+        "listed_price": "555 triệu VNĐ",
+        "HN_price": "644.294.000 VNĐ",
+        "TPHCM_price": "633.194.000 VNĐ",
+        "other_price": "614.194.000 VNĐ"
+      },
+      {
+        "name": "AT",
+        "listed_price": "598 triệu VNĐ",
+        "HN_price": "692.454.000 VNĐ",
+        "TPHCM_price": "680.494.000 VNĐ",
+        "other_price": "661.494.000 VNĐ"
+      },
+      {
+        "name": "AT Premium",
+        "listed_price": "658 triệu VNĐ",
+        "HN_price": "759.654.000 VNĐ",
+        "TPHCM_price": "746.494.000 VNĐ",
+        "other_price": "727.494.000 VNĐ"
+      },
+      {
+        "name": "Cross",
+        "listed_price": "698 triệu VNĐ",
+        "HN_price": "804.454.000 VNĐ",
+        "TPHCM_price": "790.494.000 VNĐ",
+        "other_price": "771.494.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mini",
+    "model_title_name": "3 Door 2021",
+    "prices": [
+      {
+        "name": "Cooper S 3 cửa",
+        "listed_price": "1 tỷ 839 triệu VNĐ",
+        "HN_price": "2.082.017.000 VNĐ",
+        "TPHCM_price": "2.045.237.000 VNĐ",
+        "other_price": "2.026.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mitsubishi",
+    "model_title_name": "Triton 2021",
+    "prices": [
+      {
+        "name": "4x2AT MIVEC",
+        "listed_price": "650 triệu VNĐ",
+        "HN_price": "719.137.000 VNĐ",
+        "TPHCM_price": "711.337.000 VNĐ",
+        "other_price": "692.337.000 VNĐ"
+      },
+      {
+        "name": "4x2AT MIVEC",
+        "listed_price": "650 triệu VNĐ",
+        "HN_price": "719.137.000 VNĐ",
+        "TPHCM_price": "711.337.000 VNĐ",
+        "other_price": "692.337.000 VNĐ"
+      },
+      {
+        "name": "4x2AT Athlete",
+        "listed_price": "780 triệu VNĐ",
+        "HN_price": "858.497.000 VNĐ",
+        "TPHCM_price": "849.137.000 VNĐ",
+        "other_price": "830.137.000 VNĐ"
+      },
+      {
+        "name": "4x2AT Athlete",
+        "listed_price": "780 triệu VNĐ",
+        "HN_price": "858.497.000 VNĐ",
+        "TPHCM_price": "849.137.000 VNĐ",
+        "other_price": "830.137.000 VNĐ"
+      },
+      {
+        "name": "4x4AT Athlete",
+        "listed_price": "905 triệu VNĐ",
+        "HN_price": "992.497.000 VNĐ",
+        "TPHCM_price": "981.637.000 VNĐ",
+        "other_price": "962.637.000 VNĐ"
+      },
+      {
+        "name": "4x4AT Athlete",
+        "listed_price": "905 triệu VNĐ",
+        "HN_price": "992.497.000 VNĐ",
+        "TPHCM_price": "981.637.000 VNĐ",
+        "other_price": "962.637.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mini",
+    "model_title_name": "5 Door 2021",
+    "prices": [
+      {
+        "name": "Cooper S 5 cửa",
+        "listed_price": "1 tỷ 839 triệu VNĐ",
+        "HN_price": "2.082.017.000 VNĐ",
+        "TPHCM_price": "2.045.237.000 VNĐ",
+        "other_price": "2.026.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mitsubishi",
+    "model_title_name": "Attrage 2021",
+    "prices": [
+      {
+        "name": "MT",
+        "listed_price": "380 triệu VNĐ",
+        "HN_price": "425.137.000 VNĐ",
+        "TPHCM_price": "421.337.000 VNĐ",
+        "other_price": "402.337.000 VNĐ"
+      },
+      {
+        "name": "CVT",
+        "listed_price": "465 triệu VNĐ",
+        "HN_price": "515.237.000 VNĐ",
+        "TPHCM_price": "510.587.000 VNĐ",
+        "other_price": "491.587.000 VNĐ"
+      },
+      {
+        "name": "CVT Premium",
+        "listed_price": "490 triệu VNĐ",
+        "HN_price": "541.737.000 VNĐ",
+        "TPHCM_price": "536.837.000 VNĐ",
+        "other_price": "517.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mitsubishi",
+    "model_title_name": "Pajero Sport 2023",
+    "prices": [
+      {
+        "name": "4x2 AT Premium",
+        "listed_price": "1 tỷ 130 triệu VNĐ",
+        "HN_price": "1.288.294.000 VNĐ",
+        "TPHCM_price": "1.265.694.000 VNĐ",
+        "other_price": "1.246.694.000 VNĐ"
+      },
+      {
+        "name": "4x4 AT Premium",
+        "listed_price": "1 tỷ 365 triệu VNĐ",
+        "HN_price": "1.551.494.000 VNĐ",
+        "TPHCM_price": "1.524.194.000 VNĐ",
+        "other_price": "1.505.194.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mitsubishi",
+    "model_title_name": "Outlander 2022",
+    "prices": [
+      {
+        "name": "2.0 CVT",
+        "listed_price": "825 triệu VNĐ",
+        "HN_price": "897.194.000 VNĐ",
+        "TPHCM_price": "888.944.000 VNĐ",
+        "other_price": "869.944.000 VNĐ"
+      },
+      {
+        "name": "2.0 CVT Premium",
+        "listed_price": "950 triệu VNĐ",
+        "HN_price": "1.029.694.000 VNĐ",
+        "TPHCM_price": "1.020.194.000 VNĐ",
+        "other_price": "1.001.194.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mini",
+    "model_title_name": "Countryman 2021",
+    "prices": [
+      {
+        "name": "Cooper S Countryman",
+        "listed_price": "2 tỷ 439 triệu VNĐ",
+        "HN_price": "2.754.017.000 VNĐ",
+        "TPHCM_price": "2.705.237.000 VNĐ",
+        "other_price": "2.686.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "MG",
+    "model_title_name": "MG5 2023",
+    "prices": [
+      {
+        "name": "MT",
+        "listed_price": "399 triệu VNĐ",
+        "HN_price": "469.217.000 VNĐ",
+        "TPHCM_price": "461.237.000 VNĐ",
+        "other_price": "442.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "MG",
+    "model_title_name": "ZS 2021",
+    "prices": [
+      {
+        "name": "MG ZS STD+",
+        "listed_price": "538 triệu VNĐ",
+        "HN_price": "624.897.000 VNĐ",
+        "TPHCM_price": "614.137.000 VNĐ",
+        "other_price": "595.137.000 VNĐ"
+      },
+      {
+        "name": "MG ZS COM+",
+        "listed_price": "588 triệu VNĐ",
+        "HN_price": "680.897.000 VNĐ",
+        "TPHCM_price": "669.137.000 VNĐ",
+        "other_price": "650.137.000 VNĐ"
+      },
+      {
+        "name": "MG ZS LUX+",
+        "listed_price": "638 triệu VNĐ",
+        "HN_price": "736.897.000 VNĐ",
+        "TPHCM_price": "724.137.000 VNĐ",
+        "other_price": "705.137.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mazda",
+    "model_title_name": "BT-50 2021",
+    "prices": [
+      {
+        "name": "1.9 MT 4x2",
+        "listed_price": "584 triệu VNĐ",
+        "HN_price": "648.385.000 VNĐ",
+        "TPHCM_price": "641.377.000 VNĐ",
+        "other_price": "622.377.000 VNĐ"
+      },
+      {
+        "name": "1.9 MT 4x2",
+        "listed_price": "584 triệu VNĐ",
+        "HN_price": "648.385.000 VNĐ",
+        "TPHCM_price": "641.377.000 VNĐ",
+        "other_price": "622.377.000 VNĐ"
+      },
+      {
+        "name": "1.9 AT 4x2",
+        "listed_price": "644 triệu VNĐ",
+        "HN_price": "712.705.000 VNĐ",
+        "TPHCM_price": "704.977.000 VNĐ",
+        "other_price": "685.977.000 VNĐ"
+      },
+      {
+        "name": "1.9 AT 4x2",
+        "listed_price": "644 triệu VNĐ",
+        "HN_price": "712.705.000 VNĐ",
+        "TPHCM_price": "704.977.000 VNĐ",
+        "other_price": "685.977.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mazda",
+    "model_title_name": "CX-3 2023",
+    "prices": [
+      {
+        "name": "1.5AT",
+        "listed_price": "524 triệu VNĐ",
+        "HN_price": "609.217.000 VNĐ",
+        "TPHCM_price": "598.737.000 VNĐ",
+        "other_price": "579.737.000 VNĐ"
+      },
+      {
+        "name": "1.5 Deluxe",
+        "listed_price": "559 triệu VNĐ",
+        "HN_price": "648.417.000 VNĐ",
+        "TPHCM_price": "637.237.000 VNĐ",
+        "other_price": "618.237.000 VNĐ"
+      },
+      {
+        "name": "1.5 Luxury",
+        "listed_price": "589 triệu VNĐ",
+        "HN_price": "682.017.000 VNĐ",
+        "TPHCM_price": "670.237.000 VNĐ",
+        "other_price": "651.237.000 VNĐ"
+      },
+      {
+        "name": "1.5 Premium",
+        "listed_price": "644 triệu VNĐ",
+        "HN_price": "743.617.000 VNĐ",
+        "TPHCM_price": "730.737.000 VNĐ",
+        "other_price": "711.737.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mazda",
+    "model_title_name": "CX-30 2021",
+    "prices": [
+      {
+        "name": "2.0 Luxury",
+        "listed_price": "709 triệu VNĐ",
+        "HN_price": "816.417.000 VNĐ",
+        "TPHCM_price": "802.237.000 VNĐ",
+        "other_price": "783.237.000 VNĐ"
+      },
+      {
+        "name": "2.0 Premium",
+        "listed_price": "749 triệu VNĐ",
+        "HN_price": "861.217.000 VNĐ",
+        "TPHCM_price": "846.237.000 VNĐ",
+        "other_price": "827.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mazda",
+    "model_title_name": "Mazda2 2023",
+    "prices": [
+      {
+        "name": "1.5 AT",
+        "listed_price": "415 triệu VNĐ",
+        "HN_price": "487.137.000 VNĐ",
+        "TPHCM_price": "478.837.000 VNĐ",
+        "other_price": "459.837.000 VNĐ"
+      },
+      {
+        "name": "1.5 Luxury",
+        "listed_price": "499 triệu VNĐ",
+        "HN_price": "581.217.000 VNĐ",
+        "TPHCM_price": "571.237.000 VNĐ",
+        "other_price": "552.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Mazda",
+    "model_title_name": "Mazda3 2021",
+    "prices": [
+      {
+        "name": "1.5 Deluxe",
+        "listed_price": "579 triệu VNĐ",
+        "HN_price": "636.077.000 VNĐ",
+        "TPHCM_price": "630.287.000 VNĐ",
+        "other_price": "611.287.000 VNĐ"
+      },
+      {
+        "name": "1.5 Luxury",
+        "listed_price": "619 triệu VNĐ",
+        "HN_price": "678.477.000 VNĐ",
+        "TPHCM_price": "672.287.000 VNĐ",
+        "other_price": "653.287.000 VNĐ"
+      },
+      {
+        "name": "Sport 1.5 Luxury",
+        "listed_price": "649 triệu VNĐ",
+        "HN_price": "710.277.000 VNĐ",
+        "TPHCM_price": "703.787.000 VNĐ",
+        "other_price": "684.787.000 VNĐ"
+      },
+      {
+        "name": "Sport 1.5 Premium",
+        "listed_price": "709 triệu VNĐ",
+        "HN_price": "773.877.000 VNĐ",
+        "TPHCM_price": "766.787.000 VNĐ",
+        "other_price": "747.787.000 VNĐ"
+      },
+      {
+        "name": "1.5 Premium",
+        "listed_price": "729 triệu VNĐ",
+        "HN_price": "795.077.000 VNĐ",
+        "TPHCM_price": "787.787.000 VNĐ",
+        "other_price": "768.787.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Nissan",
+    "model_title_name": "Kicks 2022",
+    "prices": [
+      {
+        "name": "E",
+        "listed_price": "789 triệu VNĐ",
+        "HN_price": "906.017.000 VNĐ",
+        "TPHCM_price": "890.237.000 VNĐ",
+        "other_price": "871.237.000 VNĐ"
+      },
+      {
+        "name": "V",
+        "listed_price": "858 triệu VNĐ",
+        "HN_price": "983.297.000 VNĐ",
+        "TPHCM_price": "966.137.000 VNĐ",
+        "other_price": "947.137.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Nissan",
+    "model_title_name": "Navara 2022",
+    "prices": [
+      {
+        "name": "EL 2WD",
+        "listed_price": "699 triệu VNĐ",
+        "HN_price": "771.665.000 VNĐ",
+        "TPHCM_price": "763.277.000 VNĐ",
+        "other_price": "744.277.000 VNĐ"
+      },
+      {
+        "name": "4WD Cao cấp",
+        "listed_price": "945 triệu VNĐ",
+        "HN_price": "1.035.377.000 VNĐ",
+        "TPHCM_price": "1.024.037.000 VNĐ",
+        "other_price": "1.005.037.000 VNĐ"
+      },
+      {
+        "name": "PRO4X",
+        "listed_price": "970 triệu VNĐ",
+        "HN_price": "1.062.177.000 VNĐ",
+        "TPHCM_price": "1.050.537.000 VNĐ",
+        "other_price": "1.031.537.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Nissan",
+    "model_title_name": "Almera 2022",
+    "prices": [
+      {
+        "name": "CVT",
+        "listed_price": "539 triệu VNĐ",
+        "HN_price": "626.017.000 VNĐ",
+        "TPHCM_price": "615.237.000 VNĐ",
+        "other_price": "596.237.000 VNĐ"
+      },
+      {
+        "name": "CVT Cao cấp",
+        "listed_price": "595 triệu VNĐ",
+        "HN_price": "688.737.000 VNĐ",
+        "TPHCM_price": "676.837.000 VNĐ",
+        "other_price": "657.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Maserati",
+    "model_title_name": "Quattroporte 2021",
+    "prices": [
+      {
+        "name": "QP350RL 21",
+        "listed_price": "6 tỷ 972 triệu VNĐ",
+        "HN_price": "7.830.977.000 VNĐ",
+        "TPHCM_price": "7.691.537.000 VNĐ",
+        "other_price": "7.672.537.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Maserati",
+    "model_title_name": "Ghibli 2021",
+    "prices": [
+      {
+        "name": "Ghibli GH330RS21",
+        "listed_price": "5 tỷ 983 triệu VNĐ",
+        "HN_price": "6.723.297.000 VNĐ",
+        "TPHCM_price": "6.603.637.000 VNĐ",
+        "other_price": "6.584.637.000 VNĐ"
+      },
+      {
+        "name": "GranSport GH350RS21",
+        "listed_price": "6 tỷ 112 triệu VNĐ",
+        "HN_price": "6.867.777.000 VNĐ",
+        "TPHCM_price": "6.745.537.000 VNĐ",
+        "other_price": "6.726.537.000 VNĐ"
+      },
+      {
+        "name": "Trofeo GH580RS21",
+        "listed_price": "11 tỷ 904 triệu VNĐ",
+        "HN_price": "13.354.817.000 VNĐ",
+        "TPHCM_price": "13.116.737.000 VNĐ",
+        "other_price": "13.097.737.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Aston Martin",
+    "model_title_name": "V8 DB11 2021",
+    "prices": [
+      {
+        "name": "V8",
+        "listed_price": "13 tỷ 799 triệu VNĐ",
+        "HN_price": "15.477.217.000 VNĐ",
+        "TPHCM_price": "15.201.237.000 VNĐ",
+        "other_price": "15.182.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Maserati",
+    "model_title_name": "Grecale 2023",
+    "prices": [
+      {
+        "name": "GT",
+        "listed_price": "4 tỷ 200 triệu VNĐ",
+        "HN_price": "4.726.337.000 VNĐ",
+        "TPHCM_price": "4.642.337.000 VNĐ",
+        "other_price": "4.623.337.000 VNĐ"
+      },
+      {
+        "name": "Modena",
+        "listed_price": "5 tỷ 068 triệu VNĐ",
+        "HN_price": "5.698.497.000 VNĐ",
+        "TPHCM_price": "5.597.137.000 VNĐ",
+        "other_price": "5.578.137.000 VNĐ"
+      },
+      {
+        "name": "Trofeo",
+        "listed_price": "7 tỷ 539 triệu VNĐ",
+        "HN_price": "8.466.017.000 VNĐ",
+        "TPHCM_price": "8.315.237.000 VNĐ",
+        "other_price": "8.296.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Aston Martin",
+    "model_title_name": "DBS 2021",
+    "prices": [
+      {
+        "name": "V12",
+        "listed_price": "23 tỷ 999 triệu VNĐ",
+        "HN_price": "26.901.217.000 VNĐ",
+        "TPHCM_price": "26.421.237.000 VNĐ",
+        "other_price": "26.402.237.000 VNĐ"
+      },
+      {
+        "name": "V12",
+        "listed_price": "23 tỷ 999 triệu VNĐ",
+        "HN_price": "26.901.217.000 VNĐ",
+        "TPHCM_price": "26.421.237.000 VNĐ",
+        "other_price": "26.402.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Aston Martin",
+    "model_title_name": "DBX 2021",
+    "prices": [
+      {
+        "name": "V8",
+        "listed_price": "13 tỷ 799 triệu VNĐ",
+        "HN_price": "15.477.217.000 VNĐ",
+        "TPHCM_price": "15.201.237.000 VNĐ",
+        "other_price": "15.182.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Maserati",
+    "model_title_name": "Levante 2021",
+    "prices": [
+      {
+        "name": "LE350AL21",
+        "listed_price": "5 tỷ 499 triệu VNĐ",
+        "HN_price": "6.181.217.000 VNĐ",
+        "TPHCM_price": "6.071.237.000 VNĐ",
+        "other_price": "6.052.237.000 VNĐ"
+      },
+      {
+        "name": "LE350AS21",
+        "listed_price": "5 tỷ 499 triệu VNĐ",
+        "HN_price": "6.181.217.000 VNĐ",
+        "TPHCM_price": "6.071.237.000 VNĐ",
+        "other_price": "6.052.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Aston Martin",
+    "model_title_name": "V8 Vantage 2021",
+    "prices": [
+      {
+        "name": "V8 Vantage",
+        "listed_price": "9 tỷ 999 triệu VNĐ",
+        "HN_price": "11.221.217.000 VNĐ",
+        "TPHCM_price": "11.021.237.000 VNĐ",
+        "other_price": "11.002.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Skoda",
+    "model_title_name": "Kodiaq 2023",
+    "prices": [
+      {
+        "name": "Ambition 1.4 TSI",
+        "listed_price": "1 tỷ 189 triệu VNĐ",
+        "HN_price": "1.283.034.000 VNĐ",
+        "TPHCM_price": "1.271.144.000 VNĐ",
+        "other_price": "1.252.144.000 VNĐ"
+      },
+      {
+        "name": "Style 2.0 TSI",
+        "listed_price": "1 tỷ 409 triệu VNĐ",
+        "HN_price": "1.516.234.000 VNĐ",
+        "TPHCM_price": "1.502.144.000 VNĐ",
+        "other_price": "1.483.144.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Suzuki",
+    "model_title_name": "Swift 2021",
+    "prices": [
+      {
+        "name": "GLX",
+        "listed_price": "560 triệu VNĐ",
+        "HN_price": "649.537.000 VNĐ",
+        "TPHCM_price": "638.337.000 VNĐ",
+        "other_price": "619.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Granvia 2021",
+    "prices": [
+      {
+        "name": "Granvia",
+        "listed_price": "3 tỷ 072 triệu VNĐ",
+        "HN_price": "3.463.334.000 VNĐ",
+        "TPHCM_price": "3.401.894.000 VNĐ",
+        "other_price": "3.382.894.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Suzuki",
+    "model_title_name": "Ciaz 2021",
+    "prices": [
+      {
+        "name": "1.4 AT",
+        "listed_price": "535 triệu VNĐ",
+        "HN_price": "621.537.000 VNĐ",
+        "TPHCM_price": "610.837.000 VNĐ",
+        "other_price": "591.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Suzuki",
+    "model_title_name": "XL7 2022",
+    "prices": [
+      {
+        "name": "GLX AT",
+        "listed_price": "600 triệu VNĐ",
+        "HN_price": "694.694.000 VNĐ",
+        "TPHCM_price": "682.694.000 VNĐ",
+        "other_price": "663.694.000 VNĐ"
+      },
+      {
+        "name": "GLX AT Sport Limited",
+        "listed_price": "640 triệu VNĐ",
+        "HN_price": "739.494.000 VNĐ",
+        "TPHCM_price": "726.694.000 VNĐ",
+        "other_price": "707.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Suzuki",
+    "model_title_name": "Ertiga 2022",
+    "prices": [
+      {
+        "name": "hybrid MT",
+        "listed_price": "539 triệu VNĐ",
+        "HN_price": "626.374.000 VNĐ",
+        "TPHCM_price": "615.594.000 VNĐ",
+        "other_price": "596.594.000 VNĐ"
+      },
+      {
+        "name": "hybrid AT",
+        "listed_price": "609 triệu VNĐ",
+        "HN_price": "704.774.000 VNĐ",
+        "TPHCM_price": "692.594.000 VNĐ",
+        "other_price": "673.594.000 VNĐ"
+      },
+      {
+        "name": "hybrid Sport Limited",
+        "listed_price": "678 triệu VNĐ",
+        "HN_price": "782.054.000 VNĐ",
+        "TPHCM_price": "768.494.000 VNĐ",
+        "other_price": "749.494.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Land Prado 2021",
+    "prices": [
+      {
+        "name": "VX",
+        "listed_price": "2 tỷ 588 triệu VNĐ",
+        "HN_price": "2.921.254.000 VNĐ",
+        "TPHCM_price": "2.869.494.000 VNĐ",
+        "other_price": "2.850.494.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Corolla Cross 2023",
+    "prices": [
+      {
+        "name": "1.8G",
+        "listed_price": "760 triệu VNĐ",
+        "HN_price": "873.537.000 VNĐ",
+        "TPHCM_price": "858.337.000 VNĐ",
+        "other_price": "839.337.000 VNĐ"
+      },
+      {
+        "name": "1.8V",
+        "listed_price": "860 triệu VNĐ",
+        "HN_price": "985.537.000 VNĐ",
+        "TPHCM_price": "968.337.000 VNĐ",
+        "other_price": "949.337.000 VNĐ"
+      },
+      {
+        "name": "1.8HEV",
+        "listed_price": "955 triệu VNĐ",
+        "HN_price": "1.091.937.000 VNĐ",
+        "TPHCM_price": "1.072.837.000 VNĐ",
+        "other_price": "1.053.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Honda",
+    "model_title_name": "Civic Type R 2022",
+    "prices": [
+      {
+        "name": "2.0 MT",
+        "listed_price": "2 tỷ 399 triệu VNĐ",
+        "HN_price": "2.709.217.000 VNĐ",
+        "TPHCM_price": "2.661.237.000 VNĐ",
+        "other_price": "2.642.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Honda",
+    "model_title_name": "CR-V 2024",
+    "prices": [
+      {
+        "name": "G",
+        "listed_price": "1 tỷ 109 triệu VNĐ",
+        "HN_price": "1.197.877.000 VNĐ",
+        "TPHCM_price": "1.186.787.000 VNĐ",
+        "other_price": "1.167.787.000 VNĐ"
+      },
+      {
+        "name": "L",
+        "listed_price": "1 tỷ 159 triệu VNĐ",
+        "HN_price": "1.250.877.000 VNĐ",
+        "TPHCM_price": "1.239.287.000 VNĐ",
+        "other_price": "1.220.287.000 VNĐ"
+      },
+      {
+        "name": "e:HEV RS",
+        "listed_price": "1 tỷ 259 triệu VNĐ",
+        "HN_price": "1.356.877.000 VNĐ",
+        "TPHCM_price": "1.344.287.000 VNĐ",
+        "other_price": "1.325.287.000 VNĐ"
+      },
+      {
+        "name": "L AWD",
+        "listed_price": "1 tỷ 310 triệu VNĐ",
+        "HN_price": "1.410.937.000 VNĐ",
+        "TPHCM_price": "1.397.837.000 VNĐ",
+        "other_price": "1.378.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Haval",
+    "model_title_name": "H6 2023",
+    "prices": [
+      {
+        "name": "HEV",
+        "listed_price": "1 tỷ 096 triệu VNĐ",
+        "HN_price": "1.249.857.000 VNĐ",
+        "TPHCM_price": "1.227.937.000 VNĐ",
+        "other_price": "1.208.937.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hongqi",
+    "model_title_name": "E-HS9 2022",
+    "prices": [
+      {
+        "name": "Executive (7 chỗ)",
+        "listed_price": "2 tỷ 768 triệu VNĐ",
+        "HN_price": "2.790.694.000 VNĐ",
+        "TPHCM_price": "2.790.694.000 VNĐ",
+        "other_price": "2.771.694.000 VNĐ"
+      },
+      {
+        "name": "Deluxe (7 chỗ)",
+        "listed_price": "2 tỷ 968 triệu VNĐ",
+        "HN_price": "2.990.694.000 VNĐ",
+        "TPHCM_price": "2.990.694.000 VNĐ",
+        "other_price": "2.971.694.000 VNĐ"
+      },
+      {
+        "name": "Premium (6 chỗ)",
+        "listed_price": "3 tỷ 339 triệu VNĐ",
+        "HN_price": "3.361.694.000 VNĐ",
+        "TPHCM_price": "3.361.694.000 VNĐ",
+        "other_price": "3.342.694.000 VNĐ"
+      },
+      {
+        "name": "Flagship (4 chỗ)",
+        "listed_price": "3 tỷ 688 triệu VNĐ",
+        "HN_price": "3.710.337.000 VNĐ",
+        "TPHCM_price": "3.710.337.000 VNĐ",
+        "other_price": "3.691.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Ford",
+    "model_title_name": "Ranger Raptor 2023",
+    "prices": [
+      {
+        "name": "2.0 4WD AT",
+        "listed_price": "1 tỷ 299 triệu VNĐ",
+        "HN_price": "1.414.865.000 VNĐ",
+        "TPHCM_price": "1.399.277.000 VNĐ",
+        "other_price": "1.380.277.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Honda",
+    "model_title_name": "Accord 2022",
+    "prices": [
+      {
+        "name": "1.5 Turbo",
+        "listed_price": "1 tỷ 319 triệu VNĐ",
+        "HN_price": "1.499.617.000 VNĐ",
+        "TPHCM_price": "1.473.237.000 VNĐ",
+        "other_price": "1.454.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Audi",
+    "model_title_name": "A8L 2022",
+    "prices": [
+      {
+        "name": "Classic",
+        "listed_price": "6 tỷ VNĐ",
+        "HN_price": "6.742.337.000 VNĐ",
+        "TPHCM_price": "6.622.337.000 VNĐ",
+        "other_price": "6.603.337.000 VNĐ"
+      },
+      {
+        "name": "Plus",
+        "listed_price": "6 tỷ 500 triệu VNĐ",
+        "HN_price": "7.302.337.000 VNĐ",
+        "TPHCM_price": "7.172.337.000 VNĐ",
+        "other_price": "7.153.337.000 VNĐ"
+      },
+      {
+        "name": "Premium",
+        "listed_price": "7 tỷ VNĐ",
+        "HN_price": "7.862.337.000 VNĐ",
+        "TPHCM_price": "7.722.337.000 VNĐ",
+        "other_price": "7.703.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Ford",
+    "model_title_name": "Explorer 2022",
+    "prices": [
+      {
+        "name": "2.3 EcoBoost",
+        "listed_price": "2 tỷ 399 triệu VNĐ",
+        "HN_price": "2.709.574.000 VNĐ",
+        "TPHCM_price": "2.661.594.000 VNĐ",
+        "other_price": "2.642.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Audi",
+    "model_title_name": "e-tron GT 2022",
+    "prices": [
+      {
+        "name": "quattro",
+        "listed_price": "5 tỷ 200 triệu VNĐ",
+        "HN_price": "5.222.337.000 VNĐ",
+        "TPHCM_price": "5.222.337.000 VNĐ",
+        "other_price": "5.203.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Audi",
+    "model_title_name": "e-tron 2022",
+    "prices": [
+      {
+        "name": "50 quattro",
+        "listed_price": "2 tỷ 970 triệu VNĐ",
+        "HN_price": "2.992.337.000 VNĐ",
+        "TPHCM_price": "2.992.337.000 VNĐ",
+        "other_price": "2.973.337.000 VNĐ"
+      },
+      {
+        "name": "55 quattro Advanced",
+        "listed_price": "3 tỷ 200 triệu VNĐ",
+        "HN_price": "3.222.337.000 VNĐ",
+        "TPHCM_price": "3.222.337.000 VNĐ",
+        "other_price": "3.203.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Porsche",
+    "model_title_name": "911 2023",
+    "prices": [
+      {
+        "name": "Carerra",
+        "listed_price": "7 tỷ 620 triệu VNĐ",
+        "HN_price": "8.556.737.000 VNĐ",
+        "TPHCM_price": "8.404.337.000 VNĐ",
+        "other_price": "8.385.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra 4",
+        "listed_price": "8 tỷ 100 triệu VNĐ",
+        "HN_price": "9.094.337.000 VNĐ",
+        "TPHCM_price": "8.932.337.000 VNĐ",
+        "other_price": "8.913.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra T",
+        "listed_price": "8 tỷ 310 triệu VNĐ",
+        "HN_price": "9.329.537.000 VNĐ",
+        "TPHCM_price": "9.163.337.000 VNĐ",
+        "other_price": "9.144.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra Cabriolet",
+        "listed_price": "8 tỷ 470 triệu VNĐ",
+        "HN_price": "9.508.737.000 VNĐ",
+        "TPHCM_price": "9.339.337.000 VNĐ",
+        "other_price": "9.320.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra S",
+        "listed_price": "8 tỷ 530 triệu VNĐ",
+        "HN_price": "9.575.937.000 VNĐ",
+        "TPHCM_price": "9.405.337.000 VNĐ",
+        "other_price": "9.386.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra 4 Cabriolet",
+        "listed_price": "8 tỷ 910 triệu VNĐ",
+        "HN_price": "10.001.537.000 VNĐ",
+        "TPHCM_price": "9.823.337.000 VNĐ",
+        "other_price": "9.804.337.000 VNĐ"
+      },
+      {
+        "name": "Targa 4",
+        "listed_price": "8 tỷ 910 triệu VNĐ",
+        "HN_price": "10.001.537.000 VNĐ",
+        "TPHCM_price": "9.823.337.000 VNĐ",
+        "other_price": "9.804.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra 4S",
+        "listed_price": "8 tỷ 980 triệu VNĐ",
+        "HN_price": "10.079.937.000 VNĐ",
+        "TPHCM_price": "9.900.337.000 VNĐ",
+        "other_price": "9.881.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra S Cabriolet",
+        "listed_price": "9 tỷ 530 triệu VNĐ",
+        "HN_price": "10.695.937.000 VNĐ",
+        "TPHCM_price": "10.505.337.000 VNĐ",
+        "other_price": "10.486.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra GTS",
+        "listed_price": "9 tỷ 630 triệu VNĐ",
+        "HN_price": "10.807.937.000 VNĐ",
+        "TPHCM_price": "10.615.337.000 VNĐ",
+        "other_price": "10.596.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra 4S Cabriolet",
+        "listed_price": "9 tỷ 850 triệu VNĐ",
+        "HN_price": "11.054.337.000 VNĐ",
+        "TPHCM_price": "10.857.337.000 VNĐ",
+        "other_price": "10.838.337.000 VNĐ"
+      },
+      {
+        "name": "Targa 4S",
+        "listed_price": "9 tỷ 850 triệu VNĐ",
+        "HN_price": "11.054.337.000 VNĐ",
+        "TPHCM_price": "10.857.337.000 VNĐ",
+        "other_price": "10.838.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra 4 GTS",
+        "listed_price": "10 tỷ 120 triệu VNĐ",
+        "HN_price": "11.356.737.000 VNĐ",
+        "TPHCM_price": "11.154.337.000 VNĐ",
+        "other_price": "11.135.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra GTS Cabriolet",
+        "listed_price": "10 tỷ 510 triệu VNĐ",
+        "HN_price": "11.793.537.000 VNĐ",
+        "TPHCM_price": "11.583.337.000 VNĐ",
+        "other_price": "11.564.337.000 VNĐ"
+      },
+      {
+        "name": "Carerra 4 GTS Cabriolet",
+        "listed_price": "11 tỷ VNĐ",
+        "HN_price": "12.342.337.000 VNĐ",
+        "TPHCM_price": "12.122.337.000 VNĐ",
+        "other_price": "12.103.337.000 VNĐ"
+      },
+      {
+        "name": "Targa 4 GTS",
+        "listed_price": "11 tỷ VNĐ",
+        "HN_price": "12.342.337.000 VNĐ",
+        "TPHCM_price": "12.122.337.000 VNĐ",
+        "other_price": "12.103.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo",
+        "listed_price": "14 tỷ 250 triệu VNĐ",
+        "HN_price": "15.982.337.000 VNĐ",
+        "TPHCM_price": "15.697.337.000 VNĐ",
+        "other_price": "15.678.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo Cabriolet",
+        "listed_price": "15 tỷ 070 triệu VNĐ",
+        "HN_price": "16.900.737.000 VNĐ",
+        "TPHCM_price": "16.599.337.000 VNĐ",
+        "other_price": "16.580.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo S",
+        "listed_price": "16 tỷ 500 triệu VNĐ",
+        "HN_price": "18.502.337.000 VNĐ",
+        "TPHCM_price": "18.172.337.000 VNĐ",
+        "other_price": "18.153.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo S Cabriolet",
+        "listed_price": "17 tỷ 380 triệu VNĐ",
+        "HN_price": "19.487.937.000 VNĐ",
+        "TPHCM_price": "19.140.337.000 VNĐ",
+        "other_price": "19.121.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Bentley",
+    "model_title_name": "Continental 2023",
+    "prices": [
+      {
+        "name": "GT S",
+        "listed_price": "19 tỷ 548 triệu VNĐ",
+        "HN_price": "21.916.097.000 VNĐ",
+        "TPHCM_price": "21.525.137.000 VNĐ",
+        "other_price": "21.506.137.000 VNĐ"
+      }
+    ]
+  },
+  { "model_brand": "Audi", "model_title_name": "Q2 2021", "prices": [] },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "XM 2024",
+    "prices": [
+      {
+        "name": "XM 2024",
+        "listed_price": "10 tỷ 099 triệu VNĐ",
+        "HN_price": "11.333.217.000 VNĐ",
+        "TPHCM_price": "11.131.237.000 VNĐ",
+        "other_price": "11.112.237.000 VNĐ"
+      }
+    ]
+  },
+  { "model_brand": "Audi", "model_title_name": "A7 2021", "prices": [] },
+  { "model_brand": "Audi", "model_title_name": "Q3 2021", "prices": [] },
+  { "model_brand": "Audi", "model_title_name": "Q7 2021", "prices": [] },
+  { "model_brand": "Audi", "model_title_name": "A4 2021", "prices": [] },
+  { "model_brand": "Audi", "model_title_name": "Q5 2021", "prices": [] },
+  { "model_brand": "Audi", "model_title_name": "A6 2021", "prices": [] },
+  { "model_brand": "Audi", "model_title_name": "Q8 2021", "prices": [] },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "i7 2023",
+    "prices": [
+      {
+        "name": "xDrive60 Pure Excellence",
+        "listed_price": "7 tỷ 199 triệu VNĐ",
+        "HN_price": "7.221.337.000 VNĐ",
+        "TPHCM_price": "7.221.337.000 VNĐ",
+        "other_price": "7.202.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "Series 8 2023",
+    "prices": [
+      {
+        "name": "Gran Coupe",
+        "listed_price": "6 tỷ 899 triệu VNĐ",
+        "HN_price": "7.749.217.000 VNĐ",
+        "TPHCM_price": "7.611.237.000 VNĐ",
+        "other_price": "7.592.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "X7 2023",
+    "prices": [
+      {
+        "name": "xDrive40i M Sport",
+        "listed_price": "6 tỷ 299 triệu VNĐ",
+        "HN_price": "7.077.574.000 VNĐ",
+        "TPHCM_price": "6.951.594.000 VNĐ",
+        "other_price": "6.932.594.000 VNĐ"
+      },
+      {
+        "name": "xDrive40i Pure Excellence",
+        "listed_price": "7 tỷ 399 triệu VNĐ",
+        "HN_price": "8.309.574.000 VNĐ",
+        "TPHCM_price": "8.161.594.000 VNĐ",
+        "other_price": "8.142.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "Series 7 2023",
+    "prices": [
+      {
+        "name": "735Li M Sport",
+        "listed_price": "5 tỷ 199 triệu VNĐ",
+        "HN_price": "5.845.217.000 VNĐ",
+        "TPHCM_price": "5.741.237.000 VNĐ",
+        "other_price": "5.722.237.000 VNĐ"
+      },
+      {
+        "name": "735i Pure Excellence",
+        "listed_price": "5 tỷ 339 triệu VNĐ",
+        "HN_price": "6.002.017.000 VNĐ",
+        "TPHCM_price": "5.895.237.000 VNĐ",
+        "other_price": "5.876.237.000 VNĐ"
+      },
+      {
+        "name": "740i Pure Excellence",
+        "listed_price": "6 tỷ 599 triệu VNĐ",
+        "HN_price": "7.413.217.000 VNĐ",
+        "TPHCM_price": "7.281.237.000 VNĐ",
+        "other_price": "7.262.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "i4 2023",
+    "prices": [
+      {
+        "name": "i4 eDrive40",
+        "listed_price": "3 tỷ 759 triệu VNĐ",
+        "HN_price": "3.781.337.000 VNĐ",
+        "TPHCM_price": "3.781.337.000 VNĐ",
+        "other_price": "3.762.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "X6 2021",
+    "prices": [
+      {
+        "name": "xDrive40i M Sport",
+        "listed_price": "4 tỷ 549 triệu VNĐ",
+        "HN_price": "5.117.217.000 VNĐ",
+        "TPHCM_price": "5.026.237.000 VNĐ",
+        "other_price": "5.007.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "iX3 2023",
+    "prices": [
+      {
+        "name": "M Sport",
+        "listed_price": "3 tỷ 499 triệu VNĐ",
+        "HN_price": "3.521.337.000 VNĐ",
+        "TPHCM_price": "3.521.337.000 VNĐ",
+        "other_price": "3.502.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "X5 2024",
+    "prices": [
+      {
+        "name": "xDrive40i xLine",
+        "listed_price": "3 tỷ 909 triệu VNĐ",
+        "HN_price": "4.165.877.000 VNĐ",
+        "TPHCM_price": "4.126.787.000 VNĐ",
+        "other_price": "4.107.787.000 VNĐ"
+      },
+      {
+        "name": "xDrive40i M Sport",
+        "listed_price": "4 tỷ 159 triệu VNĐ",
+        "HN_price": "4.430.877.000 VNĐ",
+        "TPHCM_price": "4.389.287.000 VNĐ",
+        "other_price": "4.370.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "X3 2021",
+    "prices": [
+      {
+        "name": "xDrive20i",
+        "listed_price": "2 tỷ 299 triệu VNĐ",
+        "HN_price": "2.597.217.000 VNĐ",
+        "TPHCM_price": "2.551.237.000 VNĐ",
+        "other_price": "2.532.237.000 VNĐ"
+      },
+      {
+        "name": "xDrive20i xLine",
+        "listed_price": "2 tỷ 629 triệu VNĐ",
+        "HN_price": "2.966.817.000 VNĐ",
+        "TPHCM_price": "2.914.237.000 VNĐ",
+        "other_price": "2.895.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "X4 2022 ",
+    "prices": [
+      {
+        "name": "xDrive20i M Sport",
+        "listed_price": "3 tỷ 279 triệu VNĐ",
+        "HN_price": "3.694.817.000 VNĐ",
+        "TPHCM_price": "3.629.237.000 VNĐ",
+        "other_price": "3.610.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "Series 4 2021",
+    "prices": [
+      {
+        "name": "Convertible 2021",
+        "listed_price": "3 tỷ 219 triệu VNĐ",
+        "HN_price": "3.434.477.000 VNĐ",
+        "TPHCM_price": "3.402.287.000 VNĐ",
+        "other_price": "3.383.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "Z4 Roadster 2021",
+    "prices": [
+      {
+        "name": "sDrive30i M Sport",
+        "listed_price": "3 tỷ 329 triệu VNĐ",
+        "HN_price": "3.750.817.000 VNĐ",
+        "TPHCM_price": "3.684.237.000 VNĐ",
+        "other_price": "3.665.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "Series 5 2021",
+    "prices": [
+      {
+        "name": "520i Luxury Line",
+        "listed_price": "2 tỷ 499 triệu VNĐ",
+        "HN_price": "2.821.217.000 VNĐ",
+        "TPHCM_price": "2.771.237.000 VNĐ",
+        "other_price": "2.752.237.000 VNĐ"
+      },
+      {
+        "name": "520i M Sport",
+        "listed_price": "2 tỷ 969 triệu VNĐ",
+        "HN_price": "3.347.617.000 VNĐ",
+        "TPHCM_price": "3.288.237.000 VNĐ",
+        "other_price": "3.269.237.000 VNĐ"
+      },
+      {
+        "name": "530i M Sport",
+        "listed_price": "3 tỷ 289 triệu VNĐ",
+        "HN_price": "3.706.017.000 VNĐ",
+        "TPHCM_price": "3.640.237.000 VNĐ",
+        "other_price": "3.621.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "Series 3 2021",
+    "prices": [
+      {
+        "name": "320i Sport Line",
+        "listed_price": "1 tỷ 899 triệu VNĐ",
+        "HN_price": "2.149.217.000 VNĐ",
+        "TPHCM_price": "2.111.237.000 VNĐ",
+        "other_price": "2.092.237.000 VNĐ"
+      },
+      {
+        "name": "320i Sport Line Plus",
+        "listed_price": "2 tỷ 179 triệu VNĐ",
+        "HN_price": "2.462.817.000 VNĐ",
+        "TPHCM_price": "2.419.237.000 VNĐ",
+        "other_price": "2.400.237.000 VNĐ"
+      },
+      {
+        "name": "330i M Sport",
+        "listed_price": "2 tỷ 499 triệu VNĐ",
+        "HN_price": "2.821.217.000 VNĐ",
+        "TPHCM_price": "2.771.237.000 VNĐ",
+        "other_price": "2.752.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Bentley",
+    "model_title_name": "Bentayga 2021",
+    "prices": [
+      {
+        "name": "Bentayga V8",
+        "listed_price": "19 tỷ 500 triệu VNĐ",
+        "HN_price": "21.862.337.000 VNĐ",
+        "TPHCM_price": "21.472.337.000 VNĐ",
+        "other_price": "21.453.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Ford",
+    "model_title_name": "Everest 2023",
+    "prices": [
+      {
+        "name": "Ambient 2.0 AT 4x2",
+        "listed_price": "1 tỷ 099 triệu VNĐ",
+        "HN_price": "1.253.574.000 VNĐ",
+        "TPHCM_price": "1.231.594.000 VNĐ",
+        "other_price": "1.212.594.000 VNĐ"
+      },
+      {
+        "name": "Sport 2.0 AT 4x2",
+        "listed_price": "1 tỷ 178 triệu VNĐ",
+        "HN_price": "1.342.054.000 VNĐ",
+        "TPHCM_price": "1.318.494.000 VNĐ",
+        "other_price": "1.299.494.000 VNĐ"
+      },
+      {
+        "name": "Titanium 2.0 AT 4x2",
+        "listed_price": "1 tỷ 299 triệu VNĐ",
+        "HN_price": "1.477.574.000 VNĐ",
+        "TPHCM_price": "1.451.594.000 VNĐ",
+        "other_price": "1.432.594.000 VNĐ"
+      },
+      {
+        "name": "Titanium+ 2.0 AT 4x4",
+        "listed_price": "1 tỷ 468 triệu VNĐ",
+        "HN_price": "1.666.854.000 VNĐ",
+        "TPHCM_price": "1.637.494.000 VNĐ",
+        "other_price": "1.618.494.000 VNĐ"
+      },
+      {
+        "name": "Wildtrak 2.0 AT 4x4",
+        "listed_price": "1 tỷ 499 triệu VNĐ",
+        "HN_price": "1.701.574.000 VNĐ",
+        "TPHCM_price": "1.671.594.000 VNĐ",
+        "other_price": "1.652.594.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Bentley",
+    "model_title_name": "Flying Spur 2021",
+    "prices": [
+      {
+        "name": "V8",
+        "listed_price": "19 tỷ 500 triệu VNĐ",
+        "HN_price": "21.862.337.000 VNĐ",
+        "TPHCM_price": "21.472.337.000 VNĐ",
+        "other_price": "21.453.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "BMW",
+    "model_title_name": "X1 2021",
+    "prices": [
+      {
+        "name": "sDrive18i xLine LCI",
+        "listed_price": "1 tỷ 859 triệu VNĐ",
+        "HN_price": "2.104.417.000 VNĐ",
+        "TPHCM_price": "2.067.237.000 VNĐ",
+        "other_price": "2.048.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Ford",
+    "model_title_name": "Ranger 2022",
+    "prices": [
+      {
+        "name": "XLS 2.0 4x2 MT",
+        "listed_price": "665 triệu VNĐ",
+        "HN_price": "711.277.000 VNĐ",
+        "TPHCM_price": "707.287.000 VNĐ",
+        "other_price": "688.287.000 VNĐ"
+      },
+      {
+        "name": "XL 2.0 4x4 MT",
+        "listed_price": "669 triệu VNĐ",
+        "HN_price": "715.421.000 VNĐ",
+        "TPHCM_price": "711.407.000 VNĐ",
+        "other_price": "692.407.000 VNĐ"
+      },
+      {
+        "name": "XL 2.0 4x4 MT",
+        "listed_price": "669 triệu VNĐ",
+        "HN_price": "715.421.000 VNĐ",
+        "TPHCM_price": "711.407.000 VNĐ",
+        "other_price": "692.407.000 VNĐ"
+      },
+      {
+        "name": "XLS 2.0 4x2 AT",
+        "listed_price": "707 triệu VNĐ",
+        "HN_price": "754.789.000 VNĐ",
+        "TPHCM_price": "750.547.000 VNĐ",
+        "other_price": "731.547.000 VNĐ"
+      },
+      {
+        "name": "XLS 2.0 4x4 AT",
+        "listed_price": "776 triệu VNĐ",
+        "HN_price": "826.273.000 VNĐ",
+        "TPHCM_price": "821.617.000 VNĐ",
+        "other_price": "802.617.000 VNĐ"
+      },
+      {
+        "name": "XLT 2.0 4x4 AT",
+        "listed_price": "830 triệu VNĐ",
+        "HN_price": "882.217.000 VNĐ",
+        "TPHCM_price": "877.237.000 VNĐ",
+        "other_price": "858.237.000 VNĐ"
+      },
+      {
+        "name": "Sport 2.0 4x4 AT",
+        "listed_price": "864 triệu VNĐ",
+        "HN_price": "917.441.000 VNĐ",
+        "TPHCM_price": "912.257.000 VNĐ",
+        "other_price": "893.257.000 VNĐ"
+      },
+      {
+        "name": "Wildtrak 2.0 4x4 AT",
+        "listed_price": "979 triệu VNĐ",
+        "HN_price": "1.036.581.000 VNĐ",
+        "TPHCM_price": "1.030.707.000 VNĐ",
+        "other_price": "1.011.707.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Haima",
+    "model_title_name": "7X-E 2023",
+    "prices": [
+      {
+        "name": "Tiêu chuẩn",
+        "listed_price": "1 tỷ 111 triệu VNĐ",
+        "HN_price": "1.133.694.000 VNĐ",
+        "TPHCM_price": "1.133.694.000 VNĐ",
+        "other_price": "1.114.694.000 VNĐ"
+      },
+      {
+        "name": "Cao cấp",
+        "listed_price": "1 tỷ 230 triệu VNĐ",
+        "HN_price": "1.252.694.000 VNĐ",
+        "TPHCM_price": "1.252.694.000 VNĐ",
+        "other_price": "1.233.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Haima",
+    "model_title_name": "7X 2023",
+    "prices": [
+      {
+        "name": "Cao cấp",
+        "listed_price": "865 triệu VNĐ",
+        "HN_price": "939.594.000 VNĐ",
+        "TPHCM_price": "930.944.000 VNĐ",
+        "other_price": "911.944.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Ford",
+    "model_title_name": "Territory 2022",
+    "prices": [
+      {
+        "name": "Trend",
+        "listed_price": "822 triệu VNĐ",
+        "HN_price": "893.657.000 VNĐ",
+        "TPHCM_price": "885.437.000 VNĐ",
+        "other_price": "866.437.000 VNĐ"
+      },
+      {
+        "name": "Titanium",
+        "listed_price": "899 triệu VNĐ",
+        "HN_price": "975.277.000 VNĐ",
+        "TPHCM_price": "966.287.000 VNĐ",
+        "other_price": "947.287.000 VNĐ"
+      },
+      {
+        "name": "Titanium X",
+        "listed_price": "935 triệu VNĐ",
+        "HN_price": "1.013.437.000 VNĐ",
+        "TPHCM_price": "1.004.087.000 VNĐ",
+        "other_price": "985.087.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Porsche",
+    "model_title_name": "Cayenne 2023",
+    "prices": [
+      {
+        "name": "Tiêu chuẩn",
+        "listed_price": "5 tỷ 560 triệu VNĐ",
+        "HN_price": "6.249.537.000 VNĐ",
+        "TPHCM_price": "6.138.337.000 VNĐ",
+        "other_price": "6.119.337.000 VNĐ"
+      },
+      {
+        "name": "Coupé",
+        "listed_price": "5 tỷ 810 triệu VNĐ",
+        "HN_price": "6.529.537.000 VNĐ",
+        "TPHCM_price": "6.413.337.000 VNĐ",
+        "other_price": "6.394.337.000 VNĐ"
+      },
+      {
+        "name": "S",
+        "listed_price": "7 tỷ 770 triệu VNĐ",
+        "HN_price": "8.724.737.000 VNĐ",
+        "TPHCM_price": "8.569.337.000 VNĐ",
+        "other_price": "8.550.337.000 VNĐ"
+      },
+      {
+        "name": "S Coupé",
+        "listed_price": "8 tỷ 070 triệu VNĐ",
+        "HN_price": "9.060.737.000 VNĐ",
+        "TPHCM_price": "8.899.337.000 VNĐ",
+        "other_price": "8.880.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo GT",
+        "listed_price": "14 tỷ 360 triệu VNĐ",
+        "HN_price": "16.105.537.000 VNĐ",
+        "TPHCM_price": "15.818.337.000 VNĐ",
+        "other_price": "15.799.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Porsche",
+    "model_title_name": "Panamera 2021",
+    "prices": [
+      {
+        "name": "V6",
+        "listed_price": "5 tỷ 310 triệu VNĐ",
+        "HN_price": "5.969.537.000 VNĐ",
+        "TPHCM_price": "5.863.337.000 VNĐ",
+        "other_price": "5.844.337.000 VNĐ"
+      },
+      {
+        "name": "4",
+        "listed_price": "5 tỷ 500 triệu VNĐ",
+        "HN_price": "6.182.337.000 VNĐ",
+        "TPHCM_price": "6.072.337.000 VNĐ",
+        "other_price": "6.053.337.000 VNĐ"
+      },
+      {
+        "name": "4 Executive",
+        "listed_price": "5 tỷ 500 triệu VNĐ",
+        "HN_price": "6.182.337.000 VNĐ",
+        "TPHCM_price": "6.072.337.000 VNĐ",
+        "other_price": "6.053.337.000 VNĐ"
+      },
+      {
+        "name": "4 Cross Turismo",
+        "listed_price": "5 tỷ 660 triệu VNĐ",
+        "HN_price": "6.361.537.000 VNĐ",
+        "TPHCM_price": "6.248.337.000 VNĐ",
+        "other_price": "6.229.337.000 VNĐ"
+      },
+      {
+        "name": "GTS",
+        "listed_price": "7 tỷ 530 triệu VNĐ",
+        "HN_price": "8.455.937.000 VNĐ",
+        "TPHCM_price": "8.305.337.000 VNĐ",
+        "other_price": "8.286.337.000 VNĐ"
+      },
+      {
+        "name": "GTS Sport Turismo",
+        "listed_price": "10 tỷ 260 triệu VNĐ",
+        "HN_price": "11.513.537.000 VNĐ",
+        "TPHCM_price": "11.308.337.000 VNĐ",
+        "other_price": "11.289.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo S",
+        "listed_price": "13 tỷ 030 triệu VNĐ",
+        "HN_price": "14.615.937.000 VNĐ",
+        "TPHCM_price": "14.355.337.000 VNĐ",
+        "other_price": "14.336.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Porsche",
+    "model_title_name": "Macan 2022",
+    "prices": [
+      {
+        "name": "Base",
+        "listed_price": "3 tỷ 350 triệu VNĐ",
+        "HN_price": "3.774.337.000 VNĐ",
+        "TPHCM_price": "3.707.337.000 VNĐ",
+        "other_price": "3.688.337.000 VNĐ"
+      },
+      {
+        "name": "T",
+        "listed_price": "3 tỷ 570 triệu VNĐ",
+        "HN_price": "4.020.737.000 VNĐ",
+        "TPHCM_price": "3.949.337.000 VNĐ",
+        "other_price": "3.930.337.000 VNĐ"
+      },
+      {
+        "name": "S",
+        "listed_price": "4 tỷ 400 triệu VNĐ",
+        "HN_price": "4.950.337.000 VNĐ",
+        "TPHCM_price": "4.862.337.000 VNĐ",
+        "other_price": "4.843.337.000 VNĐ"
+      },
+      {
+        "name": "GTS",
+        "listed_price": "5 tỷ 340 triệu VNĐ",
+        "HN_price": "6.003.137.000 VNĐ",
+        "TPHCM_price": "5.896.337.000 VNĐ",
+        "other_price": "5.877.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Hongqi",
+    "model_title_name": "H9 2022",
+    "prices": [
+      {
+        "name": "2.0 Elegance",
+        "listed_price": "1 tỷ 508 triệu VNĐ",
+        "HN_price": "1.711.297.000 VNĐ",
+        "TPHCM_price": "1.681.137.000 VNĐ",
+        "other_price": "1.662.137.000 VNĐ"
+      },
+      {
+        "name": "2.0 Luxury",
+        "listed_price": "1 tỷ 668 triệu VNĐ",
+        "HN_price": "1.890.497.000 VNĐ",
+        "TPHCM_price": "1.857.137.000 VNĐ",
+        "other_price": "1.838.137.000 VNĐ"
+      },
+      {
+        "name": "2.0 Premium",
+        "listed_price": "1 tỷ 888 triệu VNĐ",
+        "HN_price": "2.136.897.000 VNĐ",
+        "TPHCM_price": "2.099.137.000 VNĐ",
+        "other_price": "2.080.137.000 VNĐ"
+      },
+      {
+        "name": "3.0 Premium",
+        "listed_price": "2 tỷ 468 triệu VNĐ",
+        "HN_price": "2.786.497.000 VNĐ",
+        "TPHCM_price": "2.737.137.000 VNĐ",
+        "other_price": "2.718.137.000 VNĐ"
+      },
+      {
+        "name": "3.0 Flagship",
+        "listed_price": "2 tỷ 688 triệu VNĐ",
+        "HN_price": "3.032.897.000 VNĐ",
+        "TPHCM_price": "2.979.137.000 VNĐ",
+        "other_price": "2.960.137.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Honda",
+    "model_title_name": "Civic 2022",
+    "prices": [
+      {
+        "name": "E",
+        "listed_price": "730 triệu VNĐ",
+        "HN_price": "839.937.000 VNĐ",
+        "TPHCM_price": "825.337.000 VNĐ",
+        "other_price": "806.337.000 VNĐ"
+      },
+      {
+        "name": "G",
+        "listed_price": "770 triệu VNĐ",
+        "HN_price": "884.737.000 VNĐ",
+        "TPHCM_price": "869.337.000 VNĐ",
+        "other_price": "850.337.000 VNĐ"
+      },
+      {
+        "name": "RS",
+        "listed_price": "870 triệu VNĐ",
+        "HN_price": "996.737.000 VNĐ",
+        "TPHCM_price": "979.337.000 VNĐ",
+        "other_price": "960.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Porsche",
+    "model_title_name": "718 2021",
+    "prices": [
+      {
+        "name": "Cayman",
+        "listed_price": "3 tỷ 600 triệu VNĐ",
+        "HN_price": "4.054.337.000 VNĐ",
+        "TPHCM_price": "3.982.337.000 VNĐ",
+        "other_price": "3.963.337.000 VNĐ"
+      },
+      {
+        "name": "Boxster",
+        "listed_price": "3 tỷ 720 triệu VNĐ",
+        "HN_price": "4.188.737.000 VNĐ",
+        "TPHCM_price": "4.114.337.000 VNĐ",
+        "other_price": "4.095.337.000 VNĐ"
+      },
+      {
+        "name": "Cayman T",
+        "listed_price": "4 tỷ 090 triệu VNĐ",
+        "HN_price": "4.603.137.000 VNĐ",
+        "TPHCM_price": "4.521.337.000 VNĐ",
+        "other_price": "4.502.337.000 VNĐ"
+      },
+      {
+        "name": "Boxster T",
+        "listed_price": "4 tỷ 210 triệu VNĐ",
+        "HN_price": "4.737.537.000 VNĐ",
+        "TPHCM_price": "4.653.337.000 VNĐ",
+        "other_price": "4.634.337.000 VNĐ"
+      },
+      {
+        "name": "Cayman S",
+        "listed_price": "4 tỷ 530 triệu VNĐ",
+        "HN_price": "5.095.937.000 VNĐ",
+        "TPHCM_price": "5.005.337.000 VNĐ",
+        "other_price": "4.986.337.000 VNĐ"
+      },
+      {
+        "name": "Boxster S",
+        "listed_price": "4 tỷ 650 triệu VNĐ",
+        "HN_price": "5.230.337.000 VNĐ",
+        "TPHCM_price": "5.137.337.000 VNĐ",
+        "other_price": "5.118.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Honda",
+    "model_title_name": "HR-V 2022",
+    "prices": [
+      {
+        "name": "G",
+        "listed_price": "699 triệu VNĐ",
+        "HN_price": "805.217.000 VNĐ",
+        "TPHCM_price": "791.237.000 VNĐ",
+        "other_price": "772.237.000 VNĐ"
+      },
+      {
+        "name": "L",
+        "listed_price": "826 triệu VNĐ",
+        "HN_price": "947.457.000 VNĐ",
+        "TPHCM_price": "930.937.000 VNĐ",
+        "other_price": "911.937.000 VNĐ"
+      },
+      {
+        "name": "RS",
+        "listed_price": "871 triệu VNĐ",
+        "HN_price": "997.857.000 VNĐ",
+        "TPHCM_price": "980.437.000 VNĐ",
+        "other_price": "961.437.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Porsche",
+    "model_title_name": "Taycan 2021",
+    "prices": [
+      {
+        "name": "Base",
+        "listed_price": "4 tỷ 760 triệu VNĐ",
+        "HN_price": "4.782.337.000 VNĐ",
+        "TPHCM_price": "4.782.337.000 VNĐ",
+        "other_price": "4.763.337.000 VNĐ"
+      },
+      {
+        "name": "4S Cross Turismo",
+        "listed_price": "5 tỷ 640 triệu VNĐ",
+        "HN_price": "5.662.337.000 VNĐ",
+        "TPHCM_price": "5.662.337.000 VNĐ",
+        "other_price": "5.643.337.000 VNĐ"
+      },
+      {
+        "name": "4 Cross Turismo",
+        "listed_price": "5 tỷ 660 triệu VNĐ",
+        "HN_price": "5.682.337.000 VNĐ",
+        "TPHCM_price": "5.682.337.000 VNĐ",
+        "other_price": "5.663.337.000 VNĐ"
+      },
+      {
+        "name": "4S",
+        "listed_price": "5 tỷ 720 triệu VNĐ",
+        "HN_price": "5.742.337.000 VNĐ",
+        "TPHCM_price": "5.742.337.000 VNĐ",
+        "other_price": "5.723.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo Cross Turismo",
+        "listed_price": "7 tỷ 580 triệu VNĐ",
+        "HN_price": "7.602.337.000 VNĐ",
+        "TPHCM_price": "7.602.337.000 VNĐ",
+        "other_price": "7.583.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo",
+        "listed_price": "9 tỷ 160 triệu VNĐ",
+        "HN_price": "9.182.337.000 VNĐ",
+        "TPHCM_price": "9.182.337.000 VNĐ",
+        "other_price": "9.163.337.000 VNĐ"
+      },
+      {
+        "name": "Turbo S",
+        "listed_price": "9 tỷ 550 triệu VNĐ",
+        "HN_price": "9.572.337.000 VNĐ",
+        "TPHCM_price": "9.572.337.000 VNĐ",
+        "other_price": "9.553.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Subaru",
+    "model_title_name": "BR-Z 2022",
+    "prices": [
+      {
+        "name": "BR-Z",
+        "listed_price": "1 tỷ 899 triệu VNĐ",
+        "HN_price": "2.149.217.000 VNĐ",
+        "TPHCM_price": "2.111.237.000 VNĐ",
+        "other_price": "2.092.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Honda",
+    "model_title_name": "BR-V 2023",
+    "prices": [
+      {
+        "name": "G",
+        "listed_price": "661 triệu VNĐ",
+        "HN_price": "763.014.000 VNĐ",
+        "TPHCM_price": "749.794.000 VNĐ",
+        "other_price": "730.794.000 VNĐ"
+      },
+      {
+        "name": "L",
+        "listed_price": "705 triệu VNĐ",
+        "HN_price": "812.294.000 VNĐ",
+        "TPHCM_price": "798.194.000 VNĐ",
+        "other_price": "779.194.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Subaru",
+    "model_title_name": "Outback 2023",
+    "prices": [
+      {
+        "name": "2.5 i-Touring EyeSight",
+        "listed_price": "2 tỷ 099 triệu VNĐ",
+        "HN_price": "2.373.217.000 VNĐ",
+        "TPHCM_price": "2.331.237.000 VNĐ",
+        "other_price": "2.312.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Subaru",
+    "model_title_name": "WRX 2022",
+    "prices": [
+      {
+        "name": "2.4 CVT EyeSight",
+        "listed_price": "2 tỷ 049 triệu VNĐ",
+        "HN_price": "2.317.217.000 VNĐ",
+        "TPHCM_price": "2.276.237.000 VNĐ",
+        "other_price": "2.257.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Honda",
+    "model_title_name": "City 2023",
+    "prices": [
+      {
+        "name": "G",
+        "listed_price": "559 triệu VNĐ",
+        "HN_price": "614.877.000 VNĐ",
+        "TPHCM_price": "609.287.000 VNĐ",
+        "other_price": "590.287.000 VNĐ"
+      },
+      {
+        "name": "L",
+        "listed_price": "589 triệu VNĐ",
+        "HN_price": "646.677.000 VNĐ",
+        "TPHCM_price": "640.787.000 VNĐ",
+        "other_price": "621.787.000 VNĐ"
+      },
+      {
+        "name": "RS",
+        "listed_price": "609 triệu VNĐ",
+        "HN_price": "667.877.000 VNĐ",
+        "TPHCM_price": "661.787.000 VNĐ",
+        "other_price": "642.787.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Subaru",
+    "model_title_name": "Forester 2023",
+    "prices": [
+      {
+        "name": "2.0 i-L",
+        "listed_price": "969 triệu VNĐ",
+        "HN_price": "1.107.617.000 VNĐ",
+        "TPHCM_price": "1.088.237.000 VNĐ",
+        "other_price": "1.069.237.000 VNĐ"
+      },
+      {
+        "name": "2.0 i-L EyeSight",
+        "listed_price": "1 tỷ 099 triệu VNĐ",
+        "HN_price": "1.253.217.000 VNĐ",
+        "TPHCM_price": "1.231.237.000 VNĐ",
+        "other_price": "1.212.237.000 VNĐ"
+      },
+      {
+        "name": "2.0 i-S EyeSight",
+        "listed_price": "1 tỷ 199 triệu VNĐ",
+        "HN_price": "1.365.217.000 VNĐ",
+        "TPHCM_price": "1.341.237.000 VNĐ",
+        "other_price": "1.322.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Peugeot",
+    "model_title_name": "Traveller 2021",
+    "prices": [
+      {
+        "name": "Traveller Luxury",
+        "listed_price": "1 tỷ 499 triệu VNĐ",
+        "HN_price": "1.611.634.000 VNĐ",
+        "TPHCM_price": "1.596.644.000 VNĐ",
+        "other_price": "1.577.644.000 VNĐ"
+      },
+      {
+        "name": "Traveller Premium 7S",
+        "listed_price": "1 tỷ 599 triệu VNĐ",
+        "HN_price": "1.717.634.000 VNĐ",
+        "TPHCM_price": "1.701.644.000 VNĐ",
+        "other_price": "1.682.644.000 VNĐ"
+      },
+      {
+        "name": "Traveller Premium",
+        "listed_price": "2 tỷ 089 triệu VNĐ",
+        "HN_price": "2.237.034.000 VNĐ",
+        "TPHCM_price": "2.216.144.000 VNĐ",
+        "other_price": "2.197.144.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Peugeot",
+    "model_title_name": "2008 2021",
+    "prices": [
+      {
+        "name": "Active",
+        "listed_price": "789 triệu VNĐ",
+        "HN_price": "858.677.000 VNĐ",
+        "TPHCM_price": "850.787.000 VNĐ",
+        "other_price": "831.787.000 VNĐ"
+      },
+      {
+        "name": "GT Line",
+        "listed_price": "859 triệu VNĐ",
+        "HN_price": "932.877.000 VNĐ",
+        "TPHCM_price": "924.287.000 VNĐ",
+        "other_price": "905.287.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Peugeot",
+    "model_title_name": "3008 2021",
+    "prices": [
+      {
+        "name": "3008 Active",
+        "listed_price": "949 triệu VNĐ",
+        "HN_price": "1.028.277.000 VNĐ",
+        "TPHCM_price": "1.018.787.000 VNĐ",
+        "other_price": "999.787.000 VNĐ"
+      },
+      {
+        "name": "3008 Allure",
+        "listed_price": "1 tỷ 039 triệu VNĐ",
+        "HN_price": "1.123.677.000 VNĐ",
+        "TPHCM_price": "1.113.287.000 VNĐ",
+        "other_price": "1.094.287.000 VNĐ"
+      },
+      {
+        "name": "3008 GT",
+        "listed_price": "1 tỷ 129 triệu VNĐ",
+        "HN_price": "1.219.077.000 VNĐ",
+        "TPHCM_price": "1.207.787.000 VNĐ",
+        "other_price": "1.188.787.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Peugeot",
+    "model_title_name": "5008 2021",
+    "prices": [
+      {
+        "name": "5008 Allure",
+        "listed_price": "1 tỷ 199 triệu VNĐ",
+        "HN_price": "1.293.634.000 VNĐ",
+        "TPHCM_price": "1.281.644.000 VNĐ",
+        "other_price": "1.262.644.000 VNĐ"
+      },
+      {
+        "name": "5008 GT",
+        "listed_price": "1 tỷ 319 triệu VNĐ",
+        "HN_price": "1.420.834.000 VNĐ",
+        "TPHCM_price": "1.407.644.000 VNĐ",
+        "other_price": "1.388.644.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Peugeot",
+    "model_title_name": "408 2023",
+    "prices": [
+      {
+        "name": "Allure",
+        "listed_price": "999 triệu VNĐ",
+        "HN_price": "1.081.277.000 VNĐ",
+        "TPHCM_price": "1.071.287.000 VNĐ",
+        "other_price": "1.052.287.000 VNĐ"
+      },
+      {
+        "name": "Premium",
+        "listed_price": "1 tỷ 099 triệu VNĐ",
+        "HN_price": "1.187.277.000 VNĐ",
+        "TPHCM_price": "1.176.287.000 VNĐ",
+        "other_price": "1.157.287.000 VNĐ"
+      },
+      {
+        "name": "GT",
+        "listed_price": "1 tỷ 249 triệu VNĐ",
+        "HN_price": "1.346.277.000 VNĐ",
+        "TPHCM_price": "1.333.787.000 VNĐ",
+        "other_price": "1.314.787.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Ram",
+    "model_title_name": "1500 2022",
+    "prices": [
+      {
+        "name": "Laramie",
+        "listed_price": "5 tỷ 388 triệu VNĐ",
+        "HN_price": "5.798.273.000 VNĐ",
+        "TPHCM_price": "5.733.617.000 VNĐ",
+        "other_price": "5.714.617.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Skoda",
+    "model_title_name": "Karoq 2023",
+    "prices": [
+      {
+        "name": "Ambition",
+        "listed_price": "999 triệu VNĐ",
+        "HN_price": "1.141.217.000 VNĐ",
+        "TPHCM_price": "1.121.237.000 VNĐ",
+        "other_price": "1.102.237.000 VNĐ"
+      },
+      {
+        "name": "Style",
+        "listed_price": "1 tỷ 089 triệu VNĐ",
+        "HN_price": "1.242.017.000 VNĐ",
+        "TPHCM_price": "1.220.237.000 VNĐ",
+        "other_price": "1.201.237.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Hilux 2023",
+    "prices": [
+      {
+        "name": "2.4 4x2 AT",
+        "listed_price": "852 triệu VNĐ",
+        "HN_price": "935.681.000 VNĐ",
+        "TPHCM_price": "925.457.000 VNĐ",
+        "other_price": "906.457.000 VNĐ"
+      },
+      {
+        "name": "2.4 4x2 AT",
+        "listed_price": "852 triệu VNĐ",
+        "HN_price": "935.681.000 VNĐ",
+        "TPHCM_price": "925.457.000 VNĐ",
+        "other_price": "906.457.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Camry 2022",
+    "prices": [
+      {
+        "name": "2.0G",
+        "listed_price": "1 tỷ 070 triệu VNĐ",
+        "HN_price": "1.220.737.000 VNĐ",
+        "TPHCM_price": "1.199.337.000 VNĐ",
+        "other_price": "1.180.337.000 VNĐ"
+      },
+      {
+        "name": "2.0Q",
+        "listed_price": "1 tỷ 185 triệu VNĐ",
+        "HN_price": "1.349.537.000 VNĐ",
+        "TPHCM_price": "1.325.837.000 VNĐ",
+        "other_price": "1.306.837.000 VNĐ"
+      },
+      {
+        "name": "2.5Q",
+        "listed_price": "1 tỷ 370 triệu VNĐ",
+        "HN_price": "1.556.737.000 VNĐ",
+        "TPHCM_price": "1.529.337.000 VNĐ",
+        "other_price": "1.510.337.000 VNĐ"
+      },
+      {
+        "name": "2.5HV",
+        "listed_price": "1 tỷ 460 triệu VNĐ",
+        "HN_price": "1.657.537.000 VNĐ",
+        "TPHCM_price": "1.628.337.000 VNĐ",
+        "other_price": "1.609.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Fortuner 2022",
+    "prices": [
+      {
+        "name": "2.4 4x2 MT",
+        "listed_price": "1 tỷ 026 triệu VNĐ",
+        "HN_price": "1.110.254.000 VNĐ",
+        "TPHCM_price": "1.099.994.000 VNĐ",
+        "other_price": "1.080.994.000 VNĐ"
+      },
+      {
+        "name": "2.4 4x2 AT",
+        "listed_price": "1 tỷ 118 triệu VNĐ",
+        "HN_price": "1.207.774.000 VNĐ",
+        "TPHCM_price": "1.196.594.000 VNĐ",
+        "other_price": "1.177.594.000 VNĐ"
+      },
+      {
+        "name": "2.7 4x2 AT",
+        "listed_price": "1 tỷ 229 triệu VNĐ",
+        "HN_price": "1.325.434.000 VNĐ",
+        "TPHCM_price": "1.313.144.000 VNĐ",
+        "other_price": "1.294.144.000 VNĐ"
+      },
+      {
+        "name": "Legender 2.4 4x2 AT",
+        "listed_price": "1 tỷ 259 triệu VNĐ",
+        "HN_price": "1.357.234.000 VNĐ",
+        "TPHCM_price": "1.344.644.000 VNĐ",
+        "other_price": "1.325.644.000 VNĐ"
+      },
+      {
+        "name": "2.7 4x4 AT",
+        "listed_price": "1 tỷ 319 triệu VNĐ",
+        "HN_price": "1.420.834.000 VNĐ",
+        "TPHCM_price": "1.407.644.000 VNĐ",
+        "other_price": "1.388.644.000 VNĐ"
+      },
+      {
+        "name": "2.8 4x4 AT",
+        "listed_price": "1 tỷ 434 triệu VNĐ",
+        "HN_price": "1.542.734.000 VNĐ",
+        "TPHCM_price": "1.528.394.000 VNĐ",
+        "other_price": "1.509.394.000 VNĐ"
+      },
+      {
+        "name": "Legender 2.8 4x4 AT",
+        "listed_price": "1 tỷ 470 triệu VNĐ",
+        "HN_price": "1.580.894.000 VNĐ",
+        "TPHCM_price": "1.566.194.000 VNĐ",
+        "other_price": "1.547.194.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Innova Cross 2023",
+    "prices": [
+      {
+        "name": "Xăng",
+        "listed_price": "810 triệu VNĐ",
+        "HN_price": "929.894.000 VNĐ",
+        "TPHCM_price": "913.694.000 VNĐ",
+        "other_price": "894.694.000 VNĐ"
+      },
+      {
+        "name": "HEV",
+        "listed_price": "990 triệu VNĐ",
+        "HN_price": "1.131.494.000 VNĐ",
+        "TPHCM_price": "1.111.694.000 VNĐ",
+        "other_price": "1.092.694.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Yaris Cross 2023",
+    "prices": [
+      {
+        "name": "V",
+        "listed_price": "730 triệu VNĐ",
+        "HN_price": "839.937.000 VNĐ",
+        "TPHCM_price": "825.337.000 VNĐ",
+        "other_price": "806.337.000 VNĐ"
+      },
+      {
+        "name": "HEV",
+        "listed_price": "838 triệu VNĐ",
+        "HN_price": "960.897.000 VNĐ",
+        "TPHCM_price": "944.137.000 VNĐ",
+        "other_price": "925.137.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Yaris 2021",
+    "prices": [
+      {
+        "name": "1.5G CVT",
+        "listed_price": "684 triệu VNĐ",
+        "HN_price": "788.417.000 VNĐ",
+        "TPHCM_price": "774.737.000 VNĐ",
+        "other_price": "755.737.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Vios 2023",
+    "prices": [
+      {
+        "name": "E MT 3AB",
+        "listed_price": "479 triệu VNĐ",
+        "HN_price": "530.077.000 VNĐ",
+        "TPHCM_price": "525.287.000 VNĐ",
+        "other_price": "506.287.000 VNĐ"
+      },
+      {
+        "name": "E CVT 3AB",
+        "listed_price": "528 triệu VNĐ",
+        "HN_price": "582.017.000 VNĐ",
+        "TPHCM_price": "576.737.000 VNĐ",
+        "other_price": "557.737.000 VNĐ"
+      },
+      {
+        "name": "G CVT",
+        "listed_price": "592 triệu VNĐ",
+        "HN_price": "649.857.000 VNĐ",
+        "TPHCM_price": "643.937.000 VNĐ",
+        "other_price": "624.937.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Corolla Altis 2023",
+    "prices": [
+      {
+        "name": "1.8 G",
+        "listed_price": "725 triệu VNĐ",
+        "HN_price": "834.337.000 VNĐ",
+        "TPHCM_price": "819.837.000 VNĐ",
+        "other_price": "800.837.000 VNĐ"
+      },
+      {
+        "name": "1.8 V",
+        "listed_price": "780 triệu VNĐ",
+        "HN_price": "895.937.000 VNĐ",
+        "TPHCM_price": "880.337.000 VNĐ",
+        "other_price": "861.337.000 VNĐ"
+      },
+      {
+        "name": "1.8 HEV",
+        "listed_price": "870 triệu VNĐ",
+        "HN_price": "996.737.000 VNĐ",
+        "TPHCM_price": "979.337.000 VNĐ",
+        "other_price": "960.337.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Veloz Cross 2022",
+    "prices": [
+      {
+        "name": "CVT",
+        "listed_price": "658 triệu VNĐ",
+        "HN_price": "759.654.000 VNĐ",
+        "TPHCM_price": "746.494.000 VNĐ",
+        "other_price": "727.494.000 VNĐ"
+      },
+      {
+        "name": "CVT Top",
+        "listed_price": "698 triệu VNĐ",
+        "HN_price": "804.454.000 VNĐ",
+        "TPHCM_price": "790.494.000 VNĐ",
+        "other_price": "771.494.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Innova 2021",
+    "prices": [
+      {
+        "name": "2.0E",
+        "listed_price": "755 triệu VNĐ",
+        "HN_price": "822.994.000 VNĐ",
+        "TPHCM_price": "815.444.000 VNĐ",
+        "other_price": "796.444.000 VNĐ"
+      },
+      {
+        "name": "2.0G",
+        "listed_price": "870 triệu VNĐ",
+        "HN_price": "944.894.000 VNĐ",
+        "TPHCM_price": "936.194.000 VNĐ",
+        "other_price": "917.194.000 VNĐ"
+      },
+      {
+        "name": "2.0G Venturer",
+        "listed_price": "885 triệu VNĐ",
+        "HN_price": "960.794.000 VNĐ",
+        "TPHCM_price": "951.944.000 VNĐ",
+        "other_price": "932.944.000 VNĐ"
+      },
+      {
+        "name": "2.0V",
+        "listed_price": "995 triệu VNĐ",
+        "HN_price": "1.077.394.000 VNĐ",
+        "TPHCM_price": "1.067.444.000 VNĐ",
+        "other_price": "1.048.444.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Avanza Premio 2022",
+    "prices": [
+      {
+        "name": "MT",
+        "listed_price": "558 triệu VNĐ",
+        "HN_price": "647.654.000 VNĐ",
+        "TPHCM_price": "636.494.000 VNĐ",
+        "other_price": "617.494.000 VNĐ"
+      },
+      {
+        "name": "AT",
+        "listed_price": "598 triệu VNĐ",
+        "HN_price": "692.454.000 VNĐ",
+        "TPHCM_price": "680.494.000 VNĐ",
+        "other_price": "661.494.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Wigo 2023",
+    "prices": [
+      {
+        "name": "E",
+        "listed_price": "360 triệu VNĐ",
+        "HN_price": "425.537.000 VNĐ",
+        "TPHCM_price": "418.337.000 VNĐ",
+        "other_price": "399.337.000 VNĐ"
+      },
+      {
+        "name": "G",
+        "listed_price": "405 triệu VNĐ",
+        "HN_price": "475.937.000 VNĐ",
+        "TPHCM_price": "467.837.000 VNĐ",
+        "other_price": "448.837.000 VNĐ"
+      }
+    ]
+  },
+  {
+    "model_brand": "Toyota",
+    "model_title_name": "Raize 2021",
+    "prices": [
+      {
+        "name": "1.0 Turbo",
+        "listed_price": "552 triệu VNĐ",
+        "HN_price": "640.577.000 VNĐ",
+        "TPHCM_price": "629.537.000 VNĐ",
+        "other_price": "610.537.000 VNĐ"
+      }
+    ]
+  }
+]

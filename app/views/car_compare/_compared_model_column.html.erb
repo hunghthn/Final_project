@@ -1,0 +1,33 @@
+
+  <div class="col-md-3">
+    <% if model.present? %>
+    <div class="car-item gray-bg text-center">
+      <div class="car-image">
+        <img class="img-fluid" src="<%= model.model_main_pic %>" alt="<%= model.model_name %>">
+        <div class="car-overlay-banner">
+          <ul>
+            <li>
+                <%= link_to "#", class: 'remove-from-compare', data: { model_id: model.id } do %>
+                  <i class="fa fa-minus-circle"></i>
+                <% end %>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div class="car-content">
+        <span><a href="#"><%= model.brand.brand_name %></a></span>
+        <span><%= link_to model.model_title_name, model_path(model) %></span>
+        <div class="separator"></div>
+        <div class="price">
+          <% if model.trims.any? %>
+            <select class="form-control trim-select" data-model-id="<%= model.id %>">
+              <%= options_for_select(model.trims.pluck(:name)) %>
+            </select>
+          <% else %>
+            <p>No trims available for this model.</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>

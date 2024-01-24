@@ -1,0 +1,47 @@
+<% driving_assistance_attributes = [
+  { label: 'Ngắt động cơ tạm thời (Idling Stop/Start-Stop)', att: 'idling_stop' },
+  { label: 'Trợ lực vô-lăng', att: 'power_steering' },
+  { label: 'Nhiều chế độ lái', att: 'multiple_driving_modes' },
+  { label: 'Lẫy chuyển số trên vô-lăng', att: 'steering_wheel_paddle_shifters' },
+  { label: 'Hỗ trợ đánh lái khi vào cua', att: 'cornering_assist' },
+  { label: 'Kiểm soát gia tốc', att: 'acceleration_control' },
+  { label: 'Phanh tay điện tử', att: 'electronic_parking_brake' },
+  { label: 'Giữ phanh tự động', att: 'auto_hold' },
+  { label: 'Đánh lái bánh sau', att: 'rear_wheel_steering' },
+  { label: 'Hỗ trợ đỗ xe chủ động', att: 'active_park_assist' },
+  { label: 'Giới hạn tốc độ', att: 'speed_limit_display' },
+  { label: 'Quản lý xe qua app điện thoại', att: 'vehicle_management_via_phone_app' },
+  { label: 'Hỗ trợ đọc biển báo, tín hiệu giao thông', att: 'traffic_sign_recognition' },
+  { label: 'Chế độ lái địa hình', att: 'terrain_mode' },
+  { label: 'Hỗ trợ đọc biển báo, tín hiệu giao thông', att: 'automatic_rev_match_system' },
+  { label: 'Van bướm ga điều chỉnh điện tử DBW', att: 'electronic_throttle_control_dbw' },
+  { label: 'Gài cầu điện', att: 'electric_locking_differential' },
+  { label: 'Khóa vi sai cầu sau', att: 'rear_differential_lock' },
+  { label: 'Hỗ trợ lùi xe tự động (ARA)', att: 'automatic_rearview_assist_ara' },
+  { label: 'Kiểm soát hành trình (Cruise Control)', att: 'cruise_control' },
+  { label: 'Kiểm soát hành trình thích ứng (Adaptive Cruise Control)', att: 'adaptive_cruise_control' },
+  { label: 'Phanh điện tử', att: 'electric_brake_force_distribution' },
+  { label: 'Cảnh báo tiền va chạm', att: 'forward_collision_warning' },
+  { label: 'Khởi động từ xa', att: 'remote_start' }
+] %>
+
+<div id="driving_assistance_container">
+  <div class="row pt-4 pb-4">
+    <h4 class="container-title">Hỗ trợ vận hành
+      <i id="toggle-icon" class="fa fa-angle-down"></i>
+    </h4>
+  </div>
+
+  <% driving_assistance_attributes.each do |attr| %>
+    <div class="row pt-1">
+      <div class="col-md-3">
+        <h6><%= attr[:label] %></h6>
+      </div>
+      <% @compared_models.each do |model| %>
+        <div class="col-md-3">
+          <p id="<%= "#{attr[:att]}_for_model_#{model.id}" %>"><%= model.trims.first.driving_assistance.public_send(attr[:att]) %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

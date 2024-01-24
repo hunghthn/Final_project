@@ -1,0 +1,65 @@
+<% safety_technology_attributes = [
+  { label: 'Số túi khí', att: 'airbag_count' },
+  { label: 'Cảm biến lùi', att: 'rear_sensor' },
+  { label: 'Khóa cửa trung tâm', att: 'central_locking' },
+  { label: 'Kiểm soát hành trình (Cruise Control)', att: 'cruise_control' },
+  { label: 'Kiểm soát hành trình thích ứng (Adaptive Cruise Control)', att: 'adaptive_cruise_control' },
+  { label: 'Chống bó cứng phanh (ABS)', att: 'abs_brakes' },
+  { label: 'Hỗ trợ lực phanh khẩn cấp (BA)', att: 'emergency_brake_assist' },
+  { label: 'Phân phối lực phanh điện tử (EBD)', att: 'ebd' },
+  { label: 'Cân bằng điện tử (VSC, ESP)', att: 'esp' },
+  { label: 'Kiểm soát lực kéo (chống trượt, kiểm soát độ bám đường TCS)', att: 'tcs' },
+  { label: 'Hỗ trợ khởi hành ngang dốc', att: 'hill_start_assist' },
+  { label: 'Hỗ trợ đổ đèo', att: 'hill_descent_control' },
+  { label: 'Cảnh báo điểm mù', att: 'blind_spot_warning' },
+  { label: 'Camera lùi', att: 'rear_view_camera' },
+  { label: 'Camera 360', att: 'camera_360' },
+  { label: 'Camera quan sát làn đường (LaneWatch)', att: 'lane_watch' },
+  { label: 'Cảnh báo chệch làn đường', att: 'lane_departure_warning' },
+  { label: 'Hỗ trợ giữ làn', att: 'lane_keeping_assist' },
+  { label: 'Hỗ trợ phanh tự động giảm thiểu va chạm', att: 'automatic_collision_prevention' },
+  { label: 'Cảnh báo phương tiện cắt ngang khi lùi', att: 'cross_traffic_warning_reverse' },
+  { label: 'Cảnh báo tài xế buồn ngủ', att: 'driver_drowsiness_warning' },
+  { label: 'Móc ghế an toàn cho trẻ em Isofix', att: 'isofix_hooks' },
+  { label: 'Cảm biến áp suất lốp', att: 'tire_pressure_sensor' },
+  { label: 'Cảm biến khoảng cách phía trước', att: 'front_distance_sensor' },
+  { label: 'Cảnh báo tiền va chạm', att: 'front_collision_warning' },
+  { label: 'Ổn định thân xe khi gió thổi ngang', att: 'wind_stability' },
+  { label: 'Hỗ trợ chuyển làn', att: 'lane_change_support' },
+  { label: 'Chống tăng tốc đột ngột (đạp nhầm chân ga)', att: 'sudden_acceleration_prevention' },
+  { label: 'Thông báo xe phía trước khởi hành', att: 'front_vehicle_departure_alert' },
+  { label: 'Thông báo xe trước khởi hành', att: 'front_vehicle_start_alert' },
+  { label: 'Tự động chuyển làn', att: 'automatic_lane_change' },
+  { label: 'Cảnh báo giao thông khi mở cửa', att: 'door_traffic_warning' },
+  { label: 'Vi sai hạn chế trượt LSD', att: 'limited_slip_differential' },
+  { label: 'Nhận diện biển báo giao thông', att: 'traffic_sign_recognition' },
+  { label: 'Hỗ trợ đỗ xe tự động', att: 'automatic_parking_support' },
+  { label: 'Kiểm soát hành trình trên đường địa hình', att: 'off_road_cruise_control' },
+  { label: 'Hệ thống cảm biến trước/sau', att: 'front_rear_sensors' },
+  { label: 'Camera quan sát điểm mù', att: 'blind_spot_camera' },
+  { label: 'Kiểm soát vào cua chủ động AYC (Active Yaw Control)', att: 'active_yaw_control' },
+  { label: 'Phanh tự động khẩn cấp sau va chạm', att: 'rear_automatic_emergency_braking' },
+  { label: 'Hiển thị điểm mù trên màn hình (BVM)', att: 'blind_spot_display' },
+  { label: 'Cảnh báo phương tiện phía trước khởi hành', att: 'front_cross_traffic_warning' }
+] %>
+
+<div id="safety_technology_container">
+  <div class="row pt-4 pb-4">
+    <h4 class="container-title">Công nghệ an toàn
+      <i id="toggle-icon" class="fa fa-angle-down"></i>
+    </h4>
+  </div>
+
+  <% safety_technology_attributes.each do |attr| %>
+    <div class="row pt-1">
+      <div class="col-md-3">
+        <h6><%= attr[:label] %></h6>
+      </div>
+      <% @compared_models.each do |model| %>
+        <div class="col-md-3">
+          <p id="<%= "#{attr[:att]}_for_model_#{model.id}" %>"><%= model.trims.first.safety_technology.public_send(attr[:att]) %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

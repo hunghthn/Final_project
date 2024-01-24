@@ -1,0 +1,32 @@
+<% engine_transmission_attributes = [
+  { label: "Kiểu động cơ", attribute: "engine_type" },
+  { label: "Dung tích (cc)", attribute: "engine_capacity" },
+  { label: "Công suất (mã lực)/vòng tua (vòng/phút)", attribute: "power" },
+  { label: "Mô-men xoắn (Nm)/vòng tua (vòng/phút)", attribute: "torque" },
+  { label: "Hộp số", attribute: "gearbox" },
+  { label: "Hệ dẫn động", attribute: "drive_system" },
+  { label: "Cần số điện tử", attribute: "automatic_transmission" },
+  { label: "Loại nhiên liệu", attribute: "fuel_type" },
+  { label: "Mức tiêu thụ nhiên liệu đường hỗn hợp (lít/100 km)", attribute: "fuel_consumption" }
+] %>
+
+<div id="engine_transmission_container">
+  <div class="row pt-4 pb-4">
+    <h4 class="container-title">Động cơ/hộp số
+      <i id="toggle-icon" class="fa fa-angle-down"></i>
+    </h4>
+  </div>
+
+  <% engine_transmission_attributes.each do |attr| %>
+    <div class="row pt-1">
+      <div class="col-md-3">
+        <h6><%= attr[:label] %></h6>
+      </div>
+      <% @compared_models.each do |model| %>
+        <div class="col-md-3">
+          <p id="<%= "#{attr[:attribute]}_for_model_#{model.id}" %>"><%= model.trims.first.engine_transmission.public_send(attr[:attribute]) %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

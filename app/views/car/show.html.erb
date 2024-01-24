@@ -62,149 +62,25 @@
         <!-- menu links -->
         <ul class="menu-links">
             <!-- active class -->
-            <li><a href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a>
-                 <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel">
-                    <li><a href="index.html">Home 1</a></li>
-                </ul>
+            <li><a href="javascript:void(0)"> Home </a>
             </li>
-            <li><a href="javascript:void(0)">Pages <i class="fa fa-angle-down fa-indicator"></i></a>
-                <!-- drop down full width -->
-                <div class="drop-down menu-bg grid-col-12">
-                    <!--grid row-->
-                    <div class="grid-row">
-                        <!--grid column 3-->
-                        <div class="grid-col-3">
-                            <ul>
-                              <li><a href="about-01.html">About 01</a></li>
-                    
-                        </div>
-                        <!--grid column 3-->
-                        <div class="grid-col-3">
-                            <ul>
-                              <li><a href="team-01.html">team 01</a></li>
-                            </ul>
-                        </div>
-                        <!--grid column 3-->
-                        <div class="grid-col-3">
-                            <ul>
-                              <li><a href="login.html">login</a></li>
-                            
-                            </ul>
-                        </div>
-                        <!--grid column 3-->
-                        <div class="grid-col-3">
-                            <ul>
-                              <li><a href="page-left-sidebar.html">page left sidebar </a></li>
-                             
-                            </ul>
-                        </div>
-
-                    </div>
+            <li><a href="javascript:void(0)">So sánh <i class="fa fa-angle-down fa-indicator"></i></a>
+              <div class="drop-down menu-bg grid-col-12">
+                <div class="grid-row" id="list-compared">
+                  <%= render partial: 'compared_models', locals: { compared_models: session[:compared_models] } %>
                 </div>
+                <div class="grid-row" id ="compare_button">
+                  <%= link_to "So sánh", car_compare_compare_path, class: "button red float-end" %>
+                </div> 
+              </div>
             </li>
-            <li><a href="javascript:void(0)">blog <i class="fa fa-angle-down fa-indicator"></i></a>
-                <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel">
-                    <li><a href="javascript:void(0)">blog classic <i class="fa fa-angle-right fa-indicator"></i> </a>
-                        <!-- drop down second level -->
-                        <ul class="drop-down-multilevel">
-                           <li><a href="blog-left-sidebar.html">left sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:void(0)">Masonry  <i class="fa fa-angle-right fa-indicator"></i> </a>
-                      <!-- drop down second level -->
-                        <ul class="drop-down-multilevel">
-                            <li><a href="blog-masonry-2-collums.html"> 2 column </a> </li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:void(0)">blog single <i class="fa fa-angle-right fa-indicator"></i> </a>
-                      <!-- drop down second level -->
-                        <ul class="drop-down-multilevel">
-                            <li><a href="blog-single-01.html">blog single 01 </a> </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="active"><a href="javascript:void(0)">Car listing  <i class="fa fa-angle-down fa-indicator"></i></a>
+            <li><a href="javascript:void(0)">top doanh số   <i class="fa fa-angle-down fa-indicator"></i></a>
                <!-- drop down multilevel  -->
                 <ul class="drop-down-multilevel">
-                    <li class="active"><a href="listing-01.html">listing 01</a></li>
-                    <li><a href="listing-02.html">listing 02</a></li>
+                    <li><%= link_to "Cả năm 2023", sales_index_path %></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0)">Car details  <i class="fa fa-angle-down fa-indicator"></i></a>
-               <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel">
-                    <li><a href="details-01.html">details 01</a></li>
-                    <li><a href="details-02.html">details 02</a></li>
-                </ul>
-            </li>
-            <li><a href="javascript:void(0)"> Contact <i class="fa fa-angle-down fa-indicator"></i></a>
-                 <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel right-menu">
-                   <li><a href="contact-01.html">contact 01</a></li>
-                   <li><a href="contact-02.html">contact 02</a></li>
-                </ul>
-            </li>
-            <!-- <li>
-              <div class="search-top"> <a class="search-btn not_click d-none d-lg-block" href="javascript:void(0);">Search Button</a>
-                <div class="search-box not-click">
-                  <div class="row">
-                    <div class="col-xl-2 col-md-4 col-sm-6">
-                     <div class="selected-box">
-                      <select class="selectpicker">
-                        <option selected disabled>Brand</option>
-                        <% @brands.sort_by(&:brand_name).each do |brand| %>
-                          <option ><%= brand.brand_name %></option>
-                        <% end %>
-                     </select>
-                    </div>
-                     </div>
-                     <div class="col-xl-2 col-md-4 col-sm-6">
-                      <div class="selected-box">
-                         <select class="selectpicker">
-                          <option selected disabled>Type</option>
-                          <% @types.sort_by(&:type_name).each do |type| %>
-                            <option ><%= type.type_name %></option>
-                          <% end %>
-                         </select>
-                       </div>
-                      </div>
-                      <div class="col-xl-2 col-md-4 col-sm-6">
-                       <div class="selected-box">
-                       <select class="selectpicker">
-                        <option selected disabled>Segment</option>
-                          <% @segments.sort_by(&:segment_name).each do |segment| %>
-                            <option ><%= segment.segment_name %></option>
-                          <% end %>
-                       </select>
-                      </div>
-                        </div>
-                       <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="selected-box">
-                         <select class="selectpicker">
-                            <option>Body style</option>
-                           </select>
-                          </div>
-                        </div>
-                       <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="selected-box">
-                         <select class="selectpicker">
-                            <option>Vehicle Status</option>
-                           </select>
-                         </div>
-                        </div>
-                       <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="text-center">
-                          <button class="button red" type="button">Search</button>
-                      </div>
-                    </div>
-                  </div>
-                 </div>
-               </div>
-              </li> -->
-        </ul>
+          </ul>
        </div>
       </div>
      </div>
@@ -225,12 +101,12 @@
   <div class="container">
      <div class="row text-center intro-title">
            <div class="col-md-6 text-md-start d-inline-block">
-             <h1 class="text-white">product listing </h1>
+             <h1 class="text-white">Danh sách xe đang bán tại Việt Nam</h1>
            </div>
            <div class="col-md-6 text-md-end float-end">
              <ul class="page-breadcrumb">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
-                <li><a href="#">Car List</a> <i class="fa fa-angle-double-right"></i></li>
+                <li><a href="#"><i class="fa fa-home"></i> Trang chủ</a> <i class="fa fa-angle-double-right"></i></li>
+                 <li><%= link_to 'Danh sách xe', car_show_path %> <i class="fa fa-angle-double-right"></i></li>
              </ul>
            </div>
      </div>
@@ -247,22 +123,32 @@ product-listing  -->
 <section class="product-listing page-section-ptb">
  <div class="container">
   <div class="row">
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-3 col-md-3">
       <div class="listing-sidebar">
         <%= search_form_for @q, url: car_show_path, method: "get", html: { class: 'search-form' } do |f| %>
           <div class="widget">
             <div class="widget-search">
-              <h5>Advanced Search</h5>
-              <ul class="list-style
-              -none">
-                <li><i class="fa fa-star"> </i> Results Found <span class="float-end"><%= @models_count %></span></li>
-                <li><i class="fa fa-shopping-cart"> </i> Compare Vehicles <span class="float-end">(10)</span></li>
+              <h5>Tìm kiếm nâng cao</h5>
+              <ul class="list-style-none">
+                <li><i class="fa fa-star"> </i> Kết quả được tìm thấy <span class="float-end"><%= @models_count %></span></li>
+                <li>
+                  <i class="fa fa-shopping-cart"> </i> So sánh xe
+                  <span class="float-end" id="compare-count">
+                    <%= session[:compared_models].to_a.size %>
+                  </span>
+                </li>
+                <li>
+                  <i class="fa fa-refresh"></i> Reset 
+                  <span class="float-end" id="reset-compare">
+                   <%= link_to 'X', reset_compare_path %>
+                  </span>
+                </li>
               </ul>
             </div>
             <div class="clearfix">
               <ul class="list-group">
                 <li class="list-group-item">
-                  <a href="#">Brand</a>
+                  <a href="#">Thương hiệu</a>
                   <ul>
                     <li>
                         <div class="selected-box">
@@ -277,7 +163,7 @@ product-listing  -->
                   </ul>
                 </li>
                 <li class="list-group-item">
-                  <a href="#">Types</a>
+                  <a href="#">Loại xe</a>
                   <ul>
                     <li>              
                         <div class="selected-box">
@@ -291,7 +177,7 @@ product-listing  -->
                   </ul>
                 </li>
                 <li class="list-group-item">
-                  <a href="#">Segment</a>
+                  <a href="#">Phân khúc xe</a>
                   <ul>
                     <li>
                       <div class="selected-box">
@@ -305,12 +191,12 @@ product-listing  -->
                   </ul>
                 </li>
                 <li class="list-group-item">
-                  <%= select_tag "sort_option", options_for_select([["Price: Lowest first", "lowest_price"], ["Price: Highest first", "highest_price"], ["Model Name: A to Z", "name_a_to_z"], ["Model Name: Z to A", "name_z_to_a"]]) %>  
+                  <%= select_tag "sort_option", options_for_select([["Thấp đến cao ", "lowest_price"], ["Cao đến thấp ", "highest_price"], ["Tên xe: A đến Z", "name_a_to_z"], ["Tên xe: Z đến A", "name_z_to_a"]]) %>  
                 </li>                
                 <li class="list-group-item">
                   <div class="price-slide">
                     <div class="price">
-                      <label class="mb-2" for="price">Price Range</label>
+                      <label class="mb-2" for="price">Khoảng giá tìm kiếm</label>
                         <input type="text" id="price" class="amount w-100" value="1 tỷ - 3 tỷ" />
                       <div id="slider-range"></div>
                       <%= hidden_field_tag "min_price" , 1000%>
@@ -323,70 +209,27 @@ product-listing  -->
           </div>
         
         <div class="widget-banner">
-          <%= f.submit "Search", class: 'button red' %>
+          <%= f.submit "Tìm", class: 'button red' %>
           <% end %>  
         </div>
       </div>
     </div>
-     <div class="col-lg-8 col-md-8">
+     <div class="col-lg-9 col-md-9">
        <div class="sorting-options-main">
          <div class="row">
-          <!-- <div class="col-lg-4">
-            <div class="price-slide">
-            <div class="price">
-              <label class="mb-2" for="price">Price Range</label>
-                <input type="text" id="price" class="amount" value="100 triệu - 3 tỷ" />
-              <div id="slider-range"></div>
-            </div>
-            </div>
-          </div>  -->
-          <!-- <div class="col-lg-4">
-            <div class="price-slide-2">
-            <div class="price">
-              <label class="mb-2" for="HP">Horse Power Range</label>
-                <input type="text" id="HP" class="amount" value="$50 - $300" />
-              <div id="slider-range-2"></div>
-            </div>
-            </div>
-          </div>  -->
           <div class="col">
-            <%= search_form_for @q, url: car_show_path, method: "get", html: { class: 'search-form' } do |f| %>
-            <div class="price-search">
-              <span class="mb-2">Name search</span>
-              <div class="search">
-                <i class="fa fa-search"></i>
-                <%= f.search_field :model_title_name, class: 'form-control placeholder', placeholder: 'Search....' %>
+            <%= search_form_for @q, url: car_show_path, method: "get", html: { class: 'search-name-form' } do |f| %>
+              <div class="price-search">
+                <span class="mb-2">Tìm theo tên</span>
+                <div class="search">
+                  <i class="fa fa-search"></i>
+                  <%= f.search_field :model_title_name_cont, class: 'form-control placeholder', placeholder: '....', id: 'model_title_name_autocomplete' %>
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- <div class="col">
-            <%= f.submit 'Search', class: 'button red' %>
             <% end %>
-          </div>
-         -->
+          </div>   
 
-          <!-- <div class="col">
-            <button class="button red" type="button" id="combined-search">
-              Search
-            </button>
-          </div> -->
         </div>
-        <!-- <div class="row sorting-options">
-          <div class="col-lg-5">
-            <div class="selected-box">
-              <%= form_tag(car_show_path, method: "get", class: 'sort-form', remote: true) do %>
-                <%= select_tag "sort_option", options_for_select([["Price: Lowest first", "lowest_price"], ["Price: Highest first", "highest_price"], ["Model Name: A to Z", "name_a_to_z"], ["Model Name: Z to A", "name_z_to_a"]]) %>
-              <% end %>
-            </div>            
-          </div>
-          <div class="col-lg-3 text-end">
-          </div>
-          <div class="col-lg-4 text-end">
-            <button class="button red" type="button" id="combined-search">
-              Search
-            </button>
-          </div>
-        </div>  -->
        </div>
         <div class="row" id="car-list"> 
           <%= render partial: 'car_list', locals: { models: @models } %>
@@ -423,75 +266,6 @@ product-listing  -->
        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-6">
-        <div class="about-content">
-          <img id="logo_img" src="<%= asset_path('logo/logo-light.png') %>" alt="logo">
-          <p>We provide everything you need to build an amazing dealership website developed especially for car sellers dealers or auto motor retailers.</p>
-        </div>
-        <div class="address">
-          <ul>
-            <li> <i class="fa fa-map-marker"></i><span>220E Front St. Burlington NC 27215</span> </li>
-            <li> <i class="fa fa-phone"></i><span>(007) 123 456 7890</span> </li>
-            <li> <i class="fa fa-envelope-o"></i><span>support@website.com</span> </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="usefull-link">
-        <h6 class="text-white">Useful Links</h6>
-          <ul>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Change Oil and Filter</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Brake Pads Replacement</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Timing Belt Replacement</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Pre-purchase Car Inspection</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Starter Replacement</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-       <div class="recent-post-block">
-        <h6 class="text-white">recent posts </h6>
-          <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="images/car/01.jpg" alt="">
-            </div>
-            <div class="recent-post-info">
-                <a href="#">Time to change your </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2021</span>
-            </div>
-         </div>
-         <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="images/car/02.jpg" alt="">
-            </div>
-            <div class="recent-post-info">
-                <a href="#">The best time to </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2021</span>
-            </div>
-         </div>
-         <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="images/car/03.jpg" alt="">
-            </div>
-            <div class="recent-post-info">
-                <a href="#">Replacing a timing </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2021</span>
-            </div>
-         </div>
-       </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="news-letter">
-        <h6 class="text-white">subscribe Our Newsletter </h6>
-         <p>Keep up on our always evolving products features and technology. Enter your e-mail and subscribe to our newsletter.</p>
-         <form class="news-letter">
-           <input type="email" placeholder="Enter your Email" class="form-control placeholder">
-           <a class="button red" href="#">Subscribe</a>
-         </form>
-        </div>
-      </div>
-    </div>
     <hr />
   </div>
 </footer>
@@ -512,37 +286,70 @@ product-listing  -->
 </div>
 <script>
 
-  $(document).on('submit', '.search-form', function() {
-    var min = $("#slider-range").slider("values", 0) / 1000;
-    var max = $("#slider-range").slider("values", 1) / 1000;
-  
-    $('#min_price').val(min);
-    $('#max_price').val(max);
+$('.add-to-compare').on('click', function(e) {
+  e.preventDefault();
+
+  var modelId = $(this).data('model-id');
+  var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+  $.ajax({
+    type: 'POST',
+    url: '/car/add_to_compare',
+    data: {
+      model_id: modelId,
+      authenticity_token: csrfToken
+    },
+    success: function(response) {
+      console.log(response);
+
+      $.ajax({
+        type: 'GET',
+        url: '/car/render_compared_models',
+        success: function() {
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      });
+    },
+    error: function(error) {
+      console.log(error);
+    }
   });
-  
+});
+
+// Sử dụng event delegation cho phần tử cha tồn tại từ trước (body trong trường hợp này)
+$('body').on('click', '.remove-from-compare', function(e) {
+  e.preventDefault();
+
+  var modelId = $(this).data('model-id');
+  var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+  $.ajax({
+    type: 'POST',
+    url: '/car/remove_from_compare',
+    data: {
+      model_id: modelId,
+      authenticity_token: csrfToken
+    },
+    success: function(response) {
+      console.log(response);
+      $.ajax({
+        type: 'GET',
+        url: '/car/render_compared_models',
+        success: function() {
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      });
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  });
+});
+
 
 </script>
- <!--=================================
- back to top -->
 </body>
-<!-- jquery  -->
-<!-- <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script> -->
-
-<!-- bootstrap -->
-<!-- <script type="text/javascript" src="js/popper.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script> -->
-
-<!-- mega-menu -->
-<!-- <script type="text/javascript" src="js/mega-menu/mega_menu.js"></script> -->
-
-<!-- jquery-ui -->
-<!-- <script type="text/javascript" src="js/jquery-ui.js"></script> -->
-
-<!-- select -->
-<!-- <script type="text/javascript" src="js/select/jquery-select.js"></script> -->
-
-<!-- magnific popup -->
-<!-- <script type="text/javascript" src="js/magnific-popup/jquery.magnific-popup.min.js"></script> -->
-
-<!-- custom -->
-<!-- <script type="text/javascript" src="js/custom.js"></script> -->

@@ -4,7 +4,10 @@ class Model < ApplicationRecord
   belongs_to :brand
   belongs_to :segment
   belongs_to :type
-
+  has_many :trims, dependent: :destroy
+  has_many :sales
+  has_many :model_detail, dependent: :destroy
+  
   before_save :extract_price_ranges
   before_save :assign_brand_id
   before_save :assign_type_id
@@ -20,6 +23,10 @@ class Model < ApplicationRecord
        model_power model_price model_price_max model_price_min model_seat model_segment model_source model_title_name model_torque model_type updated_at brand_id type_id segment_id]
   end
 
+  def full_model_name
+    "#{model_brand} #{model_name_main}"
+  end
+  
   private
 
   def extract_price_ranges

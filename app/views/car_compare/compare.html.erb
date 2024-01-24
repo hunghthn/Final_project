@@ -1,0 +1,903 @@
+<body>
+
+<!--=================================
+  loading -->
+
+ <div id="loading">
+  <div id="loading-center">
+      <img src="<%= asset_path('loader/loader.gif') %>" alt="">
+ </div>
+</div>
+
+<!--=================================
+  loading -->
+
+
+<!--=================================
+ header -->
+
+<header id="header" class="defualt">
+<div class="topbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="topbar-left text-lg-start text-center">
+           <ul class="list-inline">
+             <li> <i class="fa fa-envelope-o"> </i> hungchv16@gmail.com</li>
+             <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
+           </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="topbar-right text-lg-end text-center">
+           <ul class="list-inline">
+             <li> <i class="fa fa-phone"></i> 0386680574</li>
+             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+             <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--=================================
+ mega menu -->
+
+<div class="menu">
+  <!-- menu start -->
+   <nav id="menu" class="mega-menu">
+    <!-- menu list items container -->
+    <section class="menu-list-items">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-12 position-relative">
+        <!-- menu logo -->
+        <ul class="menu-logo">
+            <li>
+                <a href=<%= car_show_path %>><img id="logo_img" src="<%= asset_path('logo/logo-light.png') %>" alt="logo"></a>
+            </li>
+        </ul>
+        <!-- menu links -->
+        <ul class="menu-links">
+            <!-- active class -->
+            <li><a href="javascript:void(0)"> Home </a>
+            </li>
+            <li><a href="javascript:void(0)">So sánh <i class="fa fa-angle-down fa-indicator"></i></a>
+            </li>
+                        <li><a href="javascript:void(0)">top doanh số   <i class="fa fa-angle-down fa-indicator"></i></a>
+               <!-- drop down multilevel  -->
+                <ul class="drop-down-multilevel">
+                    <li><%= link_to "Cả năm 2023", sales_index_path %></li>
+                </ul>
+            </li>
+          </ul>
+       </div>
+      </div>
+     </div>
+    </section>
+   </nav>
+  <!-- menu end -->
+ </div>
+</header>
+
+<!--=================================
+ header -->
+
+
+<!--=================================
+ inner-intro -->
+
+ <section class="inner-intro bg-1 bg-overlay-black-70">
+  <div class="container">
+     <div class="row text-center intro-title">
+           <div class="col-md-6 text-md-start d-inline-block">
+             <h1 class="text-white">So sánh xe </h1>
+           </div>
+           <div class="col-md-6 text-md-end float-end">
+             <ul class="page-breadcrumb">
+               <li><a href="#"><i class="fa fa-home"></i> Trang chủ</a> <i class="fa fa-angle-double-right"></i></li>
+                 <li><%= link_to 'So sánh xe', car_compare_compare_path %> <i class="fa fa-angle-double-right"></i></li>
+             </ul>
+           </div>
+     </div>
+  </div>
+</section>
+
+<!--=================================
+ inner-intro -->
+
+
+<!--=================================
+left-sidebar  -->
+
+<section class="page-left-sidebar page-section-ptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h5>
+          <% if @compared_models.present? %>
+            So sánh xe <%= @compared_models.map { |model| "#{model.brand.brand_name} #{model.model_title_name} " }.join(' vs ') %>
+          <% else %>
+            Chưa có mô hình nào được chọn để so sánh.
+          <% end %>
+        </h5>
+        <br>
+        <div class="row" id="trim-list">
+          <div class="col-md-3">
+            <h4>Hãy chọn các phiên bản bạn muốn</h4>
+            <br>
+            <button id="trigger-change">So Sánh</button>
+          </div>
+          <% @compared_models.each do |model| %>
+            <%= render partial: 'compared_model_column', locals: { model: model } %>
+          <% end %>
+        </div>
+        <div class="row pt-4" id="trim-price-list">
+          <div class="col-md-3">
+          <h4>Giá niêm yết</h4>
+          </div>
+          <% @compared_models.each do |model| %>
+            <div class="col-md-3">
+              <h6 id="<%= "price_for_model_#{model.id}" %>"><%= model.trims.first.listed_price %></h6>
+            </div>
+          <% end %>
+        </div>
+          <%= render partial: 'engine_transmission' %>
+          <%= render partial: 'size_weight' %> 
+          <%= render partial: 'suspension_brake' %>
+          <%= render partial: 'exterior' %>
+          <%= render partial: 'interior' %>
+          <%= render partial: 'driving_assistance' %>
+          <%= render partial: 'safety_technology' %>
+      </div>
+    </div>
+   </div>
+</section>
+
+<!--=================================
+left-sidebar  -->
+
+
+<!--=================================
+ footer -->
+
+<footer class="footer bg-3 bg-overlay-black-90">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <div class="social">
+        <ul>
+          <li><a class="facebook" href="#">facebook <i class="fa fa-facebook"></i> </a></li>
+          <li><a class="twitter" href="#">twitter <i class="fa fa-twitter"></i> </a></li>
+          <li><a class="pinterest" href="#">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
+          <li><a class="dribbble" href="#">dribbble <i class="fa fa-dribbble"></i> </a></li>
+          <li><a class="google-plus" href="#">google plus <i class="fa fa-google-plus"></i> </a></li>
+          <li><a class="behance" href="#">behance <i class="fa fa-behance"></i> </a></li>
+        </ul>
+       </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+</footer>
+
+<!--=================================
+ footer -->
+
+
+
+ <!--=================================
+ back to top -->
+
+<div class="car-top">
+  <span>
+    <img  src="<%= asset_path('car.png') %>" alt="">
+  </span>
+</div>
+
+ <!--=================================
+ back to top -->
+<script>
+$('.add-to-compare').on('click', function(e) {
+  e.preventDefault();
+
+  var modelId = $(this).data('model-id');
+  var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+  $.ajax({
+    type: 'POST',
+    url: '/car/add_to_compare',
+    data: {
+      model_id: modelId,
+      authenticity_token: csrfToken
+    },
+    success: function(response) {
+      console.log(response);
+
+      $.ajax({
+        type: 'GET',
+        url: '/car/render_compared_models',
+        success: function() {
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      });
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  });
+});
+
+
+// Sử dụng event delegation cho phần tử cha tồn tại từ trước (body trong trường hợp này)
+$('body').on('click', '.remove-from-compare', function(e) {
+  e.preventDefault();
+
+  var modelId = $(this).data('model-id');
+  var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+  $.ajax({
+    type: 'POST',
+    url: '/car/remove_from_compare',
+    data: {
+      model_id: modelId,
+      authenticity_token: csrfToken
+    },
+    success: function(response) {
+      location.reload();
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  });
+});
+
+$('#trigger-change').on('click', function() {
+  // Lặp qua từng model
+  $('.form-control.trim-select').each(function() {
+    var modelId = $(this).data('model-id');
+    var selectedTrimName = $(this).val();
+    var priceElementId = "#price_for_model_" + modelId;
+
+    // Gửi AJAX request để cập nhật giá
+    $.ajax({
+      type: 'GET',
+      url: '/update_price',
+      data: {
+        model_id: modelId,
+        selected_trim_name: selectedTrimName
+      },
+      success: function(response) {
+        $(priceElementId).text(response.new_price);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
+  });
+});
+
+
+
+
+function updateData(url, elementIdPrefix) {
+  // Lặp qua từng model
+  $('.form-control.trim-select').each(function() {
+    var modelId = $(this).data('model-id');
+    var selectedTrimName = $(this).val();
+    var elementId = `#${elementIdPrefix}_for_model_${modelId}`;
+
+    // Gửi AJAX request để cập nhật giá
+    $.ajax({
+      type: 'GET',
+      url: url,
+      data: {
+        model_id: modelId,
+        selected_trim_name: selectedTrimName
+      },
+      success: function(response) {
+        $(elementId).text(response.new_value);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
+  });
+}
+
+
+function update_max(url, elementIdPrefix) {
+  var maxValue = 0;
+
+  $('.form-control.trim-select').each(function() {
+    var modelId = $(this).data('model-id');
+    var selectedTrimName = $(this).val();
+    var elementId = `#${elementIdPrefix}_for_model_${modelId}`;
+
+    $.ajax({
+      type: 'GET',
+      url: url,
+      data: {
+        model_id: modelId,
+        selected_trim_name: selectedTrimName
+      },
+      success: function(response) {
+        var newValue = response.new_value;
+
+        if (newValue >= maxValue) {
+          maxValue = newValue;
+           $("p[id^='" + elementIdPrefix + "']").css('color', 'gray');
+          $(elementId).css('color', 'red');
+        }
+
+        $(elementId).text(newValue);
+        console.log('maxValue:', maxValue);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
+  });
+}
+
+function update_max_pw(url, elementIdPrefix) {
+  var maxValue = 0;
+
+  $('.form-control.trim-select').each(function() {
+    var modelId = $(this).data('model-id');
+    var selectedTrimName = $(this).val();
+    var elementId = `#${elementIdPrefix}_for_model_${modelId}`;
+
+    $.ajax({
+      type: 'GET',
+      url: url,
+      data: {
+        model_id: modelId,
+        selected_trim_name: selectedTrimName
+      },
+      success: function(response) {
+        var newValue = response.new_value;
+        var hpValue = response.hp_value;
+
+        if (hpValue >= maxValue) {
+          maxValue = hpValue;
+           $("p[id^='" + elementIdPrefix + "']").css('color', 'gray');
+          $(elementId).css('color', 'red');
+        }
+
+        $(elementId).text(newValue);
+        console.log('maxValue:', maxValue);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
+  });
+}
+
+$('#trigger-change').on('click', function() {
+  updateData('/update_engine_type', 'engine_type');
+  update_max( '/update_engine_capacity', 'engine_capacity');
+  update_max( '/update_fuel_consumption', 'fuel_consumption');
+  update_max_pw( '/update_power', 'power');
+  update_max_pw( '/update_torque', 'torque');
+  updateData( '/update_gearbox', 'gearbox');
+  updateData( '/update_drive_system', 'drive_system');
+  updateData( '/update_automatic_transmission', 'automatic_transmission');
+  
+  update_max('/update_seating_capacity', 'seating_capacity');
+  update_max('/update_wheelbase', 'wheelbase');
+  updateData('/update_dimensions', 'dimensions')
+  
+  update_max('/update_ground_clearance', 'ground_clearance');
+  update_max('/update_turning_radius', 'turning_radius');
+  update_max('/update_cargo_volume', 'cargo_volume');
+  update_max('/update_fuel_tank_capacity', 'fuel_tank_capacity');
+  update_max('/update_curb_weight', 'curb_weight');
+  update_max('/update_total_weight', 'total_weight');
+  updateData('/update_tire_wheel', 'tire_wheel');
+  update_max('/update_luggage_volume', 'luggage_volume');
+
+  updateData('/update_attribute/front_suspension', 'front_suspension');
+
+  updateData('/update_attribute/rear_suspension', 'rear_suspension');
+
+  updateData('/update_attribute/front_brakes', 'front_brakes');
+
+  updateData('/update_attribute/rear_brakes', 'rear_brakes');
+
+  updateData('/update_attribute/shock_absorber_system', 'shock_absorber_system');
+  // Update headlight high beam
+  updateData('/update_exterior_attribute/headlight_high_beam', 'headlight_high_beam');
+
+  // Update headlight low beam
+  updateData('/update_exterior_attribute/headlight_low_beam', 'headlight_low_beam');
+
+  // Update daytime running lights
+  updateData('/update_exterior_attribute/daytime_running_lights', 'daytime_running_lights');
+
+  // Update tail lights
+  updateData('/update_exterior_attribute/tail_lights', 'tail_lights');
+
+  // Update fog lights
+  updateData('/update_exterior_attribute/fog_lights', 'fog_lights');
+
+  // Update auto headlights
+  updateData('/update_exterior_attribute/auto_headlights', 'auto_headlights');
+
+  // Update auto headlight range control
+  updateData('/update_exterior_attribute/auto_headlight_range_control', 'auto_headlight_range_control');
+
+  // Update auto headlight leveling
+  updateData('/update_exterior_attribute/auto_headlight_leveling', 'auto_headlight_leveling');
+
+  // Update high mounted stop light
+  updateData('/update_exterior_attribute/high_mounted_stop_light', 'high_mounted_stop_light');
+
+  // Update exhaust pipe
+  updateData('/update_exterior_attribute/exhaust_pipe', 'exhaust_pipe');
+
+  // Update automatic rain sensing wipers
+  updateData('/update_exterior_attribute/automatic_rain_sensing_wipers', 'automatic_rain_sensing_wipers');
+
+  // Update shark fin antenna
+  updateData('/update_exterior_attribute/shark_fin_antenna', 'shark_fin_antenna');
+
+  // Update power operated trunk
+  updateData('/update_exterior_attribute/power_operated_trunk', 'power_operated_trunk');
+
+  // Update hands-free trunk
+  updateData('/update_exterior_attribute/hands_free_trunk', 'hands_free_trunk');
+
+  // Update rearview mirror
+  updateData('/update_exterior_attribute/rearview_mirror', 'rearview_mirror');
+
+  // Update heated rearview mirror
+  updateData('/update_exterior_attribute/heated_rearview_mirror', 'heated_rearview_mirror');
+
+  // Update anti-glare side mirrors
+  updateData('/update_exterior_attribute/anti_glare_side_mirrors', 'anti_glare_side_mirrors');
+
+  // Update lower side mirror when reversing
+  updateData('/update_exterior_attribute/lower_side_mirror_when_reversing', 'lower_side_mirror_when_reversing');
+
+  // Update rear wind deflector
+  updateData('/update_exterior_attribute/rear_wind_deflector', 'rear_wind_deflector');
+
+  // Update roof rack
+  updateData('/update_exterior_attribute/roof_rack', 'roof_rack');
+
+  // Update seat material
+updateData('/update_interior_attribute/seat_material', 'seat_material');
+
+// Update driver seat adjustment
+updateData('/update_interior_attribute/driver_seat_adjustment', 'driver_seat_adjustment');
+
+// Update memory driver seat position
+updateData('/update_interior_attribute/memory_driver_seat_position', 'memory_driver_seat_position');
+
+// Update passenger seat adjustment
+updateData('/update_interior_attribute/passenger_seat_adjustment', 'passenger_seat_adjustment');
+
+// Update driver dashboard
+updateData('/update_interior_attribute/driver_dashboard', 'driver_dashboard');
+
+// Update steering wheel material
+updateData('/update_interior_attribute/steering_wheel_material', 'steering_wheel_material');
+
+// Update second row seats
+updateData('/update_interior_attribute/second_row_seats', 'second_row_seats');
+
+// Update third row seats
+updateData('/update_interior_attribute/third_row_seats', 'third_row_seats');
+
+// Update air conditioning
+updateData('/update_interior_attribute/air_conditioning', 'air_conditioning');
+
+// Update one-touch windows
+updateData('/update_interior_attribute/one_touch_windows', 'one_touch_windows');
+
+// Update infotainment screen
+updateData('/update_interior_attribute/infotainment_screen', 'infotainment_screen');
+
+// Update speaker system
+updateData('/update_interior_attribute/speaker_system', 'speaker_system');
+
+// Update double-layer glass
+updateData('/update_interior_attribute/double_layer_glass', 'double_layer_glass');
+
+// Update tinted glass
+updateData('/update_interior_attribute/tinted_glass', 'tinted_glass');
+
+// Update rear entertainment screen
+updateData('/update_interior_attribute/rear_entertainment_screen', 'rear_entertainment_screen');
+
+// Update rear passenger screen
+updateData('/update_interior_attribute/rear_passenger_screen', 'rear_passenger_screen');
+
+// Update smartphone integration
+updateData('/update_interior_attribute/smartphone_integration', 'smartphone_integration');
+
+// Update additional features
+updateData('/update_interior_attribute/additional_features', 'additional_features');
+
+// Update steering adjustment
+updateData('/update_interior_attribute/steering_adjustment', 'steering_adjustment');
+
+// Update interior color
+updateData('/update_interior_attribute/interior_color', 'interior_color');
+
+// Update driver seat massage
+updateData('/update_interior_attribute/driver_seat_massage', 'driver_seat_massage');
+
+// Update passenger seat massage
+updateData('/update_interior_attribute/passenger_seat_massage', 'passenger_seat_massage');
+
+// Update driver seat cooling
+updateData('/update_interior_attribute/driver_seat_cooling', 'driver_seat_cooling');
+
+// Update passenger seat cooling
+updateData('/update_interior_attribute/passenger_seat_cooling', 'passenger_seat_cooling');
+
+// Update driver steering controls
+updateData('/update_interior_attribute/driver_steering_controls', 'driver_steering_controls');
+
+// Update smart key
+updateData('/update_interior_attribute/smart_key', 'smart_key');
+
+// Update push button start
+updateData('/update_interior_attribute/push_button_start', 'push_button_start');
+
+// Update rear seat vents
+updateData('/update_interior_attribute/rear_seat_vents', 'rear_seat_vents');
+
+// Update sunroof
+updateData('/update_interior_attribute/sunroof', 'sunroof');
+
+// Update panoramic sunroof
+updateData('/update_interior_attribute/panoramic_sunroof', 'panoramic_sunroof');
+
+// Update auto-dimming rearview mirror
+updateData('/update_interior_attribute/auto_dimming_rearview_mirror', 'auto_dimming_rearview_mirror');
+
+// Update front armrest
+updateData('/update_interior_attribute/front_armrest', 'front_armrest');
+
+// Update rear armrest
+updateData('/update_interior_attribute/rear_armrest', 'rear_armrest');
+
+// Update Apple CarPlay
+updateData('/update_interior_attribute/apple_carplay', 'apple_carplay');
+
+// Update Android Auto
+updateData('/update_interior_attribute/android_auto', 'android_auto');
+
+// Update voice command
+updateData('/update_interior_attribute/voice_command', 'voice_command');
+
+// Update hands-free calling
+updateData('/update_interior_attribute/hands_free_calling', 'hands_free_calling');
+
+// Update WiFi hotspot
+updateData('/update_interior_attribute/wifi_hotspot', 'wifi_hotspot');
+
+// Update AUX connection
+updateData('/update_interior_attribute/aux_connection', 'aux_connection');
+
+// Update USB connection
+updateData('/update_interior_attribute/usb_connection', 'usb_connection');
+
+// Update Bluetooth connection
+updateData('/update_interior_attribute/bluetooth_connection', 'bluetooth_connection');
+
+// Update AM/FM radio
+updateData('/update_interior_attribute/am_fm_radio', 'am_fm_radio');
+
+// Update wireless charging
+updateData('/update_interior_attribute/wireless_charging', 'wireless_charging');
+
+// Update power tailgate
+updateData('/update_interior_attribute/power_tailgate', 'power_tailgate');
+
+// Update remote start
+updateData('/update_interior_attribute/remote_start', 'remote_start');
+
+// Update air filter
+updateData('/update_interior_attribute/air_filter', 'air_filter');
+
+// Update steering wheel heating
+updateData('/update_interior_attribute/steering_wheel_heating', 'steering_wheel_heating');
+
+// Update navigation
+updateData('/update_interior_attribute/navigation', 'navigation');
+
+// Update air quality control
+updateData('/update_interior_attribute/air_quality_control', 'air_quality_control');
+
+// Update gesture control
+updateData('/update_interior_attribute/gesture_control', 'gesture_control');
+
+// Update center display
+updateData('/update_interior_attribute/center_display', 'center_display');
+
+// Update power driver seat adjustment
+updateData('/update_interior_attribute/power_driver_seat_adjustment', 'power_driver_seat_adjustment');
+
+// Update power passenger seat adjustment
+updateData('/update_interior_attribute/power_passenger_seat_adjustment', 'power_passenger_seat_adjustment');
+
+// Update WiFi connectivity
+updateData('/update_interior_attribute/wifi_connectivity', 'wifi_connectivity');
+
+// Update interior ambient lighting
+updateData('/update_interior_attribute/interior_ambient_lighting', 'interior_ambient_lighting');
+
+// Update Apple CarPlay and Android Auto
+updateData('/update_interior_attribute/apple_carplay_android_auto', 'apple_carplay_android_auto');
+
+// Update interior material
+updateData('/update_interior_attribute/interior_material', 'interior_material');
+
+// Update starry ceiling
+updateData('/update_interior_attribute/starry_ceiling', 'starry_ceiling');
+
+// Update Alcantara ceiling
+updateData('/update_interior_attribute/alcantara_ceiling', 'alcantara_ceiling');
+
+// Update driver cabin and passenger compartment partition with TV
+updateData('/update_interior_attribute/driver_cabin_and_passenger_compartment_partition_with_tv', 'driver_cabin_and_passenger_compartment_partition_with_tv');
+
+// Update independent seats with leg support
+updateData('/update_interior_attribute/independent_seats_with_leg_support', 'independent_seats_with_leg_support');
+
+// Update virtual assistant
+updateData('/update_interior_attribute/virtual_assistant', 'virtual_assistant');
+
+// Update steering memory
+updateData('/update_interior_attribute/steering_memory', 'steering_memory');
+
+// Update rear seat heating and cooling
+updateData('/update_interior_attribute/rear_seat_heating_cooling', 'rear_seat_heating_cooling');
+
+// Update front seat heating and cooling
+updateData('/update_interior_attribute/front_seat_heating_cooling', 'front_seat_heating_cooling');
+
+// Update rear seats heating
+updateData('/update_interior_attribute/rear_seats_heating', 'rear_seats_heating');
+
+// Update rear sunshade
+updateData('/update_interior_attribute/rear_sunshade', 'rear_sunshade');
+
+// Update rear door sunshade
+updateData('/update_interior_attribute/rear_door_sunshade', 'rear_door_sunshade');
+
+// Update power outlet 230V
+updateData('/update_interior_attribute/power_outlet_230V', 'power_outlet_230V');
+// Update idling stop
+updateData('/update_driving_assistance_attribute/idling_stop', 'idling_stop');
+
+// Update power steering
+updateData('/update_driving_assistance_attribute/power_steering', 'power_steering');
+
+// Update multiple driving modes
+updateData('/update_driving_assistance_attribute/multiple_driving_modes', 'multiple_driving_modes');
+
+// Update steering wheel paddle shifters
+updateData('/update_driving_assistance_attribute/steering_wheel_paddle_shifters', 'steering_wheel_paddle_shifters');
+
+// Update cornering assist
+updateData('/update_driving_assistance_attribute/cornering_assist', 'cornering_assist');
+
+// Update acceleration control
+updateData('/update_driving_assistance_attribute/acceleration_control', 'acceleration_control');
+
+// Update electronic parking brake
+updateData('/update_driving_assistance_attribute/electronic_parking_brake', 'electronic_parking_brake');
+
+// Update auto hold
+updateData('/update_driving_assistance_attribute/auto_hold', 'auto_hold');
+
+// Update rear wheel steering
+updateData('/update_driving_assistance_attribute/rear_wheel_steering', 'rear_wheel_steering');
+
+// Update active park assist
+updateData('/update_driving_assistance_attribute/active_park_assist', 'active_park_assist');
+
+// Update speed limit display
+updateData('/update_driving_assistance_attribute/speed_limit_display', 'speed_limit_display');
+
+// Update vehicle management via phone app
+updateData('/update_driving_assistance_attribute/vehicle_management_via_phone_app', 'vehicle_management_via_phone_app');
+
+// Update traffic sign recognition
+updateData('/update_driving_assistance_attribute/traffic_sign_recognition', 'traffic_sign_recognition');
+
+// Update terrain mode
+updateData('/update_driving_assistance_attribute/terrain_mode', 'terrain_mode');
+
+// Update automatic rev match system
+updateData('/update_driving_assistance_attribute/automatic_rev_match_system', 'automatic_rev_match_system');
+
+// Update electronic throttle control DBW
+updateData('/update_driving_assistance_attribute/electronic_throttle_control_dbw', 'electronic_throttle_control_dbw');
+
+// Update electric locking differential
+updateData('/update_driving_assistance_attribute/electric_locking_differential', 'electric_locking_differential');
+
+// Update rear differential lock
+updateData('/update_driving_assistance_attribute/rear_differential_lock', 'rear_differential_lock');
+
+// Update automatic rearview assist ARA
+updateData('/update_driving_assistance_attribute/automatic_rearview_assist_ara', 'automatic_rearview_assist_ara');
+
+// Update cruise control
+updateData('/update_driving_assistance_attribute/cruise_control', 'cruise_control');
+
+// Update adaptive cruise control
+updateData('/update_driving_assistance_attribute/adaptive_cruise_control', 'adaptive_cruise_control');
+
+// Update electric brake force distribution
+updateData('/update_driving_assistance_attribute/electric_brake_force_distribution', 'electric_brake_force_distribution');
+
+// Update forward collision warning
+updateData('/update_driving_assistance_attribute/forward_collision_warning', 'forward_collision_warning');
+
+// Update remote start
+updateData('/update_driving_assistance_attribute/remote_start', 'remote_start');
+// Update airbag count
+updateData('/update_safety_technology_attribute/airbag_count', 'airbag_count');
+
+// Update rear sensor
+updateData('/update_safety_technology_attribute/rear_sensor', 'rear_sensor');
+
+// Update central locking
+updateData('/update_safety_technology_attribute/central_locking', 'central_locking');
+
+// Update cruise control
+updateData('/update_safety_technology_attribute/cruise_control', 'cruise_control');
+
+// Update adaptive cruise control
+updateData('/update_safety_technology_attribute/adaptive_cruise_control', 'adaptive_cruise_control');
+
+// Update ABS brakes
+updateData('/update_safety_technology_attribute/abs_brakes', 'abs_brakes');
+
+// Update emergency brake assist
+updateData('/update_safety_technology_attribute/emergency_brake_assist', 'emergency_brake_assist');
+
+// Update EBD
+updateData('/update_safety_technology_attribute/ebd', 'ebd');
+
+// Update ESP
+updateData('/update_safety_technology_attribute/esp', 'esp');
+
+// Update TCS
+updateData('/update_safety_technology_attribute/tcs', 'tcs');
+
+// Update hill start assist
+updateData('/update_safety_technology_attribute/hill_start_assist', 'hill_start_assist');
+
+// Update hill descent control
+updateData('/update_safety_technology_attribute/hill_descent_control', 'hill_descent_control');
+
+// Update blind spot warning
+updateData('/update_safety_technology_attribute/blind_spot_warning', 'blind_spot_warning');
+
+// Update rear view camera
+updateData('/update_safety_technology_attribute/rear_view_camera', 'rear_view_camera');
+
+// Update 360-degree camera
+updateData('/update_safety_technology_attribute/camera_360', 'camera_360');
+
+// Update LaneWatch
+updateData('/update_safety_technology_attribute/lane_watch', 'lane_watch');
+
+// Update lane departure warning
+updateData('/update_safety_technology_attribute/lane_departure_warning', 'lane_departure_warning');
+
+// Update lane keeping assist
+updateData('/update_safety_technology_attribute/lane_keeping_assist', 'lane_keeping_assist');
+
+// Update automatic collision prevention
+updateData('/update_safety_technology_attribute/automatic_collision_prevention', 'automatic_collision_prevention');
+
+// Update cross traffic warning reverse
+updateData('/update_safety_technology_attribute/cross_traffic_warning_reverse', 'cross_traffic_warning_reverse');
+
+// Update driver drowsiness warning
+updateData('/update_safety_technology_attribute/driver_drowsiness_warning', 'driver_drowsiness_warning');
+
+// Update Isofix hooks
+updateData('/update_safety_technology_attribute/isofix_hooks', 'isofix_hooks');
+
+// Update tire pressure sensor
+updateData('/update_safety_technology_attribute/tire_pressure_sensor', 'tire_pressure_sensor');
+
+// Update front distance sensor
+updateData('/update_safety_technology_attribute/front_distance_sensor', 'front_distance_sensor');
+
+// Update front collision warning
+updateData('/update_safety_technology_attribute/front_collision_warning', 'front_collision_warning');
+
+// Update wind stability
+updateData('/update_safety_technology_attribute/wind_stability', 'wind_stability');
+
+// Update lane change support
+updateData('/update_safety_technology_attribute/lane_change_support', 'lane_change_support');
+
+// Update sudden acceleration prevention
+updateData('/update_safety_technology_attribute/sudden_acceleration_prevention', 'sudden_acceleration_prevention');
+
+// Update front vehicle departure alert
+updateData('/update_safety_technology_attribute/front_vehicle_departure_alert', 'front_vehicle_departure_alert');
+
+// Update front vehicle start alert
+updateData('/update_safety_technology_attribute/front_vehicle_start_alert', 'front_vehicle_start_alert');
+
+// Update automatic lane change
+updateData('/update_safety_technology_attribute/automatic_lane_change', 'automatic_lane_change');
+
+// Update door traffic warning
+updateData('/update_safety_technology_attribute/door_traffic_warning', 'door_traffic_warning');
+
+// Update limited slip differential
+updateData('/update_safety_technology_attribute/limited_slip_differential', 'limited_slip_differential');
+
+// Update traffic sign recognition
+updateData('/update_safety_technology_attribute/traffic_sign_recognition', 'traffic_sign_recognition');
+
+// Update automatic parking support
+updateData('/update_safety_technology_attribute/automatic_parking_support', 'automatic_parking_support');
+
+// Update off-road cruise control
+updateData('/update_safety_technology_attribute/off_road_cruise_control', 'off_road_cruise_control');
+
+// Update front/rear sensors
+updateData('/update_safety_technology_attribute/front_rear_sensors', 'front_rear_sensors');
+
+// Update blind spot camera
+updateData('/update_safety_technology_attribute/blind_spot_camera', 'blind_spot_camera');
+
+// Update active yaw control
+updateData('/update_safety_technology_attribute/active_yaw_control', 'active_yaw_control');
+
+// Update rear automatic emergency braking
+updateData('/update_safety_technology_attribute/rear_automatic_emergency_braking', 'rear_automatic_emergency_braking');
+
+// Update blind spot display
+updateData('/update_safety_technology_attribute/blind_spot_display', 'blind_spot_display');
+
+// Update front cross traffic warning
+updateData('/update_safety_technology_attribute/front_cross_traffic_warning', 'front_cross_traffic_warning');
+
+
+});
+
+$(document).ready(function() {
+  // Function to toggle rows in a container
+  function toggleContainer(containerId) {
+    $(`${containerId} .row:not(:first)`).hide();
+
+    $(`${containerId} h4`).click(function() {
+      $(`${containerId} .row:not(:first)`).toggle();
+    });
+  }
+
+  // Toggle behavior for each container
+  toggleContainer("#engine_transmission_container");
+  toggleContainer("#size_weight_container");
+  toggleContainer("#suspension_brake_container");
+  toggleContainer("#exterior_container");
+  toggleContainer("#interior_container");
+  toggleContainer("#driving_assistance_container");
+  toggleContainer("#safety_technology_container");
+});
+
+
+</script>
+</body>

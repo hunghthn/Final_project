@@ -1,0 +1,91 @@
+<% interior_attributes = [
+  { label: 'Chất liệu bọc ghế', att: 'seat_material' },
+  { label: 'Điều chỉnh ghế lái', att: 'driver_seat_adjustment' },
+  { label: 'Nhớ vị trí ghế lái', att: 'memory_driver_seat_position' },
+  { label: 'Điều chỉnh ghế phụ', att: 'passenger_seat_adjustment' },
+  { label: 'Bảng đồng hồ tài xế', att: 'driver_dashboard' },
+  { label: 'Chất liệu bọc vô-lăng', att: 'steering_wheel_material' },
+  { label: 'Hàng ghế thứ hai', att: 'second_row_seats' },
+  { label: 'Hàng ghế thứ ba', att: 'third_row_seats' },
+  { label: 'Điều hoà', att: 'air_conditioning' },
+  { label: 'Cửa kính một chạm', att: 'one_touch_windows' },
+  { label: 'Màn hình giải trí', att: 'infotainment_screen' },
+  { label: 'Hệ thống loa', att: 'speaker_system' },
+  { label: 'Kính hai lớp', att: 'double_layer_glass' },
+  { label: 'Kính tối màu', att: 'tinted_glass' },
+  { label: 'Màn hình giải trí ghế sau', att: 'rear_entertainment_screen' },
+  { label: 'Màn hình giải trí ghế phụ', att: 'rear_passenger_screen' },
+  { label: 'Kết nối điện thoại thông minh', att: 'smartphone_integration' },
+  { label: 'Trang bị khác', att: 'additional_features' },
+  { label: 'Điều chỉnh vô-lăng', att: 'steering_adjustment' },
+  { label: 'Màu nội thất', att: 'interior_color' },
+  { label: 'Massage ghế lái', att: 'driver_seat_massage' },
+  { label: 'Massage ghế phụ', att: 'passenger_seat_massage' },
+  { label: 'Sưởi ấm ghế lái', att: 'driver_seat_cooling' },
+  { label: 'Sưởi ấm ghế phụ', att: 'passenger_seat_cooling' },
+  { label: 'Nút bấm tích hợp trên vô-lăng', att: 'driver_steering_controls' },
+  { label: 'Chìa khoá thông minh', att: 'smart_key' },
+  { label: 'Khởi động nút bấm', att: 'push_button_start' },
+  { label: 'Cửa gió hàng ghế sau', att: 'rear_seat_vents' },
+  { label: 'Cửa sổ trời', att: 'sunroof' },
+  { label: 'Cửa sổ trời toàn cảnh', att: 'panoramic_sunroof' },
+  { label: 'Gương chiếu hậu trong xe chống chói tự động', att: 'auto_dimming_rearview_mirror' },
+  { label: 'Tựa tay hàng ghế trước', att: 'front_armrest' },
+  { label: 'Tựa tay hàng ghế sau', att: 'rear_armrest' },
+  { label: 'Kết nối Apple CarPlay', att: 'apple_carplay' },
+  { label: 'Kết nối Android Auto', att: 'android_auto' },
+  { label: 'Ra lệnh giọng nói', att: 'voice_command' },
+  { label: 'Đàm thoại rảnh tay', att: 'hands_free_calling' },
+  { label: 'Phát WiFi', att: 'wifi_hotspot' },
+  { label: 'Kết nối AUX', att: 'aux_connection' },
+  { label: 'Kết nối USB', att: 'usb_connection' },
+  { label: 'Kết nối Bluetooth', att: 'bluetooth_connection' },
+  { label: 'Radio AM/FM', att: 'am_fm_radio' },
+  { label: 'Sạc không dây', att: 'wireless_charging' },
+  { label: 'Cửa hít', att: 'power_tailgate' },
+  { label: 'Khởi động từ xa', att: 'remote_start' },
+  { label: 'Lọc không khí', att: 'air_filter' },
+  { label: 'Sưởi vô-lăng', att: 'steering_wheel_heating' },
+  { label: 'Điều hướng (bản đồ)', att: 'navigation' },
+  { label: 'Kiểm soát chất lượng không khí', att: 'air_quality_control' },
+  { label: 'Điều khiển bằng cử chỉ', att: 'gesture_control' },
+  { label: 'Màn hình trung tâm', att: 'center_display' },
+  { label: 'Ghế lái chỉnh điện', att: 'power_driver_seat_adjustment' },
+  { label: 'Ghế phụ chỉnh điện', att: 'power_passenger_seat_adjustment' },
+  { label: 'Kết nối WiFi', att: 'wifi_connectivity' },
+  { label: 'Đèn viền trang trí nội thất chủ động', att: 'interior_ambient_lighting' },
+  { label: 'Apple CarPlay và Android auto', att: 'apple_carplay_android_auto' },
+  { label: 'Chất liệu nội thất', att: 'interior_material' },
+  { label: 'Trần sao', att: 'starry_ceiling' },
+  { label: 'Trần vật liệu Alcatara', att: 'alcantara_ceiling' },
+  { label: 'Vách ngăn khoang lái và Cabin - kèm tivi', att: 'driver_cabin_and_passenger_compartment_partition_with_tv' },
+  { label: 'Ghế độc lập - có bệ đỡ chân', att: 'independent_seats_with_leg_support' },
+  { label: 'Trợ lý ảo', att: 'virtual_assistant' },
+  { label: 'Nhớ vị trí vô-lăng', att: 'steering_memory' },
+  { label: 'Sưởi và làm mát hàng ghế sau', att: 'rear_seat_heating_cooling' },
+  { label: 'Sưởi và làm mát hàng ghế trước', att: 'front_seat_heating_cooling' },
+  { label: 'Hàng ghế sau có sưởi', att: 'rear_seats_heating' },
+  { label: 'Đèn viền Ambient', att: 'rear_sunshade' },
+  { label: 'Rèm che nắng kính sau', att: 'rear_door_sunshade' },
+  { label: 'Ổ điện xoay chiều 230V', att: 'power_outlet_230V' }
+] %>
+<div id="interior_container">
+  <div class="row pt-4 pb-4">
+    <h4 class="container-title">Nội thất
+      <i id="toggle-icon" class="fa fa-angle-down"></i>
+    </h4>
+  </div>
+
+  <% interior_attributes.each do |item| %>
+    <div class="row pt-1">
+      <div class="col-md-3">
+        <h6><%= item[:label] %></h6>
+      </div>
+      <% @compared_models.each do |model| %>
+        <div class="col-md-3">
+          <p id="<%= "#{item[:att]}_for_model_#{model.id}" %>"><%= model.trims.first.interior&.public_send(item[:att]) %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

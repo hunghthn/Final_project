@@ -1,0 +1,34 @@
+<% size_weight_attributes = [
+  { label: "Số chỗ", attribute: "seating_capacity" },
+  { label: "Kích thước dài x rộng x cao (mm)", attribute: "dimensions" },
+  { label: "Chiều dài cơ sở (mm)", attribute: "wheelbase" },
+  { label: "Khoảng sáng gầm (mm)", attribute: "ground_clearance" },
+  { label: "Lốp, la-zăng", attribute: "tire_wheel" },
+  { label: "Bán kính vòng quay (mm)", attribute: "turning_radius" },
+  { label: "Dung tích bình nhiên liệu (lít)", attribute: "fuel_tank_capacity" },
+  { label: "Trọng lượng bản thân (kg)", attribute: "curb_weight" },
+  { label: "Trọng lượng toàn tải (kg)", attribute: "total_weight" },
+  { label: "Dung tích khoang hành lý (lít)", attribute: "cargo_volume" },
+  { label: "Thể tích khoang hành lý (lít)", attribute: "luggage_volume" }
+] %>
+
+<div id="size_weight_container">
+  <div class="row pt-4 pb-4">
+    <h4 class="container-title">Kích thước/trọng lượng
+      <i id="toggle-icon" class="fa fa-angle-down"></i>
+    </h4>
+  </div>
+
+  <% size_weight_attributes.each do |attr| %>
+    <div class="row pt-1 ">
+      <div class="col-md-3">
+        <h6><%= attr[:label] %></h6>
+      </div>
+      <% @compared_models.each do |model| %>
+        <div class="col-md-3">
+          <p id="<%= "#{attr[:attribute]}_for_model_#{model.id}" %>"><%= model.trims.first.size_weight.public_send(attr[:attribute]) %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

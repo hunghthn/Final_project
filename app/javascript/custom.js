@@ -189,8 +189,8 @@ var POTENZA = {};
             slide: function(event, ui) {
               var min = ui.values[0] / 1000, 
                   max = ui.values[1] / 1000;
+              if(max == 10 ) {$('#max_price').val(100);} else {$('#max_price').val(max);};
               $('#min_price').val(min);
-              $('#max_price').val(max);
               $('#' + this.id).prev().val(formatCurrency(min) + " - " + formatCurrency(max));
           }
         });
@@ -200,7 +200,8 @@ var POTENZA = {};
 // Hàm định dạng số sang định dạng tỷ triệu
   function formatCurrency(value) {
     var absValue = Math.abs(value);
-    if (absValue >= 1) {
+    if(absValue < 10){
+      if (absValue >= 1) {
         var billions = Math.floor(absValue);
         var millions = Math.round((absValue % 1) * 1000);
         if (millions === 1000) {
@@ -212,8 +213,12 @@ var POTENZA = {};
             result += (result.length > 0 ? " " : "") + millions.toLocaleString() + " triệu";
         }
         return result;
-    } else {
-        return (absValue * 1000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " triệu";
+      } else {
+          return (absValue * 1000).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " triệu";
+      }
+    }
+    else{
+      return (absValue).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " tỷ +";
     }
   }
 

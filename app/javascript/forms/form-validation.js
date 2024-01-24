@@ -414,68 +414,67 @@ $(document).ready(function () {
 		Financing Calculator
 	**************************************************/
 	function fnisNum(x) {
-		var filter = /(^\d+\.?$)|(^\d*\.\d+$)/;
-		if (filter.test(x)) {
-			return true;
-		}
-		return false;
+		var filter = /^\d+(\.\d{1,2})?$/;
+		return filter.test(x);
 	}
-	$(document).on('click','.calculate_finance',function(){
-		var form_id          = $(this).attr('data-form-id');
-		var current_form     = $( '#'+form_id );
-		var loan_amount_el   = $( current_form ).find( '#loan-amount' );
-		var loan_amount      = $( loan_amount_el ).val();
-		var interest_rate_el = $( current_form ).find( '#interest-rate' );
-		var interest_rate    = $( interest_rate_el ).val();
-		var period_el        = $( current_form ).find( '#period' );
-		var period           = $( period_el ).val();
-		var down_payment_el  = $( current_form ).find( '#down-payment' );
-		var down_payment     = $( down_payment_el ).val();
-		var currency_symbol  = '$';
 
-		console.log( current_form );
+	function formatNumber(number) {
+		return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+	}
+
+	$(document).on('click', '.calculate_finance', function () {
+		var form_id = $(this).attr('data-form-id');
+		var current_form = $('#' + form_id);
+		var loan_amount_el = $(current_form).find('#loan-amount');
+		var loan_amount = $(loan_amount_el).val();
+		var interest_rate_el = $(current_form).find('#interest-rate');
+		var interest_rate = $(interest_rate_el).val();
+		var period_el = $(current_form).find('#period');
+		var period = $(period_el).val();
+		var down_payment_el = $(current_form).find('#down-payment');
+		var down_payment = $(down_payment_el).val();
+		var currency_symbol = 'VND';
+
+		console.log(current_form);
 
 		var t = down_payment;
 		var I = interest_rate;
 		var N = period;
 		var P = loan_amount;
 
-		var vTempP = String(P).replace(currency_symbol, '').replace(',', '');
-		if (!fnisNum(vTempP)) {
+		if (!fnisNum(P)) {
 			alert("Please enter a valid number for the Loan Amount (P).");
-			$( loan_amount_el ).focus();
+			$(loan_amount_el).focus();
 			return false;
 		}
 
-		var vTempT = String(t).replace(currency_symbol, '').replace(',', '');
-		if (!fnisNum(vTempT)) {
+		if (!fnisNum(t)) {
 			alert("Please enter a valid number for the Down Payment (P).");
-			$( down_payment_el ).focus();
+			$(down_payment_el).focus();
 			return false;
 		}
 
 		if (!fnisNum(I)) {
 			alert("Enter an Interest Rate (r).");
-			$( interest_rate_el ).focus();
+			$(interest_rate_el).focus();
 			return false;
 		}
 		if (!fnisNum(N)) {
 			alert("Please enter the Total Number of Payments (N).");
-			$( period_el ).focus();
+			$(period_el).focus();
 			return false;
 		}
 
-		P = vTempP;
-		t = vTempT;
 		var X = (P - t);
 		var Y = ((I / 100) / 12);
-		var z = (Math.pow((1 + ((I / 100) / 12)), -N));
+		var z = Math.pow((1 + ((I / 100) / 12)), -N);
 		var a = (X * Y);
 		var b = (1 - z);
 		var Tot = (a / b);
 		var ans2 = Tot.toFixed(2);
 
-		$( '#txtPayment' ).html( currency_symbol + ans2 + '<sup>&#47;mo</sup>' );
+		$('#txtPayment').html( ans2 + ' ' + currency_symbol);
 	});
+
 
 });

@@ -1,0 +1,6 @@
+<!-- _compared_models.html.erb -->
+<% if compared_models.present? %>
+  <% compared_models.each do |model_id| %>
+    <%= render partial: 'car/compared_model', locals: { model_id: model_id } %>
+  <% end %>
+<% end %>

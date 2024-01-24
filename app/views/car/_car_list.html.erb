@@ -5,8 +5,11 @@
       <img class="img-fluid" src="<%= model.model_main_pic %>" alt="<%= model.model_name %>">
       <div class="car-overlay-banner">
         <ul>
-          <li><a href="#"><i class="fa fa-link"></i></a></li>
-          <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+          <li>
+              <%= link_to "#", class: 'add-to-compare', data: { model_id: model.id } do %>
+                <i class="fa fa-shopping-cart"></i>
+              <% end %>
+          </li>
         </ul>
       </div>
     </div>

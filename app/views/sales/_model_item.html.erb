@@ -1,0 +1,50 @@
+<div class="car-grid">
+    <div class="row">
+        <div class="col-lg-4 col-md-12">
+            <div class="car-item gray-bg text-center">
+            <div class="car-image">
+                <img class="img-fluid" src="<%= sale.model.model_main_pic %>" alt="<%= sale.model.model_name %>">
+                <div class="car-overlay-banner">
+                <ul>
+                    <li>
+                        <%= link_to "#", class: 'add-to-compare', data: { model_id: sale.model.id } do %>
+                            <i class="fa fa-shopping-cart"></i>
+                        <% end %>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-12">
+            <div class="car-details">
+            <div class="car-title">
+                <span><%= link_to sale.model_number %></span>
+            </div>
+            <div class="car-title">
+                <span><%= link_to sale.model.full_model_name , model_path(sale.model) %></span>
+                <p> Giá niêm yết: <%= sale.model.model_price %></p>
+            </div>
+            <div class="price">
+                <span >Doanh số: </span>
+                <span class="new-price"><%=  sale.total_sales%> </span>
+            </div>
+            <div class="car-list">
+            <ul class="list-inline">
+                <% if sale.northern_sales.present? %>
+                <li>Miền Bắc: <%= sale.northern_sales %> </li>
+                <% end %>
+
+                <% if sale.central_sales.present? %>
+                <li>Miền Trung: <%= sale.central_sales %> </li>
+                <% end %>
+
+                <% if sale.southern_sales.present? %>
+                <li>Miền Nam: <%= sale.southern_sales %> </li>
+                <% end %>
+            </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>

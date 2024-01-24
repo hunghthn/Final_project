@@ -1,0 +1,92 @@
+[
+  {
+    "model_brand": "Mitsubishi",
+    "model_name": "Xpander",
+    "model_number": "1",
+    "total_sales": "19.740",
+    "northern_sales": "6.562",
+    "central_sales": "4.008",
+    "southern_sales": "9.170"
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_name": "Accent",
+    "model_number": "2",
+    "total_sales": "17.452",
+    "northern_sales": null,
+    "central_sales": null,
+    "southern_sales": null
+  },
+  {
+    "model_brand": "Mazda",
+    "model_name": "CX-5",
+    "model_number": "3",
+    "total_sales": "16.808",
+    "northern_sales": "9.261",
+    "central_sales": "2.594",
+    "southern_sales": "4.953"
+  },
+  {
+    "model_brand": "Ford",
+    "model_name": "Ranger",
+    "model_number": "4",
+    "total_sales": "16.085",
+    "northern_sales": "6.485",
+    "central_sales": "3.662",
+    "southern_sales": "5.938"
+  },
+  {
+    "model_brand": "Toyota",
+    "model_name": "Vios",
+    "model_number": "5",
+    "total_sales": "13.521",
+    "northern_sales": "6.277",
+    "central_sales": "2.748",
+    "southern_sales": "4.496"
+  },
+  {
+    "model_brand": "Kia",
+    "model_name": "Sonet",
+    "model_number": "6",
+    "total_sales": "11.366",
+    "northern_sales": "5.902",
+    "central_sales": "2.343",
+    "southern_sales": "3.121"
+  },
+  {
+    "model_brand": "Hyundai",
+    "model_name": "Creta",
+    "model_number": "7",
+    "total_sales": "10.719",
+    "northern_sales": null,
+    "central_sales": null,
+    "southern_sales": null
+  },
+  {
+    "model_brand": "Toyota",
+    "model_name": "Corolla Cross",
+    "model_number": "8",
+    "total_sales": "10.485",
+    "northern_sales": "4.961",
+    "central_sales": "2.622",
+    "southern_sales": "2.902"
+  },
+  {
+    "model_brand": "Ford",
+    "model_name": "Everest",
+    "model_number": "9",
+    "total_sales": "9.960",
+    "northern_sales": "4.303",
+    "central_sales": "1.696",
+    "southern_sales": "3.961"
+  },
+  {
+    "model_brand": "Honda",
+    "model_name": "City",
+    "model_number": "10",
+    "total_sales": "9.894",
+    "northern_sales": "4.531",
+    "central_sales": "2.504",
+    "southern_sales": "2.859"
+  }
+]
