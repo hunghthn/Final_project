@@ -1,0 +1,234 @@
+<body>
+
+    <!--=================================
+      loading -->
+    
+     <div id="loading">
+      <div id="loading-center">
+        <img src="<%= asset_path('loader/loader.gif') %>" alt="">
+     </div>
+    </div>
+    
+    <!--=================================
+      loading -->
+    
+    
+    <!--=================================
+     header -->
+    
+    <header id="header" class="defualt">
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="topbar-left text-lg-start text-center">
+               <ul class="list-inline">
+                 <li> <i class="fa fa-envelope-o"> </i> hungchv16@gmail.com</li>
+                 <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
+               </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="topbar-right text-lg-end text-center">
+               <ul class="list-inline">
+                 <li> <i class="fa fa-phone"></i> 0386680574</li>
+                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                 <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--=================================
+     mega menu -->
+    
+    <div class="menu">
+      <!-- menu start -->
+       <nav id="menu" class="mega-menu">
+        <!-- menu list items container -->
+        <section class="menu-list-items">
+         <div class="container">
+          <div class="row">
+           <div class="col-md-12 position-relative">
+            <!-- menu logo -->
+            <ul class="menu-logo">
+                <li>
+                    <a href=<%= car_show_path %>><img id="logo_img" src="<%= asset_path('logo/logo-light.png') %>" alt="logo"></a>
+                </li>
+                </li>
+            </ul>
+            <!-- menu links -->
+              <ul class="menu-links">
+                <!-- active class -->
+                <li><a href="javascript:void(0)"> Home </a>
+                </li>
+                <li><a href="javascript:void(0)">So sánh <i class="fa fa-angle-down fa-indicator"></i></a>
+                    <div class="drop-down menu-bg grid-col-12">
+                      <div class="grid-row" id="list-compared">
+                        <%= render partial: 'car/compared_models', locals: { compared_models: session[:compared_models] } %>
+                      </div>
+                      <div class="grid-row" id ="compare_button">
+                       <%= link_to "So sánh", car_compare_compare_path, class: "button red float-end" %>
+                      </div>
+                    </div>
+                </li>
+                            <li><a href="javascript:void(0)">top doanh số   <i class="fa fa-angle-down fa-indicator"></i></a>
+                   <!-- drop down multilevel  -->
+                    <ul class="drop-down-multilevel">
+                        <li><%= link_to "Cả năm 2023", sales_index_path %></li>
+                    </ul>
+                </li>
+              </ul>
+           </div>
+          </div>
+         </div>
+        </section>
+       </nav>
+      <!-- menu end -->
+     </div>
+    </header>
+    
+    <!--=================================
+     header -->
+    
+    
+    <!--=================================
+     inner-intro -->
+    
+     <section class="inner-intro bg-1 bg-overlay-black-70">
+        <div class="container">
+           <div class="row text-center intro-title">
+                 <div class="col-md-6 text-md-start d-inline-block">
+                   <h1 class="text-white">Đăng ký </h1>
+                 </div>
+                 <div class="col-md-6 text-md-end float-end">
+                   <ul class="page-breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i> Trang chủ</a> <i class="fa fa-angle-double-right"></i></li>
+                      <li><span>Đăng ký</span> </li>
+                   </ul>
+                 </div>
+           </div>
+        </div>
+      </section>
+
+<!--=================================
+ inner-intro -->
+
+
+<!--=================================
+ register-form  -->
+
+ <section class="register-form page-section-ptb">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+           <div class="section-title">
+             <span>Chào mừng bạn đến </span>
+             <h2>Hệ thống thông tin VNCar</h2>
+             <div class="separator"></div>
+           </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+         <div class="col-lg-8 col-md-12">
+          <div class="gray-form">
+            <%= form_with model: @user, local: true do |form| %>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <%= form.label :firstname, 'Tên*', class: 'form-label' %>
+                  <%= form.text_field :firstname, class: 'form-control', placeholder: 'Tên' %>
+                </div>
+                <div class="mb-3 col-md-6">
+                  <%= form.label :lastname, 'Họ*', class: 'form-label' %>
+                  <%= form.text_field :lastname, class: 'form-control', placeholder: 'Họ' %>
+                </div>
+              </div>
+              <div class="mb-3">
+                <%= form.label :username, 'Tên tài khoản*', class: 'form-label' %>
+                <%= form.text_field :username, class: 'form-control', placeholder: 'Chọn tên tài khoản của bạn' %>
+              </div>
+              <div class="mb-3">
+                <%= form.label :password, 'Mật khẩu*', class: 'form-label' %>
+                <%= form.password_field :password, class: 'form-control', placeholder: 'Mật khẩu' %>
+              </div>
+              <div class="mb-3">
+                <%= form.label :password_confirmation, 'Nhập lại mật khẩu*', class: 'form-label' %>
+                <%= form.password_field :password_confirmation, class: 'form-control', placeholder: 'Mật khẩu' %>
+              </div>
+              <div class="mb-3">
+                <%= form.label :email, 'Email *', class: 'form-label' %>
+                <%= form.email_field :email, class: 'form-control', placeholder: 'Nhập email của bạn' %>
+              </div>
+              <div class="mb-3">
+                <%= form.label :phone, 'Điện thoại di động *', class: 'form-label' %>
+                <%= form.telephone_field :phone, class: 'form-control', placeholder: 'Nhập số điện thoại di động của bạn' %>
+              </div>
+              <div class="mb-3">
+                <%= form.label :gender, 'Giới tính *', class: 'form-label' %>
+                <div class="selected-box">
+                <%= form.select :gender, User.genders.keys.map { |key| [key.humanize, User.genders[key]] }, {}, class: 'form-control' %>
+                </div>
+              </div>
+              <div class="mb-3">
+                <%= form.submit 'Đăng ký tài khoản', class: 'button ', style: 'background-color: red;' %>
+              </div>
+              <p class="link">Bạn đã có một tài khoản? Xin vui lòng <a href="/login"> đăng nhập tại đây </a></p>
+            <% end %>
+          </div>
+         </div>
+      </div>
+    </div>
+  </section>
+  
+<!--=================================
+ register-form  -->
+
+
+<!--=================================
+ footer -->
+
+<footer class="footer bg-3 bg-overlay-black-90">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <div class="social">
+        <ul>
+          <li><a class="facebook" href="#">facebook <i class="fa fa-facebook"></i> </a></li>
+          <li><a class="twitter" href="#">twitter <i class="fa fa-twitter"></i> </a></li>
+          <li><a class="pinterest" href="#">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
+          <li><a class="dribbble" href="#">dribbble <i class="fa fa-dribbble"></i> </a></li>
+          <li><a class="google-plus" href="#">google plus <i class="fa fa-google-plus"></i> </a></li>
+          <li><a class="behance" href="#">behance <i class="fa fa-behance"></i> </a></li>
+        </ul>
+       </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--=================================
+ footer -->
+
+
+
+ <!--=================================
+ back to top -->
+
+ <div class="car-top">
+    <span> <img  src="<%= asset_path('car.png') %>" alt=""></span>
+  </div>
+
+ <!--=================================
+ back to top -->
+
+
+
+
+
+</body>
+
+

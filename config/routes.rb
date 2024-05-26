@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :users, only: [:new, :create, :show]
   get 'car/show', to: 'car#show', as: 'car_show'
   get '/models_autocomplete', to: 'car#models_autocomplete'
   post '/car/add_to_compare', to: 'car#add_to_compare'
@@ -42,5 +43,32 @@ Rails.application.routes.draw do
   get '/update_driving_assistance_attribute/:attribute_name', to: 'car_compare#update_driving_assistance_attribute'
   get '/update_safety_technology_attribute/:attribute_name', to: 'car_compare#update_safety_technology_attribute'
   get 'up' => 'rails/health#show', as: :rails_health_check
+
+  get '/districts/:prefecture_id', to: 'districts#index'
+  get '/cardealers/find_by_district', to: 'cardealers#find_by_district'
+  resources :inquiries, only: [:create]
+  resources :cardealers, only: [:index, :show] do
+    member do
+      get :filtered_models
+    end
+  end
+
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy', as: :logout
+
+  namespace :admin do
+    resources :cardealers do
+      member do
+        get 'staffs', to: 'cardealers#staffs_index'
+        get 'models', to: 'cardealers#models_index'
+        get 'inquiries_today'
+        get 'inquiries_this_week'
+        get 'inquiries_this_month'
+        get 'inquiries_all'
+        get 'filtered_models'
+      end
+    end
+  end
 
 end

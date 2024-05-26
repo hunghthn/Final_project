@@ -7,12 +7,10 @@ class Model < ApplicationRecord
   has_many :trims, dependent: :destroy
   has_many :sales
   has_many :model_detail, dependent: :destroy
-  
+  has_many :car_dealer_cars
   before_save :extract_price_ranges
-  before_save :assign_brand_id
-  before_save :assign_type_id
-  before_save :assign_segment_id
   before_save :extract_name_and_year
+  has_many :inquiries, through: :car_dealer_cars
 
   def self.ransackable_associations(_auth_object = nil)
     %w[brand segment type]
@@ -26,7 +24,7 @@ class Model < ApplicationRecord
   def full_model_name
     "#{model_brand} #{model_name_main}"
   end
-  
+
   private
 
   def extract_price_ranges
@@ -75,61 +73,6 @@ class Model < ApplicationRecord
     else
       self.model_price_min = nil
       self.model_price_max = nil
-    end
-  end
-
-  def assign_brand_id
-    # Kiểm tra xem `model_brand` có giá trị hay không
-    return unless model_brand.present?
-
-    # Tìm brand tương ứng với model_brand
-    found_brand = Brand.find_by(brand_name: model_brand)
-
-    # Kiểm tra xem có brand nào tìm thấy không
-    if found_brand
-      # Gán id của brand cho model_brand
-      self.brand_id = found_brand.id
-    else
-      # Nếu không tìm thấy, có thể xử lý theo yêu cầu của bạn,
-      # ví dụ: tạo mới một brand mới
-      new_brand = Brand.create(brand_name: model_brand)
-      self.brand_id = new_brand.id
-    end
-  end
-
-  def assign_segment_id
-    # Kiểm tra xem `model_brand` có giá trị hay không
-    return unless model_segment.present?
-
-    # Tìm brand tương ứng với model_brand
-    found_segment = Segment.find_by(segment_name: model_segment)
-
-    # Kiểm tra xem có brand nào tìm thấy không
-    if found_segment
-      # Gán id của brand cho model_brand
-      self.segment_id = found_segment.id
-    else
-      # Nếu không tìm thấy, có thể xử lý theo yêu cầu của bạn,
-      # ví dụ: tạo mới một brand mới
-      new_semgent = Segment.create(segment_name: model_segment)
-      self.segment_id = new_semgent.id
-    end
-  end
-
-  def assign_type_id
-    return unless model_type.present?
-
-    found_type = Type.find_by(type_name: model_type)
-
-    # Kiểm tra xem có brand nào tìm thấy không
-    if found_type
-      # Gán id của brand cho model_brand
-      self.type_id = found_type.id
-    else
-      # Nếu không tìm thấy, có thể xử lý theo yêu cầu của bạn,
-      # ví dụ: tạo mới một brand mới
-      new_type = Type.create(type_name: model_type)
-      self.type_id = new_type.id
     end
   end
 

@@ -1529,9 +1529,9 @@ form.gray-form .form-notice p { margin-bottom: 10px; }
 .car-details .car-price span { font-style: italic; }
 .details-nav { margin: 30px 0px 40px; }
 .details-nav ul li { display: inline-block; margin-right: 10px; }
-.details-nav ul li a { color: #999999; border: 1px solid #e3e3e3; padding: 5px 14px; display: block; margin-bottom: 10px; }
+.details-nav ul li a { color: #6c757d; border: 1px solid #6c757d; padding: 5px 14px; display: block; margin-bottom: 10px; }
 .details-nav ul li a i { padding-right: 10px; }
-.details-nav ul li a:hover { border-color: #db2d2e; background: #db2d2e; color: #ffffff; }
+.details-nav ul li a:hover { border-color: black; background: #db2d2e; color: #ffffff; }
 .car-details-sidebar .details-weight { margin-bottom: 40px; }
 .car-details-sidebar .details-phone.details-weight .feature-box-3 .content h4 { margin-top: 10px; margin-bottom: 5px; }
 .details-location iframe { border: 0px; width: 100%; height: 250px; }
@@ -2294,4 +2294,25 @@ margin-left: -17px; line-height: 50px; }
 
 #compare_button{
   font-size: 25px;
+}
+
+.flash-message {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.flash-message.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.flash-message.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
 }

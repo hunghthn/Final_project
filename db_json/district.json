@@ -1,0 +1,1703 @@
+[
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Ba Đình"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Hoàn Kiếm"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Tây Hồ"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Long Biên"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Cầu Giấy"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Đống Đa"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Hai Bà Trưng"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Hoàng Mai"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Thanh Xuân"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Sóc Sơn"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Đông Anh"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Gia Lâm"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Nam Từ Liêm"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Thanh Trì"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Bắc Từ Liêm"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Mê Linh"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Quận Hà Đông"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Thị xã Sơn Tây"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Ba Vì"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Phúc Thọ"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Đan Phượng"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Hoài Đức"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Quốc Oai"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Thạch Thất"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Chương Mỹ"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Thanh Oai"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Thường Tín"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Phú Xuyên"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Ứng Hòa"
+    },
+    {
+        "tỉnh thành": "Hà Nội",
+        "quận huyện": "Huyện Mỹ Đức"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Thành phố Hà Giang"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Đồng Văn"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Mèo Vạc"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Yên Minh"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Quản Bạ"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Vị Xuyên"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Bắc Mê"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Hoàng Su Phì"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Xín Mần"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Bắc Quang"
+    },
+    {
+        "tỉnh thành": "Hà Giang",
+        "quận huyện": "Huyện Quang Bình"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Thành phố Cao Bằng"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Bảo Lâm"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Bảo Lạc"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Hà Quảng"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Trùng Khánh"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Hạ Lang"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Quảng Hòa"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Hoà An"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Nguyên Bình"
+    },
+    {
+        "tỉnh thành": "Cao Bằng",
+        "quận huyện": "Huyện Thạch An"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Thành Phố Bắc Kạn"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Huyện Pác Nặm"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Huyện Ba Bể"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Huyện Ngân Sơn"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Huyện Bạch Thông"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Huyện Chợ Đồn"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Huyện Chợ Mới"
+    },
+    {
+        "tỉnh thành": "Bắc Kạn",
+        "quận huyện": "Huyện Na Rì"
+    },
+    {
+        "tỉnh thành": "Tuyên Quang",
+        "quận huyện": "Thành phố Tuyên Quang"
+    },
+    {
+        "tỉnh thành": "Tuyên Quang",
+        "quận huyện": "Huyện Lâm Bình"
+    },
+    {
+        "tỉnh thành": "Tuyên Quang",
+        "quận huyện": "Huyện Na Hang"
+    },
+    {
+        "tỉnh thành": "Tuyên Quang",
+        "quận huyện": "Huyện Chiêm Hóa"
+    },
+    {
+        "tỉnh thành": "Tuyên Quang",
+        "quận huyện": "Huyện Hàm Yên"
+    },
+    {
+        "tỉnh thành": "Tuyên Quang",
+        "quận huyện": "Huyện Yên Sơn"
+    },
+    {
+        "tỉnh thành": "Tuyên Quang",
+        "quận huyện": "Huyện Sơn Dương"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Thành phố Lào Cai"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Huyện Bát Xát"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Huyện Mường Khương"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Huyện Si Ma Cai"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Huyện Bắc Hà"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Huyện Bảo Thắng"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Huyện Bảo Yên"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Thị xã Sa Pa"
+    },
+    {
+        "tỉnh thành": "Lào Cai",
+        "quận huyện": "Huyện Văn Bàn"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Thành phố Điện Biên Phủ"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Thị Xã Mường Lay"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Mường Nhé"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Mường Chà"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Tủa Chùa"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Tuần Giáo"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Điện Biên"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Điện Biên Đông"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Mường Ảng"
+    },
+    {
+        "tỉnh thành": "Điện Biên",
+        "quận huyện": "Huyện Nậm Pồ"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Thành phố Lai Châu"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Huyện Tam Đường"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Huyện Mường Tè"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Huyện Sìn Hồ"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Huyện Phong Thổ"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Huyện Than Uyên"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Huyện Tân Uyên"
+    },
+    {
+        "tỉnh thành": "Lai Châu",
+        "quận huyện": "Huyện Nậm Nhùn"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Thành phố Sơn La"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Quỳnh Nhai"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Thuận Châu"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Mường La"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Bắc Yên"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Phù Yên"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Mộc Châu"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Yên Châu"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Mai Sơn"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Sông Mã"
+    },
+    {
+        "tỉnh thành": "Sơn La",
+        "quận huyện": "Huyện Sốp Cộp"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Thành phố Yên Bái"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Thị xã Nghĩa Lộ"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Huyện Lục Yên"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Huyện Văn Yên"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Huyện Mù Cang Chải"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Huyện Trấn Yên"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Huyện Trạm Tấu"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Huyện Văn Chấn"
+    },
+    {
+        "tỉnh thành": "Yên Bái",
+        "quận huyện": "Huyện Yên Bình"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Thành phố Việt Trì"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Thị xã Phú Thọ"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Đoan Hùng"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Hạ Hoà"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Thanh Ba"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Phù Ninh"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Yên Lập"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Cẩm Khê"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Tam Nông"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Lâm Thao"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Thanh Sơn"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Thanh Thủy"
+    },
+    {
+        "tỉnh thành": "Phú Thọ",
+        "quận huyện": "Huyện Tân Sơn"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Thành phố Vĩnh Yên"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Thị xã Phúc Yên"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Huyện Lập Thạch"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Huyện Tam Dương"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Huyện Tam Đảo"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Huyện Bình Xuyên"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Huyện Yên Lạc"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Huyện Vĩnh Tường"
+    },
+    {
+        "tỉnh thành": "Vĩnh Phúc",
+        "quận huyện": "Huyện Sông Lô"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Thành phố Bắc Ninh"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Yên Phong"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Quế Võ"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Tiên Du"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Từ Sơn"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Thuận Thành"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Gia Bình"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Lương Tài"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Lập Thạch"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Sơn Đông"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Thành phố Bắc Giang"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Yên Thế"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Tân Yên"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Lạng Giang"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Lục Nam"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Lục Ngạn"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Sơn Động"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Yên Dũng"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Việt Yên"
+    },
+    {
+        "tỉnh thành": "Bắc Giang",
+        "quận huyện": "Huyện Hiệp Hòa"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Đại Từ"
+    },
+    {
+        "tỉnh thành": "Bắc Ninh",
+        "quận huyện": "Huyện Phổ Yên"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Thành phố Phủ Lý"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Duy Tiên"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Kim Bảng"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Thanh Liêm"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Bình Lục"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Lý Nhân"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Thanh Liêm"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Bình Lục"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Lý Nhân"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Thành phố Nam Định"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Mỹ Lộc"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Vụ Bản"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Ý Yên"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Nghĩa Hưng"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Nam Trực"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Trực Ninh"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Xuân Trường"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Giao Thủy"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Hải Hậu"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Thành phố Thái Bình"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Thị xã Quỳnh Côi"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Huyện Hưng Hà"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Huyện Đông Hưng"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Huyện Thái Thụy"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Huyện Tiền Hải"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Huyện Kiến Xương"
+    },
+    {
+        "tỉnh thành": "Thái Bình",
+        "quận huyện": "Huyện Vũ Thư"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Phủ Lý"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Duy Tiên"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Kim Bảng"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Thanh Liêm"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Bình Lục"
+    },
+    {
+        "tỉnh thành": "Hà Nam",
+        "quận huyện": "Huyện Lý Nhân"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Thành phố Ninh Bình"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Thành phố Tam Điệp"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Huyện Nho Quan"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Huyện Gia Viễn"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Huyện Hoa Lư"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Huyện Yên Khánh"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Huyện Kim Sơn"
+    },
+    {
+        "tỉnh thành": "Ninh Bình",
+        "quận huyện": "Huyện Yên Mô"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Thành phố Thanh Hóa"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Thành phố Sầm Sơn"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Thị xã Bỉm Sơn"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Mường Lát"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Quan Hóa"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Bá Thước"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Quan Sơn"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Lang Chánh"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Ngọc Lặc"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Cẩm Thủy"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Thạch Thành"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Hà Trung"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Vĩnh Lộc"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Yên Định"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Thọ Xuân"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Triệu Sơn"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Thiệu Hóa"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Hoằng Hóa"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Hậu Lộc"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Nga Sơn"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Như Thanh"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Như Xuân"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Nông Cống"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Đông Sơn"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Hưng Nguyên"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Quảng Xương"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Tĩnh Gia"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Nghi Sơn"
+    },
+    {
+        "tỉnh thành": "Thanh Hóa",
+        "quận huyện": "Huyện Hòa Bình"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Thành phố Vinh"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Thành phố Cửa Lò"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Thành phố Thái Hoà"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Quế Phong"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Quỳ Châu"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Kỳ Sơn"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Tương Dương"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Nghĩa Đàn"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Quỳ Hợp"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Quỳnh Lưu"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Con Cuông"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Tân Kỳ"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Anh Sơn"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Diễn Châu"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Yên Thành"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Đô Lương"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Thanh Chương"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Nghi Lộc"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Nam Đàn"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Hưng Nguyên"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Hưng Nguyên"
+    },
+    {
+        "tỉnh thành": "Nghệ An",
+        "quận huyện": "Huyện Quỳnh Lưu"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Thành phố Hà Tĩnh"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Thị xã Hồng Lĩnh"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Hương Sơn"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Đức Thọ"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Vũ Quang"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Nghi Xuân"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Can Lộc"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Hương Khê"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Thạch Hà"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Cẩm Xuyên"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Kỳ Anh"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Lộc Hà"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Thạch Hà"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Cẩm Xuyên"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Kỳ Anh"
+    },
+    {
+        "tỉnh thành": "Hà Tĩnh",
+        "quận huyện": "Huyện Lộc Hà"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Thành phố Đồng Hới"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Thị xã Ba Đồn"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Huyện Minh Hóa"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Huyện Tuyên Hóa"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Huyện Quảng Trạch"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Huyện Bố Trạch"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Huyện Lệ Thủy"
+    },
+    {
+        "tỉnh thành": "Quảng Bình",
+        "quận huyện": "Huyện Quảng Ninh"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Thành phố Đông Hà"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Thị xã Quảng Trị"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Vĩnh Linh"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Hướng Hóa"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Gio Linh"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Đa Krông"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Cam Lộ"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Triệu Phong"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Hải Lăng"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Cồn Cỏ"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Lưới Tây"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Hải Lăng"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Cồn Cỏ"
+    },
+    {
+        "tỉnh thành": "Quảng Trị",
+        "quận huyện": "Huyện Lưới Tây"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Thành phố Huế"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Huyện Phong Điền"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Huyện Quảng Điền"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Huyện Hương Trà"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Huyện Phú Vang"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Huyện A Lưới"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Huyện Nam Đông"
+    },
+    {
+        "tỉnh thành": "Thừa Thiên Huế",
+        "quận huyện": "Huyện Phú Lộc"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Thành phố Tam Kỳ"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Thành phố Hội An"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Thành phố Điện Bàn"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Duy Xuyên"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Đại Lộc"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Tiên Phước"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Quế Sơn"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Nông Sơn"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Thăng Bình"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Hiệp Đức"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Bắc Trà My"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Nam Trà My"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Tây Giang"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Phước Sơn"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Nam Giang"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Đông Giang"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Ba Tơ"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Đại Lộc"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Tiên Phước"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Quế Sơn"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Nông Sơn"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Thăng Bình"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Hiệp Đức"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Bắc Trà My"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Nam Trà My"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Tây Giang"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Phước Sơn"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Nam Giang"
+    },
+    {
+        "tỉnh thành": "Quảng Nam",
+        "quận huyện": "Huyện Đông Giang"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Thành phố Quảng Ngãi"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Thị xã Đức Phổ"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Thị xã Ba Tơ"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Sơn Tịnh"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Tư Nghĩa"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Sơn Tây"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Trà Bồng"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Tây Trà"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Sơn Hà"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Tư Nghĩa"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Sơn Tây"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Trà Bồng"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Tây Trà"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Sơn Hà"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Mộ Đức"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Đức Phổ"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Ba Tơ"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Minh Long"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Mộ Đức"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Đức Phổ"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Ba Tơ"
+    },
+    {
+        "tỉnh thành": "Quảng Ngãi",
+        "quận huyện": "Huyện Minh Long"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Thành phố Nam Định"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Mỹ Lộc"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Vụ Bản"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Ý Yên"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Nghĩa Hưng"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Nam Trực"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Trực Ninh"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Xuân Trường"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Giao Thủy"
+    },
+    {
+        "tỉnh thành": "Nam Định",
+        "quận huyện": "Huyện Hải Hậu"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Thành phố Hưng Yên"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Văn Lâm"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Văn Giang"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Yên Mỹ"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Thị xã Mỹ Hào"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Ân Thi"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Khoái Châu"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Kim Động"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Tiên Lữ"
+    },
+    {
+        "tỉnh thành": "Hưng Yên",
+        "quận huyện": "Huyện Phù Cừ"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Quận Ngô Quyền"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Quận Lê Chân"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Quận Hải An"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Quận Kiến An"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Quận Đồ Sơn"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Quận Dương Kinh"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện Thuỷ Nguyên"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện An Dương"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện An Lão"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện Kiến Thuỵ"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện Tiên Lãng"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện Vĩnh Bảo"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện Cát Hải"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Huyện Bạch Long Vĩ"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Thành phố Hải Dương"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Thành phố Chí Linh"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Nam Sách"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Thị xã Kinh Môn"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Kim Thành"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Thanh Hà"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Cẩm Giàng"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Bình Giang"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Gia Lộc"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Tứ Kỳ"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Ninh Giang"
+    },
+    {
+        "tỉnh thành": "Hải Dương",
+        "quận huyện": "Huyện Thanh Miện"
+    },
+    {
+        "tỉnh thành": "Hải Phòng",
+        "quận huyện": "Quận Hồng Bàng"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Thành phố Hạ Long"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Thành phố Móng Cái"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Thành phố Cẩm Phả"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Thành phố Uông Bí"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Huyện Bình Liêu"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Huyện Tiên Yên"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Huyện Đầm Hà"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Huyện Hải Hà"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Huyện Ba Chẽ"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Huyện Vân Đồn"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Thị xã Đông Triều"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Thị xã Quảng Yên"
+    },
+    {
+        "tỉnh thành": "Quảng Ninh",
+        "quận huyện": "Huyện Cô Tô"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Thành phố Lạng Sơn"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Tràng Định"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Bình Gia"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Văn Lãng"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Cao Lộc"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Văn Quan"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Bắc Sơn"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Hữu Lũng"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Chi Lăng"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Lộc Bình"
+    },
+    {
+        "tỉnh thành": "Lạng Sơn",
+        "quận huyện": "Huyện Đình Lập"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Thành phố Sông Công"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Huyện Định Hóa"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Huyện Phú Lương"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Huyện Đồng Hỷ"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Huyện Võ Nhai"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Huyện Đại Từ"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Thành phố Phổ Yên"
+    },
+    {
+        "tỉnh thành": "Thái Nguyên",
+        "quận huyện": "Huyện Phú Bình"
+    }
+    
+]

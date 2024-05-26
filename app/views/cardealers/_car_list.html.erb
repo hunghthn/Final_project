@@ -1,0 +1,43 @@
+
+<% models.each do |car| %>
+<div class="car-grid">
+  <div class="row">
+   <div class="col-lg-4 col-md-12">
+     <div class="car-item gray-bg text-center">
+      <div class="car-image">
+        <img class="img-fluid" src="<%= car.model.model_main_pic %>" alt="<%= car.model.model_name %>">
+        <div class="car-overlay-banner">
+         <ul>
+          <li>
+            <%= link_to "#", class: 'add-to-compare', data: { model_id: car.model.id } do %>
+              <i class="fa fa-shopping-cart"></i>
+            <% end %>
+          </li>
+          </ul>
+        </div>
+      </div>
+     </div>
+    </div>
+     <div class="col-lg-8 col-md-12">
+       <div class="car-details">
+       <div class="car-title">
+        <%= link_to car.model.full_model_name, model_path(car.model) %></span>
+        <p> Hiện có: <span style="color: red"><%= car.amount %></span></p>
+         </div>
+         <div class="price">
+              <span class="old-price"> <%= car.model.model_price %></span>
+              <span class="new-price"> <%= car.cardealer_price %> </span>
+              <%= link_to "Chi tiết", model_path(car.model), class: "button red float-end" %>
+            </div>
+          <div class="car-list">
+            <ul class="list-inline">
+              <li><i class="fa fa-registered"></i> <%= car.model.model_year %></li>
+              <li><i class="fa fa-car"></i>  <%= car.model.type.type_name %></li>
+              <li><i class="fa fa-cog"></i> <%= car.model.segment.segment_name %> </li>
+            </ul>
+          </div>
+         </div>
+       </div>
+      </div>
+    </div>
+    <% end %>

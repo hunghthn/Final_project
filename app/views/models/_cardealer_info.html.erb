@@ -1,0 +1,59 @@
+<div class="row pb-4">
+    <section class="custom-block-3 search-here white-bg page-section-pb position-relative">
+      <div class="container">
+       <div class="row">
+        <div class="col-xl-12 ">
+            <div class="custom-block-content">
+                <div class="title">
+                    <h3>Thông tin đại lý xe phù hợp</h3>
+                  </div>
+            </div>
+            <% if @car_dealer_cars.empty? %>
+            <div class="row mt-4">
+                <div class="content">
+                <h2 class="text-red">0</h2>
+                <strong><p style="font-size:x-large;">Không tìm được xe phù hợp</p></strong>
+            </div>
+            <% else %>
+            <% @car_dealer_cars.each_with_index do |car_dealer_car, index| %>
+            <div class="row mt-4 " style="border: #212529 1px solid; padding-top:10px">
+                <div class="content">
+                <h2 class="text-red"><%= index + 1 %></h2>
+                <strong>
+                    <p style="font-size:x-large; color: #212529">
+                      <%= link_to car_dealer_car.cardealer.name, cardealer_path(car_dealer_car.cardealer) %>
+                    </p>
+                  </strong>
+                <p style="color: #212529;">Địa chỉ: <%= car_dealer_car.cardealer.sub_location %>, <%= car_dealer_car.cardealer.district.name %>, <%= car_dealer_car.cardealer.district.prefecture.name %></p>
+                </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                        <div class="feature-box-3">
+                            <div class="icon">
+                                <i class="glyph-icon flaticon-wallet"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Giá: <%= car_dealer_car.cardealer_price%> </h6>
+                                <p>Số lượng: <%= car_dealer_car.amount%></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="feature-box-3">
+                                <div class="details-nav">
+                                <ul>
+                                    <li>
+                                        <%= render partial: 'models/inquiry_form', locals: {  car_dealer_car: car_dealer_car } %>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+            <% end %>
+       </div>
+      </div>
+    </section>
+    </div>

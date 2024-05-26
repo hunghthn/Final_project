@@ -1,0 +1,22 @@
+<div class="item">
+    <div class="testimonial-block text-center">
+      <div class="testimonial-image">
+        <img class="img-fluid" src="<%= asset_path('car_delealer_employee/bg/01.jpg') %>" alt="">
+      </div>
+      <div class="testimonial-box">
+        <div class="testimonial-avtar">
+          <% if employee.gender == 'male' %>
+            <img class="img-fluid" src="<%= asset_path('car_delealer_employee/02.jpg') %>" alt="">
+          <% else %>
+          <img class="img-fluid" src="<%= asset_path('car_delealer_employee/01.jpg') %>" alt="">
+          <% end %>
+          <h6><%=  employee.name %></h6>
+          <span><%=  employee.role %></span>
+        </div>
+        <div class="testimonial-content">
+            <p><%=  employee.detail %></p>
+            <i class="fa fa-quote-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>

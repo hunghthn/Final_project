@@ -1,7 +1,7 @@
 # db/migrate/20240103140400_create_interiors.rb
-class CreateInteriors < ActiveRecord::Migration[7.1]
+class CreateExteriors < ActiveRecord::Migration[7.1]
   def change
-    create_table :interiors do |t|
+    create_table :exteriors do |t|
       t.string :seat_material
       t.string :driver_seat_adjustment
       t.string :driver_seat_memory

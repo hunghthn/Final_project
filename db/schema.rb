@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_11_074649) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_22_150212) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,52 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_11_074649) do
     t.text "brand_desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "car_dealer_cars", force: :cascade do |t|
+    t.bigint "model_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "cardealer_id", null: false
+    t.integer "amount"
+    t.string "cardealer_price"
+    t.index ["cardealer_id"], name: "index_car_dealer_cars_on_cardealer_id"
+    t.index ["model_id"], name: "index_car_dealer_cars_on_model_id"
+  end
+
+  create_table "car_dealer_employees", force: :cascade do |t|
+    t.bigint "cardealer_id", null: false
+    t.string "name"
+    t.integer "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "detail"
+    t.string "picture"
+    t.integer "gender"
+    t.index ["cardealer_id"], name: "index_car_dealer_employees_on_cardealer_id"
+  end
+
+  create_table "cardealers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "sub_location"
+    t.bigint "district_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "website"
+    t.string "work_time"
+    t.string "work_day"
+    t.string "detail"
+    t.index ["district_id"], name: "index_cardealers_on_district_id"
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.string "name"
+    t.bigint "prefecture_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["prefecture_id"], name: "index_districts_on_prefecture_id"
   end
 
   create_table "driving_assistances", force: :cascade do |t|
@@ -87,6 +133,46 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_11_074649) do
   end
 
   create_table "exteriors", force: :cascade do |t|
+    t.string "seat_material"
+    t.string "driver_seat_adjustment"
+    t.string "driver_seat_memory"
+    t.string "driver_seat_massage"
+    t.string "passenger_seat_adjustment"
+    t.string "passenger_seat_massage"
+    t.string "driver_seat_cooling"
+    t.string "passenger_seat_cooling"
+    t.string "driver_seat_heating"
+    t.string "passenger_seat_heating"
+    t.string "dashboard"
+    t.string "steering_wheel_controls"
+    t.string "steering_wheel_material"
+    t.string "smart_key"
+    t.string "push_button_start"
+    t.string "air_conditioning"
+    t.string "rear_seat_air_vents"
+    t.string "one_touch_windows"
+    t.string "panoramic_sunroof"
+    t.string "auto_dimming_rearview_mirror"
+    t.string "front_center_armrest"
+    t.string "rear_center_armrest"
+    t.string "entertainment_screen"
+    t.string "apple_carplay"
+    t.string "android_auto"
+    t.string "voice_command"
+    t.string "hands_free_calling"
+    t.string "audio_system"
+    t.string "wifi_connectivity"
+    t.string "aux_input"
+    t.string "usb_input"
+    t.string "bluetooth_connectivity"
+    t.string "am_fm_radio"
+    t.string "wireless_charging"
+    t.string "power_closing_doors"
+    t.string "air_filter"
+    t.string "steering_wheel_heating"
+    t.string "navigation_system"
+    t.string "air_quality_control"
+    t.string "gesture_control"
     t.bigint "trim_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -115,6 +201,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_11_074649) do
     t.string "hood_air_intake"
     t.string "roof_rack"
     t.index ["trim_id"], name: "index_exteriors_on_trim_id"
+  end
+
+  create_table "inquiries", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.text "note"
+    t.integer "preferred_contact"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "car_dealer_car_id"
   end
 
   create_table "interiors", force: :cascade do |t|
@@ -230,6 +327,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_11_074649) do
     t.index ["brand_id"], name: "index_models_on_brand_id"
     t.index ["segment_id"], name: "index_models_on_segment_id"
     t.index ["type_id"], name: "index_models_on_type_id"
+  end
+
+  create_table "prefectures", force: :cascade do |t|
+    t.string "name"
+    t.integer "prefecture_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "safety_technologies", force: :cascade do |t|
@@ -356,9 +460,27 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_11_074649) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "phone"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "gender"
+    t.string "username"
+  end
+
+  add_foreign_key "car_dealer_cars", "cardealers"
+  add_foreign_key "car_dealer_cars", "trims", column: "model_id"
+  add_foreign_key "car_dealer_employees", "cardealers"
+  add_foreign_key "cardealers", "districts"
+  add_foreign_key "districts", "prefectures"
   add_foreign_key "driving_assistances", "trims"
   add_foreign_key "engine_transmissions", "trims"
   add_foreign_key "exteriors", "trims"
+  add_foreign_key "inquiries", "car_dealer_cars"
   add_foreign_key "interiors", "trims"
   add_foreign_key "model_details", "models"
   add_foreign_key "models", "brands"

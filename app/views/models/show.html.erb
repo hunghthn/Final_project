@@ -82,6 +82,18 @@
                     <li><%= link_to "Cả năm 2023", sales_index_path %></li>
                 </ul>
             </li>
+            <li>
+              <% if current_user %>
+              <a href="javascript:void(0)"> <%= current_user.firstname %>  <i class="fa fa-angle-down fa-indicator"></i></a>
+               <ul class="drop-down-multilevel">
+                <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                <li><%= link_to "Đăng xuất", logout_path, method: :delete %>
+                </li>
+               </ul>
+              <% else %>
+                <%= link_to "Đăng nhập", login_path %>
+              <% end %>
+            </li>
           </ul>
        </div>
       </div>
@@ -109,7 +121,7 @@
              <ul class="page-breadcrumb">
                 <li><a href="#"><i class="fa fa-home"></i> Trang chủ</a> <i class="fa fa-angle-double-right"></i></li>
                 <li><%= link_to 'Danh sách xe', car_show_path %> <i class="fa fa-angle-double-right"></i></li>
-                <li><span> <%= @model.model_title_name%> </span> </li>
+                <li id ="model-name" data-model-id="<%= @model.id%>" ><span><%= @model.model_title_name%></span> </li>
              </ul>
            </div>
      </div>
@@ -261,75 +273,6 @@ car-details -->
                           </div>
                           <div>
                             <a class="button red" id="schedule_test_drive_submit">Schedule Now <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></a>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a data-bs-toggle="modal" data-bs-target="#exampleModal3" data-whatever="@mdo" href="#" class="css_btn"><i class="fa fa-tag"></i>Make an Offer</a>
-                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLabel3">Make an Offer</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
-                      </div>
-                      <div class="modal-body">
-						<div id="mao_notice" class="form-notice" style="display:none;"></div>
-                        <form class="gray-form reset_css" action="https://themes.potenzaglobalsolutions.com/html/cardealer/post" id="mao_form">
-                          <input type="hidden" name="action" value="make_an_offer" />
-                          <div class="mb-3">
-                            <label class="form-label">Name*</label>
-                            <input type="text" id="mao_name" name="mao_name" class="form-control">
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label">Email address*</label>
-                            <input type="text" id="mao_email" name="mao_email" class="form-control">
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label">Phone*</label>
-                            <input type="text" id="mao_phone" name="mao_phone" class="form-control">
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label">Offered Price*</label>
-                            <input type="text" id="mao_price" name="mao_price" class="form-control">
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label">Financing Required*</label>
-                            <div class="selected-box">
-                              <select class="selectpicker" id="mao_financing" name="mao_financing">
-                                <option value="Yes">Yes </option>
-                                <option value="No">No</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label">additional Comments/Conditions*</label>
-                            <textarea class="form-control input-message" rows="4" id="mao_comments" name="mao_comments"></textarea>
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label pe-3">Preferred Contact*</label>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault001">
-                              <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault001">
-                                Email
-                              </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault002" checked>
-                              <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault002">
-                                Phone
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-3">
-                            <div id="recaptcha3"></div>
-                          </div>
-                          <div>
-                            <a class="button red" id="make_an_offer_submit">Submit <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></a>
                           </div>
                         </form>
                       </div>
@@ -1132,6 +1075,51 @@ car-details -->
             </div>
          </div>
        </div>
+       <h3>      Tìm Kiếm Đại Lý Xe Phù Hợp</h3>
+       <div class="row mt-5 pt-5">
+        <section class="search white-bg">
+          <div class="container">
+           <div class="search-block red-bg">
+              <div class="row">
+                <div class="col-md-6">
+                  <span>Chọn tỉnh/ thành phố</span>
+                  <div class="selected-box" id="prefecture-select">
+                    <select name="q[prefecture_id_eq]">
+                      <% @prefectures.each do |prefecture| %>
+                        <option value="<%= prefecture.id %>"><%= prefecture.name %></option>
+                      <% end %>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <span>Chọn quận/huyện</span>
+                  <div class="selected-box" id="district">
+                    <select  id="district-select" name="q[district_id_eq]">
+                      <% @hanoi.districts.each do |district| %>
+                        <option value="<%= district.id %>"><%= district.name %></option>
+                      <% end %>
+                        
+
+                    </select>
+                  </div>
+                </div>                
+                  <div class="row">
+                    <div class="price">
+                       <div id="slider-range"></div>
+                       <a id = "renderButton" class="button white" href="#">TÌM KIẾM</a>
+                     </div>
+                   </div>
+           </div>
+          </div>
+        </section>
+        
+         <!--=================================
+         search -->
+       </div>
+       
+       <div id="cardealer_list"></div>
+        
        <div class="feature-car">
          <h4>Xe cùng hãng</h4>
           <div class="row pb-4">
@@ -1416,9 +1404,99 @@ $('body').on('click', '.remove-from-compare', function(e) {
   });
 });
 
+$(document).ready(function() {
+  $('#prefecture-select .select-options li').on('click', function() {
+      var prefectureId = $(this).attr('rel'); 
+      console.log(prefectureId);
+
+      if (prefectureId) {
+          $.ajax({
+              url: '/districts/' + prefectureId,
+              method: 'GET',
+              success: function(data) {
+                  console.log(data);
+                  var districtSelect = document.getElementById('district-select');
+                  while (districtSelect.firstChild) {
+                      districtSelect.removeChild(districtSelect.firstChild);
+                  }
+
+                  data.forEach(function(district) {
+                      var option = document.createElement('option');
+                      option.value = district.id;
+                      option.textContent = district.name;
+                      districtSelect.appendChild(option);
+                  });
+
+                  var selectOptions = document.querySelector('#district .select-options');
+                  while (selectOptions.firstChild) {
+                      selectOptions.removeChild(selectOptions.firstChild);
+                  }
+                  
+                  data.forEach(function(district) {
+                      var listItem = document.createElement('li');
+                      listItem.textContent = district.name;
+                      listItem.setAttribute('rel', district.id);
+                      selectOptions.appendChild(listItem);
+                  });
+
+                  var selectStyled = document.querySelector('#district .select-styled');
+                  selectStyled.textContent = data[0].name;
+                  
+
+                  console.log('District select updated');
+              
+
+                  
+              },
+              error: function(xhr, status, error) {
+                  console.error('Error:', error); 
+              }
+          });
+      }
+  });
+
+
+  
+});
+
+$(document).ready(function() {
+  $(document).on('click', '#district .select-options li', function() {
+    var districtName = $(this).text();
+    console.log(districtName);
+    var selectStyled = document.querySelector('#district .select-styled');
+    selectStyled.textContent = districtName;
+  });
+});
+
+$(document).ready(function() {
+  $('.button.white').on('click', function(event) {
+    event.preventDefault();
+
+    var selectedDistrict = $('#district .select-styled').text().trim();
+    var currentModelName = $('#model-name').data('model-id');
+    console.log(currentModelName);
+    $.ajax({
+      url: '/cardealers/find_by_district',
+      method: 'GET',
+      data: { district_name: selectedDistrict, model_id: currentModelName },
+      success: function(data) {
+        $('#cardealer_list').html(data); 
+        
+      },
+      error: function(xhr, status, error) {
+        console.error('Error:', error);
+      }
+    });
+  });
+});
+
+$(document).ready(function() {
+  $('#modal-trigger').click(function() {
+    console.log(123);
+    $('#exampleModal3').modal('show');
+  });
+});
 
 </script>
 </body>
 
-<!-- Mirrored from themes.potenzaglobalsolutions.com/html/cardealer/details-02.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Dec 2023 16:29:06 GMT -->
-</html>

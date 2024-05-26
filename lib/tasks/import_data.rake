@@ -7,7 +7,7 @@ namespace :import do
   task brands: :environment do
     Brand.connection.execute('ALTER SEQUENCE brands_id_seq RESTART WITH 1')
     Brand.delete_all
-    json_data = File.read('/home/hth/Desktop/Final_project/db_json/brand.json')
+    json_data = File.read('/home/hth/Final_project/db_json/brand.json')
     brands = JSON.parse(json_data)
     brands.each do |brand_data|
       Brand.create(brand_data)
@@ -19,7 +19,7 @@ namespace :import do
   task segments: :environment do
     Segment.connection.execute('ALTER SEQUENCE segments_id_seq RESTART WITH 1')
     Segment.delete_all
-    json_data = File.read('/home/hth/Desktop/Final_project/db_json/segment.json')
+    json_data = File.read('/home/hth/Final_project/db_json/segment.json')
     segments = JSON.parse(json_data)
     segments.each do |segment_data|
       Segment.create(segment_data)
@@ -31,7 +31,7 @@ namespace :import do
   task types: :environment do
     Type.connection.execute('ALTER SEQUENCE types_id_seq RESTART WITH 1')
     Type.delete_all
-    json_data = File.read('/home/hth/Desktop/Final_project/db_json/type.json')
+    json_data = File.read('/home/hth/Final_project/db_json/type.json')
     types = JSON.parse(json_data)
     types.each do |type_data|
       Type.create(type_data)
@@ -41,22 +41,47 @@ namespace :import do
 
   desc 'Import data from JSON to models table'
   task models: :environment do
+    # Đặt lại trình tự ID
     Model.connection.execute('ALTER SEQUENCE models_id_seq RESTART WITH 1')
     Model.delete_all
-    json_data = File.read('/home/hth/Desktop/Final_project/db_json/model.json')
+  
+    # Đọc dữ liệu JSON
+    json_data = File.read('/home/hth/Final_project/db_json/model.json')
     models = JSON.parse(json_data)
+  
+    # Xử lý từng bản ghi trong JSON
     models.each do |model_data|
-      Model.create(model_data)
+      # Tìm hoặc tạo Brand
+      brand_name = model_data['model_brand']
+      brand = Brand.find_or_create_by(brand_name: brand_name)
+  
+      # Tìm hoặc tạo Segment
+      segment_name = model_data['model_segment']
+      segment = Segment.find_or_create_by(segment_name: segment_name)
+  
+      # Tìm hoặc tạo Type
+      type_name = model_data['model_type']
+      type = Type.find_or_create_by(type_name: type_name)
+  
+      # Gán các khóa ngoại vào model_data
+      model_data['brand_id'] = brand.id
+      model_data['segment_id'] = segment.id
+      model_data['type_id'] = type.id
+  
+      # Tạo Model
+      Model.create!(model_data) # Sử dụng `create!` để báo lỗi nếu có vấn đề
     end
+  
     puts 'Data imported successfully!'
   end
+  
 
   desc 'Import data from JSON to trims table'
   task trims: :environment do
     Trim.connection.execute('ALTER SEQUENCE trims_id_seq RESTART WITH 1')
     Trim.delete_all
 
-    json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim_spider_name.json')
+    json_data = File.read('/home/hth/Final_project/db_json/trim_spider_name.json')
     trims_data = JSON.parse(json_data)
 
     trims_data.each do |trim_data|
@@ -96,7 +121,7 @@ namespace :import do
     ModelDetail.connection.execute('ALTER SEQUENCE model_details_id_seq RESTART WITH 1')
     ModelDetail.delete_all
 
-    json_data = File.read('/home/hth/Desktop/Final_project/db_json/model_desc.json')
+    json_data = File.read('/home/hth/Final_project/db_json/model_desc.json')
     model_details_data = JSON.parse(json_data)
 
     model_details_data.each do |model_data|
@@ -126,7 +151,7 @@ namespace :import do
 
   desc 'Import data from JSON to trims table'
   task update_trims: :environment do
-    json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')
+    json_data = File.read('/home/hth/Final_project/db_json/trim.json')
     trims_data = JSON.parse(json_data)
 
     trims_data.each do |trim_data|
@@ -154,7 +179,7 @@ task engine_transmissions: :environment do
   EngineTransmission.connection.execute('ALTER SEQUENCE engine_transmissions_id_seq RESTART WITH 1')
   EngineTransmission.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')
+  json_data = File.read('/home/hth/Final_project/db_json/trim.json')
   trim_datas = JSON.parse(json_data)
 
   trim_datas.each do |trim_data|
@@ -210,7 +235,7 @@ task size_weights: :environment do
   SizeWeight.connection.execute('ALTER SEQUENCE size_weights_id_seq RESTART WITH 1')
   SizeWeight.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')
+  json_data = File.read('/home/hth/Final_project/db_json/trim.json')
   trim_datas = JSON.parse(json_data)
 
   trim_datas.each do |trim_data|
@@ -252,7 +277,7 @@ task suspension_brakes: :environment do
   SuspensionBrake.connection.execute('ALTER SEQUENCE suspension_brakes_id_seq RESTART WITH 1')
   SuspensionBrake.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')
+  json_data = File.read('/home/hth/Final_project/db_json/trim.json')
   trim_datas = JSON.parse(json_data)
 
   trim_datas.each do |trim_data|
@@ -288,7 +313,7 @@ task exteriors: :environment do
   Exterior.connection.execute('ALTER SEQUENCE exteriors_id_seq RESTART WITH 1')
   Exterior.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')
+  json_data = File.read('/home/hth/Final_project/db_json/trim.json')
   trim_datas = JSON.parse(json_data)
 
   trim_datas.each do |trim_data|
@@ -343,7 +368,7 @@ task interiors: :environment do
   Interior.connection.execute('ALTER SEQUENCE interiors_id_seq RESTART WITH 1')
   Interior.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')
+  json_data = File.read('/home/hth/Final_project/db_json/trim.json')
   trim_datas = JSON.parse(json_data)
 
   trim_datas.each do |trim_data|
@@ -444,7 +469,7 @@ task driving_assistances: :environment do
   DrivingAssistance.connection.execute('ALTER SEQUENCE driving_assistances_id_seq RESTART WITH 1')
   DrivingAssistance.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')  # Replace with the actual path to your JSON file
+  json_data = File.read('/home/hth/Final_project/db_json/trim.json')  # Replace with the actual path to your JSON file
   trim_datas = JSON.parse(json_data)
 
   trim_datas.each do |trim_data|
@@ -506,7 +531,7 @@ task safety_technologies: :environment do
   SafetyTechnology.connection.execute('ALTER SEQUENCE safety_technologies_id_seq RESTART WITH 1')
   SafetyTechnology.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/trim.json')  # Replace with the actual path to your JSON file
+  json_data = File.read('/home/hth/Final_project/db_json/trim.json')  # Replace with the actual path to your JSON file
   trim_datas = JSON.parse(json_data)
 
   trim_datas.each do |trim_data|
@@ -579,7 +604,7 @@ task sales: :environment do
   Sale.connection.execute('ALTER SEQUENCE sales_id_seq RESTART WITH 1')
   Sale.delete_all
 
-  json_data = File.read('/home/hth/Desktop/Final_project/db_json/2023_top_sale.json')
+  json_data = File.read('/home/hth/Final_project/db_json/2023_top_sale.json')
   sale_datas = JSON.parse(json_data)
 
   sale_datas.each do |sale_data|
@@ -610,5 +635,58 @@ task sales: :environment do
 
   puts 'Data imported successfully!'
 end
+
+desc 'Import prefecture data from JSON'
+task import_prefectures: :environment do
+  # Xóa dữ liệu cũ trong bảng Prefecture (nếu có)
+  Prefecture.connection.execute('ALTER SEQUENCE prefectures_id_seq RESTART WITH 1')
+  Prefecture.delete_all
+
+  # Đọc dữ liệu từ file JSON
+  json_data = File.read('/home/hth/Final_project/db_json/prefecture.json')
+  prefecture_data = JSON.parse(json_data)
+
+  # Lặp qua từng mục dữ liệu trong JSON và tạo bản ghi Prefecture tương ứng
+  prefecture_data.each do |data|
+    Prefecture.create(
+      name: data['name'],
+      prefecture_type: data['prefecture_type']
+    )
+  end
+
+  puts 'Prefecture data imported successfully!'
+end
+
+desc 'Import data from JSON to districts table'
+task import_districts: :environment do
+  # Đặt lại trình tự ID
+  District.connection.execute('ALTER SEQUENCE districts_id_seq RESTART WITH 1')
+  District.delete_all
+
+  # Đọc dữ liệu JSON
+  json_data = File.read('/home/hth/Final_project/db_json/district.json')
+  districts = JSON.parse(json_data)
+
+  # Xử lý từng bản ghi trong JSON
+  districts.each do |district_data|
+    # Tìm hoặc tạo Prefecture
+    prefecture_name = district_data['tỉnh thành']
+    prefecture = Prefecture.find_or_create_by(name: prefecture_name)
+
+    # Tạo District và liên kết với Prefecture
+    district = District.new(
+      name: district_data['quận huyện'],
+      prefecture: prefecture # Sử dụng liên kết tự động được tạo bởi Rails
+    )
+
+    # Lưu District vào cơ sở dữ liệu và báo lỗi nếu có vấn đề
+    unless district.save
+      puts "Error importing district: #{district.errors.full_messages.join(', ')}"
+    end
+  end
+
+  puts 'Data imported successfully!'
+end
+
 
 end

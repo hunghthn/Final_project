@@ -1,0 +1,33 @@
+
+<% inquiriess.each do |inquiries| %>
+<div class="car-grid">
+  <div class="row">
+   <div class="col-lg-4 col-md-12">
+     <div class="car-item gray-bg text-center">
+      <div class="car-image">
+        <img class="img-fluid" src="<%= inquiries.car_dealer_car.model.model_main_pic %>" alt="<%= inquiries.car_dealer_car.model.model_name %>">
+      </div>
+     </div>
+    </div>
+     <div class="col-lg-8 col-md-12">
+       <div class="car-details">
+        <div class="car-title">
+          <%= link_to inquiries.car_dealer_car.model.full_model_name, model_path(inquiries.car_dealer_car.model) %></span>
+          <p style="margin-bottom: 5px;"> Hiện có: <span style="color: red"><%= inquiries.car_dealer_car.amount %></span></p>   
+        </div>
+         <div class="price">
+            <span class="old-price"> <%= inquiries.car_dealer_car.model.model_price %></span>
+            <span class="new-price"> <%= inquiries.car_dealer_car.cardealer_price %> </span>
+            <div class="details-nav" style="margin: 10px 0px 0px;">
+              <ul style="margin-bottom: 0px">
+                  <li>
+                    <%= render partial: 'inquiry_info', locals: {  info: inquiries } %>
+                  </li>
+              </ul>
+            </div>
+          </div>
+         </div>
+       </div>
+      </div>
+    </div>
+<% end %>

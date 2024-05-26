@@ -25,6 +25,5 @@ class AddColumnsToExteriors < ActiveRecord::Migration[7.1]
     add_column :exteriors, :roof_rails, :string
     add_column :exteriors, :hood_air_intake, :string
     add_column :exteriors, :roof_rack, :string
-    add_column :exteriors, :sunroof, :string
   end
 end

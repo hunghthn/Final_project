@@ -1,0 +1,255 @@
+[
+    {
+      "name": "Hà Nội",
+      "prefecture_type": 2
+    },
+    {
+      "name": "Hà Giang",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Cao Bằng",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bắc Kạn",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Tuyên Quang",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Lào Cai",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Điện Biên",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Lai Châu",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Sơn La",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Yên Bái",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Hoà Bình",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Thái Nguyên",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Lạng Sơn",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Quảng Ninh",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bắc Giang",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Phú Thọ",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Vĩnh Phúc",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bắc Ninh",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Hải Dương",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Hải Phòng",
+      "prefecture_type": 2
+    },
+    {
+      "name": "Hưng Yên",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Thái Bình",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Hà Nam",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Nam Định",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Ninh Bình",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Thanh Hóa",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Nghệ An",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Hà Tĩnh",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Quảng Bình",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Quảng Trị",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Thừa Thiên Huế",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Đà Nẵng",
+      "prefecture_type": 2
+    },
+    {
+      "name": "Quảng Nam",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Quảng Ngãi",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bình Định",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Phú Yên",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Khánh Hòa",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Ninh Thuận",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bình Thuận",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Kon Tum",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Gia Lai",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Đắk Lắk",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Đắk Nông",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Lâm Đồng",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bình Phước",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Tây Ninh",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bình Dương",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Đồng Nai",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bà Rịa - Vũng Tàu",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Hồ Chí Minh",
+      "prefecture_type": 2
+    },
+    {
+      "name": "Long An",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Tiền Giang",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bến Tre",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Trà Vinh",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Vĩnh Long",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Đồng Tháp",
+      "prefecture_type": 1
+    },
+    {
+      "name": "An Giang",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Kiên Giang",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Cần Thơ",
+      "prefecture_type": 2
+    },
+    {
+      "name": "Hậu Giang",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Sóc Trăng",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Bạc Liêu",
+      "prefecture_type": 1
+    },
+    {
+      "name": "Cà Mau",
+      "prefecture_type": 1
+    }
+  ]
+  

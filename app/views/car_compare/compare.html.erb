@@ -73,6 +73,18 @@
                     <li><%= link_to "Cả năm 2023", sales_index_path %></li>
                 </ul>
             </li>
+            <li>
+              <% if current_user %>
+              <a href="javascript:void(0)"> <%= current_user.firstname %>  <i class="fa fa-angle-down fa-indicator"></i></a>
+               <ul class="drop-down-multilevel">
+                <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                <li><%= link_to "Đăng xuất", logout_path, method: :delete %>
+                </li>
+               </ul>
+              <% else %>
+                <%= link_to "Đăng nhập", login_path %>
+              <% end %>
+            </li>
           </ul>
        </div>
       </div>

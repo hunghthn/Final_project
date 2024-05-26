@@ -1,0 +1,216 @@
+<body>
+
+<!--=================================
+  loading -->
+
+  <div id="loading">
+    <div id="loading-center">
+      <img src="<%= asset_path('loader/loader.gif') %>" alt="">
+   </div>
+  </div>
+
+<!--=================================
+  loading -->
+
+
+<!--=================================
+ header -->
+ <header id="header" class="defualt">
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="topbar-left text-lg-start text-center">
+               <ul class="list-inline">
+                 <li> <i class="fa fa-envelope-o"> </i> hungchv16@gmail.com</li>
+                 <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
+               </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="topbar-right text-lg-end text-center">
+               <ul class="list-inline">
+                 <li> <i class="fa fa-phone"></i> 0386680574</li>
+                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                 <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--=================================
+ mega menu -->
+
+ <div class="menu">
+    <!-- menu start -->
+     <nav id="menu" class="mega-menu">
+      <!-- menu list items container -->
+      <section class="menu-list-items">
+       <div class="container">
+        <div class="row">
+         <div class="col-md-12 position-relative">
+          <!-- menu logo -->
+          <ul class="menu-logo">
+              <li>
+                  <a href=<%= car_show_path %>><img id="logo_img" src="<%= asset_path('logo/logo-light.png') %>" alt="logo"></a>
+              </li>
+              </li>
+          </ul>
+          <!-- menu links -->
+            <ul class="menu-links">
+              <!-- active class -->
+              <li><a href="javascript:void(0)"> Home </a>
+              </li>
+              <li><a href="javascript:void(0)">So sánh <i class="fa fa-angle-down fa-indicator"></i></a>
+                  <div class="drop-down menu-bg grid-col-12">
+                    <div class="grid-row" id="list-compared">
+                      <%= render partial: 'car/compared_models', locals: { compared_models: session[:compared_models] } %>
+                    </div>
+                    <div class="grid-row" id ="compare_button">
+                     <%= link_to "So sánh", car_compare_compare_path, class: "button red float-end" %>
+                    </div>
+                  </div>
+              </li>
+                          <li><a href="javascript:void(0)">top doanh số   <i class="fa fa-angle-down fa-indicator"></i></a>
+                 <!-- drop down multilevel  -->
+                  <ul class="drop-down-multilevel">
+                      <li><%= link_to "Cả năm 2023", sales_index_path %></li>
+                  </ul>
+              </li>
+              <li>
+                <% if current_user %>
+                  <%= link_to current_user.username, user_path(current_user) %>
+                <% else %>
+                  <%= link_to "Đăng nhập", login_path %>
+                <% end %>
+              </li>
+            </ul>
+         </div>
+        </div>
+       </div>
+      </section>
+     </nav>
+    <!-- menu end -->
+   </div>
+  </header>
+
+
+<!--=================================
+ inner-intro -->
+
+ <section class="inner-intro bg-1 bg-overlay-black-70">
+  <div class="container">
+     <div class="row text-center intro-title">
+         <div class="col-md-6 text-md-start d-inline-block">
+             <h1 class="text-white">ĐĂNG NHẬP </h1>
+           </div>
+          <div class="col-md-6 text-md-end float-end">
+         <ul class="page-breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> Trang chủ</a> <i class="fa fa-angle-double-right"></i></li>
+            <li><span>Đăng nhập</span> </li>
+         </ul>
+      </div>
+     </div>
+  </div>
+</section>
+
+<!--=================================
+ inner-intro -->
+
+
+<!--=================================
+ login-form  -->
+
+ <section class="login-form page-section-ptb">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+           <div class="section-title">
+             <h2>Đăng nhập vào tài khoản của bạn</h2>
+             <div class="separator"></div>
+           </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-12">
+          <div class="gray-form clearfix">
+            <%= form_with url: login_path, method: :post do |form| %>
+              <div class="mb-3">
+                <%= form.label :username, "Tên tài khoản*", class: "form-label" %>
+                <%= form.text_field :username, class: "form-control", placeholder: "Tên tài khoản" %>
+              </div>
+              <div class="mb-3">
+                <%= form.label :password, "Mật khẩu*", class: "form-label" %>
+                <%= form.password_field :password, class: "form-control", placeholder: "Mật khẩu" %>
+              </div>
+              <!-- <div class="mb-3">
+                <div class="remember-checkbox mb-4">
+                  <%= form.check_box :remember_me, id: "remember_me" %>
+                  <%= form.label :remember_me, "Nhớ mật khẩu" %>
+                  <a href="#" class="float-end">Quên mật khẩu?</a>
+                </div>
+              </div> -->
+              <div class="d-grid">
+                <%= form.submit "Đăng nhập", class: "button red btn-block", style: "background: #db2d2e" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+           <div class="section-title">
+            <div class="separator mb-3"></div>
+            <p>Nếu bạn chưa có tài khoản, vui lòng <a href="/users/new">đăng ký tài khoản</a>.</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+<!--=================================
+ login-form  -->
+
+
+<!--=================================
+ footer -->
+
+<footer class="footer bg-3 bg-overlay-black-90">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <div class="social">
+        <ul>
+          <li><a class="facebook" href="#">facebook <i class="fa fa-facebook"></i> </a></li>
+          <li><a class="twitter" href="#">twitter <i class="fa fa-twitter"></i> </a></li>
+          <li><a class="pinterest" href="#">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
+          <li><a class="dribbble" href="#">dribbble <i class="fa fa-dribbble"></i> </a></li>
+          <li><a class="google-plus" href="#">google plus <i class="fa fa-google-plus"></i> </a></li>
+          <li><a class="behance" href="#">behance <i class="fa fa-behance"></i> </a></li>
+        </ul>
+       </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--=================================
+ footer -->
+
+
+ <!--=================================
+ back to top -->
+
+<div class="car-top">
+  <span><img src="images/car.png" alt=""></span>
+</div>
+
+ <!--=================================
+ back to top -->
+
+</body>
+
