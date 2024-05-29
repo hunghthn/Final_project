@@ -77,7 +77,11 @@
               <% if current_user %>
               <a href="javascript:void(0)"> <%= current_user.firstname %>  <i class="fa fa-angle-down fa-indicator"></i></a>
                <ul class="drop-down-multilevel">
-                <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                <% if current_user.admin_car_dealer? %>
+                  <li><%= link_to "Admin", admin_cardealer_path(current_user.cardealer) %></li>
+                <% else %>
+                  <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                <% end %>
                 <li><%= link_to "Đăng xuất", logout_path, method: :delete %>
                 </li>
                </ul>
@@ -128,7 +132,7 @@ left-sidebar  -->
 <section class="page-left-sidebar page-section-ptb">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12" style="padding-bottom: 20px;">
         <h5>
           <% if @compared_models.present? %>
             So sánh xe <%= @compared_models.map { |model| "#{model.brand.brand_name} #{model.model_title_name} " }.join(' vs ') %>
@@ -147,24 +151,53 @@ left-sidebar  -->
             <%= render partial: 'compared_model_column', locals: { model: model } %>
           <% end %>
         </div>
-        <div class="row pt-4" id="trim-price-list">
-          <div class="col-md-3">
-          <h4>Giá niêm yết</h4>
-          </div>
-          <% @compared_models.each do |model| %>
-            <div class="col-md-3">
-              <h6 id="<%= "price_for_model_#{model.id}" %>"><%= model.trims.first.listed_price %></h6>
-            </div>
-          <% end %>
-        </div>
-          <%= render partial: 'engine_transmission' %>
-          <%= render partial: 'size_weight' %> 
-          <%= render partial: 'suspension_brake' %>
-          <%= render partial: 'exterior' %>
-          <%= render partial: 'interior' %>
-          <%= render partial: 'driving_assistance' %>
-          <%= render partial: 'safety_technology' %>
       </div>
+    </div>
+    <div class="row">
+      <section class="specifications gray-bg page-section-ptb" style="padding-top: 0px;">
+        <div class="container">
+          <div class="row">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   <span> <i class="flaticon-price-tag"></i> Giá Niêm Yết </span>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <table class="table table-striped">
+                      <tbody>
+                        <tr class="border-top">
+                          <td class="fixed-width-td-1"> Giá niêm yết</td>
+                          <% @compared_models.each do |model| %>
+                            <td class="fixed-width-td" id="<%= "price_for_model_#{model.id}" %>"> <%= model.trims.first.listed_price %></td>
+                          </div>
+                        <% end %>                         
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <%= render partial: 'engine_transmission' %>
+
+              <%= render partial: 'size_weight' %>
+
+              <%= render partial: 'suspension_brake' %>
+
+              <%= render partial: 'interior' %>
+
+              <%= render partial: 'exterior' %>
+
+              <%= render partial: 'driving_assistance' %>
+
+              <%= render partial: 'safety_technology' %>
+
+            </div>
+        </div>
+      </section>
     </div>
    </div>
 </section>
@@ -269,32 +302,6 @@ $('body').on('click', '.remove-from-compare', function(e) {
   });
 });
 
-$('#trigger-change').on('click', function() {
-  // Lặp qua từng model
-  $('.form-control.trim-select').each(function() {
-    var modelId = $(this).data('model-id');
-    var selectedTrimName = $(this).val();
-    var priceElementId = "#price_for_model_" + modelId;
-
-    // Gửi AJAX request để cập nhật giá
-    $.ajax({
-      type: 'GET',
-      url: '/update_price',
-      data: {
-        model_id: modelId,
-        selected_trim_name: selectedTrimName
-      },
-      success: function(response) {
-        $(priceElementId).text(response.new_price);
-      },
-      error: function(error) {
-        console.log(error);
-      }
-    });
-  });
-});
-
-
 
 
 function updateData(url, elementIdPrefix) {
@@ -343,7 +350,7 @@ function update_max(url, elementIdPrefix) {
 
         if (newValue >= maxValue) {
           maxValue = newValue;
-           $("p[id^='" + elementIdPrefix + "']").css('color', 'gray');
+           $("td[id^='" + elementIdPrefix + "']").css('color', 'gray');
           $(elementId).css('color', 'red');
         }
 
@@ -378,7 +385,7 @@ function update_max_pw(url, elementIdPrefix) {
 
         if (hpValue >= maxValue) {
           maxValue = hpValue;
-           $("p[id^='" + elementIdPrefix + "']").css('color', 'gray');
+           $("td[id^='" + elementIdPrefix + "']").css('color', 'gray');
           $(elementId).css('color', 'red');
         }
 
@@ -392,28 +399,75 @@ function update_max_pw(url, elementIdPrefix) {
   });
 }
 
+function update_max_new(url, elementIdPrefix) {
+  var maxValue = 0;
+  var elementsWithMaxValue = [];
+
+  $('.form-control.trim-select').each(function() {
+    var modelId = $(this).data('model-id');
+    var selectedTrimName = $(this).val();
+    var elementId = `#${elementIdPrefix}_for_model_${modelId}`;
+
+    $.ajax({
+      type: 'GET',
+      url: url,
+      data: {
+        model_id: modelId,
+        selected_trim_name: selectedTrimName
+      },
+      success: function(response) {
+        var newValue = response.new_value;
+
+        if (newValue > maxValue) {
+          maxValue = newValue;
+          elementsWithMaxValue = [elementId]; // Reset and add new max element
+        } else if (newValue === maxValue) {
+          elementsWithMaxValue.push(elementId); // Add to list of max elements
+        }
+
+        $(elementId).text(newValue);
+
+        // Update colors
+        $("td[id^='" + elementIdPrefix + "']").css('color', 'gray');
+        elementsWithMaxValue.forEach(function(id) {
+          $(id).css('color', 'red');
+        });
+
+        console.log('maxValue:', maxValue);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
+  });
+}
+
+
+
 $('#trigger-change').on('click', function() {
+
+  update_max_pw( '/update_price', 'price');
   updateData('/update_engine_type', 'engine_type');
-  update_max( '/update_engine_capacity', 'engine_capacity');
-  update_max( '/update_fuel_consumption', 'fuel_consumption');
+  update_max_new( '/update_engine_capacity', 'engine_capacity');
+  update_max_new( '/update_fuel_consumption', 'fuel_consumption');
   update_max_pw( '/update_power', 'power');
   update_max_pw( '/update_torque', 'torque');
   updateData( '/update_gearbox', 'gearbox');
   updateData( '/update_drive_system', 'drive_system');
   updateData( '/update_automatic_transmission', 'automatic_transmission');
   
-  update_max('/update_seating_capacity', 'seating_capacity');
-  update_max('/update_wheelbase', 'wheelbase');
+  update_max_new('/update_seating_capacity', 'seating_capacity');
+  update_max_new('/update_wheelbase', 'wheelbase');
   updateData('/update_dimensions', 'dimensions')
   
-  update_max('/update_ground_clearance', 'ground_clearance');
-  update_max('/update_turning_radius', 'turning_radius');
-  update_max('/update_cargo_volume', 'cargo_volume');
-  update_max('/update_fuel_tank_capacity', 'fuel_tank_capacity');
-  update_max('/update_curb_weight', 'curb_weight');
-  update_max('/update_total_weight', 'total_weight');
+  update_max_new('/update_ground_clearance', 'ground_clearance');
+  updateData('/update_turning_radius', 'turning_radius');
+  update_max_new('/update_cargo_volume', 'cargo_volume');
+  update_max_new('/update_fuel_tank_capacity', 'fuel_tank_capacity');
+  update_max_pw('/update_curb_weight', 'curb_weight');
+  update_max_pw('/update_total_weight', 'total_weight');
   updateData('/update_tire_wheel', 'tire_wheel');
-  update_max('/update_luggage_volume', 'luggage_volume');
+  update_max_pw('/update_luggage_volume', 'luggage_volume');
 
   updateData('/update_attribute/front_suspension', 'front_suspension');
 
@@ -762,7 +816,7 @@ updateData('/update_driving_assistance_attribute/forward_collision_warning', 'fo
 // Update remote start
 updateData('/update_driving_assistance_attribute/remote_start', 'remote_start');
 // Update airbag count
-updateData('/update_safety_technology_attribute/airbag_count', 'airbag_count');
+update_max_new('/update_airbag_count', 'airbag_count');
 
 // Update rear sensor
 updateData('/update_safety_technology_attribute/rear_sensor', 'rear_sensor');
@@ -890,25 +944,7 @@ updateData('/update_safety_technology_attribute/front_cross_traffic_warning', 'f
 
 });
 
-$(document).ready(function() {
-  // Function to toggle rows in a container
-  function toggleContainer(containerId) {
-    $(`${containerId} .row:not(:first)`).hide();
 
-    $(`${containerId} h4`).click(function() {
-      $(`${containerId} .row:not(:first)`).toggle();
-    });
-  }
-
-  // Toggle behavior for each container
-  toggleContainer("#engine_transmission_container");
-  toggleContainer("#size_weight_container");
-  toggleContainer("#suspension_brake_container");
-  toggleContainer("#exterior_container");
-  toggleContainer("#interior_container");
-  toggleContainer("#driving_assistance_container");
-  toggleContainer("#safety_technology_container");
-});
 
 
 </script>

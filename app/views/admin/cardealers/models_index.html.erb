@@ -86,7 +86,11 @@
                       <% if current_user %>
                       <a href="javascript:void(0)"> <%= current_user.firstname %>  <i class="fa fa-angle-down fa-indicator"></i></a>
                        <ul class="drop-down-multilevel">
+                        <% if current_user.admin_car_dealer? %>
+                        <li><%= link_to "Admin", admin_cardealer_path(current_user.cardealer) %></li>
+                      <% else %>
                         <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                      <% end %>
                         <li><%= link_to "Đăng xuất", logout_path, method: :delete %>
                         </li>
                        </ul>
@@ -153,9 +157,66 @@
             </div>
           </div>
             <div class="col-md-9">
+              <section class="car-details page-section-ptb" style="padding: 0px; margin-top: 0px;">
+                <div class="container" >
+                <div class="row" >
+                  <div class="details-nav" style="padding-top: 0px; margin: 0px;">
+                    <ul>
+                      <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                         <i class="fa fa-plus-circle"></i>Thêm mẫu xe
+                        </a>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Thêm mẫu xe</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="gray-form reset_css"  action="<%= car_dealer_cars_path %>"   method="post">
+                                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                                  <input type="hidden" name="car_dealer_car[cardealer_id]" value="<%= @cardealer.id %>">
+                                  <div class="mb-3" id="admin-brand-select">
+                                    <label class="form-label">Hãng xe*</label>
+                                    <select class="form-control ">
+                                      <option value="">Chọn hãng xe</option>
+                                      <% @brands.each do |brand| %>
+                                        <option value="<%= brand.id %>"><%= brand.brand_name %></option>
+                                      <% end %>
+                                    </select>
+                                  </div>
+                                  <div class="mb-3" id="admin1-model-select">
+                                    <label class="form-label">Mẫu xe*</label>
+                                    <select class="form-control" id="admin-model-select" name="car_dealer_car[model_id]" required>
+                                      <option value="">Chọn mẫu xe</option>
+                                    </select>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label">Số lượng*</label>
+                                    <input type="number" class="form-control" name="car_dealer_car[amount]"  required />
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label">Giá bán hiện tại (triệu đồng)*</label>
+                                    <input type="number" class="form-control" name="car_dealer_car[cardealer_price]"  required />
+                                  </div>
+                                  <div>
+                                    <button type="submit" class="button red" >Gửi <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                </section>
               <div class="row">
                 <div class="isotope-filters">
-                  <button  class="active" data-filter="">All</button>
+                  <button  class="active" data-filter="">Tất cả</button>
                   <% @model_brands.each do |model_brand| %>
                     <button data-filter="<%= model_brand %>"><%= model_brand %></button>
                   <% end %>
@@ -202,8 +263,10 @@
      <!--=================================
      back to top -->
     
-    <div class="car-top">
-      <span><img src="images/car.png" alt=""></span>
+     <div class="car-top">
+      <span>
+        <img  src="<%= asset_path('car.png') %>" alt="">
+      </span>
     </div>
     
      <!--=================================
@@ -294,6 +357,65 @@
                   console.error(xhr.responseText);
               }
               });
+          });
+        });
+
+        $(document).ready(function() {
+          $('#admin-brand-select .select-options li').on('click', function() {
+            var brandId = $(this).attr('rel'); 
+            console.log(brandId);
+    
+            if (brandId) {
+
+              $.ajax({
+                url: '/brands/' + brandId,
+                method: 'GET',
+                success: function(data) {
+                  console.log(data);
+                  var districtSelect = document.getElementById('admin-model-select');
+                  while (districtSelect.firstChild) {
+                      districtSelect.removeChild(districtSelect.firstChild);
+                  }
+
+                  data.forEach(function(model) {
+                      var option = document.createElement('option');
+                      option.value = model.id;
+                      option.textContent = model.model_title_name;
+                      districtSelect.appendChild(option);
+                  });
+
+                  var selectOptions = document.querySelector('#admin1-model-select .select-options');
+                  while (selectOptions.firstChild) {
+                      selectOptions.removeChild(selectOptions.firstChild);
+                  }
+                  
+                  data.forEach(function(model) {
+                      var listItem = document.createElement('li');
+                      listItem.textContent = model.model_title_name;
+                      listItem.setAttribute('rel', model.id);
+                      selectOptions.appendChild(listItem);
+                  });
+
+                  var selectStyled = document.querySelector('#admin1-model-select .select-styled');
+                  selectStyled.textContent = data[0].model_title_name;
+                  
+
+                  console.log('District select updated');
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', error); 
+                }
+              });
+            }
+          });
+        });
+
+        $(document).ready(function() {
+          $(document).on('click', '#admin1-model-select .select-options li', function() {
+            var districtName = $(this).text();
+            console.log(districtName);
+            var selectStyled = document.querySelector('#admin1-model-select .select-styled');
+            selectStyled.textContent = districtName;
           });
         });
         

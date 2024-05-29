@@ -6,8 +6,10 @@ class CarCompareController < ApplicationController
     def update_price
       model_id = params[:model_id]
       selected_trim_name = params[:selected_trim_name]
-      new_price = Trim.find_by(model_id: model_id, name: selected_trim_name).listed_price
-      render json: { new_price: new_price }
+      trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
+      new_value = trim.listed_price
+      hp_value = trim.extract_price
+      render json: { new_value: new_value, hp_value: hp_value}
     end
 
     def update_engine_type
@@ -157,7 +159,8 @@ class CarCompareController < ApplicationController
 
     if trim && trim.size_weight
       new_value = trim.size_weight.curb_weight
-      render json: { new_value: new_value }
+      hp_value = trim.size_weight.convert_curb_weight_to_float
+      render json: { new_value: new_value, hp_value: hp_value}
     else
       render json: { new_value: nil }
     end
@@ -170,7 +173,8 @@ class CarCompareController < ApplicationController
 
     if trim && trim.size_weight
       new_value = trim.size_weight.total_weight
-      render json: { new_value: new_value }
+      hp_value = trim.size_weight.convert_total_weight_to_float
+      render json: { new_value: new_value, hp_value: hp_value}
     else
       render json: { new_value: nil }
     end
@@ -196,10 +200,12 @@ class CarCompareController < ApplicationController
 
     if trim && trim.size_weight
       new_value = trim.size_weight.luggage_volume
-      render json: { new_value: new_value }
+      hp_value = trim.size_weight.convert_luggage_volume_to_float
+      render json: { new_value: new_value, hp_value: hp_value}
     else
       render json: { new_value: nil }
     end
+
   end
 
   # Define a generic update method
@@ -278,4 +284,13 @@ class CarCompareController < ApplicationController
       render json: { new_value: nil }
     end
   end
+
+  def update_airbag_count
+    model_id = params[:model_id]
+    selected_trim_name = params[:selected_trim_name]
+    trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
+    new_value = trim.safety_technology.airbag_count
+    render json: { new_value: new_value }
+  end
+
 end

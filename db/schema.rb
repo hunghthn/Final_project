@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_22_150212) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_29_093704) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -470,6 +470,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_22_150212) do
     t.datetime "updated_at", null: false
     t.integer "gender"
     t.string "username"
+    t.integer "role", default: 0
+    t.bigint "cardealer_id"
+    t.index ["cardealer_id"], name: "index_users_on_cardealer_id"
   end
 
   add_foreign_key "car_dealer_cars", "cardealers"
@@ -491,4 +494,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_22_150212) do
   add_foreign_key "size_weights", "trims"
   add_foreign_key "suspension_brakes", "trims"
   add_foreign_key "trims", "models"
+  add_foreign_key "users", "cardealers"
 end

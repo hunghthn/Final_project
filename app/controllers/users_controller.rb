@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "Người dùng đã tạo thành công."
-      redirect_to @user
+      redirect_to car_show_path
     else
       flash[:alert] = "Đã xảy ra lỗi khi tạo người dùng."
       render :new

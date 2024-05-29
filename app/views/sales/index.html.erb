@@ -84,7 +84,11 @@
               <% if current_user %>
               <a href="javascript:void(0)"> <%= current_user.firstname %>  <i class="fa fa-angle-down fa-indicator"></i></a>
                <ul class="drop-down-multilevel">
-                <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                <% if current_user.admin_car_dealer? %>
+                  <li><%= link_to "Admin", admin_cardealer_path(current_user.cardealer) %></li>
+                <% else %>
+                  <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                <% end %>
                 <li><%= link_to "Đăng xuất", logout_path, method: :delete %>
                 </li>
                </ul>

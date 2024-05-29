@@ -1,4 +1,5 @@
 class Admin::CardealersController < ApplicationController
+  before_action :require_admin
   before_action :set_cardealer, only: [:show, :inquiries_today, :inquiries_this_week, :inquiries_this_month, :inquiries_all, :staffs_index, :models_index, :filtered_models]
 
   def index
@@ -37,6 +38,7 @@ class Admin::CardealersController < ApplicationController
   end
 
   def models_index
+    @brands = Brand.all
     @car_models = @cardealer.car_dealer_cars
     @model_brands = @car_models.map(&:model_brand).uniq
   end
@@ -57,5 +59,12 @@ class Admin::CardealersController < ApplicationController
 
   def set_cardealer
     @cardealer = Cardealer.find(params[:id])
+  end
+
+  def require_admin
+    unless current_user&.admin_car_dealer? && current_user.cardealer_id == params[:id].to_i
+      flash[:alert] = "Bạn không được phép truy cập phần này."
+      redirect_to car_show_path
+    end
   end
 end

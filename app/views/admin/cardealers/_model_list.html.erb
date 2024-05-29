@@ -6,19 +6,19 @@
       <div class="car-overlay-banner">
         <ul>
           <li>
-              <%= link_to "#" do %>
+              <a class="icon-2" data-bs-toggle="modal" data-bs-target="#editModelModal-<%= car.id %>" >
                 <i class="fa fa-pencil"></i>
-              <% end %>
+              </a>
           </li>
           <li>
-            <%= link_to "#" do %>
+            <a class="icon-2" data-bs-toggle="modal" data-bs-target="#deleteModelModal-<%= car.id %>" >
               <i class="fa fa-trash-o"></i>
-            <% end %>
+            </a>
         </li>
         </ul>
       </div>
     </div>
-    <div class="car-list">
+    <div class="car-list" style="bottom: 178px;">
       <ul class="list-inline">
         <li><i class="fa fa-car"></i> <%= car.model.type.type_name %></li>
         <li><i class="fa fa-cog"></i> <%= car.model.segment.segment_name %> </li>
@@ -31,6 +31,74 @@
       <div class="price">
         <span class="new-price"><%= car.cardealer_price %> </span>
       </div>
+      <section class="car-details page-section-ptb" style="padding: 0px; margin-top: 0px;">
+        <div class="container" >
+        <div class="row" >
+          <div class="details-nav" style="padding-top: 0px; margin: 0px;">
+            <ul>
+              <li>
+                <div class="modal fade" id="editModelModal-<%= car.id %>" tabindex="-1" role="dialog" aria-labelledby="editModelModalLabel-<%= car.id %>" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="editModelModalLabel-<%= car.id %>">chỉnh sửa thông tin</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="gray-form reset_css"   action="<%= car_dealer_car_path(car.id) %>" method="post">
+                          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                          <input type="hidden" name="_method" value="put">
+                          <div class="mb-3">
+                            <label class="form-label">Tên mẫu xe*</label>
+                            <input type="text" class="form-control" value="<%= car.model.model_brand %> <%= car.model.model_title_name %>" readonly/>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Số lượng*</label>
+                            <input type="number" class="form-control" name="car_dealer_car[amount]" value="<%= car.amount %>" required />
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Giá bán hiện tại (triệu đồng)*</label>
+                            <input type="number" class="form-control" name="car_dealer_car[cardealer_price]" value="<%= car.extract_price %>" required />
+                          </div>
+                          <div>
+                            <button type="submit" class="button red" >Gửi <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal fade" style=" margin-top: 120px;" id="deleteModelModal-<%= car.id %>" tabindex="-1" role="dialog" aria-labelledby="deleteModelModalLabel-<%= car.id %>" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="deleteModelModalLabel-<%= car.id %>">xóa mẫu xe</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                      </div>
+                      <div class="modal-body" >
+                        <form class="gray-form reset_css" action="<%= car_dealer_car_path(car.id) %>"  method="post">
+                          <input type="hidden" name="_method" value="delete">
+                          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          <input type="hidden" name="car_dealer_employee[cardealer_id]" value="<%= @cardealer.id %>">
+                          <div class="mb-3 pb-3">
+                            <p class="sub-title" style="color: black; text-align:center; font-size :medium">Bạn có chắc chắn muốn xóa mẫu xe này không ?  </p>
+                          </div>
+                          <div>
+                            <button type="submit" class="button red" >Gửi <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        </section>
     </div>
   </div>
 </div>

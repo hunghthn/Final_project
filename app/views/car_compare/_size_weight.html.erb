@@ -12,7 +12,7 @@
   { label: "Thể tích khoang hành lý (lít)", attribute: "luggage_volume" }
 ] %>
 
-<div id="size_weight_container">
+<!-- <div id="size_weight_container">
   <div class="row pt-4 pb-4">
     <h4 class="container-title">Kích thước/trọng lượng
       <i id="toggle-icon" class="fa fa-angle-down"></i>
@@ -31,4 +31,28 @@
       <% end %>
     </div>
   <% end %>
+</div> -->
+
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <span>  <i class="flaticon-tire-1"></i> Kích thước/trọng lượng </span>
+    </button>
+  </h2>
+  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <table class="table table-striped">
+                <tbody>
+                  <% size_weight_attributes.each do |attr| %>
+                    <tr>
+                        <td class="fixed-width-td-1"> <%= attr[:label] %></td>
+                        <% @compared_models.each do |model| %>
+                          <td class="fixed-width-td" id="<%= "#{attr[:attribute]}_for_model_#{model.id}" %>"><%= model.trims.first.size_weight.public_send(attr[:attribute]) %></td>
+                        <% end %>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+    </div>
+  </div>
 </div>

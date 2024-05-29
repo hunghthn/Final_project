@@ -86,7 +86,11 @@
                       <% if current_user %>
                       <a href="javascript:void(0)"> <%= current_user.firstname %>  <i class="fa fa-angle-down fa-indicator"></i></a>
                        <ul class="drop-down-multilevel">
-                        <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                        <% if current_user.admin_car_dealer? %>
+                  <li><%= link_to "Admin", admin_cardealer_path(current_user.cardealer) %></li>
+                <% else %>
+                  <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                <% end %>
                         <li><%= link_to "Đăng xuất", logout_path, method: :delete %>
                         </li>
                        </ul>
@@ -154,11 +158,87 @@
           </div>
             <div class="col-md-9">
                 <section class="our-team white-bg page-section-ptb" style="padding-top: 0;">
+                  <section class="car-details page-section-ptb" style="padding: 0px;">
+                  <div class="container" style="margin-top: 0px;">
+                  <div class="row" style="padding-top: 0px;">
+                    <div class="details-nav" style="padding-bottom: 20px; margin: 0px;">
+                      <ul>
+                        <li>
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                           <i class="fa fa-plus-circle"></i>Thêm nhân sự
+                          </a>
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title" id="exampleModalLabel">Thêm nhân sự</h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="gray-form reset_css"  action="<%= car_dealer_employees_path %>" method="post">
+                                    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                                    <input type="hidden" name="car_dealer_employee[cardealer_id]" value="<%= @cardealer.id %>">
+                                    <div class="mb-3">
+                                      <label class="form-label">Tên*</label>
+                                      <input type="text" class="form-control" name="car_dealer_employee[name]" id="rmi_name" />
+                                    </div>
+                                    <div class="mb-3">
+                                      <label class="form-label pe-3">Vai trò*</label>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="car_dealer_employee[role]" id="flexRadioDefault1" value="1">
+                                        <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault1">
+                                          Quản Lý
+                                        </label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="car_dealer_employee[role]"  id="flexRadioDefault2" value="2" checked>
+                                        <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault2">
+                                          Chuyên viên tư vấn
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="mb-3">
+                                      <label class="form-label pe-3">Giới tính*</label>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="car_dealer_employee[gender]" id="flexRadioDefault3" value="male">
+                                        <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault3">
+                                          Nam
+                                        </label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="car_dealer_employee[gender]"  id="flexRadioDefault4" value="female" checked>
+                                        <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault4">
+                                          Nữ
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="mb-3">
+                                      <label class="form-label">Thông tin</label>
+                                      <textarea class="form-control" name="car_dealer_employee[detail]"  id="rmi_message"></textarea>
+                                    </div>
+                                    <div>
+                                      <button type="submit" class="button red" >Gửi <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
+                  </section>
                     <div class="container">
                       <div class="row">
                         <% @staffs.each_slice(4) do |staffs_row| %>
                           <div class="row">
                             <% staffs_row.each do |staff| %>
+                              <% modal_id = "customModal-#{staff.id}" %>
                               <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="team text-center">
                                   <div class="team-image">
@@ -169,10 +249,106 @@
                                     <% end %>
                                     <div class="team-social">
                                       <ul>
-                                        <li><a class="icon-1" href="#"><i class="fa fa-pencil"></i></a></li>
-                                        <li><a class="icon-2" href="#"><i class="fa fa-trash-o"></i></a></li>
+                                        <li><a class="icon-1"  data-bs-toggle="modal" data-bs-target="#<%= modal_id %>"
+                                          data-name="<%= staff.name %>" 
+                                          data-gender="<%= staff.gender %>"
+                                          data-role="<%= staff.role %>" 
+                                          data-detail="<%= staff.detail %>"
+                                          ><i class="fa fa-pencil"></i></a>
+                                          <div class="modal fade" id="<%= modal_id %>" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" >
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content" style="padding: 20px; margin-top: 120px;">
+                                                <div class="modal-header" style="    border-bottom: 0px;
+                                                background: #323232;
+                                                padding: 15px 26px;
+                                                margin: 10px;
+                                                color: #ffffff;">
+                                                  <h5 class="modal-title" id="customModalLabel" style="color: #ffffff;">Chỉnh sửa thông tin</h5>
+                                                  <button type="button" class="btn-close custom-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                                </div>
+                                                <div class="modal-body">
+                                                  <form id="editForm-<%= staff.id %>" action="<%= car_dealer_employee_path(staff.id) %>" method="post">
+                                                    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                                                    <input type="hidden" name="_method" value="put">
+                                                  
+                                                    <div class="mb-3">
+                                                      <label for="name" class="form-label">Tên</label>
+                                                      <input type="text" class="form-control" id="edit-name-staff-<%= staff.id %>" value="<%= staff.name %>" name="car_dealer_employee[name]">
+                                                    </div>
+                                                    <div class="mb-3 pt-3">
+                                                      <div class="row align-items-center">
+                                                        <label class="form-label col-auto pe-3" style="margin-bottom: 0px; margin-left:10px;">Vai trò</label>
+                                                        <div class="col">
+                                                          <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" style="margin-top: 7.2px; margin-right: 10px;" name="car_dealer_employee[role]" id="edit-role_manager-<%= staff.id %>" value="1" <%= staff.role == "Quản Lý" ? 'checked' : '' %>>
+                                                            <label class="form-check-label p-0 " for="role_manager">Quản Lý</label>
+                                                          </div>
+                                                          <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" style="margin-top: 7.2px; margin-right: 10px;" name="car_dealer_employee[role]" id="edit-role_manager-<%= staff.id %>" value="2" <%= staff.role == "Chuyên viên tư vấn" ? 'checked' : '' %>>
+                                                            <label class="form-check-label p-0 " for="role_consultant">Chuyên viên tư vấn</label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    
+                                                    <div class="mb-3 pt-3">
+                                                      <div class="row align-items-center">
+                                                        <label class="form-label col-auto pe-3" style="margin-bottom: 0px; margin-left:10px;">Giới tính</label>
+                                                        <div class="col">
+                                                          <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" name="car_dealer_employee[gender]" style="margin-top: 7.2px; margin-right: 10px;" type="radio" name="gender-<%= staff.id %>" id="edit-gender_male-<%= staff.id %>" value="male" <%= staff.gender == 'male' ? 'checked' : '' %>>
+                                                            <label class="form-check-label p-0" for="gender_male">Nam</label>
+                                                          </div>
+                                                          <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" name="car_dealer_employee[gender]" style="margin-top: 7.2px; margin-right: 10px;" type="radio" name="gender-<%= staff.id %>" id="edit-gender_female-<%= staff.id %>" value="female" <%= staff.gender == 'female' ? 'checked' : '' %>>
+                                                            <label class="form-check-label p-0" for="gender_female">Nữ</label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                      <label for="detail" class="form-label">Thông tin</label>
+                                                      <textarea class="form-control" name="car_dealer_employee[detail]" id="edit-detail-staff-<%= staff.id %>" placeholder="Enter details"><%= staff.detail %></textarea>
+                                                    </div>
+                                                    <div class="mb3">
+                                                      <button type="submit" class="btn custom-save-btn">Lưu thay đổi</button>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div></li>
+                                        <li>
+                                          <a class="icon-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal" data-user-id="USER_ID">
+                                            <i class="fa fa-trash-o"></i>
+                                          </a>
+                                          <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content" style="padding: 20px; margin-top: 120px;">
+                                                <div class="modal-header" style="border-bottom: 0px; background: #323232; padding: 15px 26px; margin: 10px; color: #ffffff;">
+                                                  <h5 class="modal-title" id="deleteConfirmModalLabel" style="color: #ffffff;">Xác Nhận Xóa</h5>
+                                                  <button type="button" class="btn-close custom-close" style="color: #ffffff;" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <form id="deleteForm-<%= staff.id %>" action="<%= car_dealer_employee_path(staff.id) %>" method="post">
+                                                  <input type="hidden" name="_method" value="delete">
+                                                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                                  <div class="modal-body">
+                                                    <p style="color: black; text-align:center; font-size :medium">Bạn có chắc chắn muốn xóa người này không?</p>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                    <button type="submit" class="btn custom-save-btn" id="confirmDelete">Xóa</button>
+                                                  </div>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
                                       </ul>
+                                      
                                     </div>
+
                                   </div>
                                   <div class="team-name">
                                     <h5 class="text-black"><%= staff.name %></h5>
@@ -186,7 +362,6 @@
                       </div>
                     </div>
                   </section>
-                  
             </div>
          </div>
        </div>
@@ -227,7 +402,9 @@
      back to top -->
     
     <div class="car-top">
-      <span><img src="images/car.png" alt=""></span>
+      <span>
+        <img  src="<%= asset_path('car.png') %>" alt="">
+      </span>
     </div>
     
      <!--=================================
@@ -297,9 +474,7 @@
             }
           });
         });
-        
-        
-        
+         
         </script>
     </body>
     

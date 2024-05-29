@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get '/update_total_weight', to: 'car_compare#update_total_weight'
   get '/update_tire_wheel', to: 'car_compare#update_tire_wheel'
   get '/update_luggage_volume', to: 'car_compare#update_luggage_volume'
+  get '/update_airbag_count', to: 'car_compare#update_airbag_count'
 
   # Add a generic route for updating attributes
   get '/update_attribute/:attribute_name', to: 'car_compare#update_attribute'
@@ -45,8 +46,11 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   get '/districts/:prefecture_id', to: 'districts#index'
+  get '/brands/:brand_id', to: 'brands#index'
   get '/cardealers/find_by_district', to: 'cardealers#find_by_district'
   resources :inquiries, only: [:create]
+  resources :car_dealer_employees, only: [:index, :update, :destroy, :create]
+  resources :car_dealer_cars
   resources :cardealers, only: [:index, :show] do
     member do
       get :filtered_models
@@ -70,5 +74,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
 
 end

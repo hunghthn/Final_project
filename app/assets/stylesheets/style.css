@@ -171,7 +171,7 @@ select { border: 1px solid #232323; color: #777; cursor: pointer; display: block
 .select-styled { text-align: left; font-size: 14px; color: #323232; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 1px solid #e3e3e3; background-color: #fff; padding: 8px 15px; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; -ms-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
 .select-styled:after { content: ""; width: 0; height: 0; border: 7px solid transparent; border-color: #e3e3e3 transparent transparent transparent; position: absolute; top: 18px; right: 10px; }
 .select-styled:active:after, .select-styled.active:after { top: 10px; border-color: transparent transparent #e3e3e3 transparent; }
-.select-options { text-align: left; display: none; position: absolute; top: 100%; right: 0; left: 0; z-index: 99; margin: 0; padding: 0; list-style: none; background-color: #fff; border: 1px solid #e3e3e3; border-top: 0px; }
+.select-options {     max-height: 300px; overflow-y: auto; text-align: left; display: none; position: absolute; top: 100%; right: 0; left: 0; z-index: 99; margin: 0; padding: 0; list-style: none; background-color: #fff; border: 1px solid #e3e3e3; border-top: 0px; }
 .select-options li { list-style: none; font-size: 14px; padding-left: 15px; color: #323232; }
 
 /*************************
@@ -2315,4 +2315,65 @@ margin-left: -17px; line-height: 50px; }
 .flash-message.alert-danger {
   background-color: #f8d7da;
   color: #721c24;
+}
+
+.custom-close {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.custom-close::before,
+.custom-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.custom-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.custom-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.custom-save-btn {
+  text-align: center;
+  background: #db2d2e;
+  color: #ffffff;
+  display: inline-block;
+  text-transform: capitalize;
+  vertical-align: middle;
+  padding: 8px 20px;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+
+.fixed-width-td {
+  width: 25%; /* 25% để mỗi ô chiếm 1/4 không gian bảng, tương đương với col-md-3 */
+  text-align: center;
+  color: #212529;
+}
+
+.fixed-width-td-1 {
+  width: 25%; /* 25% để mỗi ô chiếm 1/4 không gian bảng, tương đương với col-md-3 */
+  text-align: left;
+}
+/* Thêm CSS này vào file CSS của bạn */
+.scrollable-select {
+  max-height: 1050px; 
+  overflow-y: auto;
+  
 }
