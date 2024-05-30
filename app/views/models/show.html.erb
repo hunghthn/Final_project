@@ -64,8 +64,7 @@
         <!-- menu links -->
           <ul class="menu-links">
             <!-- active class -->
-            <li><a href="javascript:void(0)"> Home </a>
-            </li>
+            <li><a href="<%= car_show_path %>">Home</a></li>
             <li><a href="javascript:void(0)">So sánh <i class="fa fa-angle-down fa-indicator"></i></a>
                 <div class="drop-down menu-bg grid-col-12">
                   <div class="grid-row" id="list-compared">
@@ -76,7 +75,8 @@
                   </div>
                 </div>
             </li>
-                        <li><a href="javascript:void(0)">top doanh số   <i class="fa fa-angle-down fa-indicator"></i></a>
+            <li><a href="<%= cardealers_path %>">CARDEALER</a></li>
+            <li><a href="javascript:void(0)">top doanh số   <i class="fa fa-angle-down fa-indicator"></i></a>
                <!-- drop down multilevel  -->
                 <ul class="drop-down-multilevel">
                     <li><%= link_to "Cả năm 2023", sales_index_path %></li>
@@ -1004,45 +1004,7 @@ car-details -->
                 </div>
               </div>
             </div>
-            <%
-=begin%>
- <div class="extra-feature">
-             <h6> extra feature</h6>
-              <div class="row">
-                <div class="col-md-4">
-                   <ul class="list-style-1">
-                     <li><i class="fa fa-check"></i> Security System</li>
-                     <li><i class="fa fa-check"></i> Air conditioning</li>
-                     <li><i class="fa fa-check"></i> Alloy Wheels</li>
-                     <li><i class="fa fa-check"></i> Anti-Lock Brakes (ABS)</li>
-                     <li><i class="fa fa-check"></i> Anti-Theft</li>
-                     <li><i class="fa fa-check"></i> Anti-Starter </li>
-                   </ul>
-                </div>
-                <div class="col-md-4">
-                   <ul class="list-style-1">
-                     <li><i class="fa fa-check"></i> Security System</li>
-                     <li><i class="fa fa-check"></i> Air conditioning</li>
-                     <li><i class="fa fa-check"></i> Alloy Wheels</li>
-                     <li><i class="fa fa-check"></i> Anti-Lock Brakes (ABS)</li>
-                     <li><i class="fa fa-check"></i> Anti-Theft</li>
-                     <li><i class="fa fa-check"></i> Anti-Starter </li>
-                   </ul>
-                </div>
-                <div class="col-md-4">
-                   <ul class="list-style-1">
-                     <li><i class="fa fa-check"></i> Security System</li>
-                     <li><i class="fa fa-check"></i> Air conditioning</li>
-                     <li><i class="fa fa-check"></i> Alloy Wheels</li>
-                     <li><i class="fa fa-check"></i> Anti-Lock Brakes (ABS)</li>
-                     <li><i class="fa fa-check"></i> Anti-Theft</li>
-                     <li><i class="fa fa-check"></i> Anti-Starter </li>
-                   </ul>
-                </div>
-              </div>
-            </div> 
-<%
-=end%>
+          
           </div>
           <div class="col-md-4">
 
@@ -1103,8 +1065,6 @@ car-details -->
                       <% @hanoi.districts.each do |district| %>
                         <option value="<%= district.id %>"><%= district.name %></option>
                       <% end %>
-                        
-
                     </select>
                   </div>
                 </div>                
@@ -1214,106 +1174,6 @@ car-details  -->
        </div>
       </div>
     </div>
-    <%
-=begin%>
- <div class="row">
-      <div class="col-lg-3 col-md-6">
-        <div class="about-content">
-          <img class="img-fluid" id="logo-footer" src="images/logo-light.png" alt="">
-          <p>We provide everything you need to build an amazing dealership website developed especially for car sellers dealers or auto motor retailers.</p>
-        </div>
-        <div class="address">
-          <ul>
-            <li> <i class="fa fa-map-marker"></i><span>220E Front St. Burlington NC 27215</span> </li>
-            <li> <i class="fa fa-phone"></i><span>(007) 123 456 7890</span> </li>
-            <li> <i class="fa fa-envelope-o"></i><span>support@website.com</span> </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="usefull-link">
-        <h6 class="text-white">Useful Links</h6>
-          <ul>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Change Oil and Filter</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Brake Pads Replacement</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Timing Belt Replacement</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Pre-purchase Car Inspection</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Starter Replacement</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-       <div class="recent-post-block">
-        <h6 class="text-white">recent posts </h6>
-          <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="images/car/01.jpg" alt="">
-            </div>
-            <div class="recent-post-info">
-                <a href="#">Time to change your </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2021</span>
-            </div>
-         </div>
-         <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="images/car/02.jpg" alt="">
-            </div>
-            <div class="recent-post-info">
-                <a href="#">The best time to </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2021</span>
-            </div>
-         </div>
-         <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="images/car/03.jpg" alt="">
-            </div>
-            <div class="recent-post-info">
-                <a href="#">Replacing a timing </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2021</span>
-            </div>
-         </div>
-       </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="news-letter">
-        <h6 class="text-white">subscribe Our Newsletter </h6>
-         <p>Keep up on our always evolving products features and technology. Enter your e-mail and subscribe to our newsletter.</p>
-         <form class="news-letter">
-           <input type="email" placeholder="Enter your Email" class="form-control placeholder">
-           <a class="button red" href="#">Subscribe</a>
-         </form>
-        </div>
-      </div>
-    </div> 
-<%
-=end%>
-    <hr />
-    <%
-=begin%>
- <div class="copyright">
-     <div class="row">
-      <div class="col-lg-6 col-md-12">
-       <div class="text-lg-start text-center">
-        <p>©Copyright 2021 Car Dealer Developed by <a href="http://www.potenzaglobalsolutions.com/" target="_blank">Potenzaglobalsolutions</a></p>
-       </div>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <ul class="list-inline text-lg-end text-center">
-          <li><a href="#">privacy policy </a> | </li>
-          <li><a href="#">terms and conditions </a> |</li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-     </div>
-    </div> 
-<%
-=end%>
-  </div>
-</footer>
-
-<!--=================================
- footer -->
-
 
 
  <!--=================================

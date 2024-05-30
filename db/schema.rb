@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_29_093704) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_30_040033) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -212,6 +212,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_29_093704) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "car_dealer_car_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_inquiries_on_user_id"
   end
 
   create_table "interiors", force: :cascade do |t|
@@ -484,6 +486,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_29_093704) do
   add_foreign_key "engine_transmissions", "trims"
   add_foreign_key "exteriors", "trims"
   add_foreign_key "inquiries", "car_dealer_cars"
+  add_foreign_key "inquiries", "users"
   add_foreign_key "interiors", "trims"
   add_foreign_key "model_details", "models"
   add_foreign_key "models", "brands"

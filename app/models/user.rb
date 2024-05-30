@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-
+  has_many :inquiries
   belongs_to :cardealer, optional: true
 
   validates :firstname, presence: true
@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   enum gender: { male: 0, female: 1, other: 2 }
   enum role: { normal_user: 0, admin_car_dealer: 1 }
+
+
 
   before_validation :convert_gender
 

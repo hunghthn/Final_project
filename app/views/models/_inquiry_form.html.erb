@@ -12,17 +12,20 @@
                       <form class="gray-form reset_css" action="<%= inquiries_path %>" method="post" id="mao_form">
                         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                         <input type="hidden" name="inquiry[car_dealer_car_id]" value="<%= car_dealer_car.id %>">
+                        <% if current_user %>
+                          <input type="hidden" name="inquiry[user_id]" value="<%= current_user.id %>">
+                        <% end %>
                         <div class="mb-3">
                           <label class="form-label">Tên*</label>
-                          <input type="text" id="mao_name" name="inquiry[name]" class="form-control" required>
+                          <input type="text" id="mao_name" name="inquiry[name]" class="form-control" value="<%= current_user.firstname if current_user.present? %>" required>
                         </div>
                         <div class="mb-3">
                           <label class="form-label">Email*</label>
-                          <input type="text" id="mao_email" name="inquiry[email]" class="form-control" required>
+                          <input type="text" id="mao_email" name="inquiry[email]" class="form-control" value="<%= current_user.email if current_user.present? %> "r equired>
                         </div>
                         <div class="mb-3">
                           <label class="form-label">Số điện thoại*</label>
-                          <input type="text" id="mao_phone" name="inquiry[phone]" class="form-control" required>
+                          <input type="text" id="mao_phone" name="inquiry[phone]" class="form-control" value="<%= current_user.phone if current_user.present? %> " required>
                         </div>
                         <div class="mb-3">
                           <label class="form-label">Lời nhắn*</label>

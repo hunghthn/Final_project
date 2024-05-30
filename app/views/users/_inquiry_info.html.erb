@@ -1,0 +1,54 @@
+
+<a data-bs-toggle="modal" data-bs-target="#exampleModal3"
+   data-name="<%= info.name %>" data-email="<%= info.email %>"
+   data-phone="<%= info.phone %>" data-preferredcontact="<%= info.preferred_contact == 0 ? "Email" : "Số điện thoại" %>"
+   data-note="<%= info.note %>" data-created-at="<%= info.created_at.strftime("%d-%m-%Y %H:%M:%S") %>"
+   data-cardealer="<%= info.car_dealer_car.cardealer.name %>"
+   href="#" class="css_btn" style="margin-bottom: 0px;">
+   <i class="fa fa-tag"></i>Thông tin yêu cầu
+</a>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="margin: 5rem auto;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel3">Thông tin yêu cầu</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="mao_notice" class="form-notice" style="display:none;"></div>
+        <form class="gray-form reset_css"  id="mao_form">
+          <input type="hidden" name="action" value="make_an_offer" />
+          <div class="mb-3">
+            <label class="form-label">Cardealer nhận yêu cầu*</label>
+            <p class="form-control-static" style="color: #dc3545;" data-id="cardealer"></p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Tên*</label>
+            <p class="form-control-static" style="color: #dc3545;" data-id="name"></p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email*</label>
+            <p class="form-control-static" style="color: #dc3545;" data-id="email"></p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Số điện thoại*</label>
+            <p class="form-control-static" style="color: #dc3545;" data-id="phone"></p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label pe-3">Liên hệ ưu tiên:</label>
+            <p class="form-control-static" style="color: #dc3545;" data-id="preferredcontact"></p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">LỜI NHẮN*</label>
+            <p class="form-control-static" style="color: #dc3545;" data-id="note"></p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Thời gian tạo yêu cầu*</label>
+            <p class="form-control-static" style="color: #dc3545;" data-id="created-at"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

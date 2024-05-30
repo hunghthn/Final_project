@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show, :update]
   get 'car/show', to: 'car#show', as: 'car_show'
   get '/models_autocomplete', to: 'car#models_autocomplete'
   post '/car/add_to_compare', to: 'car#add_to_compare'
@@ -47,7 +47,12 @@ Rails.application.routes.draw do
 
   get '/districts/:prefecture_id', to: 'districts#index'
   get '/brands/:brand_id', to: 'brands#index'
-  get '/cardealers/find_by_district', to: 'cardealers#find_by_district'
+  resources :cardealers, only: [:index, :show] do
+    collection do
+      get 'find_by_district', to: 'cardealers#find_by_district'
+      get 'find_by_location', to: 'cardealers#find_by_location'
+    end
+  end
   resources :inquiries, only: [:create]
   resources :car_dealer_employees, only: [:index, :update, :destroy, :create]
   resources :car_dealer_cars

@@ -1,0 +1,53 @@
+<% if @cardealers.empty? %>
+<div class="row mt-4">
+    <div class="content">
+    <h2 class="text-red">0</h2>
+    <strong><p style="font-size:x-large;">Không tìm được đại lý phù hợp</p></strong>
+</div>
+<% else %>
+<% @cardealers.each_with_index do |test, index| %>
+<% cars = test.car_dealer_cars %>
+<% model_brands = cars.map(&:model_brand).uniq %>
+<div class="row" style="padding-bottom: 20px;">
+    <div class="custom-block-content" style="padding-top: 0px;">
+       <div class="content">
+         <h2 class="text-red"><%= index + 1 %></h2>
+         <p style="font-size:x-large; color: #212529">
+           <%= link_to test.name, cardealer_path(test) %>
+         </p>
+         <p style="color: #212529;">Địa chỉ: <%=  test.sub_location %>, <%=  test.district.name %>, <%=  test.district.prefecture.name %></p>
+       </div>
+     </div>
+   <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <div class="feature-box-3">
+       <div class="icon">
+         <i class="glyph-icon flaticon-beetle"></i>
+       </div>
+       <div class="content">
+         <h6>Các hãng xe kinh doanh </h6>
+         <p class="mb-0">
+            <% model_brands.each do |model_brand| %>
+              <%= model_brand %>,   
+            <% end %>
+          </p>
+       </div>
+      </div>
+     </div>
+     <div class="col-md-6 col-sm-6">
+      <div class="feature-box-3">
+       <div class="icon">
+        <%= link_to cardealer_path(test) do %>
+            <i class="glyph-icon flaticon-interface-1"></i>
+        <% end %>
+       </div>
+       <div class="content">
+         <h6>Chi tiết</h6>
+         <p>Click icon bên cạnh để xem thêm </p>
+       </div>
+      </div>
+     </div>
+   </div>
+ </div>
+ <% end %>
+ <% end %>

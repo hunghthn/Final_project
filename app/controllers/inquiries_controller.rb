@@ -13,7 +13,7 @@ class InquiriesController < ApplicationController
     private
   
     def inquiry_params
-      params.require(:inquiry).permit(:name, :email, :phone, :note, :preferred_contact, :car_dealer_car_id)
+      params.require(:inquiry).permit(:name, :email, :phone, :note, :preferred_contact, :car_dealer_car_id ,:user_id)
     end
   end
   

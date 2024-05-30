@@ -4,6 +4,9 @@ class CardealersController < ApplicationController
 
   def index
     @cardealers = Cardealer.all
+    @prefectures = Prefecture.all
+    @hanoi = Prefecture.find(1)
+    @test = Cardealer.find(2)
   end
 
   def show
@@ -32,6 +35,18 @@ class CardealersController < ApplicationController
       end
     end
     render partial: 'models/cardealer_info', locals: { car_dealer_cars: @car_dealer_cars }
+  end
+
+  def find_by_location
+    district_name = params[:district_name]
+    @cardealers = Cardealer.joins(:district).where("districts.name = ?", district_name)
+    if @cardealers.empty?
+      district = District.find_by(name: district_name)
+      prefecture_id = district.prefecture_id
+      cardealers_in_prefecture = Cardealer.joins(:district).where(districts: { prefecture_id: prefecture_id })
+      @cardealers = cardealers_in_prefecture
+    end
+    render partial: 'cardealers/cardealer_info', locals: { cardealers: @cardealers }
   end
 
   def filtered_models

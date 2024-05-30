@@ -1,0 +1,399 @@
+<body>
+
+    <!--=================================
+      loading -->
+    
+      <div id="loading">
+        <div id="loading-center">
+          <img src="<%= asset_path('loader/loader.gif') %>" alt="">
+       </div>
+      </div>
+      
+    
+    <!--=================================
+      loading -->
+    
+    
+    <!--=================================
+     header -->
+    
+    <header id="header" class="defualt">
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="topbar-left text-lg-start text-center">
+               <ul class="list-inline">
+                <li> <i class="fa fa-envelope-o"> </i> hungchv16@gmail.com</li>
+                <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
+               </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="topbar-right text-lg-end text-center">
+               <ul class="list-inline">
+                 <li> <i class="fa fa-phone"></i> 0386680574</li>
+                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                 <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--=================================
+     mega menu -->
+    
+     <div class="menu">
+        <!-- menu start -->
+         <nav id="menu" class="mega-menu">
+          <!-- menu list items container -->
+          <section class="menu-list-items">
+           <div class="container">
+            <div class="row">
+             <div class="col-md-12 position-relative">
+              <!-- menu logo -->
+              <ul class="menu-logo">
+                  <li>
+                      <a href=<%= car_show_path %>><img id="logo_img" src="<%= asset_path('logo/logo-light.png') %>" alt="logo"></a>
+                  </li>
+              </ul>
+              <!-- menu links -->
+              <ul class="menu-links">
+                  <!-- active class -->
+                  <li><a href="<%= car_show_path %>">Home</a></li>
+
+                  <li><a href="javascript:void(0)">So sánh <i class="fa fa-angle-down fa-indicator"></i></a>
+                    <div class="drop-down menu-bg grid-col-12">
+                      <div class="grid-row" id="list-compared">
+                        <%= render partial: 'car/compared_models', locals: { compared_models: session[:compared_models] } %>
+                      </div>
+                      <div class="grid-row" id ="compare_button">
+                        <%= link_to "So sánh", car_compare_compare_path, class: "button red float-end" %>
+                      </div> 
+                    </div>
+                  </li>
+                  <li><a href="<%= cardealers_path %>">CARDEALER</a></li>
+                  <li><a href="javascript:void(0)">top doanh số   <i class="fa fa-angle-down fa-indicator"></i></a>
+                     <!-- drop down multilevel  -->
+                      <ul class="drop-down-multilevel">
+                          <li><%= link_to "Cả năm 2023", sales_index_path %></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <% if current_user %>
+                    <a href="javascript:void(0)"> <%= current_user.firstname %>  <i class="fa fa-angle-down fa-indicator"></i></a>
+                     <ul class="drop-down-multilevel">
+                      <% if current_user.admin_car_dealer? %>
+                      <li><%= link_to "Admin", admin_cardealer_path(current_user.cardealer) %></li>
+                    <% else %>
+                      <li><%= link_to "Tài khoản", user_path(current_user) %></li>
+                    <% end %>
+                      <li><%= link_to "Đăng xuất", logout_path, method: :delete %>
+                      </li>
+                     </ul>
+                    <% else %>
+                      <%= link_to "Đăng nhập", login_path %>
+                    <% end %>
+                  </li>
+                </ul>
+             </div>
+            </div>
+           </div>
+          </section>
+         </nav>
+        <!-- menu end -->
+       </div>
+      </header>
+    
+    <!--=================================
+     header -->
+    
+    
+    <!--=================================
+     inner-intro -->
+
+    
+     <section class="inner-intro bg-1 bg-overlay-black-70">
+        <div class="container">
+           <div class="row text-center intro-title">
+                 <div class="col-md-6 text-md-start d-inline-block">
+                   <h1 class="text-white">Danh sách các cardealer</h1>
+                 </div>
+                 <div class="col-md-6 text-md-end float-end">
+                   <ul class="page-breadcrumb">
+                      <li><a href="#"><i class="fa fa-home"></i> Trang chủ</a> <i class="fa fa-angle-double-right"></i></li>
+                       <li>Car Dealer </li>
+                   </ul>
+                 </div>
+           </div>
+        </div>
+      </section>
+    
+    <!--=================================
+     inner-intro -->
+    
+     <section class="blog page-section-ptb" style="padding-bottom: 20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+               <div class="section-title">
+                 <h2>hãy tìm kiếm các đại lý xe theo vị trí </h2>
+                 <div class="separator"></div>
+               </div>
+            </div>
+          </div>
+        </div>
+     </section>
+    
+     <section class="custom-block-3 search-here white-bg page-section-pb position-relative">
+        <div class="container">
+         <div class="row">
+          <div class="col-xl-8 col-lg-7">
+          
+          <div id="cardealer_list_1"></div>
+
+          </div>
+          <div class="col-xl-4 col-lg-5">
+             <div class="search-block">
+                <div class="row no-gutter">
+                 <div class="col-md-12 text-center">
+                   <h3 class="title text-white"> <i class="fa fa-search"></i> Tìm kiếm ở đây </h3>
+                 </div>
+                 </div>
+                 <div class="row search-top-2">
+                 <div class="col-md-12">
+                  <span>Chọn tỉnh/ thành phố</span>
+                    <div class="selected-box" id="prefecture-select">
+                      <select name="q[prefecture_id_eq]" class="selectpicker">
+                        <% @prefectures.each do |prefecture| %>
+                          <option value="<%= prefecture.id %>"><%= prefecture.name %></option>
+                        <% end %>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <span>Chọn quận/huyện</span>
+                    <div class="selected-box" id="district">
+                      <select  id="district-select" name="q[district_id_eq]" class="selectpicker">
+                        <% @hanoi.districts.each do |district| %>
+                          <option value="<%= district.id %>"><%= district.name %></option>
+                        <% end %>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                   <div class="price-slide">
+                      <div class="price">
+                       <label for="amount"></label>
+                        <a class="button" id="findBut" href="#">Tìm kiếm </a>
+                      </div>
+                     </div>
+                    </div>
+                </div>
+              </div>
+           </div>
+         </div>
+        </div>
+      </section>
+      
+    
+    
+     <!--=================================
+     cars -->
+    
+    <!--=================================
+     footer -->
+    
+     <footer class="footer bg-3 bg-overlay-black-90">
+        <div class="container">
+          <div class="row">
+           <div class="col-md-12">
+            <div class="social">
+              <ul>
+                <li><a class="facebook" href="#">facebook <i class="fa fa-facebook"></i> </a></li>
+                <li><a class="twitter" href="#">twitter <i class="fa fa-twitter"></i> </a></li>
+                <li><a class="pinterest" href="#">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
+                <li><a class="dribbble" href="#">dribbble <i class="fa fa-dribbble"></i> </a></li>
+                <li><a class="google-plus" href="#">google plus <i class="fa fa-google-plus"></i> </a></li>
+                <li><a class="behance" href="#">behance <i class="fa fa-behance"></i> </a></li>
+              </ul>
+             </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </footer>
+    
+    <!--=================================
+     footer -->
+    
+    
+    
+     <!--=================================
+     back to top -->
+    
+     <div class="car-top">
+        <span>
+          <img  src="<%= asset_path('car.png') %>" alt="">
+        </span>
+    </div>
+    
+    <script>
+    
+      $('.add-to-compare').on('click', function(e) {
+        e.preventDefault();
+      
+        var modelId = $(this).data('model-id');
+        var csrfToken = $('meta[name="csrf-token"]').attr('content');
+      
+        $.ajax({
+          type: 'POST',
+          url: '/car/add_to_compare',
+          data: {
+            model_id: modelId,
+            authenticity_token: csrfToken
+          },
+          success: function(response) {
+            console.log(response);
+      
+            $.ajax({
+              type: 'GET',
+              url: '/car/render_compared_models',
+              success: function() {
+              },
+              error: function(error) {
+                console.log(error);
+              }
+            });
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
+      
+      // Sử dụng event delegation cho phần tử cha tồn tại từ trước (body trong trường hợp này)
+      $('body').on('click', '.remove-from-compare', function(e) {
+        e.preventDefault();
+      
+        var modelId = $(this).data('model-id');
+        var csrfToken = $('meta[name="csrf-token"]').attr('content');
+      
+        $.ajax({
+          type: 'POST',
+          url: '/car/remove_from_compare',
+          data: {
+            model_id: modelId,
+            authenticity_token: csrfToken
+          },
+          success: function(response) {
+            console.log(response);
+            $.ajax({
+              type: 'GET',
+              url: '/car/render_compared_models',
+              success: function() {
+              },
+              error: function(error) {
+                console.log(error);
+              }
+            });
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
+      
+      $(document).ready(function() {
+        $('#prefecture-select .select-options li').on('click', function() {
+            var prefectureId = $(this).attr('rel'); 
+            console.log(prefectureId);
+      
+            if (prefectureId) {
+                $.ajax({
+                    url: '/districts/' + prefectureId,
+                    method: 'GET',
+                    success: function(data) {
+                        console.log(data);
+                        var districtSelect = document.getElementById('district-select');
+                        while (districtSelect.firstChild) {
+                            districtSelect.removeChild(districtSelect.firstChild);
+                        }
+      
+                        data.forEach(function(district) {
+                            var option = document.createElement('option');
+                            option.value = district.id;
+                            option.textContent = district.name;
+                            districtSelect.appendChild(option);
+                        });
+      
+                        var selectOptions = document.querySelector('#district .select-options');
+                        while (selectOptions.firstChild) {
+                            selectOptions.removeChild(selectOptions.firstChild);
+                        }
+                        
+                        data.forEach(function(district) {
+                            var listItem = document.createElement('li');
+                            listItem.textContent = district.name;
+                            listItem.setAttribute('rel', district.id);
+                            selectOptions.appendChild(listItem);
+                        });
+      
+                        var selectStyled = document.querySelector('#district .select-styled');
+                        selectStyled.textContent = data[0].name;
+                        
+      
+                        console.log('District select updated');
+                    
+      
+                        
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error); 
+                    }
+                });
+            }
+        });
+      
+      
+        
+      });
+      
+      $(document).ready(function() {
+        $(document).on('click', '#district .select-options li', function() {
+          var districtName = $(this).text();
+          console.log(districtName);
+          var selectStyled = document.querySelector('#district .select-styled');
+          selectStyled.textContent = districtName;
+        });
+      });
+      
+      $(document).ready(function() {
+        $('#findBut').on('click', function(event) {
+          event.preventDefault();
+      
+          var selectedDistrict = $('#district .select-styled').text().trim();
+          $.ajax({
+            url: '/cardealers/find_by_location',
+            method: 'GET',
+            data: { district_name: selectedDistrict },
+            success: function(data) {
+              $('#cardealer_list_1').html(data); 
+              
+            },
+            error: function(xhr, status, error) {
+              console.error('Error:', error);
+            }
+          });
+        });
+      });
+      
+      
+      </script>
+    </body>
