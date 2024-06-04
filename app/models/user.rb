@@ -12,18 +12,20 @@ class User < ApplicationRecord
   enum gender: { male: 0, female: 1, other: 2 }
   enum role: { normal_user: 0, admin_car_dealer: 1 }
 
+  has_many :reviews
 
-
-  before_validation :convert_gender
 
   def admin_car_dealer?
     role == 'admin_car_dealer'
   end
-  
-  private
 
-  def convert_gender
-    self.gender = gender.to_i if gender.is_a?(String)
+  def self.vietnamese_genders
+    {
+      'Nam' => 'male',
+      'Nữ' => 'female',
+      'Khác' => 'other'
+    }
   end
+  
 
 end

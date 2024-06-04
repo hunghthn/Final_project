@@ -170,8 +170,10 @@
               <div class="mb-3">
                 <%= form.label :gender, 'Giới tính *', class: 'form-label' %>
                 <div class="selected-box">
-                <%= form.select :gender, User.genders.keys.map { |key| [key.humanize, User.genders[key]] }, {}, class: 'form-control' %>
+                  <% gender_options = { 'Nam' => 'male', 'Nữ' => 'female', 'Khác' => 'other' } %>
+                  <%= form.select :gender, gender_options.map { |label, value| [label, value] }, {}, class: 'form-control' %>
                 </div>
+                
               </div>
               <div class="mb-3">
                 <%= form.submit 'Đăng ký tài khoản', class: 'button ', style: 'background-color: red;' %>

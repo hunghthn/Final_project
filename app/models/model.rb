@@ -11,6 +11,8 @@ class Model < ApplicationRecord
   before_save :extract_price_ranges
   before_save :extract_name_and_year
   has_many :inquiries, through: :car_dealer_cars
+  has_many :reviews
+  has_many :images, dependent: :destroy
 
   def self.ransackable_associations(_auth_object = nil)
     %w[brand segment type]

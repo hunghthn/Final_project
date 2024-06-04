@@ -7,5 +7,6 @@ class ModelsController < ApplicationController
     @q = Cardealer.ransack(params[:q])
     @prefectures = Prefecture.all
     @hanoi = Prefecture.find(1)
+
   end
 end

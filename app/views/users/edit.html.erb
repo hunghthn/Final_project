@@ -117,7 +117,7 @@
       <div class="container">
          <div class="row text-center intro-title">
                <div class="col-md-6 text-md-start d-inline-block">
-                 <h1 class="text-white">Trang cá nhân người dùng</h1>
+                 <h1 class="text-white">Trang Chỉnh sửa thông tin cá nhân người dùng</h1>
                </div>
                <div class="col-md-6 text-md-end float-end">
                  <ul class="page-breadcrumb">
@@ -152,28 +152,61 @@
                         <li>
                           <%= link_to '<i class="fa fa-angle-right"></i> Chỉnh sửa thông tin cá nhân'.html_safe, edit_user_path(current_user) %>
                         </li>                        
-                        <li><%= link_to '<i class="fa fa-angle-right"></i> Đổi mật khẩu '.html_safe, edit_password_user_path(current_user) %></li>
+                        <li><%= link_to '<i class="fa fa-angle-right"></i> Đổi mật khẩu '.html_safe,  edit_password_user_path(current_user) %></li>
                     </ul>
                     </div>
                 </div>
               </div>
             </div>
               <div class="col-md-9">
-                <section class="product-listing page-section-ptb" style="padding: 40px 0;">
+                <section class="register-form page-section-ptb" style="padding-top: 0px;">
                     <div class="container">
-                        <div class="row">
-                          <div class="col-lg-12 col-md-12">
-                              <div class="row" id="car-list"> 
-                              <%= render partial: 'car_list', locals: { inquiriess: @inquiries } %>
-                              </div>
-                              <div class="pagination-nav d-flex justify-content-center">
-                                <ul class="pagination">
-                                  <%= will_paginate @inquiries, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, class: 'page-item', link_class: 'page-link' %>
-                                </ul>
-                              </div> 
+                      <div class="row justify-content-center">
+                         <div class="col-lg-8 col-md-9">
+                          <div class="gray-form">
+                            <%= form_with(model: @user, local: true) do |form| %>
+                            <%= form.hidden_field :id %>
+
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                <%= form.label :firstname, 'Tên*', class: 'form-label' %>
+                                <%= form.text_field :firstname, class: 'form-control', placeholder: 'Tên' %>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                <%= form.label :lastname, 'Họ*', class: 'form-label' %>
+                                <%= form.text_field :lastname, class: 'form-control', placeholder: 'Họ' %>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <%= form.label :email, 'Email *', class: 'form-label' %>
+                                <%= form.email_field :email, class: 'form-control', placeholder: 'Nhập email của bạn' %>
+                            </div>
+
+                            <div class="mb-3">
+                                <%= form.label :phone, 'Điện thoại di động *', class: 'form-label' %>
+                                <%= form.telephone_field :phone, class: 'form-control', placeholder: 'Nhập số điện thoại di động của bạn' %>
+                            </div>
+
+                            <div class="mb-3">
+                                <%= form.label :gender, 'Giới tính *', class: 'form-label' %>
+                                <div class="selected-box">
+                                  <% gender_options = { 'Nam' => 'male', 'Nữ' => 'female', 'Khác' => 'other' } %>
+                                  <%= form.select :gender, gender_options.map { |label, value| [label, value] }, {}, class: 'form-control' %>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <%= form.submit 'Lưu thay đổi', class: 'button', style: 'background-color: red;' %>
+                            </div>
+                            <% end %>
+
                           </div>
-                        </div>
-                   </section>
+                         </div>
+                      </div>
+                    </div>
+                  </section>
+                
               </div>
            </div>
          </div>
@@ -287,30 +320,6 @@
       });
     });
     
-    $(document).ready(function() {
-      
-        $('#exampleModal3').on('show.bs.modal', function(event) {
-          var button = $(event.relatedTarget); 
-          var cardealer = button.data('cardealer');
-          var name = button.data('name');
-          var email = button.data('email');
-          var phone = button.data('phone');
-          var preferredContact = button.data('preferredcontact');
-          var note = button.data('note');
-          var createdAt = button.data('created-at');
-      
-          var modal = $(this);
-          console.log(preferredContact);
-          console.log(modal.find('p[data-id="preferredcontact"]'));
-          modal.find('p[data-id="cardealer"]').text(cardealer);
-          modal.find('p[data-id="name"]').text(name);
-          modal.find('p[data-id="email"]').text(email);
-          modal.find('p[data-id="phone"]').text(phone);
-          modal.find('p[data-id="preferredcontact"]').text(preferredContact);
-          modal.find('p[data-id="note"]').text(note);
-          modal.find('p[data-id="created-at"]').text(createdAt);
-        });
-      });
     
     </script>
     </body>

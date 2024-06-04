@@ -688,5 +688,295 @@ task import_districts: :environment do
   puts 'Data imported successfully!'
 end
 
+desc 'Import data from JSON to iamge table'
+  task images: :environment do
+    Image.connection.execute('ALTER SEQUENCE images_id_seq RESTART WITH 1')
+    Image.delete_all
+
+    json_data = File.read('/home/hth/Final_project/db_json/model_image_with_urls.json')
+    images_data = JSON.parse(json_data)
+
+    images_data.each do |image_data|
+      model_title_name = image_data['model_title_name']
+      model_brand = image_data['model_brand']
+      model = Model.find_by( model_title_name: model_title_name, model_brand: model_brand)
+
+      # Kiểm tra xem model có tồn tại hay không
+      unless model
+        puts "Model '#{model_title_name}' for brand '#{model_brand}' not found. Import aborted."
+        next
+      end
+
+      image_data['model_id'] = model.id  # Gán model_id vào trim_data
+      # Create a new model_detail record
+      image_data['image_urls'].each do |image_url|
+        Image.create!(image_url: image_url, model: model)
+      end
+      
+    end
+
+    puts 'Data imported successfully!'
+  end
+
+  desc 'Import autofun_data from JSON to  table'
+  task autofun: :environment do
+
+    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/cadillac_trims.json')
+    data = JSON.parse(daihatsu_model_data)
+
+    brand_name = data["brand_name"]
+    models = data["models"]
+
+    brand = Brand.find_by(brand_name: brand_name)
+    unless brand
+      puts "Brand '#{brand_name}' not found. Import aborted."
+      next
+    end
+
+    models.each do |model_data|
+
+      segment = Segment.find_by(segment_name: model_data["segment"])
+      unless segment
+        puts "segment '#{model_data["segment"]}' not found. Import aborted."
+        next
+      end
+
+      type = Type.find_by(type_name: model_data["type_info"])
+      unless type
+        puts "type '#{model_data["type_info"]}' not found. Import aborted."
+        next
+      end
+
+      model = Model.new(
+        model_brand: brand.brand_name,
+        model_title_name: model_data["model_name"],
+        model_price: model_data["model_price"],
+        model_segment: segment.segment_name,
+        model_main_pic: model_data["model_image"],
+        model_engine: model_data["model_engine"],
+        model_power: model_data["model_power"],
+        model_torque: model_data["model_torque"],
+        model_gearbox: model_data["model_gearbox"],
+        model_drive_system: nil,  # Cập nhật giá trị phù hợp nếu có
+        model_seat: model_data["model_seat"],
+        model_type: type.type_name,
+        model_source: "Nhập khẩu",
+        model_year: model_data["model_year"],
+        model_name_main: model_data["model_name"],
+        brand_id: brand.id,
+        segment_id: segment.id,
+        type_id: type.id
+      )
+
+      if model.save
+        puts "Model #{model.model_title_name} saved successfully"
+      else
+        puts "Failed to save model '#{model.model_title_name}': #{model.errors.full_messages.join(', ')}"
+      end
+    end
+
+    puts 'Data imported successfully!'
+  end
+
+  desc 'Import autofun_data from JSON to  table'
+  task autofun_trim: :environment do
+
+    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/chevrolet_trims.json')
+    data = JSON.parse(daihatsu_model_data)
+
+    brand_name = data["brand_name"]
+    models = data["models"]
+
+    brand = Brand.find_by(brand_name: brand_name)
+    unless brand
+      puts "Brand '#{brand_name}' not found. Import aborted."
+      next
+    end
+
+    models.each do |model_data|
+
+      segment = Segment.find_by(segment_name: model_data["segment"])
+      unless segment
+        puts "segment '#{model_data["segment"]}' not found. Import aborted."
+        next
+      end
+
+      type = Type.find_by(type_name: model_data["type_info"])
+      unless type
+        puts "type '#{model_data["type_info"]}' not found. Import aborted."
+        next
+      end
+
+      model = Model.find_by(model_brand: brand.brand_name, model_title_name: model_data["model_name"])
+
+      unless model
+        puts "model '#{model_data["model_name"]}' not found. Import aborted."
+        next
+      end
+
+      model_data["trims"].each do |trim_data|
+        trim = model.trims.new(
+          name: trim_data["trim_name"],
+          listed_price: trim_data["trim_price"],
+          model_brand: model.model_brand,
+          model_title_name: model.model_title_name,
+          trim_source: "Nhập khẩu",
+          trim_type: model_data["type_info"]
+
+        )
+  
+        if trim.save
+          puts "Trim '#{trim.name}' saved successfully"
+        else
+          puts "Failed to save trim '#{trim.name}': #{trim.errors.full_messages.join(', ')}"
+        end
+      end
+    end
+
+    puts 'Data imported successfully!'
+  end
+
+  desc 'Import autofun_data from JSON to  table'
+  task autofun_trim_detail: :environment do
+
+    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/cadillac_trims.json')
+    data = JSON.parse(daihatsu_model_data)
+
+    brand_name = data["brand_name"]
+    models = data["models"]
+
+    brand = Brand.find_by(brand_name: brand_name)
+    unless brand
+      puts "Brand '#{brand_name}' not found. Import aborted."
+      next
+    end
+
+    models.each do |model_data|
+
+      segment = Segment.find_by(segment_name: model_data["segment"])
+      unless segment
+        puts "segment '#{model_data["segment"]}' not found. Import aborted."
+        next
+      end
+
+      type = Type.find_by(type_name: model_data["type_info"])
+      unless type
+        puts "type '#{model_data["type_info"]}' not found. Import aborted."
+        next
+      end
+
+      model = Model.find_by(model_brand: brand.brand_name, model_title_name: model_data["model_name"])
+
+      unless model
+        puts "model '#{model_data["model_name"]}' not found. Import aborted."
+        next
+      end
+
+      model_data["trims"].each do |trim_data|
+
+        trim = Trim.find_by(name: trim_data["trim_name"], listed_price: trim_data["trim_price"], model_brand: model.model_brand  )
+        unless trim
+          puts "trim '#{trim_data["trim_name"]}' not found. Import aborted."
+          next
+        end
+
+        engine_transmissions = trim.build_engine_transmission(
+          engine_type: trim_data["trim_engine"],
+          power: trim_data["trim_power"],
+          torque: trim_data["trim_torque"],
+          gearbox: trim_data["trim_gearbox"],
+          fuel_type: trim_data["trim_fuel_type"],
+          fuel_consumption:  trim_data["trim_fuel_consumption"],
+
+        )
+  
+        if engine_transmissions.save
+          puts "saved successfully"
+        else
+          puts "Failed to save trim  #{engine_transmissions.errors.full_messages.join(', ')}"
+        end
+
+        size_weights = trim.build_size_weight(
+          fuel_tank_capacity: trim_data["trim_fuel_tank_capacity"],
+          dimensions: trim_data["trim_dimensions"],
+          ground_clearance: trim_data["trim_ground_clearance"],
+          cargo_volume: trim_data["trim_cargo_volume"],
+        )
+  
+        if size_weights.save
+          puts "saved successfully"
+        else
+          puts "Failed to save trim  #{size_weights.errors.full_messages.join(', ')}"
+        end
+
+        suspension_brakes = trim.build_suspension_brake(
+          front_suspension: trim_data["trim_front_suspension"],
+          rear_suspension: trim_data["trim_rear_suspension"],
+
+        )
+  
+        if suspension_brakes.save
+          puts "saved successfully"
+        else
+          puts "Failed to save trim  #{suspension_brakes.errors.full_messages.join(', ')}"
+        end
+
+        exteriors = trim.build_exterior(
+          headlight_high_beam: trim_data["trim_headlight_high_beam"],
+          tail_lights: trim_data["trim_tail_lights"],
+          seat_material: trim_data["trim_seat_material"],
+          fog_lights: trim_data["trim_fog_lights"],
+
+        )
+  
+        if exteriors.save
+          puts "saved successfully"
+        else
+          puts "Failed to save trim  #{exteriors.errors.full_messages.join(', ')}"
+        end
+
+        interiors = trim.build_interior(
+          apple_carplay_android_auto: trim_data["trim_apple_carplay_android_auto"],
+
+        )
+  
+        if interiors.save
+          puts "saved successfully"
+        else
+          puts "Failed to save trim  #{interiors.errors.full_messages.join(', ')}"
+        end
+
+        driving_assistances = trim.build_driving_assistance(
+          cruise_control: trim_data["trim_cruise_control"],
+
+        )
+  
+        if driving_assistances.save
+          puts "saved successfully"
+        else
+          puts "Failed to save trim  #{driving_assistances.errors.full_messages.join(', ')}"
+        end
+
+        safety_technologies = trim.build_safety_technology(
+          abs_brakes: trim_data["trim_abs_brakes"],
+          rear_view_camera: trim_data["trim_rear_view_camera"],
+          blind_spot_warning: trim_data["trim_blind_spot_warning"],
+          ebd: trim_data["trim_ebd"],
+          esp: trim_data["trim_esp"],
+          emergency_brake_assist: trim_data["trim_emergency_brake_assist"],
+
+        )
+  
+        if safety_technologies.save
+          puts "saved successfully"
+        else
+          puts "Failed to save trim  #{safety_technologies.errors.full_messages.join(', ')}"
+        end
+
+      end
+    end
+
+    puts 'Data imported successfully!'
+  end
 
 end

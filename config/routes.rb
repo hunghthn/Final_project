@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :users, only: [:new, :create, :show, :update]
+  resources :users, only: [:new, :create, :show, :update,:edit]
   get 'car/show', to: 'car#show', as: 'car_show'
   get '/models_autocomplete', to: 'car#models_autocomplete'
   post '/car/add_to_compare', to: 'car#add_to_compare'
@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'reset_compare', to: 'car#reset_compare'
   get '/car/render_compared_models', to: 'car#render_compared_models'
   get '/sales', to: 'sales#index', as: 'sales_index'
-  resources :models, only: [:show]
+  resources :models, only: [:show] do
+    resources :reviews, only: [:create]
+  end
 
   get '/car_compare/compare', to: 'car_compare#compare', as: 'car_compare_compare'
   get '/update_price', to: 'car_compare#update_price'
@@ -80,5 +82,13 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    member do
+      get 'edit_password'
+      patch 'update_password'
+    end
+  end
+
+  resources :reviews, only: [:create, ]
 
 end

@@ -1,15 +1,17 @@
 class UsersController < ApplicationController
 
-  before_action :require_login , only: [:show, :update]
-  before_action :correct_user, only: [:show, :update]
+  before_action :require_login , only: [:show, :edit, :update]
+  before_action :correct_user, only: [:show, :edit, :update]
 
   def new
     @user = User.new
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def create
-    # Convert gender to integer
-    user_params[:gender] = user_params[:gender].to_i
 
     @user = User.new(user_params)
     if @user.save
@@ -37,12 +39,30 @@ class UsersController < ApplicationController
     @inquiries = @user.inquiries.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   end
 
+  def edit_password
+    @user = current_user
+  end
+  
+  def update_password
+    @user = current_user
+    if @user&.authenticate(params[:user][:current_password])
+      if @user.update(password: params[:user][:password], password_confirmation: params[:user][:password_confirmation])
+        flash[:notice] = "Mật khẩu đã được cập nhật thành công."
+        redirect_to user_path(current_user)
+      else
+        flash.now[:alert] = "Xác nhận mật khẩu mới không khớp."
+        render :edit_password
+      end
+    else
+      flash.now[:alert] = "Mật khẩu hiện tại không đúng."
+      render :edit_password
+    end
+  end
+  
   private
 
   def user_params
-    params.require(:user).permit(:firstname, :lastname, :username, :password, :password_confirmation, :email, :phone, :gender).tap do |user_params|
-      user_params[:gender] = user_params[:gender].to_i if user_params[:gender].present?
-    end
+    params.require(:user).permit(:firstname, :lastname, :username, :password, :password_confirmation, :email, :phone, :gender)
   end
 
   def require_login

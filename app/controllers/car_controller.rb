@@ -13,7 +13,7 @@ class CarController < ApplicationController
     # Áp dụng điều kiện giá nếu có
     apply_price_condition(params[:min_price], params[:max_price])
 
-    @models = @q.result(distinct: true).paginate(page: params[:page], per_page: 9)
+    @models = @q.result(distinct: true).order(:model_title_name).paginate(page: params[:page], per_page: 9)
     @models_count = @models.total_entries
   end
 

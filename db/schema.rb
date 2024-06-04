@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_30_040033) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_04_032707) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -203,6 +203,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_040033) do
     t.index ["trim_id"], name: "index_exteriors_on_trim_id"
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "image_url"
+    t.bigint "model_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["model_id"], name: "index_images_on_model_id"
+  end
+
   create_table "inquiries", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -336,6 +344,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_040033) do
     t.integer "prefecture_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.bigint "model_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["model_id"], name: "index_reviews_on_model_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "safety_technologies", force: :cascade do |t|
@@ -485,6 +503,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_040033) do
   add_foreign_key "driving_assistances", "trims"
   add_foreign_key "engine_transmissions", "trims"
   add_foreign_key "exteriors", "trims"
+  add_foreign_key "images", "models"
   add_foreign_key "inquiries", "car_dealer_cars"
   add_foreign_key "inquiries", "users"
   add_foreign_key "interiors", "trims"
@@ -492,6 +511,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_040033) do
   add_foreign_key "models", "brands"
   add_foreign_key "models", "segments"
   add_foreign_key "models", "types"
+  add_foreign_key "reviews", "models"
+  add_foreign_key "reviews", "users"
   add_foreign_key "safety_technologies", "trims"
   add_foreign_key "sales", "models"
   add_foreign_key "size_weights", "trims"

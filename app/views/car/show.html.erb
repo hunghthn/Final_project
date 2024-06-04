@@ -167,7 +167,7 @@ product-listing  -->
                   <ul>
                     <li>
                         <div class="selected-box">
-                          <%= f.collection_check_boxes :brand_id_in, Brand.all, :id, :brand_name, {}, { class: 'form-check-input' } do |b| %>
+                          <%= f.collection_check_boxes :brand_id_in, Brand.order(:brand_name).all, :id, :brand_name, {}, { class: 'form-check-input' } do |b| %>
                             <div class="form-check">
                               <%= b.check_box + b.label %>
                             </div>
@@ -182,7 +182,7 @@ product-listing  -->
                   <ul>
                     <li>              
                         <div class="selected-box">
-                          <%= f.collection_check_boxes :type_id_in, Type.all, :id, :type_name, {}, { class: 'form-check-input' } do |b| %>
+                          <%= f.collection_check_boxes :type_id_in, Type.order(:type_name).all, :id, :type_name, {}, { class: 'form-check-input' } do |b| %>
                             <div class="form-check">
                               <%= b.check_box + b.label %>
                             </div>
@@ -196,7 +196,7 @@ product-listing  -->
                   <ul>
                     <li>
                       <div class="selected-box">
-                        <%= f.collection_check_boxes :segment_id_in, Segment.all, :id, :segment_name, {}, { class: 'form-check-input' } do |b| %>
+                        <%= f.collection_check_boxes :segment_id_in, Segment.order(:segment_name).all, :id, :segment_name, {}, { class: 'form-check-input' } do |b| %>
                           <div class="form-check">
                             <%= b.check_box + b.label %>
                           </div>
@@ -212,10 +212,10 @@ product-listing  -->
                   <div class="price-slide">
                     <div class="price">
                       <label class="mb-2" for="price">Khoảng giá tìm kiếm</label>
-                        <input type="text" id="price" class="amount w-100" value="1 tỷ - 3 tỷ" />
+                        <input type="text" id="price" class="amount w-100" value="100 triệu - 10 tỷ" />
                       <div id="slider-range"></div>
-                      <%= hidden_field_tag "min_price" , 1000%>
-                      <%= hidden_field_tag "max_price" , 3000%>
+                      <%= hidden_field_tag "min_price" , 100%>
+                      <%= hidden_field_tag "max_price" , 10000%>
                     </div>
                   </div>
                 </li>

@@ -185,7 +185,7 @@ var POTENZA = {};
             range: true,
             min: 0,
             max: 10000, 
-            values: [1000, 3000], 
+            values: [100, 10000], 
             slide: function(event, ui) {
               var min = ui.values[0] / 1000, 
                   max = ui.values[1] / 1000;

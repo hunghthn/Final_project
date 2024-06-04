@@ -881,26 +881,16 @@ car-details -->
           <div class="slider slider-for detail-big-car-gallery">
                
               <img class="img-fluid" src=<%= @model.model_main_pic %> alt="">  
+              <% @model.images.each do |image| %>
+                <img class="img-fluid" src="<%= image.image_url %>" alt="Image for <%= @model.model_title_name %>">
+              <% end %>
 
-              <img class="img-fluid" src="<%= asset_path('detail/big/01.jpg') %>" alt="">
-               <img class="img-fluid" src="<%= asset_path('detail/big/02.jpg') %>" alt="">
-               <img class="img-fluid" src="<%= asset_path('detail/big/03.jpg') %>" alt="">
-               <img class="img-fluid" src="<%= asset_path('detail/big/04.jpg') %>" alt="">
-               <img class="img-fluid" src="<%= asset_path('detail/big/05.jpg') %>" alt="">
-               <img class="img-fluid" src="<%= asset_path('detail/big/06.jpg') %>" alt="">
-               <img class="img-fluid" src="<%= asset_path('detail/big/07.jpg') %>" alt="">
-               <img class="img-fluid" src="<%= asset_path('detail/big/08.jpg') %>" alt=""> 
             </div>
             <div class="slider slider-nav">
-              <img class="img-fluid" src=<%= @model.model_main_pic %> alt="">  
-                <img class="img-fluid" src="<%= asset_path('detail/thum/01.jpg') %>" alt="">
-                <img class="img-fluid" src="<%= asset_path('detail/thum/02.jpg') %>" alt="">
-                <img class="img-fluid" src="<%= asset_path('detail/thum/03.jpg') %>" alt="">
-                <img class="img-fluid" src="<%= asset_path('detail/thum/04.jpg') %>" alt="">
-                <img class="img-fluid" src="<%= asset_path('detail/thum/05.jpg') %>" alt="">
-                <img class="img-fluid" src="<%= asset_path('detail/thum/06.jpg') %>" alt="">
-                <img class="img-fluid" src="<%= asset_path('detail/thum/07.jpg') %>" alt="">
-                <img class="img-fluid" src="<%= asset_path('detail/thum/08.jpg') %>" alt=""> 
+                <img class="img-fluid" src=<%= @model.model_main_pic %> alt="">  
+                <% @model.images.each do |image| %>
+                  <img class="img-fluid" src="<%= image.image_url %>" alt="Image for <%= @model.model_title_name %>">
+                <% end %>
             </div>
          </div>
 
@@ -1151,10 +1141,61 @@ car-details -->
        </div>
 </section>
 
+<% if !@model.reviews.empty? %>
+<section class="testimonial-4 testimonial-dark bg-1 bg-overlay-black-70 page-section-ptb">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+      <div class="section-title">
+         <h2 class="text-white">Đánh giá</h2>
+         <div class="separator"></div>
+      </div>
+    </div>
+   </div>
+    <div class="row">
+     <div class="col-md-12">
+      <div class="owl-carousel owl-theme" data-nav-dots="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-space="30">
+
+        <%= render partial: 'review', locals: { reviews: @model.reviews } %>
+
+     </div>
+    </div>
+   </div>
+  </div>
+</section>
+<% end %>
 <!--=================================
 car-details  -->
 
-
+<section class="contact page-section-ptb white-bg">
+  <div class="container">
+    <div class="page-section-ptb" style="padding: 0px;">
+      <div class="row">
+       <div class="col-lg-12 col-sm-12">
+       <div class="gray-form">
+        <% if current_user %>
+        <%= form_with(model: [@model, Review.new], local: true, id: "contactform") do |form| %>
+              <div class="contact-form row">
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <%= form.text_area :content, class: 'form-control input-message', placeholder: 'Hãy nhập đánh giá của bạn*', rows: 4 %>
+                  </div>
+                </div>
+                <%= form.hidden_field :user_id, value: current_user.id %>
+                <%= form.hidden_field :model_id, value: @model.id %>
+                <div class="col-md-12">
+                  <%= form.submit 'Gửi đánh giá', class: 'button',  style: "background:#db2d2e;"%>
+                </div>
+              </div>
+            <% end %>
+            <% else %>
+              <p style="text-align: center; font-size:larger">Bạn cần phải <%= link_to 'đăng nhập', login_path %> để gửi đánh giá.</p>
+            <% end %>
+       </div>
+     </div>
+ </div>
+  </div>
+</section>
 <!--=================================
  footer -->
 
