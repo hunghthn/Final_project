@@ -15,6 +15,9 @@ class CarController < ApplicationController
 
     @models = @q.result(distinct: true).order(:model_title_name).paginate(page: params[:page], per_page: 9)
     @models_count = @models.total_entries
+    @selected_sort_option = params[:sort_option]
+    @min_price = params[:min_price]
+    @max_price = params[:max_price]
   end
 
   def models_autocomplete
@@ -62,7 +65,7 @@ class CarController < ApplicationController
     when 'lowest_price'
       @q.sorts = 'model_price_min asc'
     when 'highest_price'
-      @q.sorts = 'model_price_max desc'
+      @q.sorts = 'model_price_min desc'
     when 'name_a_to_z'
       @q.sorts = 'model_title_name asc'
     when 'name_z_to_a'

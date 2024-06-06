@@ -205,17 +205,17 @@ product-listing  -->
                     </li>
                   </ul>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" data-sort="<%= @selected_sort_option %>" id="sort">
                   <%= select_tag "sort_option", options_for_select([["Thấp đến cao ", "lowest_price"], ["Cao đến thấp ", "highest_price"], ["Tên xe: A đến Z", "name_a_to_z"], ["Tên xe: Z đến A", "name_z_to_a"]]) %>  
                 </li>                
                 <li class="list-group-item">
-                  <div class="price-slide">
+                  <div class="price-slide" data-min-price="<%= @min_price %>" data-max-price="<%= @max_price %>">
                     <div class="price">
                       <label class="mb-2" for="price">Khoảng giá tìm kiếm</label>
                         <input type="text" id="price" class="amount w-100" value="100 triệu - 10 tỷ" />
                       <div id="slider-range"></div>
-                      <%= hidden_field_tag "min_price" , 100%>
-                      <%= hidden_field_tag "max_price" , 10000%>
+                      <%= hidden_field_tag "min_price", @min_price %>
+                      <%= hidden_field_tag "max_price", @max_price %>
                     </div>
                   </div>
                 </li>
@@ -301,6 +301,7 @@ product-listing  -->
 </div>
 <script>
 
+  
 $('.add-to-compare').on('click', function(e) {
   e.preventDefault();
 
@@ -364,6 +365,30 @@ $('body').on('click', '.remove-from-compare', function(e) {
     }
   });
 });
+
+$(document).ready(function() {
+  
+  var sort_option =$("#sort").data('sort') ;
+  var vietnameseOptions = {
+    'lowest_price': 'Thấp đến cao',
+    'highest_price': 'Cao đến thấp',
+    'name_a_to_z': 'Tên xe: A đến Z',
+    'name_z_to_a': 'Tên xe: Z đến A'
+  }; 
+
+  if (sort_option =='') {
+    sort_option = 'lowest_price';
+  }
+
+  var selectStyled = document.querySelector('#sort .select-styled');
+
+  selectStyled.textContent = vietnameseOptions[sort_option];
+  
+});
+
+
+  
+
 
 
 </script>

@@ -4,4 +4,5 @@ class Cardealer < ApplicationRecord
     has_many :car_dealer_cars
     has_many :inquiries, through: :car_dealer_cars
     has_many :users
+    has_many :model_requests, dependent: :destroy
 end

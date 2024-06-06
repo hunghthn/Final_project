@@ -181,11 +181,29 @@ var POTENZA = {};
   // }
   POTENZA.priceslider = function () {
     if($(".price-slide").exists()) {
+
+      var minPrice =$(".price-slide").data('min-price') * 1000; 
+      var maxPrice = $(".price-slide").data('max-price') * 1000;
+
+      if (minPrice === 0) {
+        minPrice = 100;
+      }
+      if (maxPrice === 0) {
+          maxPrice = 10000;
+      }
+
+      if (maxPrice > 10000) {
+        maxPrice = 10000;
+    }
+
+      $('#price').val(formatCurrency(minPrice/1000) + " - " + formatCurrency(maxPrice/1000));
+
+        
         $("#slider-range").slider({
             range: true,
             min: 0,
             max: 10000, 
-            values: [100, 10000], 
+            values: [minPrice, maxPrice], 
             slide: function(event, ui) {
               var min = ui.values[0] / 1000, 
                   max = ui.values[1] / 1000;

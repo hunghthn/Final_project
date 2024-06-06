@@ -1075,9 +1075,20 @@ car-details -->
        <div id="cardealer_list"></div>
         
        <div class="feature-car">
-         <h4>Xe cùng hãng</h4>
+         <h4 style="padding-top: 20px;">Xe cùng hãng</h4>
           <div class="row pb-4">
-            <div class="col-md-12">
+            <% column_size = case @brand_models.count
+            when 1
+              'col-md-3'
+            when 2
+              'col-md-6'
+            when 3
+              'col-md-9'
+            else
+              'col-md-12'
+            end
+            %>
+            <div class="<%= column_size %>">
               <div class="owl-carousel" data-nav-arrow="true" data-nav-dots="false" data-items="<%= [@brand_models.count, 4].min %>" data-md-items="<%= [@brand_models.count, 4].min %>" data-sm-items="2" data-xs-items="2" data-space="15">
                 <% @brand_models.each do |model| %>  
                   <div class="item">
@@ -1106,10 +1117,20 @@ car-details -->
               </div>
             </div>
           </div>
-          <h4>XE CÙNG PHÂN KHÚC </h4>
+          <h4 style="padding-top: 20px;">XE CÙNG PHÂN KHÚC </h4>
           <div class="row">
-          
-            <div class="col-md-12">
+            <% column_size = case @segment_models.count
+                  when 1
+                    'col-md-3'
+                  when 2
+                    'col-md-6'
+                  when 3
+                    'col-md-9'
+                  else
+                    'col-md-12'
+                  end
+            %>
+            <div class="<%= column_size %>">
               <div class="owl-carousel" data-nav-arrow="true" data-nav-dots="false" data-items="<%= [@segment_models.count, 4].min %>" data-md-items="<%= [@segment_models.count, 4].min %>" data-sm-items="2" data-xs-items="2" data-space="15">
                 <% @segment_models.each do |model1| %>  
                   <div class="item">

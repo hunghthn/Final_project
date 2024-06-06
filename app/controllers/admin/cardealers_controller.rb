@@ -1,6 +1,6 @@
 class Admin::CardealersController < ApplicationController
   before_action :require_admin
-  before_action :set_cardealer, only: [:show, :inquiries_today, :inquiries_this_week, :inquiries_this_month, :inquiries_all, :staffs_index, :models_index, :filtered_models]
+  before_action :set_cardealer, only: [:show, :inquiries_today, :inquiries_this_week, :inquiries_this_month, :inquiries_all, :staffs_index, :models_index, :filtered_models, :model_request, :create_model_request]
 
   def index
     # Hiển thị danh sách các cardealer cho admin
@@ -37,6 +37,11 @@ class Admin::CardealersController < ApplicationController
     @staffs = @cardealer.car_dealer_employees
   end
 
+  def model_request
+    @model_request = ModelRequest.new
+  
+  end
+
   def models_index
     @brands = Brand.all
     @car_models = @cardealer.car_dealer_cars
@@ -55,6 +60,17 @@ class Admin::CardealersController < ApplicationController
     end
   end
 
+  def create_model_request
+    @model_request = ModelRequest.new(model_request_params)
+    @model_request.cardealer = @cardealer
+  
+    if @model_request.save
+      redirect_to admin_cardealer_path(@cardealer), notice: 'Yêu cầu đã được gửi thành công.'
+    else
+      render :model_request
+    end
+  end
+
   private
 
   def set_cardealer
@@ -66,5 +82,9 @@ class Admin::CardealersController < ApplicationController
       flash[:alert] = "Bạn không được phép truy cập phần này."
       redirect_to car_show_path
     end
+  end
+
+  def model_request_params
+    params.require(:model_request).permit(:brand_name, :car_model_name, :model_year)
   end
 end

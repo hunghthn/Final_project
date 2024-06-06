@@ -78,6 +78,8 @@ Rails.application.routes.draw do
         get 'inquiries_this_month'
         get 'inquiries_all'
         get 'filtered_models'
+        get 'model_request'
+        post 'create_model_request'
       end
     end
   end
