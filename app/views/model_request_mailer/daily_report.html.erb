@@ -1,0 +1,26 @@
+<h1>Báo cáo yêu cầu mẫu xe mới hàng ngày</h1>
+
+<p>Dưới đây là các yêu cầu mẫu xe được tạo vào ngày hôm qua:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cardealer yêu cầu</th>
+      <th>Tên hãng xe</th>
+      <th>Tên mẫu xe</th>
+      <th>Năm sản xuất</th>
+      <th>Được tạo tại</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @model_requests.each do |request| %>
+      <tr>
+        <td><%= request.cardealer.name %></td>
+        <td><%= request.brand_name %></td>
+        <td><%= request.car_model_name %></td>
+        <td><%= request.model_year %></td>
+        <td><%= request.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

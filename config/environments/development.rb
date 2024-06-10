@@ -74,5 +74,15 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # Raise error when a before_action's only/except options reference missing actions
-  config.action_controller.raise_on_missing_callback_actions = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.elasticemail.com',
+    port: 2525, # hoặc 587 hoặc 465 tùy thuộc vào yêu cầu của Elastic Email
+    domain: '', # thay bằng domain của bạn
+    user_name: 'carvietnam01@gmail.com',
+    password: '09C4D3C54F2E1AD67C6507E9685AD1CBBC66',
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
 end

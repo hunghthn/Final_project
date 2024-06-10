@@ -979,4 +979,116 @@ desc 'Import data from JSON to iamge table'
     puts 'Data imported successfully!'
   end
 
+  desc 'Import data from JSON to update_models table'
+  task update_models: :environment do
+    # Đọc dữ liệu JSON
+    json_data = File.read('/home/hth/Final_project/db_json/model.json')
+    models = JSON.parse(json_data)
+  
+    # Xử lý từng bản ghi trong JSON
+    models.each do |model_data|
+      # Tìm hoặc tạo Brand
+      brand_name = model_data['model_brand']
+      brand = Brand.find_or_create_by(brand_name: brand_name)
+  
+      # Tìm hoặc tạo Segment
+      segment_name = model_data['model_segment']
+      segment = Segment.find_or_create_by(segment_name: segment_name)
+  
+      # Tìm hoặc tạo Type
+      type_name = model_data['model_type']
+      type = Type.find_or_create_by(type_name: type_name)
+      
+      # Tìm model theo các thuộc tính cần thiết (ví dụ: brand, segment, type, model_title_name)
+      model = Model.find_by(
+        brand: brand,
+        segment: segment,
+        type: type,
+        model_title_name: model_data['model_title_name']
+      )
+      
+      if model
+        # Nếu tìm thấy, kiểm tra và cập nhật giá nếu cần
+        if model.model_price != model_data['model_price']
+          model.update(model_price: model_data['model_price'])
+          puts "Updated model price for #{model.model_title_name}"
+        end
+      else
+        # Nếu không tìm thấy, tạo một bản ghi mới
+        model_data['brand_id'] = brand.id
+        model_data['segment_id'] = segment.id
+        model_data['type_id'] = type.id
+        Model.create!(model_data)
+        puts "Created new model #{model_data['model_title_name']}"
+      end
+    end
+  
+    puts 'Data updated successfully!'
+  end
+
+  desc 'Update data from JSON to trims table'
+  task update_trims: :environment do
+    # Đọc dữ liệu JSON
+    json_data = File.read('/home/hth/Final_project/db_json/trim_spider_name.json')
+    trims_data = JSON.parse(json_data)
+
+    trims_data.each do |trim_data|
+      model_brand = trim_data['model_brand']
+      model_title_name = trim_data['model_title_name']
+
+      # Tìm model bằng brand và title_name
+      model = Model.find_by(model_brand: model_brand, model_title_name: model_title_name)
+
+      # Kiểm tra xem model có tồn tại hay không
+      unless model
+        puts "Model '#{model_title_name}' for brand '#{model_brand}' not found. Import aborted."
+        next
+      end
+
+      trim_data['model_id'] = model.id  # Gán model_id vào trim_data
+
+      trim_data['prices'].each do |price_data|
+        # Tìm trim theo các thuộc tính cần thiết (ví dụ: model_id, name)
+        trim = Trim.find_by(model_id: trim_data['model_id'], name: price_data['name'])
+
+        if trim
+          # Nếu tìm thấy, kiểm tra và cập nhật giá nếu cần
+          updated = false
+          if trim.listed_price != price_data['listed_price']
+            trim.update(listed_price: price_data['listed_price'])
+            updated = true
+          end
+          if trim.hn_price != price_data['HN_price']
+            trim.update(hn_price: price_data['HN_price'])
+            updated = true
+          end
+          if trim.tphcm_price != price_data['TPHCM_price']
+            trim.update(tphcm_price: price_data['TPHCM_price'])
+            updated = true
+          end
+          if trim.other_price != price_data['other_price']
+            trim.update(other_price: price_data['other_price'])
+            updated = true
+          end
+          puts "Updated trim '#{trim.name}' for model '#{model_title_name}'" if updated
+        else
+          # Nếu không tìm thấy, tạo một bản ghi mới
+          Trim.create!(
+            model_id: trim_data['model_id'],
+            model_brand: trim_data['model_brand'],
+            model_title_name: trim_data['model_title_name'],
+            name: price_data['name'],
+            listed_price: price_data['listed_price'],
+            hn_price: price_data['HN_price'],
+            tphcm_price: price_data['TPHCM_price'],
+            other_price: price_data['other_price']
+          )
+          puts "Created new trim '#{price_data['name']}' for model '#{model_title_name}'"
+        end
+      end
+    end
+
+    puts 'Data updated successfully!'
+  end
+
 end
