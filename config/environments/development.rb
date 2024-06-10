@@ -78,9 +78,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.elasticemail.com',
     port: 2525, # hoặc 587 hoặc 465 tùy thuộc vào yêu cầu của Elastic Email
-    domain: '', # thay bằng domain của bạn
-    user_name: 'carvietnam01@gmail.com',
-    password: '09C4D3C54F2E1AD67C6507E9685AD1CBBC66',
+    domain: ENV['ELASTIC_EMAIL_DOMAIN'],
+    user_name: ENV['ELASTIC_EMAIL_USERNAME'],
+    password: ENV['ELASTIC_EMAIL_PASSWORD'],
     authentication: 'plain',
     enable_starttls_auto: true
   }

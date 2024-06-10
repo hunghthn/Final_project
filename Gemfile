@@ -11,6 +11,7 @@ gem 'pry'
 gem 'pry-rails'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
