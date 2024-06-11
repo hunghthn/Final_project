@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+
+  root 'car#show'
   resources :users, only: [:new, :create, :show, :update,:edit]
   get 'car/show', to: 'car#show', as: 'car_show'
   get '/models_autocomplete', to: 'car#models_autocomplete'
@@ -55,7 +57,11 @@ Rails.application.routes.draw do
       get 'find_by_location', to: 'cardealers#find_by_location'
     end
   end
-  resources :inquiries, only: [:create]
+  resources :inquiries, only: [:create] do
+    collection do
+      post 'send_otp'
+    end
+  end
   resources :car_dealer_employees, only: [:index, :update, :destroy, :create]
   resources :car_dealer_cars
   resources :cardealers, only: [:index, :show] do

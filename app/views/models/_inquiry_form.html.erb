@@ -1,59 +1,60 @@
-
-    <a data-bs-toggle="modal" data-bs-target="#exampleModal3" data-whatever="@mdo" href="#" class="css_btn"><i class="fa fa-tag"></i>Liên hệ để tư vấn miễn phí</a>
-    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="exampleModalLabel3">Liên hệ với chúng tôi</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+<a data-bs-toggle="modal" data-bs-target="#exampleModal3" data-whatever="@mdo" href="#" class="css_btn"><i class="fa fa-tag"></i>Liên hệ để tư vấn miễn phí</a>
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel3">Liên hệ với chúng tôi</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="mao_notice" class="form-notice" style="display:none;"></div>
+        <form class="gray-form reset_css" action="<%= inquiries_path %>" method="post" id="mao_form">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <input type="hidden" name="inquiry[car_dealer_car_id]" value="<%= car_dealer_car.id %>">
+          <% if current_user %>
+            <input type="hidden" name="inquiry[user_id]" value="<%= current_user.id %>">
+          <% end %>
+          <div class="mb-3">
+            <label class="form-label">Tên*</label>
+            <input type="text" id="mao_name" name="inquiry[name]" class="form-control" value="<%= current_user.firstname if current_user.present? %>" required>
           </div>
-          <div class="modal-body">
-                      <div id="mao_notice" class="form-notice" style="display:none;"></div>
-                      <form class="gray-form reset_css" action="<%= inquiries_path %>" method="post" id="mao_form">
-                        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                        <input type="hidden" name="inquiry[car_dealer_car_id]" value="<%= car_dealer_car.id %>">
-                        <% if current_user %>
-                          <input type="hidden" name="inquiry[user_id]" value="<%= current_user.id %>">
-                        <% end %>
-                        <div class="mb-3">
-                          <label class="form-label">Tên*</label>
-                          <input type="text" id="mao_name" name="inquiry[name]" class="form-control" value="<%= current_user.firstname if current_user.present? %>" required>
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label">Email*</label>
-                          <input type="text" id="mao_email" name="inquiry[email]" class="form-control" value="<%= current_user.email if current_user.present? %> "r equired>
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label">Số điện thoại*</label>
-                          <input type="text" id="mao_phone" name="inquiry[phone]" class="form-control" value="<%= current_user.phone if current_user.present? %> " required>
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label">Lời nhắn*</label>
-                          <textarea class="form-control input-message" rows="4" id="mao_comments" name="inquiry[note]"></textarea>
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label pe-3">Liên hệ ưu tiên*</label>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inquiry[preferred_contact]" id="flexRadioDefault001" value="0">
-                            <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault001">
-                              Email
-                            </label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inquiry[preferred_contact]" id="flexRadioDefault002" value="1" checked>
-                            <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault002">
-                              Số điện thoại
-                            </label>
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <div id="recaptcha3"></div>
-                        </div>
-                        <div>
-                          <button type="submit" class="button red" id="make_an_offer_submit">Gửi <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></button>
-                        </div>
-                      </form>
+          <div class="mb-3">
+            <label class="form-label">Email*</label>
+            <input type="text" id="mao_email" name="inquiry[email]" class="form-control" value="<%= current_user.email if current_user.present? %>" required>
           </div>
-        </div>
+          <div class="mb-3">
+            <label class="form-label">Số điện thoại*</label>
+            <input type="text" id="mao_phone" name="inquiry[phone]" class="form-control" value="<%= current_user.phone if current_user.present? %>" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Lời nhắn*</label>
+            <textarea class="form-control input-message" rows="4" id="mao_comments" name="inquiry[note]"></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label pe-3">Liên hệ ưu tiên*</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inquiry[preferred_contact]" id="flexRadioDefault001" value="0">
+              <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault001">
+                Email
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inquiry[preferred_contact]" id="flexRadioDefault002" value="1" checked>
+              <label class="form-check-label p-0 text-uppercase" for="flexRadioDefault002">
+                Số điện thoại
+              </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mã OTP* (Vui lòng kiểm tra email của bạn nhập phía trên)</label>
+            <input type="text" id="otp_code" name="otp_code" class="form-control" required>
+            <button type="button" id="send_otp" class="button mt-2 mb-2" style="background-color: #0dcaf0; line-height:15px">Gửi mã OTP</button>
+          </div>
+          <div>
+            <button type="submit" class="button red" id="make_an_offer_submit">Gửi <i class="fa fa-spinner fa-spin fa-fw btn-loader" style="display: none;"></i></button>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
+</div>

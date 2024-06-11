@@ -1416,12 +1416,36 @@ $(document).ready(function() {
   });
 });
 
+
 $(document).ready(function() {
-  $('#modal-trigger').click(function() {
-    console.log(123);
-    $('#exampleModal3').modal('show');
+ 
+  $(document).on('click', '#send_otp', function() {
+    var email = $('#mao_email').val();
+    if (email === '') {
+      // Nếu email rỗng, hiển thị thông báo cho người dùng
+      alert('Vui lòng nhập địa chỉ email.');
+      return; // Dừng hàm và không thực hiện AJAX request
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: '/inquiries/send_otp',
+      data: JSON.stringify({ email: email }),
+      contentType: 'application/json',
+      headers: {
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function() {
+        alert('Mã OTP đã được gửi!');
+      },
+      error: function() {
+        alert('Đã xảy ra lỗi khi gửi mã OTP.');
+      }
+    });
   });
 });
+
+
 
 </script>
 </body>
