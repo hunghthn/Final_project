@@ -737,7 +737,7 @@ f
 .car-top.car-down { -webkit-transition: 1.0s; -ms-transition: 1.0s; -o-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
 .car-top:before, .car-top:after { content: ""; position: absolute; -o-transition: 0.2s; -webkit-transition: 0.2s; -ms-transition: 0.2s; -moz-transition: 0.2s; transition: 0.2s; opacity: 0; }
 .car-top:hover:before, .car-top:hover:after, .car-top.car-run:before, .car-top.car-run:after { opacity: 1; }
-.car-top:before, .car-top.car-run:before { top: -1px; left: 0px; width: 85px; height: 89px; background: url('/assets/car-focus.png') no-repeat 0 0; } 
+.car-top:before, .car-top.car-run:before { top: -1px; left: 0px; width: 85px; height: 89px; background: url('<%= asset_path("car-focus.png") %>') no-repeat 0 0; } 
 
 /*************************************
         Footer
