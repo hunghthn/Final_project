@@ -19,6 +19,8 @@ module CarPj
     config.autoload_lib(ignore: %w[assets tasks])
     config.time_zone = 'Asia/Ho_Chi_Minh'
     config.active_record.default_timezone = :local
+    config.serve_static_assets = true
+
 
     # Configuration for the application, engines, and railties goes here.
     #

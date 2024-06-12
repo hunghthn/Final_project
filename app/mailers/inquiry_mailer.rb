@@ -6,5 +6,5 @@ class InquiryMailer < ApplicationMailer
       @otp = otp
       mail(to: email, subject: 'Mã OTP từ CARVN')
     end
-  end
+end
   
