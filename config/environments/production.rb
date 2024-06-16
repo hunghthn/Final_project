@@ -99,4 +99,16 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.elasticemail.com',
+    port: 2525, # hoặc 587 hoặc 465 tùy thuộc vào yêu cầu của Elastic Email
+    domain: ENV['ELASTIC_EMAIL_DOMAIN'],
+    user_name: ENV['ELASTIC_EMAIL_USERNAME'],
+    password: ENV['ELASTIC_EMAIL_PASSWORD'],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
 end

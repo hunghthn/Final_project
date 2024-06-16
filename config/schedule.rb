@@ -23,13 +23,13 @@ every :day, at: '8:00 am' do
   end
 
 every :monday, at: '5am' do
-  rake 'db:update_models'
-  rake 'db:update_trims'
-  rake 'db:safety_technologies'
-  rake 'db:driving_assistances'
-  rake 'db:interiors'
-  rake 'db:exteriors'
-  rake 'db:suspension_brakes'
-  rake 'db:size_weights'
-  rake 'db:engine_transmissions'
+  # rake 'db:update_models'
+  # rake 'db:update_trims'
+  # rake 'db:safety_technologies'
+  # rake 'db:driving_assistances'
+  # rake 'db:interiors'
+  # rake 'db:exteriors'
+  # rake 'db:suspension_brakes'
+  # rake 'db:size_weights'
+  # rake 'db:engine_transmissions'
 end
