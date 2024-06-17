@@ -98,5 +98,6 @@ Rails.application.routes.draw do
   end
 
   resources :reviews, only: [:create, ]
-
+  get 'password_resets/new', to: 'password_resets#new'
+  post 'password_resets/create', to: 'password_resets#create'
 end

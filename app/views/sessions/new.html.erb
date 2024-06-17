@@ -147,13 +147,6 @@
                 <%= form.label :password, "Mật khẩu*", class: "form-label" %>
                 <%= form.password_field :password, class: "form-control", placeholder: "Mật khẩu" %>
               </div>
-              <!-- <div class="mb-3">
-                <div class="remember-checkbox mb-4">
-                  <%= form.check_box :remember_me, id: "remember_me" %>
-                  <%= form.label :remember_me, "Nhớ mật khẩu" %>
-                  <a href="#" class="float-end">Quên mật khẩu?</a>
-                </div>
-              </div> -->
               <div class="d-grid">
                 <%= form.submit "Đăng nhập", class: "button red btn-block", style: "background: #db2d2e" %>
               </div>
@@ -166,6 +159,7 @@
            <div class="section-title">
             <div class="separator mb-3"></div>
             <p>Nếu bạn chưa có tài khoản, vui lòng <a href="/users/new">đăng ký tài khoản</a>.</p>
+            <p>Nếu bạn  <a href="/password_resets/new">quên mật khẩu</a>.</p>
            </div>
         </div>
       </div>
@@ -206,7 +200,8 @@
  back to top -->
 
 <div class="car-top">
-  <span><img src="images/car.png" alt=""></span>
+  <span> <img  src="<%= asset_path('car.png') %>" alt=""></span>
+  
 </div>
 
  <!--=================================
