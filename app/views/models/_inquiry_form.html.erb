@@ -1,5 +1,5 @@
-<a data-bs-toggle="modal" data-bs-target="#exampleModal3" data-whatever="@mdo" href="#" class="css_btn"><i class="fa fa-tag"></i>Liên hệ để tư vấn miễn phí</a>
-<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<a data-bs-toggle="modal" data-bs-target="#exampleModal<%= car.id %>" data-whatever="@mdo" href="#" class="css_btn"><i class="fa fa-tag"></i>Liên hệ để tư vấn miễn phí</a>
+<div class="modal fade" id="exampleModal<%= car.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -10,7 +10,7 @@
         <div id="mao_notice" class="form-notice" style="display:none;"></div>
         <form class="gray-form reset_css" action="<%= inquiries_path %>" method="post" id="mao_form">
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-          <input type="hidden" name="inquiry[car_dealer_car_id]" value="<%= car_dealer_car.id %>">
+          <input type="hidden" name="inquiry[car_dealer_car_id]" value="<%= car.id %>">
           <% if current_user %>
             <input type="hidden" name="inquiry[user_id]" value="<%= current_user.id %>">
           <% end %>
