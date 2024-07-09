@@ -7,7 +7,7 @@ namespace :import do
   task brands: :environment do
     Brand.connection.execute('ALTER SEQUENCE brands_id_seq RESTART WITH 1')
     Brand.delete_all
-    json_data = File.read('/home/hth/Final_project/db_json/brand.json')
+    json_data = File.read('db_json/brand.json')
     brands = JSON.parse(json_data)
     brands.each do |brand_data|
       Brand.create(brand_data)
@@ -19,7 +19,7 @@ namespace :import do
   task segments: :environment do
     Segment.connection.execute('ALTER SEQUENCE segments_id_seq RESTART WITH 1')
     Segment.delete_all
-    json_data = File.read('/home/hth/Final_project/db_json/segment.json')
+    json_data = File.read('db_json/segment.json')
     segments = JSON.parse(json_data)
     segments.each do |segment_data|
       Segment.create(segment_data)
@@ -31,7 +31,7 @@ namespace :import do
   task types: :environment do
     Type.connection.execute('ALTER SEQUENCE types_id_seq RESTART WITH 1')
     Type.delete_all
-    json_data = File.read('/home/hth/Final_project/db_json/type.json')
+    json_data = File.read('db_json/type.json')
     types = JSON.parse(json_data)
     types.each do |type_data|
       Type.create(type_data)
@@ -46,7 +46,7 @@ namespace :import do
     Model.delete_all
   
     # Đọc dữ liệu JSON
-    json_data = File.read('/home/hth/Final_project/db_json/model.json')
+    json_data = File.read('db_json/model.json')
     models = JSON.parse(json_data)
   
     # Xử lý từng bản ghi trong JSON
@@ -721,7 +721,7 @@ desc 'Import data from JSON to iamge table'
   desc 'Import autofun_data from JSON to  table'
   task autofun_cadillac: :environment do
 
-    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/cadillac_trims.json')
+    daihatsu_model_data = File.read('db_json/cadillac_trims.json')
     data = JSON.parse(daihatsu_model_data)
 
     brand_name = data["brand_name"]
@@ -781,7 +781,7 @@ desc 'Import data from JSON to iamge table'
   desc 'Import autofun_data from JSON to  table'
   task autofun_chevrolet: :environment do
 
-    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/chevrolet_trims.json')
+    daihatsu_model_data = File.read('db_json/chevrolet_trims.json')
     data = JSON.parse(daihatsu_model_data)
 
     brand_name = data["brand_name"]
@@ -839,7 +839,7 @@ desc 'Import data from JSON to iamge table'
   desc 'Import autofun_data from JSON to  table'
   task autofun_daihatsu: :environment do
 
-    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/daihatsu_trims.json')
+    daihatsu_model_data = File.read('db_json/daihatsu_trims.json')
     data = JSON.parse(daihatsu_model_data)
 
     brand_name = data["brand_name"]
@@ -981,7 +981,7 @@ desc 'Import data from JSON to iamge table'
 
   desc 'Import data from JSON to update_models table'
   task update_models: :environment do
-    json_data = File.read('/home/hth/Final_project/db_json/model.json')
+    json_data = File.read('db_json/model.json')
     models = JSON.parse(json_data)
   
     models.each do |model_data|
@@ -1019,7 +1019,7 @@ desc 'Import data from JSON to iamge table'
 
   desc 'Update data from JSON to trims table'
   task update_trims: :environment do
-    json_data = File.read('/home/hth/Final_project/db_json/trim_spider_name.json')
+    json_data = File.read('db_json/trim_spider_name.json')
     trims_data = JSON.parse(json_data)
 
     trims_data.each do |trim_data|
@@ -1083,7 +1083,7 @@ desc 'Import data from JSON to iamge table'
 
   desc 'Update autofun_data from JSON to table'
   task daihatsu_update: :environment do
-    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/daihatsu_trims.json')
+    daihatsu_model_data = File.read('db_json/daihatsu_trims.json')
     data = JSON.parse(daihatsu_model_data)
 
     brand_name = data["brand_name"]
@@ -1224,7 +1224,7 @@ desc 'Import data from JSON to iamge table'
 
   desc 'Update autofun_data from JSON to table'
   task chevrolet_update: :environment do
-    chevrolet_model_data = File.read('/home/hth/Final_project/db_json/chevrolet_trims.json')
+    chevrolet_model_data = File.read('db_json/chevrolet_trims.json')
     data = JSON.parse(chevrolet_model_data)
 
     brand_name = data["brand_name"]
@@ -1365,7 +1365,7 @@ desc 'Import data from JSON to iamge table'
 
   desc 'Update autofun_data from JSON to table'
   task cadillac_update: :environment do
-    cadillac_model_data = File.read('/home/hth/Final_project/db_json/cadillac_trims.json')
+    cadillac_model_data = File.read('db_json/cadillac_trims.json')
     data = JSON.parse(cadillac_model_data)
 
     brand_name = data["brand_name"]
