@@ -92,7 +92,7 @@ class CarCompareController < ApplicationController
       model_id = params[:model_id]
       selected_trim_name = params[:selected_trim_name]
       trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
-      new_value = trim.size_weight.wheelbase
+      new_value = trim.size_weight.convert_wheelbase_to_float
       render json: { new_value: new_value }
     end
   
@@ -108,7 +108,7 @@ class CarCompareController < ApplicationController
       model_id = params[:model_id]
       selected_trim_name = params[:selected_trim_name]
       trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
-      new_value = trim.size_weight.ground_clearance
+      new_value = trim.size_weight.convert_ground_clearance_to_float
       render json: { new_value: new_value }
     end
 
@@ -158,9 +158,8 @@ class CarCompareController < ApplicationController
     trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
 
     if trim && trim.size_weight
-      new_value = trim.size_weight.curb_weight
-      hp_value = trim.size_weight.convert_curb_weight_to_float
-      render json: { new_value: new_value, hp_value: hp_value}
+      new_value = trim.size_weight.convert_curb_weight_to_float
+      render json: { new_value: new_value}
     else
       render json: { new_value: nil }
     end
@@ -172,9 +171,8 @@ class CarCompareController < ApplicationController
     trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
 
     if trim && trim.size_weight
-      new_value = trim.size_weight.total_weight
-      hp_value = trim.size_weight.convert_total_weight_to_float
-      render json: { new_value: new_value, hp_value: hp_value}
+      new_value = trim.size_weight.convert_total_weight_to_float
+      render json: { new_value: new_value}
     else
       render json: { new_value: nil }
     end
@@ -199,9 +197,8 @@ class CarCompareController < ApplicationController
     trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
 
     if trim && trim.size_weight
-      new_value = trim.size_weight.luggage_volume
-      hp_value = trim.size_weight.convert_luggage_volume_to_float
-      render json: { new_value: new_value, hp_value: hp_value}
+      new_value = trim.size_weight.convert_luggage_volume_to_float
+      render json: { new_value: new_value}
     else
       render json: { new_value: nil }
     end
@@ -289,7 +286,7 @@ class CarCompareController < ApplicationController
     model_id = params[:model_id]
     selected_trim_name = params[:selected_trim_name]
     trim = Trim.find_by(model_id: model_id, name: selected_trim_name)
-    new_value = trim.safety_technology.airbag_count
+    new_value = trim.safety_technology.convert_airbag_count_to_float
     render json: { new_value: new_value }
   end
 

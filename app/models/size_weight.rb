@@ -8,12 +8,20 @@ class SizeWeight < ApplicationRecord
 
   def convert_wheelbase_to_float
     return nil if wheelbase.nil?
-    wheelbase.gsub(',', '.').to_f
+    a = wheelbase.gsub(',', '.').to_f
+    while a >= 10
+      a /= 10
+    end
+    a
   end
 
   def convert_ground_clearance_to_float
     return nil if ground_clearance.nil?
-    ground_clearance.gsub(',', '.').to_f
+    a = ground_clearance.gsub(',', '.').to_f
+    while a >= 10
+      a /= 10
+    end
+    a
   end
 
   def convert_fuel_tank_capacity_to_float
@@ -23,20 +31,20 @@ class SizeWeight < ApplicationRecord
 
   def convert_curb_weight_to_float
     return nil if curb_weight.nil?
-    matches = curb_weight.scan(/\d+/)
-
-    curb_weight = matches[0].to_i if matches.present?
-
-    curb_weight
+    a = curb_weight.gsub(',', '.').to_f
+    if a > 10
+      a = a /1000 
+    end
+    a
   end
 
   def convert_total_weight_to_float
     return nil if total_weight.nil?
-    matches = total_weight.scan(/\d+/)
-
-    total_weight = matches[0].to_i if matches.present?
-
-    total_weight
+    a = total_weight.gsub(',', '.').to_f
+    if a > 10
+      a = a /1000 
+    end
+    a
   end
 
   def convert_cargo_volume_to_float
@@ -46,12 +54,8 @@ class SizeWeight < ApplicationRecord
 
   def convert_luggage_volume_to_float
     return nil if luggage_volume.nil?
-  
-    matches = luggage_volume.scan(/\d+/)
-
-    luggage_volume = matches[0].to_i if matches.present?
-
-    luggage_volume
+    a = luggage_volume.gsub(',', '.').to_f
+    a
   end
 
   def convert_turning_radius_to_float

@@ -719,7 +719,7 @@ desc 'Import data from JSON to iamge table'
   end
 
   desc 'Import autofun_data from JSON to  table'
-  task autofun: :environment do
+  task autofun_cadillac: :environment do
 
     daihatsu_model_data = File.read('/home/hth/Final_project/db_json/cadillac_trims.json')
     data = JSON.parse(daihatsu_model_data)
@@ -779,7 +779,7 @@ desc 'Import data from JSON to iamge table'
   end
 
   desc 'Import autofun_data from JSON to  table'
-  task autofun_trim: :environment do
+  task autofun_chevrolet: :environment do
 
     daihatsu_model_data = File.read('/home/hth/Final_project/db_json/chevrolet_trims.json')
     data = JSON.parse(daihatsu_model_data)
@@ -837,9 +837,9 @@ desc 'Import data from JSON to iamge table'
   end
 
   desc 'Import autofun_data from JSON to  table'
-  task autofun_trim_detail: :environment do
+  task autofun_daihatsu: :environment do
 
-    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/cadillac_trims.json')
+    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/daihatsu_trims.json')
     data = JSON.parse(daihatsu_model_data)
 
     brand_name = data["brand_name"]
@@ -981,25 +981,19 @@ desc 'Import data from JSON to iamge table'
 
   desc 'Import data from JSON to update_models table'
   task update_models: :environment do
-    # Đọc dữ liệu JSON
     json_data = File.read('/home/hth/Final_project/db_json/model.json')
     models = JSON.parse(json_data)
   
-    # Xử lý từng bản ghi trong JSON
     models.each do |model_data|
-      # Tìm hoặc tạo Brand
       brand_name = model_data['model_brand']
       brand = Brand.find_or_create_by(brand_name: brand_name)
   
-      # Tìm hoặc tạo Segment
       segment_name = model_data['model_segment']
       segment = Segment.find_or_create_by(segment_name: segment_name)
   
-      # Tìm hoặc tạo Type
       type_name = model_data['model_type']
       type = Type.find_or_create_by(type_name: type_name)
       
-      # Tìm model theo các thuộc tính cần thiết (ví dụ: brand, segment, type, model_title_name)
       model = Model.find_by(
         brand: brand,
         segment: segment,
@@ -1008,13 +1002,11 @@ desc 'Import data from JSON to iamge table'
       )
       
       if model
-        # Nếu tìm thấy, kiểm tra và cập nhật giá nếu cần
         if model.model_price != model_data['model_price']
           model.update(model_price: model_data['model_price'])
           puts "Updated model price for #{model.model_title_name}"
         end
       else
-        # Nếu không tìm thấy, tạo một bản ghi mới
         model_data['brand_id'] = brand.id
         model_data['segment_id'] = segment.id
         model_data['type_id'] = type.id
@@ -1022,13 +1014,11 @@ desc 'Import data from JSON to iamge table'
         puts "Created new model #{model_data['model_title_name']}"
       end
     end
-  
     puts 'Data updated successfully!'
   end
 
   desc 'Update data from JSON to trims table'
   task update_trims: :environment do
-    # Đọc dữ liệu JSON
     json_data = File.read('/home/hth/Final_project/db_json/trim_spider_name.json')
     trims_data = JSON.parse(json_data)
 
@@ -1091,4 +1081,428 @@ desc 'Import data from JSON to iamge table'
     puts 'Data updated successfully!'
   end
 
+  desc 'Update autofun_data from JSON to table'
+  task daihatsu_update: :environment do
+    daihatsu_model_data = File.read('/home/hth/Final_project/db_json/daihatsu_trims.json')
+    data = JSON.parse(daihatsu_model_data)
+
+    brand_name = data["brand_name"]
+    models = data["models"]
+
+    brand = Brand.find_by(brand_name: brand_name)
+    unless brand
+      puts "Brand '#{brand_name}' not found. Import aborted."
+      next
+    end
+
+    models.each do |model_data|
+
+      segment = Segment.find_or_create_by(segment_name: model_data["segment"])
+      type = Type.find_or_create_by(type_name: model_data["type_info"])
+      model = Model.find_or_initialize_by(model_brand: brand.brand_name, model_title_name: model_data["model_name"])
+      model.segment = segment
+      model.type = type
+      model.brand = brand
+      model.model_price = model_data["model_price"]
+      model.model_main_pic = model_data["model_image"]
+      model.model_year = model_data["model_year"]
+      model.model_seat = model_data["model_seat"]
+      model.model_engine = model_data["model_engine"]
+      model.model_power = model_data["model_power"]
+      model.model_torque = model_data["model_torque"]
+      model.model_gearbox = model_data["model_gearbox"]
+      model.model_source = "Nhập khẩu"
+      model.model_segment = model_data["segment"]
+      model.model_type = model_data["type_info"]
+      model.save
+
+      model_data["trims"].each do |trim_data|
+        trim = Trim.find_or_initialize_by(name: trim_data["trim_name"], model_brand: model.model_brand)
+
+        # Nếu trim mới, xây dựng và lưu các thông tin chi tiết
+        if trim.new_record?
+          trim.listed_price = trim_data["trim_price"]
+          trim.model = model
+          trim.save
+
+          engine_transmissions = trim.build_engine_transmission(
+            engine_type: trim_data["trim_engine"],
+            power: trim_data["trim_power"],
+            torque: trim_data["trim_torque"],
+            gearbox: trim_data["trim_gearbox"],
+            fuel_type: trim_data["trim_fuel_type"],
+            fuel_consumption: trim_data["trim_fuel_consumption"]
+          )
+
+          if engine_transmissions.save
+            puts "Engine transmission saved successfully"
+          else
+            puts "Failed to save engine transmission: #{engine_transmissions.errors.full_messages.join(', ')}"
+          end
+
+          size_weights = trim.build_size_weight(
+            fuel_tank_capacity: trim_data["trim_fuel_tank_capacity"],
+            dimensions: trim_data["trim_dimensions"],
+            ground_clearance: trim_data["trim_ground_clearance"],
+            cargo_volume: trim_data["trim_cargo_volume"]
+          )
+
+          if size_weights.save
+            puts "Size weight saved successfully"
+          else
+            puts "Failed to save size weight: #{size_weights.errors.full_messages.join(', ')}"
+          end
+
+          suspension_brakes = trim.build_suspension_brake(
+            front_suspension: trim_data["trim_front_suspension"],
+            rear_suspension: trim_data["trim_rear_suspension"]
+          )
+
+          if suspension_brakes.save
+            puts "Suspension brake saved successfully"
+          else
+            puts "Failed to save suspension brake: #{suspension_brakes.errors.full_messages.join(', ')}"
+          end
+
+          exteriors = trim.build_exterior(
+            headlight_high_beam: trim_data["trim_headlight_high_beam"],
+            tail_lights: trim_data["trim_tail_lights"],
+            seat_material: trim_data["trim_seat_material"],
+            fog_lights: trim_data["trim_fog_lights"]
+          )
+
+          if exteriors.save
+            puts "Exterior saved successfully"
+          else
+            puts "Failed to save exterior: #{exteriors.errors.full_messages.join(', ')}"
+          end
+
+          interiors = trim.build_interior(
+            apple_carplay_android_auto: trim_data["trim_apple_carplay_android_auto"]
+          )
+
+          if interiors.save
+            puts "Interior saved successfully"
+          else
+            puts "Failed to save interior: #{interiors.errors.full_messages.join(', ')}"
+          end
+
+          driving_assistances = trim.build_driving_assistance(
+            cruise_control: trim_data["trim_cruise_control"]
+          )
+
+          if driving_assistances.save
+            puts "Driving assistance saved successfully"
+          else
+            puts "Failed to save driving assistance: #{driving_assistances.errors.full_messages.join(', ')}"
+          end
+
+          safety_technologies = trim.build_safety_technology(
+            abs_brakes: trim_data["trim_abs_brakes"],
+            rear_view_camera: trim_data["trim_rear_view_camera"],
+            blind_spot_warning: trim_data["trim_blind_spot_warning"],
+            ebd: trim_data["trim_ebd"],
+            esp: trim_data["trim_esp"],
+            emergency_brake_assist: trim_data["trim_emergency_brake_assist"]
+          )
+
+          if safety_technologies.save
+            puts "Safety technology saved successfully"
+          else
+            puts "Failed to save safety technology: #{safety_technologies.errors.full_messages.join(', ')}"
+          end
+        else
+          # Cập nhật giá trim nếu trim đã tồn tại
+          trim.update(listed_price: trim_data["trim_price"])
+          puts "Trim '#{trim.name}' updated with new price."
+        end
+      end
+    end
+
+    puts 'Data imported successfully!'
+  end
+
+  desc 'Update autofun_data from JSON to table'
+  task chevrolet_update: :environment do
+    chevrolet_model_data = File.read('/home/hth/Final_project/db_json/chevrolet_trims.json')
+    data = JSON.parse(chevrolet_model_data)
+
+    brand_name = data["brand_name"]
+    models = data["models"]
+
+    brand = Brand.find_by(brand_name: brand_name)
+    unless brand
+      puts "Brand '#{brand_name}' not found. Import aborted."
+      next
+    end
+
+    models.each do |model_data|
+      segment = Segment.find_or_create_by(segment_name: model_data["segment"])
+      type = Type.find_or_create_by(type_name: model_data["type_info"])
+
+      model = Model.find_or_initialize_by(model_brand: brand.brand_name, model_title_name: model_data["model_name"])
+      model.segment = segment
+      model.type = type
+      model.brand = brand
+      model.model_price = model_data["model_price"]
+      model.model_main_pic = model_data["model_image"]
+      model.model_year = model_data["model_year"]
+      model.model_seat = model_data["model_seat"]
+      model.model_engine = model_data["model_engine"]
+      model.model_power = model_data["model_power"]
+      model.model_torque = model_data["model_torque"]
+      model.model_gearbox = model_data["model_gearbox"]
+      model.model_source = "Nhập khẩu"
+      model.model_segment = model_data["segment"]
+      model.model_type = model_data["type_info"]
+      model.save
+
+      model_data["trims"].each do |trim_data|
+        trim = Trim.find_or_initialize_by(name: trim_data["trim_name"], model_brand: model.model_brand)
+
+        # Nếu trim mới, xây dựng và lưu các thông tin chi tiết
+        if trim.new_record?
+          trim.listed_price = trim_data["trim_price"]
+          trim.model = model
+          trim.save
+
+          engine_transmissions = trim.build_engine_transmission(
+            engine_type: trim_data["trim_engine"],
+            power: trim_data["trim_power"],
+            torque: trim_data["trim_torque"],
+            gearbox: trim_data["trim_gearbox"],
+            fuel_type: trim_data["trim_fuel_type"],
+            fuel_consumption: trim_data["trim_fuel_consumption"]
+          )
+
+          if engine_transmissions.save
+            puts "Engine transmission saved successfully"
+          else
+            puts "Failed to save engine transmission: #{engine_transmissions.errors.full_messages.join(', ')}"
+          end
+
+          size_weights = trim.build_size_weight(
+            fuel_tank_capacity: trim_data["trim_fuel_tank_capacity"],
+            dimensions: trim_data["trim_dimensions"],
+            ground_clearance: trim_data["trim_ground_clearance"],
+            cargo_volume: trim_data["trim_cargo_volume"]
+          )
+
+          if size_weights.save
+            puts "Size weight saved successfully"
+          else
+            puts "Failed to save size weight: #{size_weights.errors.full_messages.join(', ')}"
+          end
+
+          suspension_brakes = trim.build_suspension_brake(
+            front_suspension: trim_data["trim_front_suspension"],
+            rear_suspension: trim_data["trim_rear_suspension"]
+          )
+
+          if suspension_brakes.save
+            puts "Suspension brake saved successfully"
+          else
+            puts "Failed to save suspension brake: #{suspension_brakes.errors.full_messages.join(', ')}"
+          end
+
+          exteriors = trim.build_exterior(
+            headlight_high_beam: trim_data["trim_headlight_high_beam"],
+            tail_lights: trim_data["trim_tail_lights"],
+            seat_material: trim_data["trim_seat_material"],
+            fog_lights: trim_data["trim_fog_lights"]
+          )
+
+          if exteriors.save
+            puts "Exterior saved successfully"
+          else
+            puts "Failed to save exterior: #{exteriors.errors.full_messages.join(', ')}"
+          end
+
+          interiors = trim.build_interior(
+            apple_carplay_android_auto: trim_data["trim_apple_carplay_android_auto"]
+          )
+
+          if interiors.save
+            puts "Interior saved successfully"
+          else
+            puts "Failed to save interior: #{interiors.errors.full_messages.join(', ')}"
+          end
+
+          driving_assistances = trim.build_driving_assistance(
+            cruise_control: trim_data["trim_cruise_control"]
+          )
+
+          if driving_assistances.save
+            puts "Driving assistance saved successfully"
+          else
+            puts "Failed to save driving assistance: #{driving_assistances.errors.full_messages.join(', ')}"
+          end
+
+          safety_technologies = trim.build_safety_technology(
+            abs_brakes: trim_data["trim_abs_brakes"],
+            rear_view_camera: trim_data["trim_rear_view_camera"],
+            blind_spot_warning: trim_data["trim_blind_spot_warning"],
+            ebd: trim_data["trim_ebd"],
+            esp: trim_data["trim_esp"],
+            emergency_brake_assist: trim_data["trim_emergency_brake_assist"]
+          )
+
+          if safety_technologies.save
+            puts "Safety technology saved successfully"
+          else
+            puts "Failed to save safety technology: #{safety_technologies.errors.full_messages.join(', ')}"
+          end
+        else
+          # Cập nhật giá trim nếu trim đã tồn tại
+          trim.update(listed_price: trim_data["trim_price"])
+          puts "Trim '#{trim.name}' updated with new price."
+        end
+      end
+    end
+
+    puts 'Data imported successfully!'
+  end
+
+  desc 'Update autofun_data from JSON to table'
+  task cadillac_update: :environment do
+    cadillac_model_data = File.read('/home/hth/Final_project/db_json/cadillac_trims.json')
+    data = JSON.parse(cadillac_model_data)
+
+    brand_name = data["brand_name"]
+    models = data["models"]
+
+    brand = Brand.find_by(brand_name: brand_name)
+    unless brand
+      puts "Brand '#{brand_name}' not found. Import aborted."
+      next
+    end
+
+    models.each do |model_data|
+      
+      
+      segment = Segment.find_or_create_by(segment_name: model_data["segment"])
+      type = Type.find_or_create_by(type_name: model_data["type_info"])
+
+      model = Model.find_or_initialize_by(model_brand: brand.brand_name, model_title_name: model_data["model_name"])
+      model.segment = segment
+      model.type = type
+      model.brand = brand
+      model.model_price = model_data["model_price"]
+      model.model_main_pic = model_data["model_image"]
+      model.model_year = model_data["model_year"]
+      model.model_seat = model_data["model_seat"]
+      model.model_engine = model_data["model_engine"]
+      model.model_power = model_data["model_power"]
+      model.model_torque = model_data["model_torque"]
+      model.model_gearbox = model_data["model_gearbox"]
+      model.model_source = "Nhập khẩu"
+      model.model_segment = model_data["segment"]
+      model.model_type = model_data["type_info"]
+      model.save
+
+      model_data["trims"].each do |trim_data|
+        trim = Trim.find_or_initialize_by(name: trim_data["trim_name"], model_brand: model.model_brand)
+
+        # Nếu trim mới, xây dựng và lưu các thông tin chi tiết
+        if trim.new_record?
+          trim.listed_price = trim_data["trim_price"]
+          trim.model = model
+          trim.save
+
+          engine_transmissions = trim.build_engine_transmission(
+            engine_type: trim_data["trim_engine"],
+            power: trim_data["trim_power"],
+            torque: trim_data["trim_torque"],
+            gearbox: trim_data["trim_gearbox"],
+            fuel_type: trim_data["trim_fuel_type"],
+            fuel_consumption: trim_data["trim_fuel_consumption"]
+          )
+
+          if engine_transmissions.save
+            puts "Engine transmission saved successfully"
+          else
+            puts "Failed to save engine transmission: #{engine_transmissions.errors.full_messages.join(', ')}"
+          end
+
+          size_weights = trim.build_size_weight(
+            fuel_tank_capacity: trim_data["trim_fuel_tank_capacity"],
+            dimensions: trim_data["trim_dimensions"],
+            ground_clearance: trim_data["trim_ground_clearance"],
+            cargo_volume: trim_data["trim_cargo_volume"]
+          )
+
+          if size_weights.save
+            puts "Size weight saved successfully"
+          else
+            puts "Failed to save size weight: #{size_weights.errors.full_messages.join(', ')}"
+          end
+
+          suspension_brakes = trim.build_suspension_brake(
+            front_suspension: trim_data["trim_front_suspension"],
+            rear_suspension: trim_data["trim_rear_suspension"]
+          )
+
+          if suspension_brakes.save
+            puts "Suspension brake saved successfully"
+          else
+            puts "Failed to save suspension brake: #{suspension_brakes.errors.full_messages.join(', ')}"
+          end
+
+          exteriors = trim.build_exterior(
+            headlight_high_beam: trim_data["trim_headlight_high_beam"],
+            tail_lights: trim_data["trim_tail_lights"],
+            seat_material: trim_data["trim_seat_material"],
+            fog_lights: trim_data["trim_fog_lights"]
+          )
+
+          if exteriors.save
+            puts "Exterior saved successfully"
+          else
+            puts "Failed to save exterior: #{exteriors.errors.full_messages.join(', ')}"
+          end
+
+          interiors = trim.build_interior(
+            apple_carplay_android_auto: trim_data["trim_apple_carplay_android_auto"]
+          )
+
+          if interiors.save
+            puts "Interior saved successfully"
+          else
+            puts "Failed to save interior: #{interiors.errors.full_messages.join(', ')}"
+          end
+
+          driving_assistances = trim.build_driving_assistance(
+            cruise_control: trim_data["trim_cruise_control"]
+          )
+
+          if driving_assistances.save
+            puts "Driving assistance saved successfully"
+          else
+            puts "Failed to save driving assistance: #{driving_assistances.errors.full_messages.join(', ')}"
+          end
+
+          safety_technologies = trim.build_safety_technology(
+            abs_brakes: trim_data["trim_abs_brakes"],
+            rear_view_camera: trim_data["trim_rear_view_camera"],
+            blind_spot_warning: trim_data["trim_blind_spot_warning"],
+            ebd: trim_data["trim_ebd"],
+            esp: trim_data["trim_esp"],
+            emergency_brake_assist: trim_data["trim_emergency_brake_assist"]
+          )
+
+          if safety_technologies.save
+            puts "Safety technology saved successfully"
+          else
+            puts "Failed to save safety technology: #{safety_technologies.errors.full_messages.join(', ')}"
+          end
+        else
+          # Cập nhật giá trim nếu trim đã tồn tại
+          trim.update(listed_price: trim_data["trim_price"])
+          puts "Trim '#{trim.name}' updated with new price."
+        end
+      end
+    end
+
+    puts 'Data imported successfully!'
+  end
 end
