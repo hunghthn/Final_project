@@ -986,13 +986,13 @@ desc 'Import data from JSON to iamge table'
   
     models.each do |model_data|
       brand_name = model_data['model_brand']
-      brand = Brand.find_or_create_by(brand_name: brand_name)
+      brand = Brand.find_by(brand_name: brand_name)
   
       segment_name = model_data['model_segment']
-      segment = Segment.find_or_create_by(segment_name: segment_name)
+      segment = Segment.find_by(segment_name: segment_name)
   
       type_name = model_data['model_type']
-      type = Type.find_or_create_by(type_name: type_name)
+      type = Type.find_by(type_name: type_name)
       
       model = Model.find_by(
         brand: brand,
